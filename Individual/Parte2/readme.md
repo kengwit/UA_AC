@@ -4,12 +4,16 @@ La tecnología MMX fue diseñada para mejorar de forma sustancial el rendimiento
 Se basa en un nuevo juego de instrucciones, que se añadían a las ya existentes en la arquitectura 80×86, y en nuevos tipos de datos de 64 bits.
 Dichas instrucciones trabajaban en paralelo sobre múltiples elementos de datos empaquetados en cantidades de 64 bits.
 
+https://docs.oracle.com/cd/E18752_01/html/817-5477/eojdc.html
+
 
 # SSE (Streaming SIMD Extensions)
 SSE son una extensión al grupo de instrucciones MMX, que también fueron desarrolladas por Intel, concretamente, para sus procesadores Pentium III (1999).
 Están especialmente pensadas para decodificación de MPEG2 (códec vinculado a los DVD), procesamiento de gráficos tridimensionales y software de reconocimiento de voz.
 Con la tecnología SSE, los microprocesadores x86 fueron dotados de setenta nuevas instrucciones y de ocho registros nuevos: del xmm0 al xmm7.
 Estos registros tienen una extensión de 128 bits (es decir que pueden almacenar hasta 16 bytes de información cada uno).
+
+https://docs.oracle.com/cd/E26502_01/html/E28388/eojde.html
 
 
 ## NET Bubble Sort SEE (comparando assembler + C)
