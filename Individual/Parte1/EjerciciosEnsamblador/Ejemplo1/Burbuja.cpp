@@ -3,6 +3,7 @@
 
 
 void bubbleSort(int arr[], int n);
+void swapNumber(int *a, int *b);
 
 int main(void)
 {
@@ -37,44 +38,31 @@ int main(void)
 
 void bubbleSort(int arr[], int size)
 {
-     for (size_t i = 0; i < size - 1; i++)
-        for (size_t j = 0; j < size - i - 1; j++)
+     for (int i = 0; i < size - 1; i++)
+        for (int j = 0; j < size - i - 1; j++)
             if (arr[j] > arr[j + 1]) {
 
-                /*__asm
-                {
-                    mov eax, arr[j]
-                    mov ebx, arr[j + 1]
-                }
-
-
-                __asm
-                {
-                    mov dx, count
-                    oloop :
-                    mov cx, count
-                        lea si, nums
-
-                        iloop :
-                    mov al, [si]; Because compare can't have both memory
-                        cmp al, [si + 1]
-                        jl common; if al is less than[si + 1] Skip the below two lines for swapping.
-                        xchg al, [si + 1]
-                        mov[si], al; Coz we can't use two memory locations in xchg directly.
-
-                        common:
-                    INC si
-                        loop iloop
-
-                        dec dx
-                        jnz oloop
-                }*/
-
-
+                printf_s("%d", arr[j]);
+                printf_s(" = ");
+                swapNumber(&arr[j], &arr[j + 1]);
+                printf_s("%d \n", arr[j]);
+                /*
                 int tempVal = arr[j];
                 arr[j] = arr[j + 1];
-                arr[j + 1] = tempVal;
+                arr[j + 1] = tempVal;*/
             }
+}
+
+void swapNumber(int *a, int* b) {
+    __asm
+    {
+        mov eax, a;
+        mov ebx, b;
+
+        mov ecx, eax;
+        mov a, ebx;
+        mov b, ecx;
+    }
 }
 
 
