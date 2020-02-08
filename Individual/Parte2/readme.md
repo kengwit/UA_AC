@@ -19,8 +19,10 @@ https://docs.oracle.com/cd/E26502_01/html/E28388/eojde.html
 ## NET Bubble Sort SEE (comparando assembler + C)
 - ¿Qué hace el programa?
 ```
-Ordena arrays con contenido aleatorio de valor double, usando el algoritmo BubbleSort implementado en C y en Inline Assembly.
-Se ordenan arrays de longitud 2 cuya longitud crece expotencialmente despues de cada iteracion hasta tener la longitud 66537, y muestra el tiempo transcurrido en cada caso, comparando ambas implementaciones.
+	Ordena arrays con contenido aleatorio de valor double, usando el algoritmo BubbleSort 
+implementado en C y en Inline Assembly. Se ordenan arrays de longitud 2 cuya longitud 
+crece expotencialmente despues de cada iteracion hasta tener la longitud 66537, y muestra 
+el tiempo transcurrido en cada caso, comparando ambas implementaciones.
 ```
 - ¿Se utilizan extensiones MMX o SSE?
 ```
@@ -31,7 +33,8 @@ SSE, ya que se pueden reconocer instrucciones del set SSE2 tales como minpd, max
 
 - ¿Qué ganancia obtenemos con el algoritmo MMX/SSE con respecto al algoritmo secuencial?
 ```
-A medida que la longitud del array va aumentando, podemos observar que la ganancia se va estabilizando en el 100%, siendo la implementacion en SSE el doble de rapida que en C.
+	A medida que la longitud del array va aumentando, podemos observar que la ganancia se va
+estabilizando en el 100%, siendo la implementacion en SSE el doble de rapida que en C.
 ```
 - Realiza una batería de pruebas y muéstralo utilizando gráficas explicativas.
 ![Grafico comparativo](https://i.imgur.com/eAM5Mlr.png)
