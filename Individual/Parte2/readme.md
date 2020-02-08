@@ -59,12 +59,19 @@ Las SSE (SSE2, SSE3, SSSE3, SSE4 (4.1, 4.2, a) son unas extensiónes al grupo de
 
 ## NET Inner Product (comparando assembler + C)
 - ¿Qué hace el programa?
-
+```
+	Suma la multiplicación de arrays rellenos de valores aleatorios de distinto tipo implementado de diferentes maneras, en C, en ensamblador usando instrucciones de SSE2 y otra con instrucciones de SS3.
+```
 
 - Comenta la siguiente función: float sse3_inner(const float* a, const float* b, unsigned int size)
-
+```
+	// TO DO
+```
 
 - ¿Qué ganancia obtenemos con el algoritmo optimizado mediante extensiones SIMD con respecto al algoritmo secuencial?
+```
+	Por lo que podemos ver segun los resultados, la ganancia esta vez depende del set que se usa y sobre que tipo de valor se usa, aún así, el resultado es el de siempre, favorable para la implementacion en ensamblador, los calculos realizados con floats parecen ser el triple de rapidos para el set sse3, y en el resto de tipos parece llegar a duplicar la velocidad de la implementacion en C.
+```
 
 - Realiza una batería de pruebas y muéstralo utilizando gráficas explicativas.
 
@@ -74,6 +81,7 @@ Las SSE (SSE2, SSE3, SSSE3, SSE4 (4.1, 4.2, a) son unas extensiónes al grupo de
 
 
 - ¿Qué ganancia obtenemos con el algoritmo optimizado mediante extensiones SIMD con respecto al algoritmo secuencial?
+
 
 - Realiza una batería de pruebas y muéstralo utilizando gráficas explicativas.
 
@@ -91,3 +99,7 @@ Las SSE (SSE2, SSE3, SSSE3, SSE4 (4.1, 4.2, a) son unas extensiónes al grupo de
 - http://www.jegerlehner.ch/intel/IntelCodeTable.pdf
 - https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf
 
+
+# Preguntas:
+- Porque en data transfer se multiplica por size(int) y despues se divide?
+- Porque en Inner product, la funcion "sse_inner_d" y "sse_inner" no está realmente implementada en ningun bloque __asm?

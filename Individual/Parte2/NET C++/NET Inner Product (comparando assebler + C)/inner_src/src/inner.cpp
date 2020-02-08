@@ -8,6 +8,7 @@ void tic()
         QueryPerformanceFrequency(&m_nFreq);
         QueryPerformanceCounter(&m_nBeginTime);
 }
+
 __int64 toc()
 {
         LARGE_INTEGER nEndTime;
