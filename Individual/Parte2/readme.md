@@ -31,7 +31,7 @@ SSE, ya que se pueden reconocer instrucciones del set SSE2 tales como minpd, max
 A medida que la longitud del array va aumentando, podemos observar que la ganancia se va estabilizando en el 100%, siendo la implementacion en SSE el doble de rapida que en C.
 
 - Realiza una batería de pruebas y muéstralo utilizando gráficas explicativas.
-![Grafico comparativo](https://imgur.com/eAM5Mlr)
+![Grafico comparativo](https://i.imgur.com/eAM5Mlr.png)
 
 
 ## NET Data Transfer (comparando assembler + C)
