@@ -39,6 +39,7 @@ int main(int argc, char* argv[])
 		dwTimeStart = clock();
 		for(i = 0; i < ITERATION; i++)
 			DataTransferTypical(piDst, piSrc, dwDataSizeInBytes);
+
 		dwTimeEnd = clock();
 		printf("== Typical Transfer of %d * %d times of %d bytes data ==\nTime Elapsed = %d msec\n\n", ITERATION, DATA_SIZE, sizeof(int), dwTimeEnd - dwTimeStart);
 
@@ -49,6 +50,7 @@ int main(int argc, char* argv[])
 		dwTimeStart = clock();
 		for(i = 0; i < ITERATION; i++)
 			DataTransferOptimised(piDst, piSrc, dwDataSizeInBytes);
+
 		dwTimeEnd = clock();
 		printf("== Optimised Transfer of %d * %d times of %d bytes data ==\nTime Elapsed = %d msec\n\n", ITERATION, DATA_SIZE, sizeof(int), dwTimeEnd - dwTimeStart);
 

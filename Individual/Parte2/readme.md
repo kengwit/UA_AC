@@ -1,15 +1,11 @@
 # MMX
 ```
 MMX es un conjunto de instrucciones SIMD (Single Instruction Multiple Data) creadas por Intel. La tecnología MMX fue diseñada para mejorar de forma sustancial el rendimiento de las aplicaciones multimedia y de telecomunicaciones. Se basa en un nuevo juego de instrucciones, que se añadían a las ya existentes en la arquitectura 80×86, y en nuevos tipos de datos de 64 bits. Dichas instrucciones trabajaban en paralelo sobre múltiples elementos de datos empaquetados en cantidades de 64 bits.
-
-https://docs.oracle.com/cd/E18752_01/html/817-5477/eojdc.html
 ```
 
 # SSE (Streaming SIMD Extensions)
 ```
-Las SSE (SSE2, SSE3, SSE4) son unas extensiónes al grupo de instrucciones MMX, que también fueron desarrolladas por Intel, concretamente, para sus procesadores Pentium III (1999). Están especialmente pensadas para decodificación de MPEG2 (códec vinculado a los DVD), procesamiento de gráficos tridimensionales y software de reconocimiento de voz. Con la tecnología SSE, los microprocesadores x86 fueron dotados de setenta nuevas instrucciones y de ocho registros nuevos: del xmm0 al xmm7. Estos registros tienen una extensión de 128 bits (es decir que pueden almacenar hasta 16 bytes de información cada uno).
-
-https://docs.oracle.com/cd/E26502_01/html/E28388/eojde.html
+Las SSE (SSE2, SSE3, SSSE3, SSE4 (4.1, 4.2, a) son unas extensiónes al grupo de instrucciones MMX, que también fueron desarrolladas por Intel, concretamente, para sus procesadores Pentium III (1999). Están especialmente pensadas para decodificación de MPEG2 (códec vinculado a los DVD), procesamiento de gráficos tridimensionales y software de reconocimiento de voz. Con la tecnología SSE, los microprocesadores x86 fueron dotados de setenta nuevas instrucciones y de ocho registros nuevos: del xmm0 al xmm7. Estos registros tienen una extensión de 128 bits (es decir que pueden almacenar hasta 16 bytes de información cada uno).
 ```
 
 ## NET Bubble Sort SEE (comparando assembler + C)
@@ -22,7 +18,9 @@ https://docs.oracle.com/cd/E26502_01/html/E28388/eojde.html
 	SSE, ya que se pueden reconocer instrucciones del set SSE2 tales como minpd, maxpd, movapd...
 ```
 - Comenta el funcionamiento de la función: void sortDoublesSSE(Int32 byteCount, double* values)
-
+```
+	// TO DO
+```
 
 - ¿Qué ganancia obtenemos con el algoritmo MMX/SSE con respecto al algoritmo secuencial?
 ```
@@ -34,18 +32,29 @@ https://docs.oracle.com/cd/E26502_01/html/E28388/eojde.html
 
 ## NET Data Transfer (comparando assembler + C)
 - ¿Qué hace el programa?
-
+```
+	Medir cuanto tarda el sistema en transferir datos (4 bytes (sizeof: int ) de un registro de memoria a otro una cantidad de veces (definido en ITERATION), implementado en C y en Inline Assembly, mostrando la diferencia entre ambos. Además permite reejecutar dicha prueba para obtener unos datos concluyentes sobre este.
+```
 
 - Explica las siguientes instrucciones: shufpd, cmpltpd, movmskpd
 
+	- shufpd: Baraja dos pares de valores de precision de coma flotante de mxx1 y mxx2, y devuelve el resultado a mxx1.
+	- cmpltpd: Compara si dos valores de precision de coma flotante son "menores que" entre si.
+	- movmskpd: Extrae la mascara de signo de un valor de precision de coma flotante en mmx.
+
 
 - Explica el funcionamiento de la siguiente función: int DataTransferOptimised(int* piDst, int* piSrc, unsigned long SizeInBytes)
-
+```
+	// TO DO
+```
 
 - ¿Qué ganancia obtenemos con el algoritmo optimizado mediante extensiones SIMD con respecto al algoritmo secuencial? 
-
+```
+	Si comparamos los resultado tras varias iteraciones, podemos comprobar que la implementación en ensamblador llega a ser hasta 5 veces más rapida que la implementada en C.
+```
 
 - Realiza una batería de pruebas y muéstralo utilizando gráficas explicativas.
+![Grafico comparativo](https://i.imgur.com/C6410wI.png)
 
 
 ## NET Inner Product (comparando assembler + C)
@@ -57,7 +66,6 @@ https://docs.oracle.com/cd/E26502_01/html/E28388/eojde.html
 
 - ¿Qué ganancia obtenemos con el algoritmo optimizado mediante extensiones SIMD con respecto al algoritmo secuencial?
 
-
 - Realiza una batería de pruebas y muéstralo utilizando gráficas explicativas.
 
 
@@ -67,7 +75,19 @@ https://docs.oracle.com/cd/E26502_01/html/E28388/eojde.html
 
 - ¿Qué ganancia obtenemos con el algoritmo optimizado mediante extensiones SIMD con respecto al algoritmo secuencial?
 
-
 - Realiza una batería de pruebas y muéstralo utilizando gráficas explicativas.
 
+
+
+
+# Fuentes:
+- https://books.google.es/books?id=bt3ZjeB4v9gC&printsec=frontcover&hl=es#v=onepage&q&f=false
+- https://books.google.es/books?id=c3SlgrqMid4C&printsec=frontcover&hl=es#v=onepage&q&f=false
+- https://books.google.es/books?id=C3_WIQOYE2EC&printsec=frontcover&hl=es#v=onepage&q&f=false
+- https://books.google.es/books?id=FGxOp0lAljUC&printsec=frontcover&hl=es#v=onepage&q&f=false
+- http://softpixel.com/~cwright/programming/simd/
+- https://docs.oracle.com/cd/E18752_01/html/817-5477/eojdc.html
+- https://docs.oracle.com/cd/E26502_01/html/E28388/eojde.html
+- http://www.jegerlehner.ch/intel/IntelCodeTable.pdf
+- https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf
 
