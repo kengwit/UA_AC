@@ -11,7 +11,7 @@ Las SSE (SSE2, SSE3, SSSE3, SSE4 (4.1, 4.2, a) son unas extensiónes al grupo de
 ## NET Bubble Sort SEE (comparando assembler + C)
 - ¿Qué hace el programa?
 ```
-	Ordena arrays con contenido aleatorio de valor double, usando el algoritmo BubbleSort implementado en C y en Inline Assembly. Se ordenan arrays de longitud 2 cuya longitud  crece expotencialmente despues de cada iteracion hasta tener la longitud 66537, y muestra  el tiempo transcurrido en cada caso, comparando ambas implementaciones.
+	Ordena arrays con contenido aleatorio de valor double, usando el algoritmo BubbleSort implementado en C y en Inline ensamblador. Se ordenan arrays de longitud 2 cuya longitud  crece expotencialmente despues de cada iteracion hasta tener la longitud 66537, y muestra  el tiempo transcurrido en cada caso, comparando ambas implementaciones.
 ```
 - ¿Se utilizan extensiones MMX o SSE?
 ```
@@ -33,7 +33,7 @@ Las SSE (SSE2, SSE3, SSSE3, SSE4 (4.1, 4.2, a) son unas extensiónes al grupo de
 ## NET Data Transfer (comparando assembler + C)
 - ¿Qué hace el programa?
 ```
-	Medir cuanto tarda el sistema en transferir datos (4 bytes (sizeof: int ) de un registro de memoria a otro una cantidad de veces (definido en ITERATION), implementado en C y en Inline Assembly, mostrando la diferencia entre ambos. Además permite reejecutar dicha prueba para obtener unos datos concluyentes sobre este.
+	Medir cuanto tarda el sistema en transferir datos (4 bytes (sizeof: int ) de un registro de memoria a otro una cantidad de veces (definido en ITERATION), implementado en C y en Inline ensamblador, mostrando la diferencia entre ambos. Además permite reejecutar dicha prueba para obtener unos datos concluyentes sobre este.
 ```
 
 - Explica las siguientes instrucciones: shufpd, cmpltpd, movmskpd
@@ -60,7 +60,7 @@ Las SSE (SSE2, SSE3, SSSE3, SSE4 (4.1, 4.2, a) son unas extensiónes al grupo de
 ## NET Inner Product (comparando assembler + C)
 - ¿Qué hace el programa?
 ```
-	Suma la multiplicación de arrays rellenos de valores aleatorios de distinto tipo implementado de diferentes maneras, en C, en ensamblador usando instrucciones de SSE2 y otra con instrucciones de SS3.
+	Suma la multiplicación de arrays rellenos de valores aleatorios de distinto tipo implementado de diferentes maneras, en C, en ensamblador usando instrucciones de SSE2 y otra con instrucciones de SS3. Cabe considerar de que el programa además usa extensiones de Microsoft.
 ```
 
 - Comenta la siguiente función: float sse3_inner(const float* a, const float* b, unsigned int size)
@@ -74,16 +74,22 @@ Las SSE (SSE2, SSE3, SSSE3, SSE4 (4.1, 4.2, a) son unas extensiónes al grupo de
 ```
 
 - Realiza una batería de pruebas y muéstralo utilizando gráficas explicativas.
+![Grafico comparativo](https://i.imgur.com/fQVQgke.png)
 
 
 ## NET MatrixVectorMult (comparando assembler + C)
 - ¿Que hace el programa?
-
+```
+	Pide al usuario un tamaño, y general un vector y una matriz de dicho tamaño con los valores de su propia posición empezando desde cero, despues realiza un calculo el cual es la suma de la multiplicación itinerada de la matriz, implementada en C y en ensamblador, y muestra la comparativa entre ambas, moestrando cual ha usado menos ciclos de reloj y el tiempo ahorrado al usar ensamblador.
+```
 
 - ¿Qué ganancia obtenemos con el algoritmo optimizado mediante extensiones SIMD con respecto al algoritmo secuencial?
-
+```
+	Despues de re-ejecutar el programa con varias dimensiones para el vector, podemos presenciar que la ganancia se va estabilizando al rededor de un 75%, siendo la funcion en ensamblador un 75%~ más rapida que la implementada en C.
+```
 
 - Realiza una batería de pruebas y muéstralo utilizando gráficas explicativas.
+![Grafico comparativo](https://i.imgur.com/cc3IvA2.png)
 
 
 

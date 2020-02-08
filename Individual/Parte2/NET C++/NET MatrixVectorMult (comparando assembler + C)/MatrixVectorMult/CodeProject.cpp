@@ -40,6 +40,7 @@ int main(int argc, char* argv[])
 	__int64 t1=GetTime();
 	for(i=0; i<100; i++)
 		result=MatrixVector_C(matrix,vector, size);
+
 	__int64 t2=GetTime();
 	__int64 time_C=t2-t1;
 	printf("Time spend en C++ fonction: %d clock cycles.\n",time_C);
