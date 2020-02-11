@@ -19,14 +19,14 @@ int suma(int a, int b);
 	printf_s("Pulse <Return> para finalizar...");
 	getchar();
 }*/
-
+/*
 int suma(int a, int b)
 {
 	__asm
 	{
-		mov eax, a; Almacena en EAX el primer argumento
-		mov ecx, b; Almacena en ECX el segundo argumento
-		add eax, ecx; Suma de los operandos, deja el resultado en eax
+		mov eax, a; 
+		mov ecx, b; 
+		add eax, ecx;
 		// Devuelve el resultado de EAX
 	}
-}
+}*/
