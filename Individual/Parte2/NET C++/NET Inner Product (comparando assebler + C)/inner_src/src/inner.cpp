@@ -8,6 +8,7 @@ void tic()
         QueryPerformanceFrequency(&m_nFreq);
         QueryPerformanceCounter(&m_nBeginTime);
 }
+
 __int64 toc()
 {
         LARGE_INTEGER nEndTime;
@@ -237,7 +238,8 @@ void vfloat()
 
         wprintf(L" sse2 intrin\t");
         tic();
-        sum = sse_inner(pv1, pv2, size);
+        sum = 
+            (pv1, pv2, size);
         toc();
         wprintf(L" %d\n", (int)sum);
 
