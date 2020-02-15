@@ -8,8 +8,13 @@ void swapNumber(int *a, int *b);
 int main(void)
 {
     const int arrSize = 20;
-    int arr[arrSize];
     
+    int byteCount = sizeof(int) * arrSize;
+
+    int* arr = (int*)_aligned_malloc(byteCount, 16);
+    if (arr == NULL)
+        return 1;
+
     srand(27015);
 
     printf_s("Valor del array desordenado: \n");
@@ -36,8 +41,41 @@ int main(void)
 
 }
 
-void bubbleSort(int arr[], int size)
+void bubbleSort(int* arr, int size)
 {
+    int* a = &size;
+
+    __asm {
+            mov esi, arr;       // Inicio del array.
+            mov edi, a;         // tamaño.
+            // --------------------------------
+
+         /*   mov eax, edi;       // contador externo.
+        
+        externo:                // Tag del bucle externo.
+            mov ebx, edi;       // contador interno.
+
+        interno:                // Tag del bucle interno.*/
+            mov ecx, [esi];     // Valor actual.
+            mov edx, [esi + 4]; // Valor siguiente.
+            // cpm ecx, edx;       // Comparamos el valor actual con el siguiente
+            // jl guardar;         // Si el valor actual ECX es menor que la siguiente [ESI + 4], entonces nos saltamos el paso de intercambiarlos.
+
+            xchg ecx, edx;      // Intercambiamos.
+
+            mov [esi], ecx;     // Guardamos el valor actual.
+            mov [esi + 4], edx; // Guardamos el valor siguiente.
+
+     /*   guardar:                // Tag  de las operaciones comunes por iteracion
+            mov esi, [esi + 4]  // Siguiente iteracion
+            dec ebx;            // Decretemntamos 1 en el contador interno.
+            jnz interno;        // Si no es 0, repetimos el bucle interno.
+
+            dec eax;            // Decrementamos 1 en el contador externo.
+            jnz externo;        // Si no es 0, repetimos el bucle externo.*/
+    }
+
+    /*
      for (int i = 0; i < size - 1; i++)
         for (int j = 0; j < size - i - 1; j++)
             if (arr[j] > arr[j + 1]) {
@@ -48,68 +86,26 @@ void bubbleSort(int arr[], int size)
                 swapNumber(&arr[j], &arr[j+1]);
 
                 printf_s("%d \n", arr[j]);
-                
-                /*
-                int tempVal = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = tempVal;*/
-            }
+              
+            }*/
+            
 }
 
 void swapNumber(int* a, int* b /*, int* size*/ ) {
     __asm
     {
- /*
-    outterloop:
-        add edx, 1;     // Counter i ;
-        move ebs, edx;  // move counter to countercalculation site.
-        add ebs, -size; // i - size;
-        add ebs, -1;    // i - 1;
+        // Haciendo que las variables de nustro codigo en C sea usable en nuestro bloque __asm.
+        mov esi, a;        // guardamos las referencias de las variables en un registro.
+        mov edi, b;        // guardamos las referencias de las variables en un registro.
 
-        // Condition to jump if i edx >= efx
-        jz innerloop;
+        // Empieza la manipulacion
+        mov eax, [esi];    // guardamos los valores en memoria de las referencias en un registro.
+        mov ebx, [edi];    // guardamos los valores en memoria de las referencias en un registro.
 
-    innerloop:
-        add eex, 1;     // Counter j;
-        move ebs, eex;  // move counter to countercalculation site.
-        add ebs, -size; // i - size;
-        add ebs, -edx;  // i - i;
-        add ebs, -1;    // i - 1;
+        xchg eax, ebx;     // damos la vuelta a los valores que tenemos guardados en los registros.
 
-        // Condition to jump if eex >= efx
-        jz end;
-
-    innerswap:
-
-        // check if arr[j] > arr[j + 1], and if its, do swap.
-
-        jz swap;
-    swap:
-*/
-
-        // Tenemos que traspasar la direccion de MEMORIA de las variables
-        //  a los REGISTROS, y una vez ahi, usamos los corchetes para hacer referencia a
-        //  a la direccion de memoria.
-        mov esi, a;
-        mov edi, b;
-
-        mov eax, [esi];
-        mov edx, [edi];
-
-        mov [esi], edx;
-        mov [edi], eax;
-
-        /* NO FUNCIONA
-        mov eax, a;
-        mov ebx, b;
-
-        mov ecx, eax;
-        mov a, ebx;
-        mov b, ecx;
-        */
-       
- // end:
+        mov [esi], eax;    // guardamos los valores de los registros de vuelta a la memoria.
+        mov [edi], ebx;    // guardamos los valores de los registros de vuelta a la memoria.
 
     }
-    
 }
