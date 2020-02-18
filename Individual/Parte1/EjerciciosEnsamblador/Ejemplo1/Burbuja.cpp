@@ -53,7 +53,9 @@ void bubbleSort(int* arr, int size)
          /*   mov eax, edi;       // contador externo.
         
         externo:                // Tag del bucle externo.
+            
             mov ebx, edi;       // contador interno.
+            sub ebx, eax;
 
         interno:                // Tag del bucle interno.*/
             mov ecx, [esi];     // Valor actual.
