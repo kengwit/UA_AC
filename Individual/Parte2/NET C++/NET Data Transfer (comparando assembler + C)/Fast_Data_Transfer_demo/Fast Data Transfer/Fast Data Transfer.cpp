@@ -68,14 +68,12 @@ int main(int argc, char* argv[])
 #pragma warning(push)
 #pragma warning(disable:4018 4102)
 
-int DataTransferTypical(int* piDst, int* piSrc, unsigned long SizeInBytes)
+int DataTransferTypical(int* piDst, int* piSrc, unsigned long SizeInBytes )
 {
 	unsigned long dwNumElements = SizeInBytes / sizeof(int);
 
 	for(int i = 0; i < dwNumElements; i++)
-	{
 		*(piDst + i) = *(piSrc + i);
-	}
 
 	return 0;
 }

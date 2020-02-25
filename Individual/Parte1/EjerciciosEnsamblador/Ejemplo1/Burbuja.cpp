@@ -43,38 +43,37 @@ int main(void)
 
 void bubbleSort(int* arr, int size)
 {
+    --size;
     int* a = &size;
 
     __asm {
-            mov esi, arr;       // Inicio del array.
             mov edi, a;         // tamaño.
-            // --------------------------------
-
-         /*   mov eax, edi;       // contador externo.
+            mov eax, edi;       // contador externo.
         
         externo:                // Tag del bucle externo.
-            
+            mov esi, arr;       // Inicio del array.
             mov ebx, edi;       // contador interno.
             sub ebx, eax;
 
-        interno:                // Tag del bucle interno.*/
+        interno:                // Tag del bucle interno.
             mov ecx, [esi];     // Valor actual.
             mov edx, [esi + 4]; // Valor siguiente.
-            // cpm ecx, edx;       // Comparamos el valor actual con el siguiente
-            // jl guardar;         // Si el valor actual ECX es menor que la siguiente [ESI + 4], entonces nos saltamos el paso de intercambiarlos.
+            cmp ecx, edx;       // Comparamos el valor actual con el siguiente.
+            jl guardar;         // Si el valor actual ECX es menor que la siguiente [ESI + 4], entonces nos saltamos el paso de intercambiarlos.
 
             xchg ecx, edx;      // Intercambiamos.
 
             mov [esi], ecx;     // Guardamos el valor actual.
             mov [esi + 4], edx; // Guardamos el valor siguiente.
 
-     /*   guardar:                // Tag  de las operaciones comunes por iteracion
-            mov esi, [esi + 4]  // Siguiente iteracion
+       guardar:                 // Tag  de las operaciones comunes por iteracion.
+            add esi, 4;         // Siguiente iteracion
             dec ebx;            // Decretemntamos 1 en el contador interno.
             jnz interno;        // Si no es 0, repetimos el bucle interno.
 
             dec eax;            // Decrementamos 1 en el contador externo.
-            jnz externo;        // Si no es 0, repetimos el bucle externo.*/
+            jnz externo;        // Si no es 0, repetimos el bucle externo.
+    
     }
 
     /*
