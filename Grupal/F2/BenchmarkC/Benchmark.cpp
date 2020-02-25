@@ -27,34 +27,42 @@ void rellenar(int* vector1, int* vector2, int size) {
     }
 }
 
-void multiplicar(int* vector1, int* vector2, int size) {
-    long int* res = new long int[size];
+void calcula(int* vector1, int* vector2, int size) {
         for (int i = 0; i < size; i++) {
-            res[i] = (vector1[i] * vector2[i]);
+            (vector1[i] * vector2[i]);
+            (vector1[i] + vector2[i]);
+            (vector1[i] - vector2[i]);
+            (vector1[i] / vector2[i]);
+            (vector1[i] % vector2[i]);
         }
 }
 
 int main() {
     int* vector1;
     int* vector2;
+    int loopsPerSize = 10000000;
 
-    for (int size = 100; size <= 130; size++) {
-        clock_t begin = clock();
+    for (int size = 1; size <= 30; size++) {
+        clock_t begin;
+        clock_t end;
 
-        for (int i = 0; i < (size * CLOCKS_PER_SEC); i++) {
-            vector1 = new int[size];
-            vector2 = new int[size];
-            rellenar(vector1, vector2, size);
-            multiplicar(vector1, vector2, size);
-            delete[] vector1;
-            delete[] vector2;
+        vector1 = new int[size];
+        vector2 = new int[size];
+
+        rellenar(vector1, vector2, size);
+
+        begin = clock();
+ 
+        for (int i = 0; i < loopsPerSize; i++) {
+            calcula(vector1, vector2, size);
         }
 
-        clock_t end = clock();
+        end = clock();
 
+        delete[] vector1;
+        delete[] vector2;
 
-        cout << (float)(end - begin) / CLOCKS_PER_SEC << " ms \t ";
-        cout << "Memoria en uso: " << pmc.PrivateUsage << "\n";
+        cout << (float)(end - begin) / CLOCKS_PER_SEC << " s \t ";
     }
     
     return 0;
