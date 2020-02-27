@@ -6,6 +6,7 @@
 using namespace std;
 using namespace chrono;
 
+// Funcion que imprime los valores de los arrays, solo tiene uso visual / para depurar.
 void imprimir(const int* vector, int size) {
     for (int index = 0; index < size; index++) {
         if (index == 0 && index != (size - 1))
@@ -19,6 +20,7 @@ void imprimir(const int* vector, int size) {
     }
 }
 
+// Rellena los arrays con valores ascendentes dependiendo del tamaño del propio array.
 void rellenar(int* vector1, int* vector2, int size) {
     for (int index = 0; index < size; index++) {
         vector1[index] = (index);
@@ -26,88 +28,119 @@ void rellenar(int* vector1, int* vector2, int size) {
     }
 }
 
+// Multiplica los arrays.
 void multiplicar(int* vector1, int* vector2, int size) {
     for (int i = 0; i < size; i++) {
-        (vector1[i] * vector2[i]);
+        const int x = (vector1[i] * vector2[i]);
     }
 }
 
+// Suma los arrays.
 void sumar(int* vector1, int* vector2, int size) {
     for (int i = 0; i < size; i++) {
-        (vector1[i] + vector2[i]);
+        const int x = (vector1[i] + vector2[i]);
     }
 }
 
-void logo() {
-    system("systeminfo");
-    cout << endl << endl
-        << "                      _________________________________________" << endl
-        << "                      |            __   ___    ___   __      __ ___     ____    _____  ___       |" << endl
-        << "                      |          /  __|  |  _   \\  |    _| |   \\     | | |__   /   |  ___  |  |__   __| |  __  \\       |" << endl
-        << "                      |         /  /_     |  | |   | |   |      | |\\ \\    | |      /  /    | |       | |       |  |       |  |   |  \\      |" << endl
-        << "                      |        /  __|    |  ||   / |   |__  | | \\ \\   | |   /\\/  /     | |       | |       |  |       |  |   |  |      |" << endl
-        << "                      |       /  /          |      /   |   __|  | |  \\ \\  | |   \\/  /      | |       | |       |  |       |  |   |  |      |" << endl
-        << "                      |      /  /           |  |\\  \\   |  |       | |   \\ \\ | |   /  /\\      | |       | |       |  |       |  |   |  |      |" << endl
-        << "                      |     /  /            |  | \\  \\  |  |__   | |    \\ \\| |  /  /\\/_   | |__| |   __|  |__  |  |_|  /      |" << endl
-        << "                      |    /_/             ||  \\\\ |__|  ||     \\_| /__|   |___|  |____| |____/       |"<<endl;
-    cout << "                      |________________________________________|" << endl << endl << endl;
-    cout << endl << endl;
-
-}
-
+// Programa principal del benchmark
 int main() {
-    ofstream fs("salida.txt");
-    logo();
+
+    // Archivo de salida de los resultados.
+    ofstream fs("salida_C.txt");
+
+    // Imprimimos los datos del ordenador.
+    #ifdef _WIN32
+        system("systeminfo");
+    #endif
+
+    #ifdef _unix
+        system("lshw -short");
+    #endif
+
+    // Declaracion de los vectores.
     int* vector1;
     int* vector2;
-    float duracion=0.0, total = 0.0;
-    int loop=1000000;
-    fs << "Size   Duracion"<<endl;
+
+    // Declaracion de los tiempos.
+    float duracion = 0.0, total = 0.0;
+
+    // Cantidad de iteraciones por tamaño.
+    int loop = 1000000;
+
+
+    cout << "Realizando calculos..." << endl << endl;
+
+    fs   << "Tamanio\t\tDuracion" << endl << "---------------------------" << endl;
+
+    cout << "Tamanio\t\tDuracion" << endl << "---------------------------" << endl;
+
+    // Bucle para multiplciar.
     for (int size = 100; size <= 130; size++) {
         vector1 = new int[size];
         vector2 = new int[size];
+
         rellenar(vector1, vector2, size); 
 
         clock_t begin = clock();
+
         for (int i = 0; i < loop; i++) {
             multiplicar(vector1, vector2, size);
         }
+
         clock_t end = clock();
 
         duracion = (float)(end - begin)/loop;
+
         delete[] vector1;
         delete[] vector2;
-        fs << size<<"    ";
-        fs << (float)(duracion / CLOCKS_PER_SEC)*1000000<< char(230) <<"s "<<endl;
-        total += (float)(duracion / CLOCKS_PER_SEC) * 1000000;
-    }
-    cout << endl << "==Media duracion de multiplicacion " << (total / (10030 - 10000)) << char(230) << "s " << endl;
-    fs << endl << "==Media duracion de multiplicacion " << (total / (10030 - 10000)) << char(230) << "s " << endl;
 
+        fs << size << "\t\t";
+        fs << (float)(duracion / CLOCKS_PER_SEC) * 10000 << "\tms "<<endl;
+
+        cout << size << "\t\t";
+        cout << (float)(duracion / CLOCKS_PER_SEC) * 10000 << "\tms " << endl;
+
+        total += (float)(duracion / CLOCKS_PER_SEC) * 10000;
+    }
+
+    cout << "==> Media duracion de multiplicacion \t" << (total / (30))  << "ms " << endl << endl;
+    fs   << "==> Media duracion de multiplicacion \t" << (total / (30))  << "ms " << endl << endl;
+
+    // Bucle para sumar.
      duracion = 0.0;
      total = 0.0;
 
     for (int size = 100; size <= 130; size++) {
+
         vector1 = new int[size];
         vector2 = new int[size];
+
         rellenar(vector1, vector2, size);
 
         clock_t begin = clock();
+
         for (int i = 0; i < loop; i++) {
             sumar(vector1, vector2, size);
         }
+
         clock_t end = clock();
 
         duracion = (float)(end - begin) / loop;
+
         delete[] vector1;
         delete[] vector2;
-        fs << size << "    ";
-        fs << (float)(duracion / CLOCKS_PER_SEC) * 1000000 << char(230) << "s " << endl;
-        total += (float)(duracion / CLOCKS_PER_SEC) * 1000000;
+
+        fs << size << "\t\t";
+        fs << (float)(duracion / CLOCKS_PER_SEC) * 10000 << "\tms " << endl;
+
+        cout << size << "\t\t";
+        cout << (float)(duracion / CLOCKS_PER_SEC) * 10000 << "\tms " << endl;
+
+        total += (float)(duracion / CLOCKS_PER_SEC) * 10000;
     }
 
-    cout << endl<<"==Media duracion de suma "<<(total/(10030-10000))<< char(230) << "s "<<endl;
-    fs << endl << "==Media duracion de suma " << (total / (10030 - 10000)) << char(230) << "s " << endl;
+    cout << "==> Media duracion de suma \t\t" << (total / (30)) << "ms " << endl;
+    fs   << "==> Media duracion de suma \t\t" << (total / (30)) << "ms " << endl;
 
     return 0;
 }
