@@ -58,8 +58,8 @@ int main() {
     #endif
 
     // Declaracion de los vectores.
-    int* vector1;
-    int* vector2;
+    int *vector1;
+    int *vector2;
 
     // Declaracion de los tiempos.
     float duracion = 0.0, total = 0.0;
@@ -76,8 +76,8 @@ int main() {
 
     // Bucle para multiplciar.
     for (int size = 100; size <= 130; size++) {
-        vector1 = new int[size];
-        vector2 = new int[size];
+        vector1 = (int *)malloc(size * sizeof(int));
+        vector2 = (int *)malloc(size * sizeof(int));
 
         rellenar(vector1, vector2, size); 
 
