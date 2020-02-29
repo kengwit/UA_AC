@@ -1,4 +1,3 @@
-// BenchmarkC.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -145,8 +144,8 @@ int main() {
      fprintf(fp, "==> Duracion media de suma \t%f ms \n\n", (total / (30)));
      printf("==> Duracion media de suma \t%f ms \n\n", (total / (30)));
 
-     printf("Aprieta cualquier tecla para cerrar.\n");
-     getchar();
+     printf("Aprieta INTRO para cerrar.\n");
+     const char x = getchar();
 
 
     return 0;
