@@ -93,11 +93,13 @@ int main() {
         free(vector1);
         free(vector2);
 
+        float a = (float)(duracion / CLOCKS_PER_SEC) * 10000;
+
         fprintf(fp, "%d\t\t", size);
-        fprintf(fp, "%f ms\n", (duracion / CLOCKS_PER_SEC) * 10000);
+        fprintf(fp, "%f ms\n", a);
 
         printf("%d\t\t", size);
-        printf("%f ms\n", (duracion / CLOCKS_PER_SEC) * 10000);
+        printf("%f ms\n", a);
 
         total += (float)(duracion / CLOCKS_PER_SEC) * 10000;
     };
@@ -129,11 +131,13 @@ int main() {
          free(vector1);
          free(vector2);
 
+         float a = (float)(duracion / CLOCKS_PER_SEC) * 10000;
+
          fprintf(fp, "%d\t\t", size);
-         fprintf(fp, "%f ms\n", (duracion / CLOCKS_PER_SEC) * 10000);
+         fprintf(fp, "%f ms\n", a);
 
          printf("%d\t\t", size);
-         printf("%f ms\n", (duracion / CLOCKS_PER_SEC) * 10000);
+         printf("%f ms\n", a);
 
          total += (float)(duracion / CLOCKS_PER_SEC) * 10000;
      };
@@ -142,7 +146,8 @@ int main() {
      printf("==> Duracion media de suma \t%f ms \n\n", (total / (30)));
 
      printf("Aprieta cualquier tecla para cerrar.\n");
-     
+     getchar();
+
 
     return 0;
 };
