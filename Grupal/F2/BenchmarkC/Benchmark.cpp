@@ -50,11 +50,13 @@ int main() {
 
     // Imprimimos los datos del ordenador.
     #ifdef _WIN32
+        system("wmic cpu get caption, deviceid, name, numberofcores, maxclockspeed, status");
         system("systeminfo");
     #endif
 
     #ifdef _unix
         system("lshw -short");
+        system("name -a");
     #endif
 
     // Declaracion de los vectores.
