@@ -36,23 +36,29 @@ int main() {
     fopen_s(&fp, "salida_C.txt", "w");
     
     if (fp == 0) {
-        printf("Error creando archivo.");
+        printf("Error creando archivo de salida.");
         return 1;
     }
 
     // Imprimimos los datos del ordenador.
     char command[200];
     #ifdef _WIN32
-        strcpy_s(command, "wmic cpu get caption, deviceid, name, numberofcores, maxclockspeed, status");
+        // Muestra y guarda el tipo de procesador.
+        strcpy_s(command, "wmic cpu get caption, deviceid, name, numberofcores, maxclockspeed, status && wmic cpu get caption, deviceid, name, numberofcores, maxclockspeed, status > HWInfo.txt");
         system(command);
-        strcpy_s(command, "systeminfo");
+
+        // Muestra y guarda la información del SO
+        strcpy_s(command, "systeminfo && systeminfo > SWInfo.txt");
         system(command);
     #endif
 
     #ifdef _unix
-        strcpy(command, "lshw -short");
+        // Muestra y guarda el tipo de procesador
+        strcpy_s(command, "lshw -short && lshw -short > HWInfo.txt");
         system(command);
-        strcpy(command, "name -a");
+
+        // Muestra y guarda la información del SO
+        strcpy_s(command, "name -a > SWInfo.txt");
         system(command);
     #endif
 
@@ -74,8 +80,14 @@ int main() {
     
     // Bucle para multiplciar.
     for (int size = 100; size <= 130; size++) {
+
         vector1 = (int*)malloc(size * sizeof(int));
         vector2 = (int*)malloc(size * sizeof(int));
+
+        if (vector1 == NULL || vector2 == NULL) {
+            printf("No se pudo asignar memoria para los vectores.");
+            return 1;
+        }
 
         rellenar(vector1, vector2, size);
 
@@ -114,6 +126,11 @@ int main() {
 
          vector1 = (int*)malloc(size * sizeof(int));
          vector2 = (int*)malloc(size * sizeof(int));
+
+         if (vector1 == NULL || vector2 == NULL) {
+             printf("No se pudo asignar memoria para los vectores.");
+             return 1;
+         }
 
          rellenar(vector1, vector2, size);
 
