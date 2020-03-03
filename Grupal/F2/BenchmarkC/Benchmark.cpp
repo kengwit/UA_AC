@@ -6,6 +6,32 @@
 #include <string.h>
 #include "malloc.h"
 
+#ifdef _WIN32
+#include <windows.h>
+
+double PCFreq = 0.0;
+__int64 CounterStart = 0;
+
+void StartCounter()
+{
+    LARGE_INTEGER li;
+    if (!QueryPerformanceFrequency(&li))
+        printf("QueryPerformanceFrequency failed!\n");
+
+    PCFreq = double(li.QuadPart);
+
+    QueryPerformanceCounter(&li);
+    CounterStart = li.QuadPart;
+}
+
+double GetCounter()
+{
+    LARGE_INTEGER li;
+    QueryPerformanceCounter(&li);
+    return double(li.QuadPart - CounterStart) / PCFreq;
+}
+#endif
+
 // Rellena los arrays con valores ascendentes dependiendo del tamaño del propio array.
 void rellenar(int* vector1, int* vector2, int size) {
     for (int index = 0; index < size; index++) {
@@ -67,10 +93,10 @@ int main() {
     int *vector2;
 
     // Declaracion de los tiempos.
-    float duracion = 0.0, total = 0.0;
+    double duracion = 0, total = 0;
 
     // Cantidad de iteraciones por tamaño.
-    int loop = 1000000;
+    int loop = 3000000;
 
     printf("Realizando calculos... \n");
 
@@ -91,36 +117,50 @@ int main() {
 
         rellenar(vector1, vector2, size);
 
+    #ifdef _WIN32
+        StartCounter();
+    #endif
+    #ifdef _unix
         clock_t begin = clock();
+    #endif
+
 
         for (int i = 0; i < loop; i++) {
             multiplicar(vector1, vector2, size);
         };
 
-        clock_t end = clock();
+    #ifdef _unix
+         clock_t end = clock();
+    #endif
 
-        duracion = (float)(end - begin) / loop;
+        double time;
+
+    #ifdef _WIN32
+        time = GetCounter();
+    #endif
+    #ifdef _unix
+        time = (float)((end - begin) / loop / CLOCKS_PER_SEC) * 1000;
+    #endif
 
         free(vector1);
         free(vector2);
 
-        float a = (float)(duracion / CLOCKS_PER_SEC) * 10000;
 
         fprintf(fp, "%d\t\t", size);
-        fprintf(fp, "%f ms\n", a);
+        fprintf(fp, "%f s\n", time);
 
         printf("%d\t\t", size);
-        printf("%f ms\n", a);
+        printf("%f s\n", time);
 
-        total += (float)(duracion / CLOCKS_PER_SEC) * 10000;
+        total += time;
     };
 
-    fprintf(fp, "==> Media duracion de multiplicacion \t%f ms \n\n", (total / (30)));
-    printf("==> Media duracion de multiplicacion \t%f ms \n\n", (total / (30)));
+    fprintf(fp, "==> Media duracion de multiplicacion \t%f s \n\n", (total / (30)));
+    printf("==> Media duracion de multiplicacion \t%f s \n\n", (total / (30)));
 
     // Bucle para sumar.
-     duracion = 0.0;
-     total = 0.0;
+     duracion = 0;
+     total = 0;
 
      for (int size = 100; size <= 130; size++) {
 
@@ -134,32 +174,45 @@ int main() {
 
          rellenar(vector1, vector2, size);
 
-         clock_t begin = clock();
-
+    #ifdef _WIN32
+             StartCounter();
+    #endif
+    #ifdef _unix
+             clock_t begin = clock();
+    #endif
          for (int i = 0; i < loop; i++) {
              sumar(vector1, vector2, size);
          };
 
-         clock_t end = clock();
+    #ifdef _unix
+             clock_t end = clock();
+    #endif
 
-         duracion = (float)(end - begin) / loop;
+
+         double time;
+
+    #ifdef _WIN32
+             time = GetCounter();
+    #endif
+    #ifdef _unix
+             time = (float)((end - begin) / loop / CLOCKS_PER_SEC) * 1000;
+    #endif
 
          free(vector1);
          free(vector2);
 
-         float a = (float)(duracion / CLOCKS_PER_SEC) * 10000;
 
          fprintf(fp, "%d\t\t", size);
-         fprintf(fp, "%f ms\n", a);
+         fprintf(fp, "%f s\n", time);
 
          printf("%d\t\t", size);
-         printf("%f ms\n", a);
+         printf("%f s\n", time);
 
-         total += (float)(duracion / CLOCKS_PER_SEC) * 10000;
+         total += time;
      };
 
-     fprintf(fp, "==> Duracion media de suma \t%f ms \n\n", (total / (30)));
-     printf("==> Duracion media de suma \t%f ms \n\n", (total / (30)));
+     fprintf(fp, "==> Duracion media de suma \t%f s \n\n", (total / (30)));
+     printf("==> Duracion media de suma \t%f s \n\n", (total / (30)));
 
      printf("Aprieta INTRO para cerrar.\n");
      const char x = getchar();
