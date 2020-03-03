@@ -12,6 +12,7 @@
 double PCFreq = 0.0;
 __int64 CounterStart = 0;
 
+
 void StartCounter()
 {
     LARGE_INTEGER li;
@@ -32,7 +33,7 @@ double GetCounter()
 }
 #endif
 
-// Rellena los arrays con valores ascendentes dependiendo del tamaño del propio array.
+// Rellena los arrays con valores ascendentes dependiendo del tamaÃ±o del propio array.
 void rellenar(int* vector1, int* vector2, int size) {
     for (int index = 0; index < size; index++) {
         vector1[index] = (index);
@@ -73,7 +74,7 @@ int main() {
         strcpy_s(command, "wmic cpu get caption, deviceid, name, numberofcores, maxclockspeed, status && wmic cpu get caption, deviceid, name, numberofcores, maxclockspeed, status > HWInfo.txt");
         system(command);
 
-        // Muestra y guarda la información del SO
+        // Muestra y guarda la informaciÃ³n del SO
         strcpy_s(command, "systeminfo && systeminfo > SWInfo.txt");
         system(command);
     #endif
@@ -83,7 +84,7 @@ int main() {
         strcpy_s(command, "lshw -short && lshw -short > HWInfo.txt");
         system(command);
 
-        // Muestra y guarda la información del SO
+        // Muestra y guarda la informaciÃ³n del SO
         strcpy_s(command, "name -a > SWInfo.txt");
         system(command);
     #endif
@@ -95,7 +96,7 @@ int main() {
     // Declaracion de los tiempos.
     double duracion = 0, total = 0;
 
-    // Cantidad de iteraciones por tamaño.
+    // Cantidad de iteraciones por tamaÃ±o.
     int loop = 3000000;
 
     printf("Realizando calculos... \n");
