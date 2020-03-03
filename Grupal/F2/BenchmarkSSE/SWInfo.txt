@@ -1,77 +1,59 @@
 
-Host Name:                 DESKTOP-K851POD
-OS Name:                   Microsoft Windows 10 Education
-OS Version:                10.0.17134 N/A Build 17134
-OS Manufacturer:           Microsoft Corporation
-OS Configuration:          Standalone Workstation
-OS Build Type:             Multiprocessor Free
-Registered Owner:          Usuario de Windows
-Registered Organization:   
-Product ID:                00328-00000-00000-AA890
-Original Install Date:     01/11/2018, 18:36:12
-System Boot Time:          13/02/2020, 8:36:55
-System Manufacturer:       System manufacturer
-System Model:              System Product Name
-System Type:               x64-based PC
-Processor(s):              1 Processor(s) Installed.
-                           [01]: Intel64 Family 6 Model 94 Stepping 3 GenuineIntel ~3401 Mhz
-BIOS Version:              American Megatrends Inc. 1702, 28/01/2016
-Windows Directory:         C:\WINDOWS
-System Directory:          C:\WINDOWS\system32
-Boot Device:               \Device\HarddiskVolume5
-System Locale:             es;Spanish (International Sort)
-Input Locale:              es;Spanish (Traditional Sort)
-Time Zone:                 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris
-Total Physical Memory:     16.305 MB
-Available Physical Memory: 9.018 MB
-Virtual Memory: Max Size:  17.329 MB
-Virtual Memory: Available: 6.212 MB
-Virtual Memory: In Use:    11.117 MB
-Page File Location(s):     C:\pagefile.sys
-Domain:                    WORKGROUP
-Logon Server:              \\DESKTOP-K851POD
-Hotfix(s):                 19 Hotfix(s) Installed.
-                           [01]: KB4534130
-                           [02]: KB4230204
-                           [03]: KB4346084
-                           [04]: KB4456655
-                           [05]: KB4465663
-                           [06]: KB4477137
-                           [07]: KB4485449
-                           [08]: KB4486153
-                           [09]: KB4486161
-                           [10]: KB4486174
-                           [11]: KB4497398
-                           [12]: KB4509094
-                           [13]: KB4512576
-                           [14]: KB4516115
-                           [15]: KB4521861
-                           [16]: KB4523203
-                           [17]: KB4524244
-                           [18]: KB4537759
-                           [19]: KB4537762
-Network Card(s):           3 NIC(s) Installed.
-                           [01]: Intel(R) Ethernet Connection (2) I219-V
-                                 Connection Name: Ethernet
-                                 DHCP Enabled:    Yes
-                                 DHCP Server:     192.168.1.1
-                                 IP address(es)
-                                 [01]: 192.168.1.36
-                                 [02]: fe80::454:7ed5:c6c1:a016
-                           [02]: VirtualBox Host-Only Ethernet Adapter
-                                 Connection Name: VirtualBox Host-Only Network #2
-                                 DHCP Enabled:    No
-                                 IP address(es)
-                                 [01]: 192.168.56.1
-                                 [02]: fe80::800b:91b0:46cd:eb52
-                           [03]: Microsoft KM-TEST Loopback Adapter
-                                 Connection Name: Npcap Loopback Adapter
-                                 DHCP Enabled:    Yes
-                                 DHCP Server:     255.255.255.255
-                                 IP address(es)
-                                 [01]: 169.254.137.27
-                                 [02]: fe80::403b:cc50:421b:891b
-Hyper-V Requirements:      VM Monitor Mode Extensions: Yes
-                           Virtualization Enabled In Firmware: Yes
-                           Second Level Address Translation: Yes
-                           Data Execution Prevention Available: Yes
+Nombre de host:                            DESKTOP-RLLGPNC
+Nombre del sistema operativo:              Microsoft Windows 10 Home
+Versi¢n del sistema operativo:             10.0.17134 N/D Compilaci¢n 17134
+Fabricante del sistema operativo:          Microsoft Corporation
+Configuraci¢n del sistema operativo:       Estaci¢n de trabajo independiente
+Tipo de compilaci¢n del sistema operativo: Multiprocessor Free
+Propiedad de:                              Usuario de Windows
+Organizaci¢n registrada:                   
+Id. del producto:                          00326-10000-00000-AA039
+Fecha de instalaci¢n original:             15/05/2018, 17:29:38
+Tiempo de arranque del sistema:            29/02/2020, 17:49:10
+Fabricante del sistema:                    Timi
+Modelo el sistema:                         TM1701
+Tipo de sistema:                           x64-based PC
+Procesador(es):                            1 Procesadores instalados.
+                                           [01]: Intel64 Family 6 Model 142 Stepping 10 GenuineIntel ~1801 Mhz
+Versi¢n del BIOS:                          INSYDE Corp. XMAKB5R0P0401, 02/10/2017
+Directorio de Windows:                     C:\WINDOWS
+Directorio de sistema:                     C:\WINDOWS\system32
+Dispositivo de arranque:                   \Device\HarddiskVolume1
+Configuraci¢n regional del sistema:        es;Espa¤ol (internacional)
+Idioma de entrada:                         en-us;Ingl‚s (Estados Unidos)
+Zona horaria:                              (UTC+00:00) Dubl¡n, Edimburgo, Lisboa, Londres
+Cantidad total de memoria f¡sica:          8.076 MB
+Memoria f¡sica disponible:                 3.981 MB
+Memoria virtual: tama¤o m ximo:            16.152 MB
+Memoria virtual: disponible:               10.839 MB
+Memoria virtual: en uso:                   5.313 MB
+Ubicaci¢n(es) de archivo de paginaci¢n:    C:\pagefile.sys
+Dominio:                                   WORKGROUP
+Servidor de inicio de sesi¢n:              \\DESKTOP-RLLGPNC
+Revisi¢n(es):                              11 revisi¢n(es) instaladas.
+                                           [01]: KB4534130
+                                           [02]: KB4100347
+                                           [03]: KB4343669
+                                           [04]: KB4343902
+                                           [05]: KB4346084
+                                           [06]: KB4462930
+                                           [07]: KB4486153
+                                           [08]: KB4486161
+                                           [09]: KB4516115
+                                           [10]: KB4537759
+                                           [11]: KB4534293
+Tarjeta(s) de red:                         2 Tarjetas de interfaz de red instaladas.
+                                           [01]: Intel(R) Dual Band Wireless-AC 8265
+                                                 Nombre de conexi¢n: Wi-Fi
+                                                 DHCP habilitado:    S¡
+                                                 Servidor DHCP:      1.1.1.1
+                                                 Direcciones IP
+                                                 [01]: 172.27.111.151
+                                                 [02]: fe80::685a:fc20:8383:f02c
+                                           [02]: Bluetooth Device (Personal Area Network)
+                                                 Nombre de conexi¢n: Conexi¢n de red Bluetooth
+                                                 Estado:             Medios desconectados
+Requisitos Hyper-V:                        Extensiones de modo de monitor de VM: S¡
+                                           Se habilit¢ la virtualizaci¢n en el firmware: S¡
+                                           Traducci¢n de direcciones de segundo nivel: S¡
+                                           La prevenci¢n de ejecuci¢n de datos est  disponible: S¡
