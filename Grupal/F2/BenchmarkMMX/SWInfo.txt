@@ -1,0 +1,59 @@
+
+Nombre de host:                            DESKTOP-RLLGPNC
+Nombre del sistema operativo:              Microsoft Windows 10 Home
+Versi¢n del sistema operativo:             10.0.17134 N/D Compilaci¢n 17134
+Fabricante del sistema operativo:          Microsoft Corporation
+Configuraci¢n del sistema operativo:       Estaci¢n de trabajo independiente
+Tipo de compilaci¢n del sistema operativo: Multiprocessor Free
+Propiedad de:                              Usuario de Windows
+Organizaci¢n registrada:                   
+Id. del producto:                          00326-10000-00000-AA039
+Fecha de instalaci¢n original:             15/05/2018, 17:29:38
+Tiempo de arranque del sistema:            29/02/2020, 17:49:10
+Fabricante del sistema:                    Timi
+Modelo el sistema:                         TM1701
+Tipo de sistema:                           x64-based PC
+Procesador(es):                            1 Procesadores instalados.
+                                           [01]: Intel64 Family 6 Model 142 Stepping 10 GenuineIntel ~1801 Mhz
+Versi¢n del BIOS:                          INSYDE Corp. XMAKB5R0P0401, 02/10/2017
+Directorio de Windows:                     C:\WINDOWS
+Directorio de sistema:                     C:\WINDOWS\system32
+Dispositivo de arranque:                   \Device\HarddiskVolume1
+Configuraci¢n regional del sistema:        es;Espa¤ol (internacional)
+Idioma de entrada:                         en-us;Ingl‚s (Estados Unidos)
+Zona horaria:                              (UTC+00:00) Dubl¡n, Edimburgo, Lisboa, Londres
+Cantidad total de memoria f¡sica:          8.076 MB
+Memoria f¡sica disponible:                 3.065 MB
+Memoria virtual: tama¤o m ximo:            16.152 MB
+Memoria virtual: disponible:               9.656 MB
+Memoria virtual: en uso:                   6.496 MB
+Ubicaci¢n(es) de archivo de paginaci¢n:    C:\pagefile.sys
+Dominio:                                   WORKGROUP
+Servidor de inicio de sesi¢n:              \\DESKTOP-RLLGPNC
+Revisi¢n(es):                              11 revisi¢n(es) instaladas.
+                                           [01]: KB4534130
+                                           [02]: KB4100347
+                                           [03]: KB4343669
+                                           [04]: KB4343902
+                                           [05]: KB4346084
+                                           [06]: KB4462930
+                                           [07]: KB4486153
+                                           [08]: KB4486161
+                                           [09]: KB4516115
+                                           [10]: KB4537759
+                                           [11]: KB4534293
+Tarjeta(s) de red:                         2 Tarjetas de interfaz de red instaladas.
+                                           [01]: Intel(R) Dual Band Wireless-AC 8265
+                                                 Nombre de conexi¢n: Wi-Fi
+                                                 DHCP habilitado:    S¡
+                                                 Servidor DHCP:      1.1.1.1
+                                                 Direcciones IP
+                                                 [01]: 172.27.111.151
+                                                 [02]: fe80::685a:fc20:8383:f02c
+                                           [02]: Bluetooth Device (Personal Area Network)
+                                                 Nombre de conexi¢n: Conexi¢n de red Bluetooth
+                                                 Estado:             Medios desconectados
+Requisitos Hyper-V:                        Extensiones de modo de monitor de VM: S¡
+                                           Se habilit¢ la virtualizaci¢n en el firmware: S¡
+                                           Traducci¢n de direcciones de segundo nivel: S¡
+                                           La prevenci¢n de ejecuci¢n de datos est  disponible: S¡
