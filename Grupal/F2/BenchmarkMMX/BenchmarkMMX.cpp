@@ -1,3 +1,5 @@
+// Grupo 5 - Benchmark MMX
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -12,6 +14,7 @@
 double PCFreq = 0.0;
 __int64 CounterStart = 0;
 
+// Iniciamos el contador.
 void StartCounter()
 {
     LARGE_INTEGER li;
@@ -24,6 +27,7 @@ void StartCounter()
     CounterStart = li.QuadPart;
 }
 
+// Obtenemos el tiempo del contador.
 double GetCounter()
 {
     LARGE_INTEGER li;
@@ -42,50 +46,60 @@ void rellenar(int* vector1, int* vector2, int size) {
 
 // Multiplica los arrays.
 void MMXmultiplicar(int* vector1, int* vector2, int size) {
-    int* tam = &size;
+    int tam = size;
     int* resMult = 0;
 
     __asm {
+        // recorremos el vector para multiplicarlo
+        mov ebx, tam;                      // contador
         mov esi, 0;                        // esi será el índice para acceder a los datos
         mov eax, 0;                        // eax será donde guardaremos la multiplicacion
-        mov ebx, tam;                      // contador
         mov ecx, 0;                        // vector1[i]
         mov edx, 0;                        // vector2[i]
+
     loop_multiplicar:
-        mov ecx, [vector1 + esi * 4];
-        mov eax, [ecx];
-        mov edx, [vector2 + esi * 4];
-        imul edx, eax;
-        add resMult, edx
+        mov eax, 0;
+        mov ecx, [vector1 + esi * 4];      // Obtenemos el valor de la posición del array
+        mov edx, [vector2 + esi * 4];      // Obtenemos el valor de la posición del array
+
+        mov eax, ecx;                      // Movemos el valor a eax (eax = 0)
+        imul eax, edx;                     // Multiplicamos el valor de eax por edx
+        
         inc esi;                           // porque cada elemento ocupa 4 bytes.
-        cmp esi, ebx;                      // comparamos con 6 porque es el índice del primer elemento fuera del vector.
-        jl loop_multiplicar;               // recorremos la matriz con un solo índice para sumarla
-        mov esi, 0;                        // esi será el índice para acceder a los datos
+        cmp esi, ebx;                      // Comparamos esi y ebx
+        jl loop_multiplicar;               // Continuamos si es menor que.
+
+        add resMult, eax
     };
 };
 
 // Suma los arrays.
 void MMXsumar(int* vector1, int* vector2, int size) {
-    int* tam = &size;
-    int* resSuma = 0;
+    int tam = size;
+    int resSuma = 0;
 
     __asm {
-        // recorremos el vector para multiplicarlo
-        mov esi, 0;                        // esi será el índice para acceder a los datos
-        mov eax, 0;                        // eax será donde guardaremos la multiplicacion
+        // recorremos el vector para sumarlo
         mov ebx, tam;                     // contador
+        mov esi, 0;                        // esi será el índice para acceder a los datos
+        mov eax, 0;                        // eax será donde guardaremos la suma
         mov ecx, 0;                        // vector1[i]
         mov edx, 0;                        // vector2[i]
+
     loop_Sumar:
-        mov ecx, [vector1 + esi * 4];
-        mov edx, [vector2 + esi * 4];
-        add eax, [ecx];                    // multiplican el índice por 4
-        add eax, edx;
+        mov eax, 0;
+        mov ecx, [vector1 + esi * 4];      // Obtenemos el valor de la posición del array
+        mov edx, [vector2 + esi * 4];      // Obtenemos el valor de la posición del array
+
+        add eax, ecx;                      // Sumamos el valor de ecx a eax (eax = 0)
+        add eax, edx;                      // Sumamos el valorr de edx a eax
+
+        add [resSuma], eax;
+
         inc esi;                           // porque cada elemento ocupa 4 bytes.
-        cmp esi, ebx;                      // comparamos con 6 porque es el índice del primer elemento fuera del vector.
-        jl loop_Sumar;                     // recorremos la matriz con un solo índice para sumarla
-        mov esi, 0;                        // esi será el índice para acceder a los datos
-        add resSuma, eax;
+        cmp esi, ebx;                      // Comparamos esi y ebx
+        jl loop_Sumar;                     // Continuamos si es menor que.
+
     };
 };
 
@@ -133,6 +147,9 @@ int main() {
     // Cantidad de iteraciones por tamaño.
     int loop = 3000000;
 
+    // Tamaño de los vectores.
+    int sizeVec = 30;
+
     printf("Realizando calculos... \n");
 
     fprintf(fp, "Tamanio\t\tDuracion\n--------------------------- \n");
@@ -140,7 +157,7 @@ int main() {
 
 
     // Bucle para multiplciar.
-    for (int size = 100; size <= 130; size++) {
+    for (int size = 100; size <= sizeVec + 100; size++) {
 
         vector1 = (int*)malloc(size * sizeof(int));
         vector2 = (int*)malloc(size * sizeof(int));
@@ -158,8 +175,9 @@ int main() {
 #ifdef _unix
         clock_t begin = clock();
 #endif
-
-        MMXsumar(vector1, vector2, size);
+        for (int i = 0; i < loop; i++) {
+            MMXsumar(vector1, vector2, size);
+        }
 
 #ifdef _unix
         clock_t end = clock();
@@ -174,6 +192,7 @@ int main() {
         time = (float)((end - begin) / loop / CLOCKS_PER_SEC) * 1000;
 #endif
 
+        // Liberamos los vectores.
         free(vector1);
         free(vector2);
 
@@ -187,14 +206,14 @@ int main() {
         total += time;
     };
 
-    fprintf(fp, "==> Media duracion de multiplicacion \t%f s \n\n", (total / (30)));
-    printf("==> Media duracion de multiplicacion \t%f s \n\n", (total / (30)));
+    fprintf(fp, "==> Media duracion de multiplicacion MMX \t%f s \n\n", (total / (sizeVec)));
+    printf("==> Media duracion de multiplicacion MMX \t%f s \n\n", (total / (sizeVec)));
 
     // Bucle para sumar.
     duracion = 0;
     total = 0;
 
-    for (int size = 100; size <= 130; size++) {
+    for (int size = 100; size <= sizeVec + 100; size++) {
 
         vector1 = (int*)malloc(size * sizeof(int));
         vector2 = (int*)malloc(size * sizeof(int));
@@ -212,9 +231,9 @@ int main() {
 #ifdef _unix
         clock_t begin = clock();
 #endif
-
-        MMXmultiplicar(vector1, vector2, size);
-
+        for (int i = 0; i < loop; i++) {
+            MMXmultiplicar(vector1, vector2, size);
+        }
 #ifdef _unix
         clock_t end = clock();
 #endif
@@ -229,6 +248,7 @@ int main() {
         time = (float)((end - begin) / loop / CLOCKS_PER_SEC) * 1000;
 #endif
 
+        // Liberamos los vectores.
         free(vector1);
         free(vector2);
 
@@ -242,8 +262,8 @@ int main() {
         total += time;
     };
 
-    fprintf(fp, "==> Duracion media de suma \t%f s \n\n", (total / (30)));
-    printf("==> Duracion media de suma \t%f s \n\n", (total / (30)));
+    fprintf(fp, "==> Duracion media de suma MMX \t%f s \n\n", (total / (sizeVec)));
+    printf("==> Duracion media de suma MMX \t%f s \n\n", (total / (sizeVec)));
 
     printf("Aprieta INTRO para cerrar.\n");
     const char x = getchar();

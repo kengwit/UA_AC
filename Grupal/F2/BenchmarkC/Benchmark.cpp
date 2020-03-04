@@ -99,6 +99,9 @@ int main() {
     // Cantidad de iteraciones por tamaño.
     int loop = 3000000;
 
+    // Tamaño de los vectores.
+    int sizeVec = 30;
+
     printf("Realizando calculos... \n");
 
     fprintf(fp, "Tamanio\t\tDuracion\n--------------------------- \n");
@@ -106,7 +109,7 @@ int main() {
 
     
     // Bucle para multiplciar.
-    for (int size = 100; size <= 130; size++) {
+    for (int size = 100; size <= sizeVec + 100; size++) {
 
         vector1 = (int*)malloc(size * sizeof(int));
         vector2 = (int*)malloc(size * sizeof(int));
@@ -156,14 +159,14 @@ int main() {
         total += time;
     };
 
-    fprintf(fp, "==> Media duracion de multiplicacion \t%f s \n\n", (total / (30)));
-    printf("==> Media duracion de multiplicacion \t%f s \n\n", (total / (30)));
+    fprintf(fp, "==> Media duracion de multiplicacion C \t%f s \n\n", (total / (sizeVec)));
+    printf("==> Media duracion de multiplicacion C \t%f s \n\n", (total / (sizeVec)));
 
     // Bucle para sumar.
      duracion = 0;
      total = 0;
 
-     for (int size = 100; size <= 130; size++) {
+     for (int size = 100; size <= sizeVec + 100; size++) {
 
          vector1 = (int*)malloc(size * sizeof(int));
          vector2 = (int*)malloc(size * sizeof(int));
@@ -212,8 +215,8 @@ int main() {
          total += time;
      };
 
-     fprintf(fp, "==> Duracion media de suma \t%f s \n\n", (total / (30)));
-     printf("==> Duracion media de suma \t%f s \n\n", (total / (30)));
+     fprintf(fp, "==> Duracion media de suma C \t%f s \n\n", (total / (sizeVec)));
+     printf("==> Duracion media de suma C \t%f s \n\n", (total / (sizeVec)));
 
      printf("Aprieta INTRO para cerrar.\n");
      const char x = getchar();
