@@ -96,6 +96,7 @@ int main() {
 
         vector1 = (int*)malloc(size * sizeof(int));
         vector2 = (int*)malloc(size * sizeof(int));
+        int* vector3 = (int*)malloc(size * sizeof(int));
 
         if (vector1 == NULL || vector2 == NULL) {
             printf("No se pudo asignar memoria para los vectores.");
@@ -118,6 +119,8 @@ int main() {
             movups xmm1, [vector2] //load vector2 into xmm1
 
             mulps xmm0, xmm1 // vector1 + vector2
+
+            movups [vector3], xmm0
         };
 
 #ifdef _unix
@@ -135,6 +138,7 @@ int main() {
 
         free(vector1);
         free(vector2);
+        free(vector3);
 
 
         fprintf(fp, "%d\t\t", size);
@@ -157,6 +161,7 @@ int main() {
 
         vector1 = (int*)malloc(size * sizeof(int));
         vector2 = (int*)malloc(size * sizeof(int));
+        int* vector3 = (int*)malloc(size * sizeof(int));
 
         if (vector1 == NULL || vector2 == NULL) {
             printf("No se pudo asignar memoria para los vectores.");
@@ -177,6 +182,9 @@ int main() {
             movups xmm1, [vector2] //load vector2 into xmm1
 
             addps xmm0, xmm1 // vector1 + vector2
+
+            movups [vector3], xmm0
+
         };
 
 #ifdef _unix
@@ -195,6 +203,7 @@ int main() {
 
         free(vector1);
         free(vector2);
+        free(vector3);
 
 
         fprintf(fp, "%d\t\t", size);
