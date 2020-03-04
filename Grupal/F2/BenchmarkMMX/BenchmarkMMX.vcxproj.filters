@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\Downloads\BenchmarkMMX.cpp">
+    <ClCompile Include="BenchmarkMMX.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

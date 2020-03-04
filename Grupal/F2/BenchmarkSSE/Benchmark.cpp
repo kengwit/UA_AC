@@ -1,3 +1,4 @@
+// Grupo 5 - Benchmark SSE
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -12,6 +13,7 @@
 double PCFreq = 0.0;
 __int64 CounterStart = 0;
 
+// Iniciamos el contador.
 void StartCounter()
 {
     LARGE_INTEGER li;
@@ -24,6 +26,7 @@ void StartCounter()
     CounterStart = li.QuadPart;
 }
 
+// Obtenemos el tiempo del contador.
 double GetCounter()
 {
     LARGE_INTEGER li;
@@ -39,6 +42,31 @@ void rellenar(int* vector1, int* vector2, int size) {
         vector2[index] = (index);
     };
 };
+
+void sumaSSE(int* vector1, int* vector2, int* vector3) {
+    __asm {
+
+        movups xmm0, [vector1] // load vector1 into xmm0
+        movups xmm1, [vector2] //load vector2 into xmm1
+
+        addps xmm0, xmm1 // vector1 + vector2
+
+        movups[vector3], xmm0 // guardamos de vuelta.
+
+    };
+}
+
+void multiplicaSSE(int* vector1, int* vector2, int* vector3) {
+    __asm {
+
+        movups xmm0, [vector1] // load vector1 into xmm0
+        movups xmm1, [vector2] //load vector2 into xmm1
+
+        mulps xmm0, xmm1 // vector1 + vector2
+
+        movups[vector3], xmm0 // guardamos de vuelta.
+    };
+}
 
 
 // Programa principal del benchmark
@@ -78,12 +106,16 @@ int main() {
     // Declaracion de los vectores.
     int* vector1;
     int* vector2;
+    int* vector3;
 
     // Declaracion de los tiempos.
     double duracion = 0, total = 0;
 
     // Cantidad de iteraciones por tamaño.
     int loop = 3000000;
+
+    // Tamaño de los vectores.
+    int sizeVec = 30;
 
     printf("Realizando calculos... \n");
 
@@ -92,11 +124,11 @@ int main() {
 
 
     // Bucle para multiplciar.
-    for (int size = 100; size <= 130; size++) {
+    for (int size = 100; size <= sizeVec + 100; size++) {
 
         vector1 = (int*)malloc(size * sizeof(int));
         vector2 = (int*)malloc(size * sizeof(int));
-        int* vector3 = (int*)malloc(size * sizeof(int));
+        vector3 = (int*)malloc(size * sizeof(int));
 
         if (vector1 == NULL || vector2 == NULL) {
             printf("No se pudo asignar memoria para los vectores.");
@@ -112,17 +144,10 @@ int main() {
         clock_t begin = clock();
 #endif
 
-
-        __asm {
-
-            movups xmm0, [vector1] // load vector1 into xmm0
-            movups xmm1, [vector2] //load vector2 into xmm1
-
-            mulps xmm0, xmm1 // vector1 + vector2
-
-            movups [vector3], xmm0
-        };
-
+        // Multiplicamos los vecotres usando SSE
+        for (int i = 0; i < loop; i++) {
+            multiplicaSSE(vector1, vector2, vector3);
+        }
 #ifdef _unix
         clock_t end = clock();
 #endif
@@ -135,7 +160,7 @@ int main() {
 #ifdef _unix
         time = (float)((end - begin) / loop / CLOCKS_PER_SEC) * 1000;
 #endif
-
+        // Liberamos los vectores.
         free(vector1);
         free(vector2);
         free(vector3);
@@ -150,18 +175,18 @@ int main() {
         total += time;
     };
 
-    fprintf(fp, "==> Media duracion de multiplicacion \t%f s \n\n", (total / (30)));
-    printf("==> Media duracion de multiplicacion \t%f s \n\n", (total / (30)));
+    fprintf(fp, "==> Media duracion de multiplicacion SSE \t%f s \n\n", (total / (sizeVec)));
+    printf("==> Media duracion de multiplicacion SSE \t%f s \n\n", (total / (sizeVec)));
 
     // Bucle para sumar.
     duracion = 0;
     total = 0;
 
-    for (int size = 100; size <= 130; size++) {
+    for (int size = 100; size <= sizeVec + 100; size++) {
 
         vector1 = (int*)malloc(size * sizeof(int));
         vector2 = (int*)malloc(size * sizeof(int));
-        int* vector3 = (int*)malloc(size * sizeof(int));
+        vector3 = (int*)malloc(size * sizeof(int));
 
         if (vector1 == NULL || vector2 == NULL) {
             printf("No se pudo asignar memoria para los vectores.");
@@ -176,16 +201,10 @@ int main() {
 #ifdef _unix
         clock_t begin = clock();
 #endif
-        __asm {
-
-            movups xmm0, [vector1] // load vector1 into xmm0
-            movups xmm1, [vector2] //load vector2 into xmm1
-
-            addps xmm0, xmm1 // vector1 + vector2
-
-            movups [vector3], xmm0
-
-        };
+        // Sumamos los vectores usando SSE.
+        for (int i = 0; i < loop; i++) {
+            sumaSSE(vector1, vector2, vector3);
+        }
 
 #ifdef _unix
         clock_t end = clock();
@@ -201,6 +220,7 @@ int main() {
         time = (float)((end - begin) / loop / CLOCKS_PER_SEC) * 1000;
 #endif
 
+        // Liberamos los vectores.
         free(vector1);
         free(vector2);
         free(vector3);
@@ -215,8 +235,8 @@ int main() {
         total += time;
     };
 
-    fprintf(fp, "==> Duracion media de suma \t%f s \n\n", (total / (30)));
-    printf("==> Duracion media de suma \t%f s \n\n", (total / (30)));
+    fprintf(fp, "==> Duracion media de suma SSE \t%f s \n\n", (total / (sizeVec)));
+    printf("==> Duracion media de suma SSE \t%f s \n\n", (total / (sizeVec)));
 
     printf("Aprieta INTRO para cerrar.\n");
     const char x = getchar();
