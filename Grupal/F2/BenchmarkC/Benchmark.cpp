@@ -1,3 +1,5 @@
+// Grupo 5 - Benchmark C
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>

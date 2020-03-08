@@ -1,4 +1,5 @@
 // Grupo 5 - Benchmark SSE
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
