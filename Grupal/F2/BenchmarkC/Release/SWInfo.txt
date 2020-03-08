@@ -23,10 +23,10 @@ System Locale:             es;Spanish (International Sort)
 Input Locale:              es;Spanish (Traditional Sort)
 Time Zone:                 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris
 Total Physical Memory:     16.305 MB
-Available Physical Memory: 11.031 MB
+Available Physical Memory: 10.336 MB
 Virtual Memory: Max Size:  17.329 MB
-Virtual Memory: Available: 9.171 MB
-Virtual Memory: In Use:    8.158 MB
+Virtual Memory: Available: 9.228 MB
+Virtual Memory: In Use:    8.101 MB
 Page File Location(s):     C:\pagefile.sys
 Domain:                    WORKGROUP
 Logon Server:              \\DESKTOP-K851POD
