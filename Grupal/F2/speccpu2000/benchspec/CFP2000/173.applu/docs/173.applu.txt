@@ -1,0 +1,65 @@
+SPEC CPU2000 Benchmark Description File
+
+Benchmark Name: APPLU
+
+Benchmark Author: Sisira Weeratunga
+
+Benchmark Program General Category: Computational Fluid Dynamics and
+                                    Computational Physics
+
+Benchmark Description: Solution of five coupled nonlinear PDE's, on a
+                       3-dimensional logically structured grid, using
+                       an implicit psuedo-time marching scheme, based
+                       on two-factor approximate factorization of the
+                       sparse Jacobian matrix. This scheme is functionally
+                       equivalent to a nonlinear block SSOR iterative
+                       scheme with lexicographic ordering. Spatial
+                       discretization of the differential operators are
+                       based on second-order accurate finite volume scheme.
+                       Insists on the strict lexicographic ordering during
+                       the solution of the regular sparse lower and upper
+                       triangular matrices. As a result, the degree of
+                       exploitable parallelism during this phase is limited
+                       to O(N**2) as opposed to O(N**3) in other phases
+                       and it's spatial distribution is non-homogenous.
+                       This fact also creates challenges during the loop
+                       re-ordering to enhance the cache locality.
+
+Input Description: There are two approaches to control the memory
+                   and run-time requirements of the benchmark:
+                   a) change in mesh size,
+                   b) change in number of time steps taken.
+                   For a fixed mesh size, run-time varies linearly
+                   with the number of time steps taken.
+                   Currently, input decks are available for
+                   several different pairs of mesh cubic sizes and
+                   the number of time steps taken. Realistic workloads
+                   would involve meshes that contain in excess of 125,000
+                   mesh points (i.e., 51X51X51 grid) and at least several
+                   hundred time steps.
+
+Output Description: The program is capable of automatically verifying
+                    whether a given run conforms to the specification
+                    of the benchmark by using internally stored reference
+                    solutions. However, these reference solutions are
+                    available only for a fixed number of mesh size/time steps
+                    pairs. If the input data does not correspond to any of
+                    the internally stored reference solutions, the verification
+                    test is not performed. Otherwise, the output indicates
+                    whether or not the run was successfull in meeting
+                    the requirements of the verifications tests. To conform
+                    to the specification of the benchmark, a run should
+                    successfully pass all three verification tests. Failure
+                    in any one or more tests indicates non-conformance
+                    with the specifications.
+
+Programming Language: Fortran 77
+
+Known portability issues: None
+
+Reference: E. Barszcz, R. Fatoohi, V. Venkatkrishnan and S. Weeratunga
+           "Solution of Regular Sparse Triangular Systems on Vector
+            and Distributed-Memory Multiprocessors",
+           Rept. No: RNR-93-007, NASA Ames Research Center, 1993
+  http://www.nas.nasa.gov/Pubs/TechReports/ebarszcz/RNR-93-007/RNR-93-007.html
+

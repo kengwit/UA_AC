@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>200.sixtrack: SPEC CPU2000 Benchmark Description</TITLE>
+<META GENERATOR="Cloyce+VIM 5.3">
+<META REVISION="$Id: 200.sixtrack.html 1393 2005-06-14 15:55:21Z cloyce $">
+</HEAD>
+
+<BODY>
+<CENTER><H1>200.sixtrack<BR>
+SPEC CPU2000 Benchmark Description File</H1></CENTER>
+
+<H2>Benchmark Name</H2>
+<P>SIXTRACK</P>
+<HR>
+
+<H2>Benchmark Author</H2>
+<P>Frank Schmidt</P>
+<HR>
+
+<H2>Benchmark Program General Category</H2>
+<P>High Energy Nuclear Physics Accelerator Design</P>
+<HR>
+
+<H2>Benchmark Description</H2>
+<P>The function of the program is to track a variable number
+of particles for a variable number of turns round a model
+of a particle accelerator such as the Large Hadron Collider
+(LHC) to check the Dynamic Aperture (DA) i.e. the long
+term stability of the beam.</P>
+<HR>
+
+<H2>Input Description</H2>
+<P>The input data defines the number of particles (60) to be
+tracked, the LHC accelerator components and geometry, the
+initial conditions of the accelerator and particles , and
+the number of turns to be tracked (variable according to
+required workload, test, train or ref).</P>
+<HR>
+
+<H2>Output Description</H2>
+<P>The output starts with a report of the input data
+describing the accelerator components and topology. The
+initial conditions and tracking parameters follow. Next
+come the results of the pre-processing including the closed
+orbit and a check on the symplectic condition. The initial
+and final co-ordinates of each particle are then reported,
+with a possible intermediate report every 50,000 turns.</P>
+
+<P>A binary file is written, one per particle, reporting the
+initial, intermediate, and final co-ordinates.</P>
+<HR>
+
+<H2>Programming Language</H2>
+<P>Fortran 77</P>
+<HR>
+
+<H2>Known portability issues</H2>
+<P>None</P>
+<HR>
+
+<H2>Reference</H2>
+
+<P><A HREF="http://wwwslap.cern.ch/lhc/dynap/">http://wwwslap.cern.ch/lhc/dynap/</A><BR>
+A general introduction to Dynamic Aperture and tracking.</P>
+
+<P><A HREF="http://wwwslap.cern.ch/~frs/sixtrack.html">http://wwwslap.cern.ch/~frs/sixtrack.html</A><BR>
+SIXTRACK -- Single Particle Tracking Code Documentation, Manuals,
+Mathematical Formalism, Tracking Studies SIXTRACK source
+code Tracking Examples</P>
+
+<P><A HREF="http://wwwinfo.cern.ch/pdp/pa/nap/Welcome.html">http://wwwinfo.cern.ch/pdp/pa/nap/Welcome.html</A><BR>
+The Numerical Accelerator Project NAP.</P>
+
+<P><A HREF="http://wwwslap.cern.ch/lhc/dynap/refer/node1.html">http://wwwslap.cern.ch/lhc/dynap/refer/node1.html</A><BR>
+Lists various relevant reports.</P>
+<HR>
+Last updated: 12 October 1999
+</BODY>
+</HTML>
+

@@ -1,0 +1,116 @@
+SPEC CPU2000 Benchmark Description File
+=======================================
+
+Benchmark Name: 
+--------------
+
+168.wupwise
+
+
+Benchmark Authors: 
+-----------------
+
+Bjoern Medeke
+Institute of Applied Computer Science
+University of Wuppertal
+Gauss-Strasse 20
+D-42097 Wuppertal
+Germany
+
+medeke@math.uni-wuppertal.de
+
+
+Benchmark Program General Category: 
+----------------------------------
+
+Physics / Quantum Chromodynamics
+
+
+Benchmark Description:
+---------------------
+
+"wupwise" is an acronym for "Wuppertal Wilson Fermion Solver", a program
+in the area of lattice gauge theory (quantum chromodynamics).
+
+Lattice gauge theory is a discretization of quantum
+chromodynamics which is generally accepted to be the fundamental
+physical theory of strong interactions among the quarks as
+constituents of matter. The most time-consuming part of a
+numerical simulation in lattice gauge theory with Wilson
+fermions on the lattice is the computation of quark propagators
+within a chromodynamic background gauge field. These
+computations use up a major part of the world's high performance
+computing power.
+
+Quark propagators are obtained by solving the inhomogeneous
+lattice-Dirac equation. The Wuppertal Wilson Fermion Solver
+(wupwise) solves the inhomogeneous lattice-Dirac equation via
+the BiCGStab iterative method which has established itself as a
+method of choice.
+
+A more detailed characterization of the program can be found in the
+Postscript file "wupwise.ps" in the "docu" subdirectory.
+
+
+Input Description: 
+-----------------
+
+The input file wupwise.in contains a few parameters from which the
+problem is built, among them:
+	SEED	seed value for a random number generator which
+		supplies initial data
+	NITER	number of iterations
+	KAPPA	parameter characterizing the matrix M = I - KAPPA * D
+
+
+Output Description: 
+------------------
+
+The main output file is "wupwise.out", containing a check value (EPS)
+for each the NITER iterations, and a final value EPSILON characterizing
+the BiCGStab result.
+
+In addition, there is a file "te.out", containing the value
+"TRUE EPSILON". Since this value (in the magnitude of 0.6E-5) has been 
+found to vary more between systems, it is written to a separate file
+for which the SPEC-imposed accuracy requirements are different from
+those required for the main output file (see values $reltol in
+file 168.wupwise/Spec/object.pm).
+
+
+Programming Language: 
+--------------------
+
+Fortran 77, with the change that (as in all of SPEC's Fortran benchmarks)
+the type
+	DOUBLE PRECISION
+has been replaced by
+	REAL*8	,
+thus making the size of the relevant floating-point data uniform
+across systems - an important consideration for fair benchmarking.
+While the type REAL*8 is not part of the strict FORTRAN77 or Fortran90  
+standards, it is a common language extension recognized by
+all Fortran compilers the SPEC CPU subcomittee has used in its tests.
+
+
+Known portability issues: 
+------------------------
+
+The source code as prepared by SPEC contains FORTRAN77 versions of
+common LINPACK BLAS functions (zaxpy.f, zcopy.f, zdotc.f, zgemm.f, zscal.f).
+According to the CPU2000 Run and Reporting Rules (2.1.2), the level 1, 2, 
+and 3 BLAS functions may be substituted by precomputed (library-based)
+subroutines (compilation for peak runs only, not for baseline runs).
+For the case that this is not done (e.g., for baseline runs, or if
+optimized libraries are not available), all BLAS functions needed by 
+the benchmark are provided in the source directory.
+
+Note that since these source functions were taken unchanged from the 
+respective source code libraries, the spelling of their names has been 
+retained: They are defined in the files z*.f in lower case, but called in
+upper case. For Fortran compilers that insist on a strict FORTRAN77
+standard (which only recognizes upper-case letters in identifiers),
+a suitable portability flag like
+	-fu	Convert all lower-case identifiers to uppercase
+may be necessary.
+

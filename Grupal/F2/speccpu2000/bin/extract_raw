@@ -1,0 +1,102 @@
+#!/spec/cpu2000/bin/specperl
+#!/spec/cpu2000/bin/specperl -d
+#!/usr/bin/perl
+#
+#  extract_raw - a tool for extracting encoded raw files from formatted
+#                   results files
+#  Copyright (C) 1999-2005 Standard Performance Evaluation Corporation
+#   All Rights Reserved
+#
+#  Author: Cloyce D. Spradling
+#
+# $Id: extract_raw 1578 2005-08-22 19:06:35Z cloyce $
+
+use MIME::Base64;
+use IO::File;
+use Compress::Zlib;
+use strict;
+
+use vars qw($mode $strip $begin $end $dup_counter $rawdata
+	    $debug);
+
+$mode = undef;
+$strip = undef;
+$dup_counter = 0;
+$begin = undef;
+$end = undef;
+$rawdata = '';
+$debug = 0;
+
+# We'll use Perl's magic <> so that files can be piped in through stdin
+# or given on the command line.
+# This will process any number of files.
+
+my $collecting = 0;
+my $fname = undef;
+while (<>) {
+    if ($collecting) {
+	if (/^$end$/) {
+	    print "$end found!  fname=$fname\n" if $debug;
+	    $rawdata = decode_base64($rawdata);
+            if ($rawdata !~ /^spec\./) {
+              # It's compressed
+              $rawdata = Compress::Zlib::memGunzip($rawdata);
+            }
+	    if (!defined($fname) || ($fname eq '') || (-e $fname)) {
+		while (-e "tmpraw.$dup_counter.raw") { $dup_counter++; }
+		if ($fname) {
+		    print STDERR "Cowardly refusing to overwrite $fname (it already exists).\nI'll write to tmpraw.$dup_counter.raw instead.\n";
+		} else {
+		    print STDERR "No filename was provided or detected for this file (wierd!).\nI'll write to tmpraw.$dup_counter.raw.\n";
+		}
+		$fname = "tmpraw.$dup_counter.raw";
+	    }
+	    if (open(OFH, ">$fname")) {
+                binmode(OFH);
+		print OFH $rawdata;
+		close(OFH);
+	    } else {
+		print STDERR "There was an error opening $fname for writing: $!\n";
+	    }
+
+	    # Prepare for the possibility that more may be coming...
+	    $mode = undef;
+	    $strip = undef;
+	    $begin = undef;
+	    $end = undef;
+	    $rawdata = '';
+	    $collecting = 0;
+	} else {
+	    # It's just another line; tack it on
+	    s/^$strip// if (defined $strip);
+	    tr/\015\012//d;
+	    $rawdata .= $_;
+	}
+    } elsif (/^$begin( GZIP)? (\S+?\.(?:raw|rsf))/) {
+	$collecting = 1;
+	$fname = $2;
+	print "$begin found!  fname=$fname\n" if $debug;
+	next;
+    }
+    if (!defined $mode) {
+	if (/^%!PS-Adobe/o) {
+	    print "PS mode\n" if $debug;
+	    $mode = 'PS';
+	    $begin = '% BEGIN';
+	    $end = '% END';
+	    $strip = '% ';
+	} elsif (/^<HTML>$/o) {
+	    print "HTML mode\n" if $debug;
+	    $mode = 'HTML';
+	    $begin = '<!-- BEGIN';
+	    $end = 'END -->';
+	    $strip = undef;
+	} elsif (/^%PDF/o) {
+	    print "PDF mode\n" if $debug;
+	    $mode = 'PDF';
+	    $begin = '% BEGIN';
+	    $end = '% END';
+	    $strip = '% ';
+	}
+    }
+}

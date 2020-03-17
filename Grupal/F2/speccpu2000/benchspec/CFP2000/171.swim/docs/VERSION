@@ -1,0 +1,83 @@
+Benchmark name: 180.swim
+Date of last modification: Nov. 94
+New run required by modification: yes
+
+Log:
+
+9/94    Reinhold Weicker - Start of log.
+
+Versions before SPEC adaption:
+
+      CODE BY PAUL N. SWARZTRAUBER, NATIONAL CENTER FOR
+      ATMOSPHERIC RESEARCH, BOULDER, CO,  OCTOBER 1984.
+
+      MODIFIED BY R. K. SATO, NCAR, APRIL 7, 1986 FOR MULTITASKING.
+
+Versions after SPEC adaption:
+
+Update during 1993:
+
+      Modified by Bodo Parady for the SPECpar suite.  Various
+      compilation sizes added.  Iterations reduced to orginal
+      problem, but size increased 4x in each dimension.
+
+Update Sept. 21, 1994 (Reinhold Weicker, SNI):
+
+      Further modified by Reinhold Weicker (Siemens Nixdorf) for the
+      SPEC CFP95 suite:
+      Changed back to the form with PARAMETER statements for
+      N1 and N2, set N1 = N2 = 1025.
+      The execution time is determined by these values and the
+      variable ITMAX (number of iterations) read from the input file.
+      Execution time is linear in ITMAX.
+
+Updates during benchathon, Sept. 26-30, 1994 (Reinhold Weicker, SNI):
+
+      Corrected character constant in line 46: Must be non-empty string
+      Some participants reported that the execution time should be longer.
+
+Update Oct. 6, 1994, Reinhold Weicker, SNI:
+
+      Increased execution time by changing the input variable ITMAX from
+      240 to 300. However the FP output values did not change (!).
+      The problem size (PARAMETER's N1, N2) could not be increased since
+      otherwise, the benchmark would get into paging/swapping on systems
+      with less than 64 MB real memory. Its size is already on the
+      high side (58 MB).
+
+Updates during benchathon, Nov. 7-11, 1994 (Reinhold Weicker, SNI):
+
+      Changed PARAMETERs N1 and N2 (grid size) from 1025 to 513,
+      to decrease the static data size and, consequently, to prevent 
+      To compensate for this change and to still have reasonable
+      execution time, changed ITMAX to 900 (In the pre-SPEC version,
+      it had been 1200).
+     
+Updates in July 1997 for submission to SPEC CPU98 by Bodo Parady, Sun
+
+	Changed PARAMETERs N1 and N2 (grid size) from 513 to 1065,
+	to increase the static data size to just less than 128MB, the
+	new target size for CPU98.
+
+	The iteration counts are still the same, with the difference
+	in the output to print more intermediate results to
+	prevent rampant constant propagation, and to prevent
+	reduction of the interation since the interation to iteration
+	output as printed does not change at all.
+
+
+August 1998
+	Bodo Parady
+	Shorted workload by about 1/8 to near 5min on the reference
+	machine
+
+
+
+October 1998
+	Bodo Parady
+	Longer input set by factor of 2.7 to near 12min on reference
+
+March 1999
+	Bodo Parady
+	Longer runtimes on ref machine.  Upped iterations from
+	275 to 350.

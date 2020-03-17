@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# miscat - cat all .mis files in the given directory
+# No support is provided for this script.
+#
+# Copyright (C) 1999-2005 Standard Performance Evaluation Corporation
+#  All Rights Reserved
+#
+# $Id: miscat 1416 2005-06-15 17:42:28Z cloyce $
+
+
+cd $*
+for i in *.mis; do
+    echo "---"$i
+    cat $i
+done

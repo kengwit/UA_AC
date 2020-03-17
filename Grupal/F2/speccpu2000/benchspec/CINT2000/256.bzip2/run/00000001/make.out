@@ -1,0 +1,16 @@
+cl -c -Fobzip2.obj              /Ox /GL /Op  bzip2.c
+bzip2.c
+bzip2.c(2008): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Fospec.obj              /Ox /GL /Op  spec.c
+spec.c
+cl       /Ox /GL /Op  bzip2.obj spec.obj     -Febzip2
+Microsoft (R) Incremental Linker Version 14.24.28315.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/ltcg 
+/out:bzip2.exe 
+bzip2.obj 
+spec.obj 
+Generando código
+Generación de código finalizada

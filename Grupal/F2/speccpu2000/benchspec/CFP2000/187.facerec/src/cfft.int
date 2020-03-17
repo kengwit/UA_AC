@@ -1,0 +1,25 @@
+!
+!	Copyright 1998  by Jan C. Vorbrueggen.
+!
+	Interface
+!
+!	Defines the interfaces of the FFTPACK routines used
+!
+	Subroutine CFFTI (N, WSAVE)
+	  Integer,    Intent(In)    :: N
+	  Real(4),    Intent(Out)   :: WSAVE (*)
+	End Subroutine
+
+	Subroutine CFFTF (N, C, WSAVE)
+	  Integer,    Intent(In)    :: N
+	  Complex(4), Intent(InOut) :: C (*)
+	  Real(4),    Intent(In)    :: WSAVE (*)
+	End Subroutine
+
+	Subroutine CFFTB (N, C, WSAVE)
+	  Integer,    Intent(In)    :: N
+	  Complex(4), Intent(InOut) :: C (*)
+	  Real(4),    Intent(In)    :: WSAVE (*)
+	End Subroutine
+
+	End Interface

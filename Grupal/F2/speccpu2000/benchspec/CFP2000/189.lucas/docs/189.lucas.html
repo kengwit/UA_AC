@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>189.lucas: SPEC CPU2000 Benchmark Description</TITLE>
+<META GENERATOR="Cloyce+VIM 5.3">
+<META REVISION="$Id: 189.lucas.html 1393 2005-06-14 15:55:21Z cloyce $">
+</HEAD>
+
+<BODY>
+<CENTER><H1>189.lucas<BR>
+SPEC CPU2000 Benchmark Description File</H1></CENTER>
+
+<H2>Benchmark Name</H2>
+<P>189.lucas</P>
+<HR>
+
+<H2>Benchmark Author</H2>
+<P>Ernst Mayer</P>
+<HR>
+
+<H2>Benchmark Program General Category</H2>
+<P>Number theory: primality testing</P>
+<HR>
+
+<H2>Benchmark Description</H2>
+<P>Performs the Lucas-Lehmer test to check primality of Mersenne numbers
+2^p-1, using arbitrary-precision (array-integer) arithmetic. 
+Accomplishes the Mersenne-mod squaring via the discrete weighted
+transform technique of Crandall and Fagin (Math. Comp. 62 (205), 
+pp.305-324, January 1994).  Uses a data-local, cache-friendly FFT to
+efficiently perform the large-integer squaring of the Lucas-Lehmer
+iterations.</P>
+<HR>
+
+<H2>Input Description</H2>
+<P>Attempt to prove the primality of a large number.</P>
+<HR>
+
+<H2>Output Description</H2>
+<P>The proof (or disproof) is not completed in the 
+time allotted for the benchmark.  Therefore, a hex residue is provided 
+to verify that the algorithm is on track towards the proof (or disproof).</P>
+<HR>
+
+<H2>Programming Language</H2>
+<P>Fortran-90</P>
+<HR>
+
+<H2>Known portability issues</H2>
+<P>None</P>
+<HR>
+
+<H2>References</H2>
+<UL>
+<LI><A HREF="ftp://209.133.33.182/pub/mayer/index.html">Author's homepage</A>
+<LI>http://www.perfsci.com/free/techpapers/F24.ps (or F24.pdf - 
+<LI>A manuscript describing algorithms similar to those in lucas.
+In <A HREF="http://www.perfsci.com/free/techpapers/F24.ps">PostScript</A> or
+<A HREF="http://www.perfsci.com/free/techpapers/F24.pdf">PDF</A>.
+</UL>
+<HR>
+Last Updated: 14 Decmber 1999
+</BODY>
+</HTML>

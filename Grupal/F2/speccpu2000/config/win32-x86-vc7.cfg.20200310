@@ -1,0 +1,87 @@
+#
+# Sample config file for use with Visual Studio 7 compilers on 32-bit
+# Microsoft Windows.
+#
+# This config file neither includes any benchmark specific peak tuning,
+# nor base flags for optimum performance, but can be used as a 
+# starter config file.
+# Also, this config file can be used only to compile and run the
+# C and C++ benchmarks. It does not use any fortran compiler.
+#
+# To run, type this command:
+#   runspec -c win32-x86-vc7.cfg -T base -n 3 -l -I 
+#
+# If your CPU has support for SSE2 (e.g. Intel Pentium 4 or later, 
+#  AMD Athlon64/Opteron or later), and if you are using Visual Studio
+#  .Net 2003 (or later) compiler, you can turn on SSE2 specific
+#  optimizations by doing:
+#    runspec -c win32-x86-vc7.cfg -T base -e vc7.sse2 -n 3 -l -I 
+# 
+# This config file has been tested with VC .Net 2002 and VC .Net 2003.
+#
+
+
+VENDOR        = 
+action        = validate
+tune          = base
+output_format = asc
+ignore_errors = yes
+ext           = vc7.x87.exe
+runlist	      = int 177 179 183 188
+
+
+#########################################################
+# Compiler selection
+#########################################################
+
+default=default=default=default:
+FC    = 
+F77   =
+CC    = cl
+CXX   = cl
+
+#########################################################
+# Baseline optimization.
+#########################################################
+
+# NOTE: 176.gcc needs /Op to get the correct answer. 
+default=base=default=default:
+COPTIMIZE   = /Ox /GL /Op
+CXXOPTIMIZE = /Ox /GL /GX /GR
+basepeak=yes
+
+default=base=vc7.sse2=default:
+COPTIMIZE   = /Ox /GL /arch:SSE2 /Op
+CXXOPTIMIZE = /Ox /arch:SSE2 /GX /GR
+basepeak=yes
+
+#########################################################
+# Portability flags
+#########################################################
+
+176.gcc=default=default=default:
+EXTRA_CFLAGS = -Dalloca=_alloca
+EXTRA_LDFLAGS = -F10000000 
+LDOPT = -Fe$@ -link -stack:10000000
+
+# Note: galgel portability commented out since no Fortran 
+#  compiler is set.
+
+#178.galgel=default=default=default:
+#EXTRA_FFLAGS = -fixed 
+#LDOPT = -Fe$@ -link -stack:300000000
+##OBJOPT= -Fo$@
+
+186.crafty=default=default=default:
+EXTRA_CFLAGS = -DNT_i386
+
+252.eon=default=default=default:
+SOURCE_PREFIX_CXX = -TP
+CXXPORTABILITY = -DHAS_ERRLIST
+
+253.perlbmk=default=default=default:
+EXTRA_CFLAGS = -DSPEC_CPU2000_NTOS -DPERLDLL /MT
+
+254.gap=default=default=default:
+EXTRA_CFLAGS=-DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO
+

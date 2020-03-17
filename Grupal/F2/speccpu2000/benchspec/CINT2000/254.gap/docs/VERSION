@@ -1,0 +1,30 @@
+History of versions, modifications for CINT2000 benchmark 254.gap
+
+Last Update: Feb 25, 1998
+
+2/1999		Ken "The Man" Sarno
+	Removed test so now validates on AIX
+
+2/1999		Ken "The Man" Sarno
+	Fixes for 64 bit pointers, must define -DSPEC_CPU2000_LP64 
+	SPEC_INT32_T defined (should be a 32 bit int)
+
+10/1998		Bodo Parady
+	Changes to ANSIfy HAS_CALLOC_PROTO
+	
+
+10/1998		Bodo Parady
+	Changes line system.c:4433 to:
+	 	ret = sbrk( (intptr_t) (4 - (intptr_t)sbrk(0) % 4 ));
+		Fixed problem with miscaste
+	Added include of gasman.h to system.c
+
+Start: July 31, 1998
+
+
+July 31, 1998
+=============
+
+Reset source from Martin Schoenert to be in new SPEC format.
+The ref binary runs with 196MB of heap space.
+

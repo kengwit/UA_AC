@@ -1,0 +1,11 @@
+running commands in speccmds.cmd 1 times
+runs started at 1583843665, 456000000, Tue Mar 10 13:34:25 2020
+run 1 started at 1583843665, 456000000, Tue Mar 10 13:34:25 2020
+child started: 0, 1583843665, 456000000, pid=7672, '../00000002/vpr_base.vc7.x87.exe net.in arch.in place.out dum.out -nodisp -place_only -init_t 5 -exit_t 0.005 -alpha_t 0.9412 -inner_num 2'
+child finished: 0, 1583843689, 183000000, sec=23, nsec=727000000, pid=7672, rc=0
+child started: 0, 1583843689, 183000000, pid=6488, '../00000002/vpr_base.vc7.x87.exe net.in arch.in place.in route.out -nodisp -route_only -route_chan_width 15 -pres_fac_mult 2 -acc_fac 1 -first_iter_pres_fac 4 -initial_pres_fac 8'
+child finished: 0, 1583843717, 691000000, sec=28, nsec=508000000, pid=6488, rc=0
+run 1 finished at: 1583843717, 691000000, Tue Mar 10 13:35:17 2020
+run 1 elapsed time: 52, 235000000, 52.235000000
+runs finished at 1583843717, 691000000, Tue Mar 10 13:35:17 2020
+runs elapsed time: 52, 235000000, 52.235000000

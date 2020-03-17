@@ -1,0 +1,42 @@
+#!/usr/local/bin/perl
+# facedecode: convert a facerec data file to a P5 PGM file
+# author: Christopher Chan-nui 2/99
+# revised: j. henning 4/9/99: tweak for 256x256 images
+
+for $file (@ARGV) {
+    $out = $file;
+    $out =~ s/\.[^.]*$//;
+    $out .= ".pgm";
+    open (FILE,   "<$file") || die "Can't open input file '$file': $!\n";
+    open (OUTPUT, ">$out")  || die "Can't open output file '$out': $!\n";
+    binmode OUTPUT;
+
+    $line_part = 0;
+    $line = '';
+    while (<FILE>) {
+	chomp; chomp;
+	@vals = split(/(..)/, $_);
+	while ($_) {
+	    $line .= sprintf "%c", 255-hex(substr($_, 0, 2));
+	    substr($_, 0, 2) = '';
+	}
+        $line_part++;
+	if ($line_part==4) {
+	    unshift(@picture, $line);
+	    $line = '';
+            $line_part = 0;
+	}
+    }
+    unshift(@picture, $line) if $line ne '';
+
+    print OUTPUT <<EOT;
+P5
+256 256
+255
+EOT
+    print OUTPUT @picture;
+    close(OUTPUT);
+    close(FILE);
+    undef @picture;
+}
+

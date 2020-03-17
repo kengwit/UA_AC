@@ -1,0 +1,191 @@
+#!/bin/sh
+
+#
+#  shrc - sets up the environment to run SPEC CPU2000
+#  Copyright (C) 1995-2005 Standard Performance Evaluation Corporation
+#
+#  Author:  Christopher Chan-Nui
+#
+# $Id: shrc 1419 2005-06-15 17:50:29Z cloyce $
+#
+
+umask 002
+# Find top of SPEC heirarchy
+
+RUNSPEC="runspec" # the name of the top Perl script
+
+# Pacify our favorite shell
+if test -n "${ZSH_VERSION+set}" && (setopt NONOMATCH) >/dev/null 2>&1; then
+  # Don't fail a glob just because part of the list doesn't match
+  setopt NONOMATCH
+elif test -n "${BASH_VERSION+set}" && (set -o hashall) >/dev/null 2>&1; then
+  # Bash probably has a similar thing, but I don't know what it is yet.
+  # Maybe it's not necessary
+  set -o hashall
+fi
+
+# Ignore preset SPEC variable
+#if [ ! -x $SPEC/bin/runspec ] && [ "$SPEC" != "" ]
+#then
+#    echo "Your \$SPEC variable is not set correctly!"
+#    SPEC=""
+#fi
+SPEC=""
+
+# Set the locale, if it isn't already set and the user hasn't forbidden it
+if [ -z "$SPEC_LOCALE_OK" ]; then
+    if [ -z "$LC_ALL" -o -z "$LC_LANG" ]; then
+        LC_ALL=C
+        LC_LANG=C
+        export LC_ALL LC_LANG
+    fi
+fi
+
+# must have dirname
+
+foo=`dirname . 2>/dev/null`
+if [ "$foo" != '.' ]
+then
+    echo "Your OS must have a dirname program!  Please check your path!\n";
+    false # don't use exit; the user's shell will do it!
+else
+  if [ "$SPEC" = "" ] 
+  then
+      SPEC=""
+      TEMPSPEC=`pwd`
+      while [ ! -f $TEMPSPEC/bin/$RUNSPEC ] && [ "$TEMPSPEC" != "/" ] && [ "$TEMPSPEC" != "." ]
+      do 
+	  TEMPSPEC=`dirname $TEMPSPEC`
+      done
+      if [ -f $TEMPSPEC/bin/$RUNSPEC ]
+      then
+	  SPEC=$TEMPSPEC
+      fi
+  fi
+  if [ "$SPEC" = "" ]
+  then
+      echo "Can't find the top of your SPEC tree!  Please change to your spec"
+      echo "directory and run this program $0 again!"
+      false
+  else
+    # In order to discourage folks from sourcing the shrc on the CD (and thereby
+    # getting the wrong values for $SPEC and friends), make sure that shrc is
+    # writable.
+
+    if [ ! -x $SPEC/bin/specperl -a ! -x $SPEC/bin/specperl.exe ]; then
+	echo ""
+	echo "WARNING: this benchmark tree has not yet been installed.  Please"
+        echo "         run install.sh before continuing."
+        echo ""
+    fi
+
+    if touch $SPEC/shrc >/dev/null 2>&1; then
+      go() {
+	  case "$1" in
+	      top|"")	cd $SPEC    		;;
+	      bin)	cd $SPEC/bin		;;
+	      config)	cd $SPEC/config		;;
+	      doc)	cd $SPEC/docs		;;
+	      docs)	cd $SPEC/docs		;;
+	      result)	cd $SPEC/result		;;
+	      results)	cd $SPEC/result		;;
+	      int)	cd $SPEC/benchspec/CINT* ;;
+	      fp)	cd $SPEC/benchspec/CFP* ;;
+	      src)	whichbench $2
+		      if [ ! -z "$SPECTMP" ]
+		      then cd $SPECTMP/src             
+		      fi                      ;;
+	      run)	whichbench $2
+		      if [ ! -z "$SPECTMP" ]
+		      then cd $SPECTMP/run
+		      fi                      ;;
+	      work)	whichbench $2
+		      if [ ! -z "$SPECTMP" ]
+		      then cd $SPECTMP/run
+		      fi                      ;;
+	      data)	whichbench $2
+		      if [ ! -z "$SPECTMP" ]
+		      then cd $SPECTMP/data
+		      fi                      ;;
+	      *)	whichbench $1
+		      if [ ! -z "$SPECTMP" ]
+		      then cd $SPECTMP
+		      fi                      ;;
+	  esac
+      }
+
+      whichbench() {
+	  SPECTMP=
+	  for i in $SPEC/benchspec/*/$1* $SPEC/benchspec/*/0$1* \
+		   $SPEC/benchspec/*/00$1* $SPEC/benchspec/*/*.$1*
+	  do
+	      if [ -d $i ]
+	      then
+		  SPECTMP=$i
+		  return
+	      fi
+	  done
+	  echo "Can't resolve $1"
+      }
+
+      SPECBIN="${SPEC}/bin"
+      case "$PATH:" in
+	  ${SPECBIN}:*) ;;
+	  *)              PATH=$SPECBIN:$PATH ;;
+      esac
+      export SPEC PATH
+
+      setperlspeclib() {
+	  SPECPERLLIB=""
+	  for i in $SPEC/bin $SPEC/bin/lib $SPEC/bin/lib/5* \
+		  $SPEC/bin/lib/site_perl $SPEC/bin/lib/site_perl/5*; do
+	      if [ -d $i ]; then
+		  if [ "$SPECPERLLIB" = '' ]; then
+		      SPECPERLLIB=$i
+		  else
+		      case ":$SPEC:" in
+			  *:$i:*)                             ;;
+			  *)      SPECPERLLIB=$SPECPERLLIB:$i ;;
+		      esac
+		  fi
+	      fi
+	  done
+	  export SPECPERLLIB
+      }
+      setperlspeclib
+
+      setldlibrarypath() {
+	  for i in $SPEC/bin $SPEC/bin/lib; do
+	      if [ -r $i/libperl.dylib* ]; then
+		  if [ "$DYLD_LIBRARY_PATH" = '' ]; then
+		      DYLD_LIBRARY_PATH=$i
+		  else
+		      case ":$DYLD_LIBRARY_PATH:" in
+			  *:$i:*)                             ;;
+			  *)      DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$i ;;
+		      esac
+		  fi
+	      fi
+	      if [ -r $i/libperl.so* ]; then
+		  if [ "$LD_LIBRARY_PATH" = '' ]; then
+		      LD_LIBRARY_PATH=$i
+		  else
+		      case ":$LD_LIBRARY_PATH:" in
+			  *:$i:*)                             ;;
+			  *)      LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$i ;;
+		      esac
+		  fi
+	      fi
+	  done
+	  export LD_LIBRARY_PATH DYLD_LIBRARY_PATH
+      }
+      setldlibrarypath
+    else
+	echo "Your shrc isn't writable.  Make sure you're not sourcing the"
+        echo "shrc on the CD-ROM and try again."
+        SPEC=""
+        export SPEC
+        false
+    fi
+  fi
+fi

@@ -1,0 +1,1351 @@
+Version 121 - 22 September 2005 *** v1.3 RELEASE ***
+===========
+  1) Documentation changes:
+     - Updated errata
+  2) Config file updates:
+     - linux-amd64-pgi.cfg
+     - linux-amd64-gcc4.cfg
+     - linux-amd64-pathscale.cfg
+
+Version 120 - 8 September 2005 *** RELEASE CANDIDATE 5 ***
+===========
+  1) Tools changes:
+     - Fixed libperl inclusion problem in packagetools
+  2) Toolset updates:
+     - linux-ydl23-ppc
+     - macosx-ppc
+     - windows-i386
+     - Digital-Unix-alpha
+     - solaris-sparc
+     - solaris-x86
+     - linux-glibc22-x86_64
+     - solaris-sparc-preSolaris10
+     - aix433-common
+     - irix-mips
+     - linux-sles9-ia64
+     - linux-redhat62-ia32
+     - HPUX11.23PA
+     - HPUX11.23IPF
+     - macosx-x86
+     - linux-rhas3r3-ia64
+     - solaris-x86-preSolaris10
+  3) Config file updates:
+     - aix-ppc-xl
+     - linux-em64t-pathscale
+
+Version 119 - 1 September 2005
+===========
+  1) Tools changes:
+     - Removed references to docs.nt in install.bat
+     - Windows installations from CD _should_ have docs installed
+     - Fixed off-by-one error in buffer realloc() in specinvoke
+  2) Config file updates:
+     - windows-ia32-intel9.0-fsc (editorial changes, plus basepeak)
+     - solaris-sparc-sun_studio-advanced_example (editorial changes)
+     - linux-amd64-pathscale (editorial changes)
+  3) Documentation updates:
+     - Top-level README
+  4) 300.twolf: Separated the two instances of the 'rows' variable
+
+Version 118 - 25 August 2005 ***RELEASE CANDIDATE 4***
+===========
+  1) Tools changes:
+     - Fixed PDF problem that caused errors with pdf2ps and Windows Acrobat
+     - Made extract_raw create files with '.raw' extensions by default
+     - Adjusted version-related warning message in rawformat
+     - Fixed most 'runspec --test' failures on Windows (die_exit still fails)
+     - Fixed PDF output on Windows
+  2) Config file updates:
+     - linux-x86-gcc
+     - Digital-Unix-alpha-gem
+     - win32-x86-vc7 (Added)
+     - macosx-ppc-gcc-nagf95 (Added)
+     - macosx-ppc-gcc33-nagf95-fast (replacing macosx-ppc-gcc33-nagf95.cfg)
+     - macosx-ppc-gcc40-nagf95-fast (replacing macosx-ppc-gcc40-nagf95.cfg)
+
+Version 117 - 19 August 2005 ***RELEASE CANDIDATE 3***
+===========
+  1) Tools changes:
+     - Fixed MD5 checking problems on installation
+     - Fixed missing tools exclusion in install.sh
+     - Shortened CD volume name
+     - Compressed build logs to get under 700MB for the CD
+  2) Toolset updates:
+     - aix433-ppc (corrected SUMS.tools)
+
+Version 116 - 18 August 2005 ***RELEASE CANDIDATE 2***
+===========
+  1) Tools changes:
+     - Fixed path quoting issue in install.bat (thanks to Rahul)
+     - Made MD5 install check failures fatal
+     - Fixed tools installation from CD
+     - Replaced spaces in CD volume label with underscores
+     - Fixed PostScript and PDF output
+     - Fixed spurious buildtools errors on OSF/1 / Digital Unix / Tru64
+     - packagetools: Fixed inclusion of bin/libperl*; added progress messages
+     - cleanuptree: Fixed textification of HTML docs
+  2) Config file updates:
+     - macosx-ppc-gcc33-nagf95
+     - macosx-ppc-gcc40-nagf95
+     - macosx-x86-gcc
+     - aix-ppc-xl
+     - linux-ppc-xl
+     - linux-amd64-pgi
+     - linux-amd64-pathscale
+     - win32-amd-pgi
+     - windows-ia32-intel9.0-fsc
+     - solaris-sparc-sun_studio-starter
+     - solaris-sparc-sun_studio-advanced_example
+     - solaris-x64-sun_studio-starter
+     - hpux-ipf-fp
+     - hpux-ipf-int
+     - hpux-pa-fp
+     - hpux-pa-int
+     - Digital-Unix-alpha-gem
+  3) Toolset updates:
+     - Digital-Unix-alpha
+  4) Documentation updates:
+     - Added changes_in_V1.3.html
+     - Corrected examples in tools_build and install_guide_unix.html
+  5) 176.gcc: Added portability defines for 64-bit Solaris/x64 and other
+              systems which need <alloca.h>.
+  6) 186.crafty: Removed duplicate common symbols
+                 Added portability defines for Solaris/x86 and Solaris/x64
+  7) 188.ammp: Added a prototype and fixed a function declaration to quiet
+               some type-mismatch problems
+  8) 300.twolf: Removed duplicate common symbols
+
+Version 115 - 2 August 2005 ***RELEASE CANDIDATE 1***
+===========
+  1) Tools changes:
+     - Make all docs with '.txt' extensions "double-clickable" in Windows
+     - install.sh: Hide failures when a particular uname switch isn't supported
+     - install.sh: Properly identify the suite that's being installed
+     - install.sh: Toned down error messages; use 'CPU2000' instead of 'SPEC'
+  2) Toolset updates:
+     - windows-i386
+     - linux-ydl23-ppc (replacing linux-glibc23-ppc)
+     - HPUX11.23IPF
+     - linux-sles9-ia64 (replacing linux-glibc23-ia64)
+     - linux-rhas3r3-ia64 (replacing linux-glibc23-ia64)
+     - linux-glibc22-x86_64
+     - irix-mips
+     - reliant-mips (removed as it won't be tested for release)
+     - HPUX11.23PA
+     - aix433-common
+  3) Config file updates:
+     - default.cfg (modifications to prevent accidental use)
+     - windows64-em64t-intel9.0p.cfg
+     - windows-ia32-intel9.0.cfg
+     - linux-amd64-gcc4.cfg
+     - aix-ppc-xl.cfg (renamed from aix_ppc.cfg)
+     - irix-mips-mipspro.cfg (renamed from sgi.cfg)
+     - linux-x86-gcc.cfg
+  4) Documentation updates:
+     - Very minor edits to tools_build to reflect changes in the new tools
+
+Version 114 - 15 July 2005
+===========
+  1) Tools changes:
+     - Don't run monitor_wrapper for training runs
+     - Remove bad CJK-related Perl test
+     - Made some fixes to deal with paths with spaces (still NOT supported!)
+     - Added description feature for tools binaries
+     - Added ability to exclude toolsets by OS version (uname -r)
+     - Added ability to exclude toolsets by processor architecture (uname -p)
+     - Fixed Perl build problem on Windows
+  2) Toolset updates:
+       - solaris-sparc
+       - solaris-sparc-preSolaris10
+       - solaris-x86
+       - solaris-x86-preSolaris10
+       - macosx-ppc
+       - macosx-x86
+       - linux-sles9-ia64
+       - irix-mips
+       - aix433-common
+       - linux-redhat62-ia32
+  3) Config file updates:
+       - aix_ppc.cfg
+       - sgi.cfg
+       - ipf-intel9.0-linux.cfg
+  4) 176.gcc: Work around a bug in the Windows 64 PSDK for x86-64
+  5) 252.eon: Fixed previous fix so that inclusion of cerrno really is default
+  6) 253.perlbmk: Set SPEC_NOT_REALLY_WINDOWS to 1 to not get Windows sources,
+                    even on Windows (think Cygwin, maybe)
+                  Added defines for MacOS X
+                  Made HAS_FGETPOS and HAS_FSETPOS default on Linux
+
+Version 113 - 21 June 2005
+===========
+  1) Corrected two doc nits pointed out in osgcpu-5515
+  2) Adapted many tools from CPU2006 to help with CVS -> Subversion changeover
+  3) Tools sources updates:
+       - Updated specperl to 5.8.7
+       - Replaced gzip with bzip2 1.0.3
+       - Replaced pdflib with PDF::API2 0.41
+       - Updated GNU make to 3.80
+       - Updated GNU tar to 1.15.1
+       - Updated Compress::Zlib to 1.34
+       - Updated HTML::Parser to 3.45
+       - Added HTML::Tagset 3.04
+       - Updated libwww-perl to 5.803
+       - Updated URI to 1.35
+       - Fixed ISO image creation
+       - Removed most (maybe all) unused Asian language support from the tools
+  4) Added specperl testsuite from CPU2006 (runspec --test)
+  5) Toolset updates:
+       - linux-glibc22-ia32
+       - solaris-sparc
+  6) 176.gcc: Initialized potentially problematic variable (osgcpu-14555)
+              Applied the '64bitgcc40' src.alt from v1.2
+  7) 187.facerec: Applied the 'AllocShape' src.alt from v1.2
+  8) 191.fma3d: Applied the 'windowsdp' src.alt from v1.2
+  9) 252.eon: Applied the 'stdcpp' src.alt from v1.2 with a small change;
+               the old errno behavior can be regained by defining
+               SPEC_CPU2000_NO_ERRNO_MACRO if the default version does not
+               compile.
+ 10) 255.vortex: Corrected comment nit pointed out in osgcpu-5515
+                 Applied the 'closed_files' src.alt from v1.2
+ 11) 300.twolf:Applied the 'stdfree' src.alt from v1.2 
+ 12) Moved all of the config files into their historical resting place
+
+Version 112 - 20 November 2001 *** v1.2 RELEASE ***
+===========
+  1) Corrected error in intel_nt_visual_studio.cfg (cpu2000support-297)
+  2) Updated author's address for 187.facerec.
+  3) Bumped version numbers to 1.2
+
+Version 111 - 30 October 2001 ***RELEASE CANDIDATE 2***
+===========
+  1) Updated documents: README, install_guide_nt.html,install_guide_unix.html,
+                        readme1st.html, system_requirements.html, utility.html,
+                        changes_in_V1.2.html, config.html, techsupport.txt
+                        example-advanced.cfg, example-simple.cfg, runspec.html
+                        execution_without_SPEC_tools.txt
+  2) Fixed another pesky config file line continuation bug; now appended and
+     continued lines can be mixed without surprise.
+  3) Fixed maketarpatch to not include .cvsignore files
+  4) HTMLized docs in the docs.nt directory now have a '.html' suffix
+  5) Updated dates in copyright notices where applicable
+  6) Updated and patched the intel_linux (now ia32-linux-gcc) and ppc32_linux
+     (now ppc32-linux-gcc) config files.
+
+Version 110 - 23 October 2001 ***RELEASE CANDIDATE 1***
+===========
+  1) Add logging of src.alt usage
+  2) Made ppc32_linux.cfg default for LinuxPPC tools
+  3) Added tools for MacOS X
+  4) Fixed handling of multi-line notes
+     Change #7 from kit 109 was undone; behavior now matches documentation
+  5) Fixed command output redirection for multiple commands
+  6) Added note to auto-converted HTML docs 
+  7) 253.perlbmk: Added defines for Linux/S390 (32- and 64-bit)
+  8) Fix for initial raw file output; now matches reformatted ones (osgcpu-5272)
+  9) Added standard C++ fix for 252.eon (osgcpu-5232)
+ 10) Added tools for IA64 HP-UX
+ 11) Added fix for 191.fma3d with Fujitsu compiler on Windows (osgcpu-3871)
+ 12) Updated documents: changes in V1.2, config.html, errata.txt,
+                        install guides, runrules.html, and runspec.html
+
+Version 109 - 24 April 2001
+===========
+  1) Attempted CRLF fix for face conversion scripts in 187.facerec
+  2) Put the 186.crafty src.alt comment fix into the main tree
+  3) 253.perlbmk:
+      o   Remove #undefs in spec_config.h to allow portability defines
+      o   Add some defines for glibc 2.2+ (spec_config.h, pp_sys.c)
+      o   P64 changes from Rahul
+  4) Fix Makefile.defaults to only attempt to remove 'objectnames' if such a
+     file was used.
+  5) Log elapsed compile time even in the event of a compile failure
+  6) Config file comments are now trimmed before interpretation to cut down on
+     surprising behavior
+  7) Config file lines continued with '\' will no longer receive a free newline
+  8) Notes lines in the raw results file will now step in increments of 5 for
+     ease of editing
+  9) When formatting results, the suitever and toolsver tags will now only be
+     added if they did not exist before
+ 10) The tuning level is now noted on every line of the run file (previously,
+     tuning levels of builds were not recorded)
+ 11) Make config file defaults for Compaq tools
+ 12) 175.vpr: P64 changes.  04/10/2001 changes in src.alt (p64.20010410),
+              04/16/2001 changes in main tree. (osgcpu-4496 and friends)
+ 13) 181.mcf: P64 changes.  04/10/2001 changes in src.alt (p64.20010410),
+              04/16/2001 changes in main tree. (osgcpu-4496 and friends)
+ 14) 252.eon: P64 changes in main tree. (osgcpu-4496 and friends)
+ 15) 254.gap: P64 changes in main tree. (osgcpu-4496 and friends)
+ 16) 255.vortex:
+       o   P64 changes.  04/10/2001 changes in src.alt (p64.20010410),
+           04/16/2001 changes in main tree. (osgcpu-4496 and friends)
+       o   type fixes from Jim Koehler
+ 17) Doc updates: config.html, runrules.html, runspec.html
+
+Version 108 - 22 December 2000   *** v1.1 RELEASE ***
+===========
+ 1) Versions bumped
+
+Version 107 - 8 December 2000   ***RELEASE CANDIDATE 2***
+===========
+ 1) Documentation updated:
+      changes_in_V1.1.txt (updated)
+ 2) src.alt for 187.crafty comment problem (comment_fix)    
+
+Version 106 - 8 November 2000   ***RELEASE CANDIDATE 1***
+===========
+ 1) Documentation updated:
+      install_guide_nt.txt
+      system_requirements.txt
+      runrules.txt (non-editorial changes reverted)
+      user-visible-changes.txt (added)
+ 2) Toolset changes:
+      aix433-common (updated)
+      linux-redhat62-alpha (updated)
+      svr4-i386 (removed)
+ 3) Backed out standards patch for 255.vortex
+ 4) Organized src.alts for use with new automated system
+ 5) Config file changes:
+      Tru64_Unix.cfg (updated)
+      alpha-linux-gem.cfg (updated; default.cfg in linux-redhat62-alpha)
+      fujitsu-siemens-nt-45.cfg -> fujitsu-siemens-nt-50.cfg (updated)
+      sgi.cfg (updated)
+      HPint1.cfg (added)
+      HPfp1.cfg (added)
+
+Version 105 - 13 October 2000 (Friday)
+===========
+ 1) Tools changes:
+      added possible fix for basepeak problems
+      added mechanism for automatically including src.alts
+      buildtools.bat update from John Henning
+ 2) Toolsets updated:
+      HPUX_1100-pa20
+      Tru64-Unix-Alpha
+      irix6.5-mips
+      linux-ppc
+      linux-redhat62-alpha
+      linux-redhat62-i686
+      linux-redhat62-sparc
+      nt40-alpha
+      nt40-i386
+      reliant-unix
+      solaris-sparc
+      solaris8-i86pc
+      solaris8-sparc
+      svr4-i386
+ 3) Toolsets deleted:
+      linux-redhat52-i686
+      linux-redhat60-alpha
+ 4) Added standards patch for 255.vortex (osgcpu-3853)
+ 5) Config file updates:
+      intel_nt.cfg - removed
+      sun_sparc_solaris.cfg - updated
+ 6) Documentation updated:
+      config.txt
+      runrules.txt (pending approval)
+ 
+Version 104 - 25 September 2000
+===========
+ 1) Tools changes:
+      fixed -v/-V confusion
+      replaced PDFlib stuff in NT tarballs with same from kit 79
+      removed PDF exclusion for NT systems
+      added 'command_add_redirect' option for cluster runs using submit
+ 2) Documentation updates: 168.wupwise, 181.mcf
+ 3) Toolsets updated: i386-svr4
+ 4) Removed NEED_MATH for 252.eon.  You might need to add EXTRA_LIBS=-lm for
+    252.eon now.
+ 5) Applied Bodo's pathname length fix for 191.fma3d
+
+Version 103 - 21 August 2000
+===========
+ 1) Tools changes:
+      typo in runspec's '-h' output fixed (doc -> docs)
+      added rawformat.bat
+      fixed bar graphs on PostScript and PDF results; base is now on top
+      solaris2.6-sparc tools renamed to solaris-sparc
+ 2) 253.perlbmk: Fixed typo in spec_config.h that would keep it from building
+                 under Linux.
+ 3) 252.eon: Applied Ken Sarno's patch for standards compliance (osgcpu-3657)
+ 4) Completed original.src section; we should be fully GPL compliant now.
+ 5) In the absence of a new NT tools build, set NT to not even try PDF output.
+    This fix should be reverted when a working NT tools set is produced.
+ 6) Documentation updates: 171.swim, 172.mgrid, 187.facerec, 301.apsi, 176.gcc
+                           (Synched up with public website.)
+    readme1st.txt updated
+    runrules.txt updated
+    execution_without_SPEC_tools.txt added (formerly polevault.txt)
+
+Version 102 - 28 July 2000
+===========
+ 1) Toolsets updated: (http://pro.spec.org/private/osg/cpu2000/tools_1.1.html)
+    aix433-common
+    nt40-i386
+    solaris8-i86pc
+ 2) Config files added:
+    alpha-linux-gem-jul28-2000.cfg (added as default.cfg for Alpha-Linux)
+
+Version 101 - 16 July 2000
+===========
+ 1) Toolsets updated: (http://pro.spec.org/private/osg/cpu2000/tools_1.1.html)
+    linux-ppc
+    reliant-unix
+    irix6.5-mips
+    Tru64-Unix-Alpha
+    hpux_1100-pa20
+    linux-redhat52-i686
+    linux-redhat60-alpha
+    linux-redhat62-alpha
+    linux-redhat62-i686
+    linux-redhat62-sparc
+    nt40-alpha
+    solaris2.6-sparc
+ 2) 253.perlbmk - added compilation defines for Linux-IA64.
+
+Version 100 - 27 June 2000
+===========
+ 1) Tools changes:
+    - All outstanding errata fixed; see
+     http://pro.spec.org/private/osg/cpu2000/tools_loose_ends_20000328_1242.txt
+    - Copyright notices updated
+    - install.sh quieted, unless you set VERBOSE=1 in your environment
+ 2) 168.wupwise - removed README.make from docs/
+ 3) 171.swim - removed README.make and DESCR.171; outdated and incomplete
+ 4) 172.mgrid - removed README.make and README; outdated
+ 5) 173.applu - removed applu.f.old from src/
+ 6) 177.mesa - removed mesa.{in,ppm,mesh} from src/
+ 7) 178.galgel - removed galgel.in.* from data/*/,
+                         galgel.in, README.CONFIG, Makefile.old from src/
+               - applied fix in eigQR.f90 (osgcpu-3404)
+ 8) 179.art - removed goteam2f, dos2unix.pl from src/
+ 9) 188.ammp - removed redundant ammp.description from docs/
+10) 301.apsi - replaced old DESCR.141 with new 301.apsi.{txt,html} from Bodo
+11) 164.gzip - removed data/raw, fixed IBM NT portability problems (osgcpu-3457)
+12) 176.gcc - removed DESCR.176, added new bc-emit.c and docs (osgcpu-3485)
+13) 181.mcf - removed makefile.vms, regularized fopen parameters (osgcpu-3467)
+14) 197.parser - removed src/Makefile.old and src/makefile.vms.  removed
+                 top-level tarball
+15) 252.eon - added comment in src/Makefile about commented-out source files
+16) 253.perlbmk - removed #line directives from perly.c.
+                - Moved src/sample_configs to docs/ and added a README
+                - Fixed problem with casting negative floats to unsigned
+17) 254.gap - removed DESCR.254, which was actually from 180.ising
+18) 255.vortex - removed docs/README.make, src/Makefile.95
+19) 300.twolf - merged DESCR and 300.twolf.txt, updated 300.twolf.html
+              - removed src/COPYING, src/Makefile.* 
+              - added note to original.src/README, along with the initial
+                twolf tarball that we got.
+20) 191.fma3d - removed src.single and docs/descr.191
+21) Documentation updated
+22) 187.facerec - fix for F95 bug (osgcpu-3488, 3500)
+
+Version 99 - never made
+
+Version 98 - 28 December 1999 -- Release Version
+==========
+ 1) Version bumped to 1.00 (release)
+ 2) Copyright notices placed on documents
+ 3) legal.txt added
+
+Version 97 - 17 December 1999 -- Release Candidate 1
+==========
+ 1) Documentation updates/additions:
+         docs/*, LICENSE, original.src/README
+ 2) 176.gcc original optabs.c added in src/src.alt
+ 3) Config files changed:
+         sgi.cfg, Alpha_NT.cfg, intel_nt_visual_studio.cfg
+ 4) Config files added:
+	 aix.pwr3.cfg, aix.rs64b.cfg, alpha-linux-gcc-nag-ffm.cfg,
+	 alpha-linux-gcc-nag.cfg
+ 5) Config files removed:
+         aix.pwr3.base.cfg
+ 6) Version bumped to 0.99 (release candidate)
+
+Version 96 - 14 December 1999
+==========
+ 1) Documentation updates/additions:
+         172.mgrid, 191.fma3d, 197.parser, 254.gap (HTML),
+         171.swim, 173.applu, 189.lucas
+	 docs/*
+ 2) Tools changes:
+    NT installer un-stupidified; shrc.bat fixed up
+    Commenting section markers will now work as expected
+    list files will be created writable by all
+    obiwan re-enabled
+    PDF exclusion fix for Alpha-NT moved
+    -V for NT fix attempt
+    inappropriate die() calls changed to Log(0, ...); exit 1;
+ 3) Original source for 177.mesa added
+    
+Version 95 - 10 December 1999
+==========
+ 1) Documentation updates/additions: everything in docs/ or docs.nt/,
+         172.mgrid, 191.fma3d, 197.parser, 254.gap (txt only, no HTML yet)
+ 2) Config files updated/added: alpha-linux-gem-dec7, Tru64_unix,
+            fujitsu-siemens-nt-45
+ 3) NT-formatted docs now at top level, original.src and docs.nt
+ 4) NT installer updated (documentation still incomplete)
+ 5) install.sh now no longer installs tools/ if you have a valid set on CD
+ 5) Tools changes:
+      verbosity levels changed to be more sane (doc forthcoming)
+      line endings now dealt with more consistently & reliably
+      extract_* and config output format now work on NT
+      raw files' MD5 hashes are now checked when formatting
+      various tweaks for the website formatter
+      help message updated
+      extra line in HTML notes eliminated
+      NT config file truncation problem fixed
+      Multiple training runs now work
+
+Version 94 - 3 December 1999
+==========
+ 1) Documentation updates/additions: (lots; see docs/)
+            Moved tools/src/README -> docs/tools_build.txt
+            Moved README.NT -> docs/install_guide_nt.txt
+ 2) Config files updated: sun_sparc_solaris.cfg
+ 3) Config files removed: siemens-reliant-unix.cfg, siemens-nt.cfg, hp.cfg
+ 4) Updated 164.gzip: undef UNALIGNED_OK
+ 5) Updated 252.eon: removed extraneous iieon file from source directory
+ 6) linux*alpha* tarballs updated with default.cfg
+ 7) Tools fixed/updated:
+	http://pro.spec.org/private/osg/cpu2000/tools_loose_ends_991203_0403.txt
+      config file "output format" added
+      MD5 hashing of raw files parts behind the fence
+      NT's install.new.bat should now work
+
+Version 93 - 22 November 1999
+==========
+ 1) Documentation updates/additions: 177.mesa.txt, runspec.txt
+ 2) Tools changes; see
+      http://pro.spec.org/private/osg/cpu2000/tools_loose_ends_991122_2234.txt
+ 3) Config files updated: sun_sparc_solaris.cfg
+
+Version 92 - 9 November 1999
+==========
+ 1) Documentation updates: readme1.txt, techsupport.txt, 255.vortex.txt,
+      168.wupwise.txt
+ 2) Tools changes; see
+      http://pro.spec.org/private/osg/cpu2000/tools_loose_ends_991108_1730.txt
+
+Version 91 - 2 November 1999
+==========
+ 1) Config file updates: sun_sparc_solaris.cfg
+ 2) 200.sixtrack updated (osgcpu-3049)
+
+Version 90 - 1 November 1999
+==========
+ 1) NT-formatted docs are now in docs.nt.
+ 2) NT installation README added
+ 3) Tools changes; see
+      http://pro.spec.org/private/osg/cpu2000/tools_loose_ends_991101_0645.txt
+
+Version 89 - 27 October 1999
+==========
+ 1) Config file updates: ppc32_linux.cfg
+ 2) 186.crafty updated (osgcpu-2986)
+ 3) 252.eon updated
+ 4) 301.apsi updated
+ 5) Tools changes; see
+      http://pro.spec.org/private/osg/cpu2000/tools_loose_ends_991027_0240.txt
+
+Version 88 - 22 October 1999
+==========
+ 1) Config file updates/adds: intel_nt.cfg sgi.cfg sun_sparc_solaris.cfg
+      intel_nt_visual_studio_15oct99.cfg intel_linux.cfg sun_sparc_linux.cfg
+      aix.cfg siemens-nt.cfg
+ 2) Tools binaries updates: unixware2-i386 nt40-i386, sgi-irix6.5,
+      siemens-reliant-unix, linux-redhat60-alpha
+ 3) 186.crafty updated (osgcpu-2887)
+ 4) 253.perlbmk updated (osgcpu-2871)
+ 5) 301.apsi updated (osgcpu-2873)
+ 6) 176.gcc updated (osgcpu-2908)
+ 7) Tools changes; see
+      http://pro.spec.org/private/osg/cpu2000/tools_loose_ends_991022_1200.txt
+
+Version 87 - 14 October 1999
+==========
+ 1) Config file updates: aix.pwr3.base.cfg sun_x86_solaris.cfg
+ 2) Benchmark descriptions added/updated: 164.gzip, 176.gcc, 178.galgel,
+      179.art, 183.equake, 186.crafty, 188.ammp, 200.sixtrack, 252.eon,
+      255.vortex, 256.bzip2, 300.twolf
+ 3) Documentation re-organized; directories are called 'docs'
+ 4) 171.swim updated (osgcpu-2794)
+ 5) 179.art updated (osgcpu-2783)
+ 6) 186.crafty updated (osgcpu-2849)
+ 7) 187.facerec updated (osgcpu-2835)
+ 8) 200.sixtrack updated (osgcpu-2798)
+ 9) 252.eon updated (osgcpu-2802)
+10) 253.perlbmk updated (osgcpu-2843)
+11) 256.bzip2 updated (osgcpu-2840)
+
+Version 86 - 6 October 1999
+==========
+ 1) Config file updates: alpha-linux.cfg, Tru64_Unix_CPU2000_6oct99.cfg,
+      Alpha_NT_CPU2000_6oct99.cfg, siemens-reliant-unix.cfg,
+      sun_sparc_solaris.cfg
+ 2) Benchmark descriptions added/updated: 164.gzip, 168.wupwise, 175.vpr,
+      181.mcf, 187.facerec, 253.perlbmk, 256.bzip2
+ 2) 164.gzip updated (osgcpu-2719)
+ 3) 176.gcc updated (osgcpu-2686)
+ 4) 181.mcf updated (osgcpu-2702)
+ 5) 187.facerec updated (osgcpu-2715)
+ 6) 188.ammp updated (osgcpu-2713)
+ 7) 301.apsi updated (osgcpu-2699)
+ 8) Tools:
+	Removed zsh-specific stuff from shrc
+
+Version 85 - 29 September 1999
+==========
+ 1) New tools for Linux (Alpha, Sparc64)
+ 2) 191.fma3d updated (osgcpu-2576)
+ 3) 172.mgrid updated (osgcpu-2552)
+ 4) 200.sixtrack updated (osgcpu-2563)
+ 5) 188.ammp updated (osgcpu-2679)
+ 6) 186.crafty updated (osgcpu-2660)
+ 7) 253.perlbmk updated (osgcpu-2673)
+ 8) 300.twolf updated (osgcpu-2608)
+ 9) 168.wupwise updated (osgcpu-2678)
+10) Config file updates: siemens-nt.cfg, intel_linux.cfg, sun_sparc_linux.cfg
+    NOTE: Not all action items in osgcpu-2586 were completed!
+
+Version 84 - 3 September 1999
+==========
+ 1) New tools (83) for AIX, Tru64 UNIX, Reliant UNIX, Solaris, NT (alpha),
+    Linux (x86, PowerPC), HP-UX 
+ 2) More buildtools fixes (no need to rebuild)
+      libperl.so should now be properly included
+ 3) 197.link renamed to 197.parser
+      Config files in the kit are updated.  Don't forget about your private
+        ones!
+ 4) Benchmark tweaks:
+      186.crafty
+      253.perlbmk
+      256.bzip2
+      301.apsi
+ 5) Tools:
+      No .pdf file is created if PDFlib is not available (formerly, PS was
+	 put in it)
+      Variable substitution is supported in notes (see doc/config.txt)
+      ASCII formatter might be less broken now
+      Bodo's bug has been stomped
+      Paul's Compress::Zlib workaround was applied
+
+Version 83 - 23 August 1999
+==========
+ 1) New tools for AIX (82+pdflib), x86/Linux (83)
+ 2) PDFlib build fixes
+ 3) submit functionality fixed -- see doc/config.txt
+ 4) intel_linux, sni_mips, sun config files fixed up (183.quake -> 183.equake)
+ 5) basepeak fixed (mostly)
+ 6) HP config file updated
+
+Version 82 - 14 August 1999
+==========
+ 1) Linux config file updates
+ 2) New tools packages for Solaris, AIX, and Linux (PPC, SPARC64 & x86)
+ 3) minimize_rundirs and minimize_builddirs now work
+ 4) Config file update races should be fixed
+ 5) Config file backups can now be disabled (backup_config=no)
+ 6) @ file for NT support (NEEDATFILE=1  -- thanks to Chris)
+ 7) install.sh tweak for OSes that try too hard to run others' binaries
+ 8) 189.lucas reftime fixed (osgcpu-2371)
+ 9) 252.eon future problem fix (osgcpu-2393)
+10) 253.perlbmk YACC parser source added (osgcpu-2397)
+11) Tools tweak - reportable now wins over ignore_errors, minimize_*
+12) 300.twolf pruning and type fixes (osgcpu-2399, 2392)
+13) 256.bzip2 type fixes (osgcpu-2399)
+14) 172.mgrid revision (osgcpu-2386)
+
+Version 81 - 5 August 1999
+==========
+ 1) Updated config file for 32-bit PPC-Linux
+ 2) Cleaned up and corrected formatters
+ 3) Added more verbose help output
+ 4) Updated AIX config file
+ 5) Fixes to make rate runs work
+ 6) Fix to create optionsX.out for FDO runs
+ 7) Upgraded pdflib from 0.6 to 2.0.  **PLEASE REBUILD TOOLS**
+ 8) Added configuration summary output (-V)
+ 9) Reportable now enforces correct run order (base, peak)
+10) Benchmark run order corrected
+11) Metrics scaled properly (x100 for speed, x1.16 for rate)
+12) Added SPEC_CPU200_NEED_BOOL to 253.perlbmk.  Updated Linux config files.
+13) rawformat can now format speed results as 1-way rates
+14) New extract_config and extract_raw tools
+15) Solaris tools added (but they need to be rebuilt, too)
+
+Version 80 - 21 July 1999
+==========
+ 1) Updated alpha tools, packagetools.bat (perl.dll)
+ 2) Extraneous 191.fma3d sources removed
+ 3) Reference run times updates (osgcpu-2338)
+ 4) Fix for the "Input set must be 'ref' for a valid run (set to 'default'
+    for this run)" error.
+ 5) AIX tools updates
+ 6) Original sources for 253.perlbmk added
+
+Version 79 - 13 July 1999
+==========
+ 1) Removed spice
+ 2) Makefile.defaults change for NT (Unix guys - don't use exe for extension)
+ 3) buildtools now puts libperl.so in the right place (osgcpu-2211)
+ 4) 10 July 1999 run rules (osgcpu-2317)
+ 5) Updated Tru64-alpha tools, added nt40-alpha tools
+ 6) Added John's packagetools.bat, printkids.pl
+ 7) Removed references to unused ggRandNum_x.cc in 252.eon
+ 8) Updated config file for SGI, Compaq NT, Compaq Tru64
+ 9) Some gcc updates
+
+Version 78 - 7 July 1999
+==========
+ 1) 187.facerec type change (osgcpu-2200)
+ 2) New tools for Solaris8-SPARC
+ 3) Spice fixups
+ 4) Tools buglets fixed (osgcpu-2268, 2270)
+
+Version 77 - 3 July 1999
+==========
+ 1) 166.ssim deleted
+ 2) 200.sixtrack reltol increased to 0.0005.
+ 3) 302.spice3f5 newish workload (osgcpu-many)
+ 4) Tools updates from Chris:
+    - more stringent reportable checking
+    - max_active_compares now equals number of users if set to 0.  Can be
+      set manually with the --maxcompares command line flag
+    - difflines is now in the user settable space
+    - default iterations is now set to 3
+ 5) HP & Intel Linux config file updates
+ 6) Paul's tar builder fix (osgcpu-2197) in
+ 7) Run rules updated (1 July version)
+ 8) New tools packages for Redhat 6.0 Linux (Alpha & x86), Reliant Unix,
+    LinuxPPC
+ 9) 253.perlbmk NT linkage fix
+10) 183.earthquake -> 183.equake
+
+Version 76 - 25 June 1999
+==========
+ 1) 171.swim
+ 2) 253.perlbmk (new this time, really! with NT and Siemens fixes)
+ 3) reftime updates (171.swim, 302.spice3f5)
+ 4) documentation updates (+ run rules of 24 June)
+ 5) Tru64 Alpha tools added
+ 6) config files updated (Intel Linux, HP)
+ 7) misc. stuff.  see osgcpu-{2160,2159} and possibly others
+
+Version 75 - 22 June 1999
+==========
+ 1) 253.perlbmk 
+ 2) 302.spice3f5
+ 3) 164.gzip
+ 4) Documentation additions
+ 5) Fix for Reinhold's FDO problem
+
+Version 74 - 14 May 1999
+==========
+ 1) 176.gcc fix for sinix
+ 2) 186.crafty obiwan set
+ 3) tools additions by john
+
+Version 73
+==========
+ 1) lots of new binaries
+ 2) 179.art
+ 3) 203.m88ksim (ref.out file)
+ 4) 302.spice3f5 (object.pm file)
+
+Version 72
+==========
+ 1) unixware binaries
+ 2) hp.cfg, ppc32_linux.cfg, sun_sparc_linux.cfg
+ 3) 203.m88ksim
+ 4) 305.spice3f5
+ 5) per size/file validation fix
+
+Version 71
+==========
+ 1) 255.vortex
+ 2) 189.lucas
+ 3) 203.m88ksim
+ 4) 302.spice3f5
+ 5) 166.ssim
+ 6) 175.vpr
+ 7) 252.eon
+ 8) 187.facerec
+ 9) 197.link
+10) 253.perlbmk
+11) 256.bzip2
+12) new config files for hp and intel_linux
+13) new binary files
+14) Tools bugfixes, pdf and ps output, NT fixes
+
+Version 70
+==========
+ 1) 176.gcc new reference output
+ 2) 203.m88ksim new reference output
+ 3) 175.vpr
+ 4) 177.mesa
+ 5) 178.galgel
+ 6) 186.crafty
+ 7) 187.facerec
+ 8) 190.gafort
+ 9) 255.vortex
+10) 305.ssim2 -> 166.ssim
+11) 171.swim
+12) 172.mgrid
+13) 173.applu
+14) 174.turb3d
+15) 301.apsi
+16) 164.gzip  (perhaps a fix to the NT bug?)
+17) 256.bzip2 (")
+18) 304.eon2 -> 252.eon
+19) 253.perlbmk
+20) Tool bugfixes, error reporting, formatting changes
+    Concurrent compares (must set max_active_compares)
+    Extra re-build fixes
+
+Version 69 - 11 April 1999
+==========
+ 1) 200.sixtrack
+ 2) 194.sim96
+ 3) 184.quake -> 184.earthquake
+ 4) 176.gcc
+ 5) 203.m88ksim
+ 6) 164.gzip NO_CHOWN and NO_UTIME always set now
+ 7) Tool bug fixes
+	specinvoke fixes
+	F is now used for F90, use F77 for the old fortran (really)
+	base FC and F77 is fixed
+	benchmarks which fail to compile will now show up
+	md5s written out even if compile fails
+	check_m5 can be set to 0 to turn off md5 checking
+	new CPU fields
+	'int' and 'fp' work again
+
+Version 68 - 9 April 1999
+==========
+ 1) 179.art stdlib.h in scanner.c
+ 2) 186.crafty NT_I386 -> NT_i386 in crafty.h
+ 3) 303.mcf2 merged into 181.mcf, NT fix, cosmetic changes
+ 4) 186.wupwise workload change
+ 5) 255.vortex workload update
+ 6) 190.gafort workload update
+ 7) 171.swim workload update
+ 8) 173.applu workload update
+ 9) 191.fma3d workload update
+10) 300.twolf workload update
+11) 164.gzip workload update
+12) 256.bzip2 workload update
+13) Tools updates:
+     ** DANGER WILL ROBINSON!!!! 
+     ** *VERY* *VERY* important, you *MUST* *ABSOLUTELY* *WITHOUT* *FAIL*
+     ** compile specinvoke in the tools/src/specinvoke-0.5 and copy it to the
+     ** bin directory, this replaces the functionality of the specrun
+     ** executable
+
+     F is now used for F90, use F77 for the old fortran
+     {C,CXX,F,F77}OPTIMIZE passed to linker?
+     {C,CXX,F,F77}LD is now allowable
+     {,C,CXX,F,F77}PORTABILITY Flag is now allowed
+     Config file is included in raw file '#>' comments are not
+	Even compressed if Compress::Zlib available
+     EXTRA_RMFILES which is passed to the RM command when cleaning up a directory
+     MD5 hashes stored in the config file
+     minimize_{build,run}dirs, these may or may not work right now
+     feedback=yes/no
+     PASS1_{C,CXX,F,F77}{FLAGS,LDFLAGS} do not trigger feedback on other benchmarks.
+     specrate now is cpu95ish
+     runtime and ratio printed after each run
+     benchmarks alternate when running multiple iterations
+     -r (or reportable) forces benchmarks to be run in order
+     notes sections (and many others) may now be included under the benchmark
+	specific seciton
+
+Version 67
+==========
+ 1) Workload updates for: 186.crafty, 177.mesa, 305.ssim2, 253.perlbmk,
+    165.jpeg, 168.wupwise, 188.ammp, 171.swim, 172.mgrid, 173.applu,
+    174.turb3d, 191.fma3d, 197.link, 300.twolf, 301.apsi
+ 2) CPU99->CPU2000  grrrr.
+ 3) 164.gzip, 256.bzip touched allocated memory
+
+Version 66
+==========
+ 1) Workload updates for: 164.gzip, 176.gcc, 177.mesa, 179.art, 183.quake,
+    186.crafty, 187.facerec, 188.ammp, 194.sim96, 200.sixtrack, 203.m88ksim,
+    254.gap, 255.vortex, 303.mcf2, 304.eon2, 305.ssim2
+
+Version 65 - 17 March 1999
+==========
+ 1) 203.m88ksim new instab.h
+ 2) new reference times
+ 3) 174.turb3d longer reference workload
+ 4) 191.fma3d increased reltol to 5%
+ 5) new intel and ppc32 linux config
+ 6) 173.applu size fix
+ 7) new ppc32 linux tools
+ 8) 164.gzip removed random ref workload
+ 9) 256.bzip2 fixed test input set
+
+Version 64
+==========
+ 1) Added 303.mcf2 304.eon2 to the Cint98.bset file
+ 2) 304.eon2 workload change
+ 3) 254.gap workload change
+ 4) 164.gzip workload change
+ 5) 256.bzip2 workload change
+ 6) 253.perlbmk workload change (for NT)
+ 7) removed dead benchmarks from tree
+
+Version 63
+==========
+ 1) 302.spice3f5 removed voter workload, reltol increased
+ 2) 304.eon2 added
+ 3) 253.perlbmk fixed test workload for NT
+ 4) Tools fix for skiptol, mesa should validate now
+
+Version 62 - 26 February 1999
+==========
+ 1) 303.mcf2 win32 change
+ 2) 253.perlbmk new random number test
+ 3) 200.sixtrack increased internal tolerance
+ 4) 168.wupwise dcabs1.f change
+ 5) tools fix and reduced debugging output
+ 6) fixed tru64 binaries
+
+Version 61 - 25 February 1999
+==========
+ 1) 186.crafty added definiton for LINUX_ULTRASPARC to LINUX_SPARC
+ 2) 303.mcf2 added
+ 3) 302.spice3f5 removed inputs, moved input from train to test, ignore 2 errors
+ 4) 169.bgl removed train_nucleic, setjmp arg cast to void*
+ 5) 253.perlbmk this time for sure!
+ 6) 166.ssim unbuffered output and fixed stats
+ 7) 254.gap 64 bit changes for real, *MUST USE -DSPEC_CPU99_LP64*
+ 7) 177.mesa skiptol=6
+ 9) tools changes, per workload/file tolerances, skiptol added
+10) new config file for linux_ultrasparc
+11) gap and perl now use SPEC_INT32_T, if your 32 bit signed ints are not
+    'int' then define this
+12) new NT-alpha tools and tru64 unix tools
+
+Version 60 - 24 February 1999
+==========
+ 1) 177.mesa removed extraneous ^M characters, ref output
+ 2) removed 170.porta,180.ising,201.flod from bset file
+ 3) 174.turb3d train workload
+ 4) 178.galgel iteration tolerance regularized
+ 5) 169.bgl win32 fixes, SIGBUS ignored, main returns int
+ 6) 253.perlbmk SPEC_CPU99_SCO_UW2
+ 7) 300.twolf removed MEMORYMAN, don't use rusage on any platform
+ 8) vim included DOVIM=1 to buildtools to build it.
+ 9) buildtools.bat for NT
+10) 302.spice removed another input set
+
+Version 59 - 24 February 1999
+==========
+ 1) 177.mesa new train and ref output changed
+ 2) 166.ssim stderr points to stdout, select call removed
+ 3) 166.quake main returns int
+ 4) 168.wupwise gcc changes, precision changes,reltol increased, random seed
+ 5) 188.ammp CPU98->CPU99, main returns int
+ 6) 203.m88ksim output format change
+ 7) 173.applu added 'EXTERNAL VERIFY' line
+ 8) 178.galgel variable name masking fixed
+ 9) 174.turb3d external verify fixed
+10) 301.apsi train input changed
+11) 200.sixtrack added 'EXTERNAL QMOD'
+12) 302.spice fixed main prototype, input sets removed
+13) 253.perlbmk train longer, ref fixed
+14) fixed shrc badness
+15) tools fixes for mean_anyway and output selection fixes
+16) hp tools renamed to conform to everything else
+
+Version 58 - 23 February 19999
+==========
+ 1) 166.ssim prototypes removed, stat added to syscall.c, main returns int
+ 2) 177.mesa ref output reduced for BLK, abstol=6
+ 3) 171.swim new train data
+ 4) 172.mgrid new train data
+ 5) 173.applu new train data
+ 6) 174.turb3d new train data
+ 7) 191.fma3d reltol=0.01
+ 8) 301.apsi new train data
+ 9) 186.crafty sparc64 support, main returns int
+10) 203.m88ksim new inputs, win32 changes, symname changes
+11) 300.twolf SPEC_CPU98->SPEC_CPU99 define
+12) 302.spice3f5 ifsim.h fix, removed input sets, main returns int
+13) 197.link main returns int
+14) 189.lucas hex_char fix for HP
+15) 200.sixtrack comment char changed
+16) default.cfg more descriptive
+17) fixed in buildtools for HP, also runs relocate now
+18) new tools for linux-sparc64, and 2 HP platforms
+
+Version 57 - 22 February 1999
+==========
+ 1) 168.wupwise modified by author
+ 2) 177.mesa frustrum change 
+ 3) 176.gcc input file move from ref to train
+ 4) Old Spec/*.pm files have been removed
+
+Version 56 - 18 February 1999
+==========
+ 1) Fixed bug in FDO detection
+ 2) First pass at .raw and .asc output (these will change a bit later)
+ 3) 168.wupwise update, reltol reduced to .03, increased precision of data types
+ 4) 253.perlbmk update, dont use files in subdirs, specify lib directory,
+    integrate MHonarc into workload, random number changes
+ 5) 255.vortex update, part count reduced
+ 6) 187.facerec update removed lots of faces, Step changed
+ 7) 175.vpr update extra command line options
+ 8) 179.art update -endx, and -endy changed
+ 9) 166.ssim update lots of changes in syscall.c, train output changed?
+10) 186.crafty update workload updates
+11) 254.gap update WIN32 fixes
+12) 302.spice3f5 update, more train input set, reltol increased to .05
+13) 191.fma3d update, reltol=.01, abstol=1e-7, output updated, LTYPE moved to
+    end of block 
+14) 169.bgl update, abstol=1e-6, 
+
+Version 55 - 4 February 1999
+==========
+ 1) 253.perlbmk   	with random number fixes
+ 2) 200.sixtrack  	changes from ryan
+ 3) 191.fma3d     	abstol set to 1e-7, stop fix
+ 4) 252.eon       	abs(x) changed to (((x)<0)?(-x):(x))
+ 5) 203.m88ksim   	renamed and 64 bit fixes
+ 6) 189.lucas     	new reference output
+ 7) 173.applu     	shorened run time
+ 8) 177.mesa      	obiwan=1
+ 9) 169.bgl	 	train fix
+10) 302.spice3f5	Kitchen Sink
+11) Tools added -a run (run but do not validate)
+12) Tools now unlock directories of runs which miscompare
+13) {C,F,CXX,F90}OPTIMIZE flags are now passed to the linker
+
+Version 54
+==========
+
+1) Bodo's tarball with bgl, fma3d and spice changes
+2) Sixtrack changes from Ryan
+3) Minor tool changes for NT
+4) Fix so that off by one checking wasn't always on
+
+Version 53 - 17 December 1998
+==========
+1. Changed RMRF definition for NT
+2. Bodo's tarball which changes 
+    167.asa       - clean up precision and workloads
+    169.bgl       - new source code with very flat profile
+    191.fma3d     - lots of changes, also free format rather than fixed
+    300.twolf     - updated SPEC_CPU parameters
+    301.apsi      - xdimag 
+    302.spice3f5  - source code update, plus a new input set for ref
+3. Ryan's new tarball 
+    194.sim96     - new input sets
+    201.flod      - portability fixes
+4. New 179.art
+
+Version 52 - 9 December 1998
+==========
+1. FMA3d fix (initialize variables)
+2. Spice <= vs < fix
+3. Nextgcc -> gcc update
+4. Sixtrack update
+5. BGL Update
+6. APSI dimag function
+7. Flod
+8. Wholesale changes for CPU98->CPU99
+9. VPR and FLOD moved to int
+
+Version 51 - 13 November 1998
+==========
+1.  Wupwise now has 7% tolerance for te.out and 4% for everything else
+2.  Turb3d has trunc fix for AIX
+3.  Lucas has new ref workload
+4.  Ijpeg has fixes for HP
+5.  Ising has new ref and train workload
+6.  Rsparse, lots of changes                                   
+7.  Eon changes for HP
+8.  Gap remoed sbrk and put calloc
+9.  fixed LD_LIBRARY_PATH in shrc
+10. new reliantunix-mips tools
+
+Version 50 - 12 November 1998
+==========
+1. Fix for fma3d under NT
+2. Eon now compiles and runs on many more platforms!
+3. Spice has nt_dirent.h protected so UNIX platforms should be happy again
+4. galgel fixes for linux
+5. nextgcc update
+6. hpux and siemens and linux-sparc64 binaries
+
+Version 49 - 11 November 1998
+==========
+1. Fixes to shrc for old tools as well as new (buildtools), specdiff -t fix
+2. New spice, bgl, apsi
+3. New nextgcc
+4. Vortex fix
+
+Version 48 - 10 November 1998
+==========
+1. Vortex and eon changes for SPEC_CPU99_ILP64 and SPEC_CPU99_LP64
+2. new perlbmk output
+3. new sixtrack
+4. Updated some tools sources (people may want to rebuild)
+
+Version 47 - 9 November 1998
+==========
+1. monitor_runspec_wrapper added
+2. New workload for 176.nextgcc
+3. New workload for 178.galgel
+4. Bodo's *new* tarball, 167.bgl, 191.fma3d, 301.apsi, 302.spice3f5
+
+Version 46:
+==========
+1. [123]90.gafort* collapsed using 390.gafort3 into 190.gafort
+2. spec_config.h in 253.perlbmk
+3. 164.gzip and 165.bzip2 changed to support 64 bits on AIX
+4. Bodo's tarball, 167.asa 301.apsi 171.swim 169.bgl 172.mgrid 254.gap
+   173.applu 302.spice3f5 191.fma3d
+
+Version 45:
+==========
+1. Restored sixtrack Makefile
+2. runspec fix for SGI
+3. changed gzip test workload to work around NT problems
+4. updated 187.facerec.9oct98_115pm.tar.gz
+5. updated 188.ammp.7oct_418pm.tar.gz
+6. updated 304.spice3f5.v3a.tar.gz (as 302)
+7. added 390.gafort3_9oct_220am.tar.gz
+
+Version 44:
+==========
+1. Removed .o file in 184.rsparse/src
+2. fixed the Cint98.bset and Cfp98.bset files 
+3. New version of 253.perlbmk as described in osgcpu-1172
+4. New benchmark 390.gafort3
+
+Version 43:
+===========
+1. Changed line 247, hash.c, in 177.mesa to get rid of SUN's warning. 
+2. New version of 187.facerec as per osgcpu-1137
+3. Changes to 186.crafty, chess.h, to add definitions for Siemens MIPS 
+4. Changed ReadRaw to SpecReadRaw in 186.crafty per John's request
+5. New version of 184.rsparse/src as in osgcpu-1145
+
+Version 42:
+===========
+1. Applied 200.sixtrack.98.0818.tar.Z and 200.sixtrack.src.980825.tar.Z
+2. Fixed Makefile.defaults for NT, wrt RMRF and *$(OBJ)
+3. Fixed syscall.c for linux
+4. Applied Ken's fixes to rsparse per osgcpu-1112
+5. Increased 179.art's ref workload runtime by a factor of 4.
+6. New workload for  perlbmk
+7. Fixed 166.ssim/syscall.cfor Chris' problems.
+8. New version of 167.asa
+9. New version of 200.sixtrack
+10. New version of data sets for gafort which fixes the NAMELIST problem
+
+Version 41:
+===========
+1. Fixed object.pm in 167.asa for NT
+
+Version 40:
+==========
+1. Ported strncasecmp.c in 197.link to NT.
+2. Added os_msdos.h to 302.spice3f5
+3. Fixed object.pm for 169.bgl and 176.nextgcc
+4. Added 256.bzip2 to the distribution
+5. Removed a bunch of .il files from 175.vpr/src
+6. New version of 166.ssim which has all three workloads. 
+7. New version of 252.eon
+8. Added vendor-specific config files in the config directory
+9. New version of 201.flod
+10. New version of 164.gzip
+11. New version of 184.rsparse
+12. New version of 180.ising
+13. Applied bodo's fixes
+
+Version 39:
+===========
+1. Changes to 176.nextgcc and 300.twolf to port them to NT. 
+2. Added gap to the distribution
+3. Added a reftime file to 301.apsi
+4. 179.art output files renamed and rel_tol of 0.01 added
+5. New version of 300.twolf which has new ref inputs and outputs.  
+6. Removed all .f files from 191.fma3d since they were duplicates of the .f90 files
+7. Modified 197.link output, the line with the byte count on it is removed. 
+8. Added reftime and reltoll for 191.fma3d
+9. Renamed all data files for 184.rsparse
+10. Removed the need for -DPURIFY and changed it to -DSPEC_CPU98 
+11. ijpeg has ifdef for USE_STRERROR needed for SPARC V9 Solaris
+12. New versions of swim and grid which have teh correct ref output files
+13. New version of 191.fma3d which has a reltol and other fxe for the automatic saving of variables
+    across function cals. 
+14. Fixes to 169.bgl which takes care of the jmpbuf problems
+
+Version 37:
+==========
+1. Changes from Bodo to inputs for turb3d, mgrid, applu. Code changes to fma3d,
+   asa, turb3d, bgl.  
+2. Fixes for 2 252.eon bugs.
+3. Renamed output files for (test,train,ref) for 184.rsparse.
+
+Version 35:
+===========
+1. 174.turb3d had duplicate lines removed from turb3d.f
+2. Changes to eon for 
+
+Version 34:
+===========
+1. New version of 194.sim96 which cleans up the output and moves common 
+   files into the all sub-directory. Greatly reduced run-time.
+2. Changed hpux to __hpux in cache.c for 166.ssim
+3. New version of 201.flod as described in osgcpu-962
+4. 255.vortex is now part of the suite. 
+5. 184.rsparse has a new version with changes made by Ken. 
+6. New version of 252.eon with changes made by Ken. 
+7. New version of 191.fma3d.
+8. New version of 201.flod flod.c.
+9. New version of spice with changes form Ken Sarno.
+
+Version 33:
+===========
+1. Moved 201.flod into the FP suite. 
+2. Changed all three outputs for mesa
+3. Changes in 253.perlbmk to make HP happy
+4. Changes to asa, fma3d, turb3d, twolf, apsi, gap
+5. New version of eon which should work on NT
+6. New version os sim96 which fixes the output. 
+7. Chnages to 176.nextgcc to fix Digital Unix problems
+8. Changed lucas_distrib_spec.f90 which fixes HP's problem. 
+
+Version 32:
+===========
+1. New version of galgel with F90 version of lapack, real*8 and complex*16
+   new input format to avoid constant propagation and makefile changes. 
+2. Added new workloads for porta which take 3 and 6 times as long. The
+   6x workload is the new reference. Ref: osgcpu-940
+3. New version of 191.fma3d as described in osgcpu-933
+4. Added 302.spice3f5
+5. New version of mcf
+6. New version of tool scripts as documented in README.tools
+
+Version 30:
+===========
+1. Fixed the galgel Makefile as it had spaces instead of tabs. 
+2. Added -lm to the 300.twolf Makefile
+3. Changed rsparse ref input. The new workload is more memory-intensive
+   but less time-intensive. 
+4. New version of ising which gets rid of the normalization causing 
+   rounding and thence, validation errors.
+5. Added 194.sim96
+6. Fixed the "Line too long" problem for bgl
+7. Added new version of flod.c to 201.flod as in osgcpu-899
+8. Added 253.perlbmk
+9. Added 187.facerec
+10. New version of 181.mcf which has a flatter profile. 
+11. New version of gzip which runs longer and with differing compression
+    levels.
+12. Changed 198.wupwiseblas3 to 168.wupwise
+13. Ported 181.mcf to NT. 
+14. New data set for ijpeg
+
+Version 29
+==========
+1. Added timberwolf
+2. Added 189.lucas
+3. Fixed the $(BINDIR) problem in 203's Makefile
+4. Added a new version of 180.ising which corrects the rounding effects
+   observed by Reinhold.
+5. Added the new version of 181.mcf with a longer runtime, less fp 
+   operation and which is 64-bit safe. 
+6. Added -lm to the Makefiles for bgl and ssim
+7. New version of lucas
+8. New version of timberwolf which corrects a comparison problem. 
+9. Added 301.apsi
+10. Fixed a problem in 166.ssim where the input file name was not being 
+   constructed. Changed the train and ref input to the test input as 
+   it is the ony input set which works.
+
+Version 28
+==========
+1. Added the .f suffix rule to the 200.sixtrack Makefile
+2. Fixed the .pm file in ssim
+3. Fixed cache.c for hp
+4. Removed 168.wupwiseblas1 and 199.wupwisenoblas
+5. Removed the dependency on sysprobe for ssim. 
+6. Fixed the Makefile in ssim by removing extra space on line 13
+7. Changed Makefiles for galgel and rsparse
+8. New version of gafort
+
+Version 27
+==========
+1. Changed the 203.m88ksim2 Makefile to add the LDOPT line
+2. Moved 200.sixtrack in to the CFP98 directory
+3. Removed extra directories in the data directory of 171.swim
+4. Fixed the Makefile in sixtrack FFLAGS instead of CFLAGS on the LD line
+5. Added 201.flod
+6. Changed input for 180.ising for longer execution time (x 3).
+7. Updated directory for 181.mcf (documentation only, no new run
+   necessary).
+8. Changed eval.c in 188.ammp
+9. Took out the ref input set for ssim and replaced ti with train
+10. Fixed cut.pl in asa
+11. Fixed all outputs for mesa
+
+Version 26
+==========
+1. Changed utility.c for crafty to eliminate GetTime
+2. Added a new initdata.h to crafty and took out data.obj from the 
+   Makefile, to fix DEC C problems. 
+3. New version of asa which does not need gzip. 
+4. Changed the suffix rule in rsparse's Makefile to .cc from .c
+5. Changed the Makefile for galgel b y adding the .f90 files to the 
+   clean rule.
+6. Fixed the train output for crafty by reaplcing the timing output
+   with ###.##
+7. Added 200.sixtrack.
+8. New version of asa which does not need gzip
+9. Removed undefined sequence from line 48 of iterate.c in crafty
+
+Vesion 25
+=========
+1. Added 190.gafort
+2. Changed Makfile in 203.m88kim2 to add getopt to the OFILES
+3. Added rel_tol to quake
+4. Commented out the while loop in 182.dt which needed getopt
+5. Conditionally include unsitd.h in mcf if NTOS is not defined
+6. Changed spec.c in 164.gzip for differing levels of compression.
+7. Changed the 203.m88ksim2 makefile by removing the hard-coded -o and $@
+8. Changed the .pm file for link to copy files recursively on NT
+
+Version 24
+==========
+1. Fixed a bug in porta.c where the fclose was not protected by 
+   ifndef SPEC98 on line 367
+2. Fixed the Makefile for 198.wupwiseblas3 by removing spaces
+   and replacing with tabs. Added extra spaces to lines on gammul.f 
+   which had less than 6 spaces. 
+3. Added an exit call to main.c on link
+4. Changes to main.c in 182.dt which took out references to 
+   gettimeofday. 
+5. Changed the double precision constants in applu.f on lines 3686-3699
+   by adding d0 at the end of each
+6. Changes to 182.dt to open the file in binary mode on NT
+7. Added 203.m88ksim2
+
+Version 23
+==========
+1. Added new vesions of ising and mcf
+2. Changes to ssim based on SNI input in osgcpu-815
+3. Added ammp.
+
+-----------------------------------------------------------------------------
+For a list of bugs to be worked on, please see
+http://pro.spec.org/private/osg/cpu2000/tools_loose_ends.txt
+Any bugs not listed there will not be worked on.  If you know of a bug not
+listed there, please send mail to osgcpu@spec.org.
+
+$Id: Revisions 1624 2005-09-22 20:05:23Z cloyce $

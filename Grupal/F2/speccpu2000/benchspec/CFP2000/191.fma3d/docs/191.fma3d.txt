@@ -1,0 +1,118 @@
+SPEC CPU2000 Benchmark Description File
+
+Benchmark Name: 191.fma3d (FMA-3D)
+
+Benchmark Author: Samuel W. Key (swkey@worldnet.att.net)
+ For current version and availability information, please contact:
+   Samuel W. Key
+   dba KEY Associates
+   1851 Tramway Terrace Loop NE
+   Albuquerque, NM 87122
+   USA
+  Telephone and Fax: (505) 856-1488
+ This information is current as of October 1999.
+
+Benchmark Program General Category:  Mechanical Response Simulation
+
+Benchmark Description:
+
+FMA-3D is a finite element method computer program designed to simulate
+the inelastic, transient dynamic response of three-dimensional solids and
+structures subjected to impulsively or suddenly applied loads. As an
+explicit code, the program is appropriate for problems where high rate
+dynamics or stress wave propagation effects are important. In contrast to
+programs using implicit time integration algorithms, the program uses a
+large number of relatively small time steps, with the solution for the
+next configuration of the body being explicit (and inexpensive) at each
+step. To further reduce the computational effort, the program has a
+complete implementation of Courant subcycling in which each element is
+integrated with the maximum time step permitted by local stability
+criteria. For simulations that have large differences in element critical
+time steps over the mesh, very significant savings in execution time are
+achieved. There are no inherent limits on the size of an analysis model,
+and storage allocation is dynamic within the code.
+
+The program may be applied to static and quasi-static problems either by
+using the dynamic relaxation option or by simply applying the external
+loads slowly and integrating the dynamics equations until all significant
+transients have died out.
+
+The algorithms and architecture of the program are designed for accuracy
+and robustness.  The solution portion of the program is in a form
+suitable for cache-based computer hardware architectures. The program is
+written in Fortran-90 and consists of over 50,000 lines of code and
+comments. The program's key features include:
+
+* Innovative techniques for managing large model databases
+* A complete library of finite elements including rigid bodies
+* An extensive assortment of constraint and loading options
+* Practical sliding interfaces for multi-component analyses
+* Extensive options for model modification during a simulation
+* Transient dynamic analysis using Courant subcycling
+* One-, two- and three-dimensional strain gauges.
+
+Element Library
+
+The program has a large selection of quality finite elements from which
+to choose for constructing a model. The element formulations all handle
+geometric and material nonlinearities  and do not lock for incompressible
+materials.  The element library has formulations that include:
+
+* 8-Node hexahedral continuum elements.
+* 6-Node pentahedral continuum elements.
+* 4-Node tetrahedral continuum elements.
+* 8-Node quadrilateral thick shell elements
+* 4-Node quadrilateral shell elements
+* 3-Node triangular shell elements
+* 4-Node quadrilateral membrane elements
+* 3-Node triangular membrane elements
+* 2-Node integrated beam elements
+* 2-Node truss elements
+* 2-Node spring elements
+* 2-Node damper elements
+
+Material Modeling
+
+To simulate realistically a variety of material behavior, the program has
+a collection of very practical stress-strain models with well established
+
+integration algorithms. The program's library of material models
+includes:
+
+* Elasticity and plasticity (isotropic and anisotropic)
+* Accurate, smooth hardening plasticity for metal forming
+* Incompressible rubber elasticity
+* Viscoelasticity
+* Volumetric compaction
+* Rate dependence
+
+Input Description:
+
+  The SPEC Reference input workload is the simulation of an impulsive
+load (initial velocity condition) applied to a cylindrical panel (thin
+shell structure supported by clamped, simply supported, and symmetry
+boundary conditions). A very fine finite element mesh (a large number of
+finite elements) is used to obtain a 100 MB RAM-resident data set for the
+simulation.
+
+Output Description:
+
+  Based on the program's ability to provide edited printer output, only
+the displacements at two specific nodal points are printed. These two
+nodal points are at the edge of the impulsive load where the initial
+velocity conditions are discontinuous and, therefore, the response of the
+cylindrical panel is initially the most interesting.
+
+Programming Language:  Fortran-90
+
+Known Portability Issues:
+
+  Apart from compiler-specific and machine-specific optimization issues,
+the only recommended compiler switch for this version of the program for
+general use is -static.
+
+Reference:
+
+ Key, S. W. and C. C. Hoff, "An Improved Constant Membrane and
+    Bending Stress Shell Element for Explicit Transient Dynamics," Computer
+    Methods in Applied Mechanics and Engineering, Vol. 124, pp 33-47, 1995.

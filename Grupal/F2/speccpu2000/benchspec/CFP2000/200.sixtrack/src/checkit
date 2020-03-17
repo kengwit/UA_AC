@@ -1,0 +1,5 @@
+#!/bin/csh
+foreach file (`ls *.f`) 
+grep -v "^\*" $file | grep -v "^C" | grep -v "^c" | cut -c 73-999 | uniq >extra/$file
+echo $file
+end

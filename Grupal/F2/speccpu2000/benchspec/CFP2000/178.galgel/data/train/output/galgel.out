@@ -1,0 +1,276 @@
+
+
+  GalGel behnchmark submitted to SPEC2000 search programm
+________________________________________________________________________________
+
+
+ This is Ra-Fa case of the GAMM benchmark on the oscillatory instability
+ of convection in a laterally heated rectangular cavity.
+
+ Solution by global spectral Galerkin method.
+________________________________________________________________________________
+
+ Parameters:
+
+ Aspect ratio (length/height) =  4.0000000    
+ Prandtl number               = 0.15000000E-01
+
+ Number of basis functions in x-direction =  20
+ Number of basis functions in z-direction =   8
+________________________________________________________________________________
+
+
+
+ Step 1: Calculate steady states sequentially for
+         Grashof numbers = 1.E1, 1.E2, 1.E3 1.E4, and 1.E5,
+         using zero initial guess
+
+
+
+        Current Grashof number =   10.000000    
+
+
+         Iterations of Newton method started
+            Newton iteration #  0    Maximal derivative = 0.1724    
+            Newton iteration #  1    Maximal derivative = 0.7966E-04
+            Newton iteration #  2    Maximal derivative =  0.000    
+         Newton method converged in  2 iterations
+
+
+        Current Grashof number =   100.00000    
+
+
+         Iterations of Newton method started
+            Newton iteration #  0    Maximal derivative =  1.552    
+            Newton iteration #  1    Maximal derivative = 0.6453E-02
+            Newton iteration #  2    Maximal derivative =  0.000    
+         Newton method converged in  2 iterations
+
+
+        Current Grashof number =   1000.0000    
+
+
+         Iterations of Newton method started
+            Newton iteration #  0    Maximal derivative =  15.52    
+            Newton iteration #  1    Maximal derivative = 0.6452    
+            Newton iteration #  2    Maximal derivative = 0.1188E-02
+            Newton iteration #  3    Maximal derivative =  0.000    
+         Newton method converged in  3 iterations
+
+
+        Current Grashof number =   10000.000    
+
+
+         Iterations of Newton method started
+            Newton iteration #  0    Maximal derivative =  155.2    
+            Newton iteration #  1    Maximal derivative =  64.08    
+            Newton iteration #  2    Maximal derivative =  4.272    
+            Newton iteration #  3    Maximal derivative = 0.2155E-01
+            Newton iteration #  4    Maximal derivative =  0.000    
+            Newton iteration #  5    Maximal derivative =  0.000    
+         Newton method converged in  5 iterations
+
+
+        Current Grashof number =   100000.00    
+
+
+         Iterations of Newton method started
+            Newton iteration #  0    Maximal derivative =  1564.    
+            Newton iteration #  1    Maximal derivative =  5514.    
+            Newton iteration #  2    Maximal derivative =  1436.    
+            Newton iteration #  3    Maximal derivative =  584.0    
+            Newton iteration #  4    Maximal derivative =  219.8    
+            Newton iteration #  5    Maximal derivative =  48.24    
+            Newton iteration #  6    Maximal derivative =  2.833    
+            Newton iteration #  7    Maximal derivative = 0.1975E-01
+            Newton iteration #  8    Maximal derivative =  0.000    
+         Newton method converged in  8 iterations
+
+ Step 1 is successfully completed
+________________________________________________________________________________
+
+
+
+ Step 2: Perform linear stability analysis
+         and calculate critical Grashof number and critical frequency.
+         Steady state at Gr=1.E5 is used as initial guess
+
+
+     Iterations of linear stability analysis started
+
+
+.....................................................................................
+     Iteration of linear stability analysis #  0
+
+
+         Iterations of Newton method started
+            Newton iteration #  0    Maximal derivative = 0.2021E-06
+         Newton method converged in  0 iterations
+
+          Grashof number=  1000000.0    
+          Eigenvalue:       Re(Lambda)=  8.297         Im(Lambda)=  109.2    
+
+.....................................................................................
+     Iteration of linear stability analysis #  1
+
+
+         Iterations of Newton method started
+            Newton iteration #  0    Maximal derivative =  63.89    
+            Newton iteration #  1    Maximal derivative =  2.368    
+            Newton iteration #  2    Maximal derivative = 0.6624E-03
+            Newton iteration #  3    Maximal derivative =  0.000    
+         Newton method converged in  3 iterations
+
+          Grashof number=  1031622.8    
+          Eigenvalue:       Re(Lambda)=  9.174         Im(Lambda)=  111.1    
+
+.....................................................................................
+     Iteration of linear stability analysis #  2
+
+
+         Iterations of Newton method started
+            Newton iteration #  0    Maximal derivative =  238.5    
+            Newton iteration #  1    Maximal derivative =  2.348    
+            Newton iteration #  2    Maximal derivative = 0.3950E-02
+            Newton iteration #  3    Maximal derivative =  0.000    
+         Newton method converged in  3 iterations
+
+          Grashof number=  700556.36    
+          Eigenvalue:       Re(Lambda)= -1.442         Im(Lambda)=  88.92    
+
+.....................................................................................
+     Iteration of linear stability analysis #  3
+
+
+         Iterations of Newton method started
+            Newton iteration #  0    Maximal derivative =  32.43    
+            Newton iteration #  1    Maximal derivative = 0.4016E-01
+            Newton iteration #  2    Maximal derivative = 0.1530E-05
+            Newton iteration #  3    Maximal derivative =  0.000    
+         Newton method converged in  3 iterations
+
+          Grashof number=  744880.58    
+          Eigenvalue:       Re(Lambda)= 0.1696         Im(Lambda)=  92.18    
+
+.....................................................................................
+     Iteration of linear stability analysis #  4
+
+
+         Iterations of Newton method started
+            Newton iteration #  0    Maximal derivative = 0.5979    
+            Newton iteration #  1    Maximal derivative = 0.1554E-04
+            Newton iteration #  2    Maximal derivative =  0.000    
+         Newton method converged in  2 iterations
+
+          Grashof number=  740213.60    
+          Eigenvalue:       Re(Lambda)= 0.3051E-02     Im(Lambda)=  91.84    
+
+.....................................................................................
+     Iteration of linear stability analysis #  5
+
+
+         Iterations of Newton method started
+            Newton iteration #  0    Maximal derivative = 0.1290E-02
+            Newton iteration #  1    Maximal derivative =  0.000    
+         Newton method converged in  1 iterations
+
+          Grashof number=  740128.12    
+          Eigenvalue:       Re(Lambda)=-0.6510E-05     Im(Lambda)=  91.83    
+
+.....................................................................................
+     Iteration of linear stability analysis #  6
+
+
+         Iterations of Newton method started
+            Newton iteration #  0    Maximal derivative = 0.4843E-07
+         Newton method converged in  0 iterations
+
+          Grashof number=  740128.31    
+          Eigenvalue:       Re(Lambda)= 0.1983E-09     Im(Lambda)=  91.83    
+
+ Step 2 is successfully completed
+________________________________________________________________________________
+
+
+
+ Step 3: Perform weakly nonlinear analysis of the Hopf bifurction
+         using projection on the central manifold
+
+
+      ........ Calculate left and right eigenvectors and coefficient C1 ..........
+
+               C1 = (  -0.3697    ,  0.1111    )
+
+               Error in left  eigenvector is   0.000    
+               Error in right eigenvector is   0.000    
+
+
+      ........ Calculate derivative of the dominant eigenvalue ..................
+
+
+
+          Calculate dominant eigenvalue at Gr=  740228.31    
+
+         Iterations of Newton method started
+            Newton iteration #  0    Maximal derivative = 0.1948    
+            Newton iteration #  1    Maximal derivative = 0.3112E-04
+            Newton iteration #  2    Maximal derivative =  0.000    
+         Newton method converged in  2 iterations
+
+
+          Calculate dominant eigenvalue at Gr=  740028.31    
+
+         Iterations of Newton method started
+            Newton iteration #  0    Maximal derivative = 0.3896    
+            Newton iteration #  1    Maximal derivative = 0.1245E-03
+            Newton iteration #  2    Maximal derivative =  0.000    
+         Newton method converged in  2 iterations
+
+
+          Calculate dominant eigenvalue at Gr=  740328.31    
+
+         Iterations of Newton method started
+            Newton iteration #  0    Maximal derivative = 0.5843    
+            Newton iteration #  1    Maximal derivative = 0.2801E-03
+            Newton iteration #  2    Maximal derivative =  0.000    
+         Newton method converged in  2 iterations
+
+
+          Calculate dominant eigenvalue at Gr=  739928.31    
+
+         Iterations of Newton method started
+            Newton iteration #  0    Maximal derivative = 0.7792    
+            Newton iteration #  1    Maximal derivative = 0.4980E-03
+            Newton iteration #  2    Maximal derivative =  0.000    
+         Newton method converged in  2 iterations
+
+
+               D(Lambda)/D(Gr) = (   0.3577E-04,  0.7274E-04)
+
+
+          Calculated estimations of errors:
+               Error in calculation of Omega       =  0.000    
+               Error in calculation of Amu2        =  0.000    
+               Error in calculation of Tau2        =  0.000    
+               Error in calculation of Beta        =  0.000    
+               Error in calculation of Dalpha/DGr  =  0.000    
+               Error in calculation of C1          =  0.000      0.000    
+
+ Step 3 is successfully completed
+________________________________________________________________________________
+
+
+ Final result:
+
+    Critical Grashof number =  0.7401E+06
+    Critical Frequency      =   91.83    
+    Parameter Mu            =  0.1034E+05
+    Parameter Tau           = -0.9396E-02
+    Floquet exponent        = -0.7395    
+
+
+ In the case of scaling of the temperature by 
+     temperature difference * height / length   :
+
+    Critical Grashof number =  0.1850E+06
+    Critical Frequency      =   22.96    

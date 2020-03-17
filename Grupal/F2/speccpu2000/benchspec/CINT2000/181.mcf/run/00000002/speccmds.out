@@ -1,0 +1,9 @@
+running commands in speccmds.cmd 1 times
+runs started at 1583843867, 986000000, Tue Mar 10 13:37:47 2020
+run 1 started at 1583843867, 986000000, Tue Mar 10 13:37:47 2020
+child started: 0, 1583843867, 986000000, pid=5372, '../00000002/mcf_base.vc7.x87.exe inp.in'
+child finished: 0, 1583843895, 554000000, sec=27, nsec=568000000, pid=5372, rc=0
+run 1 finished at: 1583843895, 554000000, Tue Mar 10 13:38:15 2020
+run 1 elapsed time: 27, 568000000, 27.568000000
+runs finished at 1583843895, 554000000, Tue Mar 10 13:38:15 2020
+runs elapsed time: 27, 568000000, 27.568000000

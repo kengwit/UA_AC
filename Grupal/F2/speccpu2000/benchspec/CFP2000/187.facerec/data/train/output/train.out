@@ -1,0 +1,82 @@
+ Enter run type (test, train, ref):
+ 
+ This run uses the following parameter settings:
+ ===============================================
+ Image parameters: 256 256 1
+ Trafo parameters: 1.5707964 1.4142135 6.2831855 5 8 T
+ Match parameters:  4 T 100  8 1.5E-03 1.0E-06
+ Graph parameters:  9 12 17 17 55 44 "pk2.asc"
+ Album gallery contains  13 images from "".
+ Probe gallery contains  26 images from "".
+ 
+ Generating graphs for album entries
+     cn1: generated graph at  52 42, similarity = 0.81970
+     dc1: generated graph at  55 45, similarity = 0.83673
+   debc1: generated graph at  58 47, similarity = 0.73872
+     gs1: generated graph at  58 52, similarity = 0.78007
+     gt1: generated graph at  51 43, similarity = 0.81102
+    har1: generated graph at  55 42, similarity = 0.74980
+   jimm1: generated graph at  53 60, similarity = 0.77153
+   kevh1: generated graph at  55 52, similarity = 0.77819
+   larw1: generated graph at  55 42, similarity = 0.78599
+   laur1: generated graph at  52 43, similarity = 0.76832
+  lisam1: generated graph at  58 48, similarity = 0.75561
+     re1: generated graph at  52 53, similarity = 0.77921
+     tb1: generated graph at  51 51, similarity = 0.79865
+ 
+ Performing comparison with probe entries
+  1      cn2:    global move determines position  52  42,  similarity = 0.80419
+  1      cn2: best match      cn1 sim. = 0.91398
+  2      cn3:    global move determines position  55  47,  similarity = 0.78378
+  2      cn3: best match      cn1 sim. = 0.82515
+  3      dc2:    global move determines position  51  51,  similarity = 0.83626
+  3      dc2: best match      dc1 sim. = 0.88430
+  4      dc4:    global move determines position  57  48,  similarity = 0.77128
+  4      dc4: best match      dc1 sim. = 0.80032
+  5    debc3:    global move determines position  56  49,  similarity = 0.72527
+  5    debc3: best match    debc1 sim. = 0.81321
+  6    debc4:    global move determines position  61  40,  similarity = 0.73279
+  6    debc4: best match    debc1 sim. = 0.93251
+  7      gs3:    global move determines position  55  46,  similarity = 0.79491
+  7      gs3: best match      gs1 sim. = 0.87671
+  8      gs4:    global move determines position  57  50,  similarity = 0.79006
+  8      gs4: best match      gs1 sim. = 0.86500
+  9      gt2:    global move determines position  59  46,  similarity = 0.77886
+  9      gt2: best match      gt1 sim. = 0.84595
+ 10      gt3:    global move determines position  55  48,  similarity = 0.81342
+ 10      gt3: best match      gt1 sim. = 0.86823
+ 11     har2:    global move determines position  57  37,  similarity = 0.73780
+ 11     har2: best match     har1 sim. = 0.93122
+ 12     har4:    global move determines position  58  49,  similarity = 0.72255
+ 12     har4: best match     har1 sim. = 0.89891
+ 13    jimm3:    global move determines position  55  51,  similarity = 0.79694
+ 13    jimm3: best match    jimm1 sim. = 0.86212
+ 14    jimm4:    global move determines position  59  46,  similarity = 0.77405
+ 14    jimm4: best match    jimm1 sim. = 0.82738
+ 15    kevh3:    global move determines position  60  51,  similarity = 0.75687
+ 15    kevh3: best match    kevh1 sim. = 0.82830
+ 16    kevh4:    global move determines position  54  49,  similarity = 0.74172
+ 16    kevh4: best match    kevh1 sim. = 0.78725
+ 17    larw3:    global move determines position  54  49,  similarity = 0.79678
+ 17    larw3: best match    larw1 sim. = 0.91277
+ 18    larw4:    global move determines position  52  36,  similarity = 0.74845
+ 18    larw4: best match     har1 sim. = 0.77917
+ 19    laur2:    global move determines position  47  45,  similarity = 0.71373
+ 19    laur2: best match    laur1 sim. = 0.79132
+ 20    laur3:    global move determines position  55  54,  similarity = 0.71499
+ 20    laur3: best match    laur1 sim. = 0.80584
+ 21   lisam2:    global move determines position  55  50,  similarity = 0.76038
+ 21   lisam2: best match   lisam1 sim. = 0.95866
+ 22   lisam3:    global move determines position  59  46,  similarity = 0.75153
+ 22   lisam3: best match   lisam1 sim. = 0.81353
+ 23      re2:    global move determines position  55  48,  similarity = 0.75847
+ 23      re2: best match      re1 sim. = 0.80931
+ 24      re4:    global move determines position  52  51,  similarity = 0.77837
+ 24      re4: best match      re1 sim. = 0.80704
+ 25      tb3:    global move determines position  52  49,  similarity = 0.79762
+ 25      tb3: best match      tb1 sim. = 0.92734
+ 26      tb4:    global move determines position  52  49,  similarity = 0.80169
+ 26      tb4: best match      tb1 sim. = 0.83665
+ 
+Performed  26 comparisons, of which  25 were correct and   1 were incorrect.
+A total of   65880 hops and  2875 sweeps were performed.

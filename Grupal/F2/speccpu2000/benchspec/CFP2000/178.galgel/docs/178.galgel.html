@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>178.galgel: SPEC CPU2000 Benchmark Description</TITLE>
+<META GENERATOR="Cloyce+VIM 5.3">
+<META REVISION="$Id: 178.galgel.html 1393 2005-06-14 15:55:21Z cloyce $">
+</HEAD>
+
+<BODY>
+<CENTER><H1>178.galgel<BR>
+SPEC CPU2000 Benchmark Description File</H1></CENTER>
+
+<H2>Benchmark Name</H2>
+<P>178.galgel</P>
+<HR>
+
+<H2>Benchmark Author</H2>
+<P>Alexander Gelfgat</P>
+<HR>
+
+<H2>Benchmark Program General Category</H2>
+<P>Computational Fluid Dynamics</P>
+<HR>
+
+<H2>Benchmark Description</H2>
+
+<P>This problem is a particular case of the GAMM (Gesellschaft fuer
+Angewandte Mathematik und Mechanik) benchmark devoted to numerical
+analysis of oscillatory instability of convection in
+low-Prandtl-number fluids [<A HREF="#1">1</A>].</P>
+
+<P>The physical problem is the following.  There is a rectangular box
+filled by a liquid whose Prandtl number is Pr=0.015.  The aspect
+ratio of the cavity length/height is 4.  The left and right vertical
+walls are maintained at at higher and lower temperatures
+respectively.  This causes a convective motion in the liquid.  When
+the temperature difference is relatively small the convective flow
+is steady.  The flow looses its stability and become oscillatory
+when the temperature difference exceeds a certain value.</P>
+
+<P>The buoyancy force, which causes the convective flow, is
+characterized by a parameter called Grashof number.  Besides all,
+the Grashof number (Gr) is proportional to the characteristic
+temperature difference (difference of the temperatures at the
+vertical walls in this case).</P>
+
+<P>The task of the GAMM benchmark is to calculate the critical value of the
+Grashof number which corresponds to a bifurcation from steady to
+oscillatory state of the flow.  Together with the critical Gr it is
+necessary to calculate the critical frequency (the frequency of the
+resulting oscillations when Gr is equal to its critical value).</P>
+
+<P>The critical values (critical Grashof number and critical frequency)
+depend on all parameters of the problem and the boundary conditions.
+The GAMM benchmark considers fixed values of the Prandtl number and
+the aspect ratio (0.015 and 4 respectively), and varies the boundary
+conditions.  The boundary conditions used here correspond to the
+Rigid/adiabatic - Free/adiabatic case defined in [<A HREF="#1">1</A>].</P>
+
+<P>The numerical method used here is the spectral Galerkin method with
+the basis functions defined globally in the whole region of the
+flow.  Detail description of the method may be found in [2].  Some
+test calculations illustrating the advantages of this method may be
+found in [<A HREF="#2">2</A>,<A HREF="#3">3</A>].</P>
+
+<P>The Galerkin method requires large computer memory required to keep
+all coefficients of the resulting dynamic system.  To avoid this
+some coefficients are recalculated each time when a calculation of
+rhs of the dynamic system is necessary, leading to a rapid increase
+of the required memory and cpu time when the number of the Galerkin
+basis functions is increased.</P>
+
+<P>A relatively small number of degrees of freedom makes it possible to
+study linear stability of steady solutions, requiring solution of an
+eigenvalue problem, which is usually impossible for an arbitrary CFD
+code.  It becomes possible with the use of the global Galerkin
+method, and it was successfully done for convective flows described
+here [<A HREF="#2">2</A>,<A HREF="#5">5</A>] and for swirling flow in a closed cylindrical container
+[<A HREF="#3">3</A>,<A HREF="#4">4</A>].</P>
+
+<P>After linear stability analysis is completed and the bifurcation
+point is calculated, we calculate an asymptotic approximation of the
+supercritical flow.  The asymptotic approach used is described in
+[<A HREF="#6">6</A>].  The details on its numerical application may be found in [<A HREF="#3">3</A>].</P>
+<HR>
+
+<H2>Input Description</H2>
+
+<P>A variety of data may be provided via namelist input.  However, only
+the number of basis functions in horizontal and vertical directions
+is provided in the SPEC input, the other data taking default values.</P>
+<HR>
+
+<H2>Output Description</H2>
+
+<P>The output consists of data relating to</P>
+<OL>
+<LI>Calculation of steady state flow.
+Steady states are calculated using Newton iterations.
+<LI>Solution of eigenvalue problem corresponding to analysis
+of linear stability of the calculated steady flow.
+<LI>Repeat steps 1 and 2 until the critical value of a governing
+parameter (Reynolds number, Grashof number, etc.) is found.
+<LI>Calculate an asymptotic approximation of the oscillatory
+state of the flow. Without going into details (see [3,6]),
+the first term of this asymptotic expansion is defined by two
+scalar numbers which are called here "Mu" and "Tau".
+Stability of the asymptotic oscillatory state is defined by the
+non-zero Floquet exponent, which is also calculated. Negative
+Floquet exponent means stability, and the positive means instability.
+</OL>
+
+<P>After all stages of calculations are completed, the code
+reports the following five numbers:</P>
+<UL>
+<LI>critical Grashof number
+<LI>critical circular frequency
+<LI>parameter Mu
+<LI>parameter Tau
+<LI>Floquet exponent
+</UL>
+<HR>
+
+<H2>Programming Language</H2>
+<P>Fortran 90</P>
+<HR>
+
+<H2>Known portability issues</H2>
+
+<P>Fixed format fortran 90 source format is used in galgel, usually
+requiring the use of a compiler flag, such as "-fixed", for
+example.</P>
+<HR>
+
+<H2>Reference</H2>
+<OL>
+<A NAME="1"><LI>Roux B. (ed.) Numerical simulation of oscillatory convection
+in low-Pr fluids:  A GAMM workshop.  Notes on Numerical Fluid
+Mechanics, Vieweg, Braunschweig, vol.27, 1990.</A>
+<A NAME="2"><LI>Gelfgat A.Yu. and Tanasawa I. Numerical analysis of oscillatory
+instability of buoyancy convection with the Galerkin spectral method.
+Numerical Heat Transfer, Part A, vol. 25, pp.627-648, 1994.</A>
+<A NAME="3"><LI>Gelfgat A.Yu., Bar-Yoseph P.Z. and Solan A. Stability of confined
+swirling flow with and without vortex breakdown. Journal of Fluid
+Mechanics, vol.311, pp.1-36, 1996.</A>
+<A NAME="4"><LI>Gelfgat A.Yu., Bar-Yoseph P.Z. and Solan A. Steady states and
+oscillatory instability of swirling flow in a cylinder with
+rotating top and bottom. Physics of Fluids, vol.8, pp.2614-2625, 1997.</A>
+<A NAME="5"><LI>Gelfgat A.Yu., Bar-Yoseph P.Z. and Yarin A. On oscillatory instability
+of convective flows at low Prandtl number. Transactions of ASME,
+Journal of Fluids Engineering, December volume of 1997 (to appear).</A>
+<A NAME="6"><LI>Hassard B.D., Kazarinoff N.D., Wan Y.-H. Theory and Applications of
+Hopf bifurcation. Mathematical Society Lecture Notes Series, vo.41.
+London, 1981.</A>
+</OL>
+<HR>
+Last updated: 12 October 1999
+</BODY>
+</HTML>
+

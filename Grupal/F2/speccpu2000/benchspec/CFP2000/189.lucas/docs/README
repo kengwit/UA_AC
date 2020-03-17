@@ -1,0 +1,17 @@
+The benchmark author, Ernst Mayer, has left various comments in 
+the source code.
+
+For general info on Mersenne primes, see http://www.mersenne.org/
+
+For mentions of SPEC's own Bodo Parady in the same breath with 
+Mersenne, see for example: 
+http://daisy.uwaterloo.ca/~alopez-o/math-faq/mathtext/node10.html
+http://www.jmas.co.jp/FAQs/sci-math-faq/primes
+http://www.utm.edu/research/primes/bios/bio.html#Parady
+
+See also the benchmark author's web site, 
+    http://k2.scl.cwru.edu/cse/emae/faculty/mayer/
+which doesn't explain this benchmark but at least has a 
+nice picture of the author.
+
+JLH 4/20/1998

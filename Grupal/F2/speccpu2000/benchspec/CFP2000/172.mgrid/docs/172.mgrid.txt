@@ -1,0 +1,39 @@
+SPEC CPU2000 Benchmark Description File
+
+Benchmark Name: 172.mgrid
+
+Benchmark Author: Eric Barszcz, Paul O. Frederickson
+
+Benchmark Program General Category: Multi-grid Solver: 3D Potential Field
+
+Benchmark Description:
+
+  172.mgrid demonstrates the capabilities of a very simple multigrid
+  solver in computing a three dimensional potential field.
+
+  Adapted by SPEC from the NAS Parallel Benchmarks with modifications
+  for portability and a different workload.
+
+Input Description:
+
+  1. It solves only a constant coefficient equation,
+     and only on a uniform cubical grid.
+
+  2. It solves only a single equation, representing
+     a scalar field rather than a vector field.
+
+Output Description:
+
+  In addition to echoing some of the inputs, the main part of the output
+  is from the smoothed approximate inverse.  Only a small fraction of the
+  smoothed output is printed, just enough to assure that all work is being
+  done and at to check intermediate results for accuracy.  In addition the
+  L2 norm and Inf norms are are used as a checksum of the output.
+
+Programming Language: Fortran 77
+
+Known portability issues: None
+
+Reference:
+
+  http://www.nas.nasa.gov/Pubs/TechReports/NASreports/NAS-95-020

@@ -1,0 +1,157 @@
+<html>
+<head>
+<title>SPEC CPU2000 System Requirements</title>
+</head>
+
+<body bgcolor=white>
+<pre>
+
+</pre>
+<h1>SPEC CPU2000 System Requirements</h1>
+
+<h4>Last updated: 27 Nov 2001 cds</h4>
+                          (To check for possible updates to this document,
+                          please see <a href=http://www.spec.org/cpu2000/docs/>
+                                     http://www.spec.org/cpu2000/docs/</a> ) 
+
+<pre>
+
+</pre>
+
+To run and install SPEC CPU2000, you will need:
+
+<ol>
+   <li><p> A computer system running UNIX or Windows (NT-derived). 
+      (See the 
+     <a href=#port><font color=blue>Portability Note</font></a> below)</p>
+
+   <li><p> A CD-ROM drive </p>
+
+   <li><p> 256MB of RAM.  Attempting to run the suite with less memory
+      is strongly discouraged, as you will end up measuring the 
+      speed of your paging file, not the speed of your CPU.</p>
+
+      <p>More memory will be needed if you run multi-user SPECrates.</p>
+
+   <li><p> Disk space:</p>
+
+       <ul>
+        <li> Typically 2GB of disk space to install and run the suite.  </p>
+
+        <li> More disk space will be needed if you plan to maintain a large 
+          set of binaries. </p>
+
+        <li> More disk space will be needed if you plan to run SPECrates 
+          with multiple copies.  Note that SPECrates must be run using 
+          a single file system, so large runs will likely require some
+          form of hardware or software disk striping.</p>
+
+        <li> Minimum requirement: It is possible to run with about 800MB 
+	  to 1GB of disk space if you are running only single-CPU 
+	  metrics and if you clean up the run directories between 
+	  experiments; see <a href=runspec.html>runspec.html</a> for 
+          more information.  </p>
+
+
+<hr width=80%>
+<center><table width=75%><tr><td>
+<i>Note: links to SPEC CPU2000 documents on this web page
+assume that you are reading the page from a directory that
+also contains the other SPEC CPU2000 documents.  If by
+some chance you are reading this web page from a location
+where the links do not work, try accessing the referenced
+documents at one of the following locations:</i>
+<ul>
+<li><a href=http://www.spec.org/cpu2000/docs/>
+     www.spec.org/cpu2000/docs/</a>
+<li><i>The </i><tt><big><b>$SPEC/docs/    </b></big></tt><i> directory on a Unix
+ system where SPEC CPU2000 has been installed.
+<li>   The </i><tt><big><b>%spec%\docs.nt\</b></big></tt><i> directory on a Wind
+ows/NT system where SPEC CPU2000 has been installed.
+<li>   The </i><tt><big><b>docs/          </b></big></tt><i> or
+           </i><tt><big><b>docs.nt\       </b></big></tt><i> directory on your S
+PEC CPU2000 distribution cdrom.</i>
+</ul>
+</td></tr></table>
+<hr width=80%>
+</center>
+
+        </ul></p>
+
+   <li><p> Since SPEC supplies only source code for the benchmarks, you will
+      need either:
+<pre>
+       a. A set of compilers for the result(s) you intend to measure:
+
+          1) For SPECint2000: Both C and C++ compilers
+          2) For SPECfp2000:  Both C and Fortran-90 compilers
+
+       --or--
+
+       b. A pre-compiled set of benchmark executables, given to you
+          by another user of the same revision of SPEC CPU2000, and
+	  any run-time libraries that may be required for those 
+	  executables.</p>
+</pre>
+
+      <p>Please notice that you cannot generate a valid CPU2000 result
+      unless you meet all of requirement 5.a.1 or 5.a.2 or 5.b.  For
+      example, if you are attempting to build the floating point suite
+      but lack a Fortran-90 compiler, you will not be able to measure
+      a SPECfp2000 result.</p>
+</ol>
+
+
+<a name=port><h2>Portability Notes</h2></a>
+
+   SPEC CPU2000 is a source code benchmark, and portability of that source
+   code is one of the chief goals of SPEC CPU2000.  SPEC has invested 
+   substantial effort to make the benchmarks portable across a wide variety 
+   of hardware architectures, operating systems, and compilers.  During the 
+   development of SPEC CPU2000 V1.0, testing was done on 7 different hardware 
+   architectures, 11 versions of Unix (including 4 Linux versions) and two 
+   versions of Windows/NT.  
+
+   <p>During the development of SPEC CPU2000 V1.2, many of these 
+   operating systems were re-tested, and in some cases newer versions
+   of the operating systems were tested.  In the Windows family, testing
+   included Windows Advanced Server, Windows XP, and Windows 2000.
+   (Notice that SPEC CPU2000 is not compatible with versions of
+   Windows that are not derived from Windows NT.  For example, SPEC
+   CPU2000 <u>cannot</u> be expected to work on Windows 95, Windows 98, 
+   Windows 3.1, or Windows Me.)
+
+   <p>Despite SPEC's testing efforts, certain portability problems are
+   likely to arise from time to time.  For example:
+    <ul>
+
+       <li> Some platforms may not have a Fortran-90 compiler available.
+
+       <li> Some older compilers may not include all the features 
+         needed to run the entire suite.
+
+       <li> Sometimes, a new release of a compiler or operating system 
+         may introduce new behavior that is incompatible with one
+         of the benchmarks.
+    </ul>
+
+   <p>If you visit <a href=http://www.spec.org/cpu2000/>http://www.spec.org/cpu2000/</a>  
+   and look up results for SPEC CPU2000,
+   you will find combinations of OS and compiler versions that are known
+   to work.  For example, if a vendor reports a SPECint2000 result on
+   the SuperHero 4 using SuperHero Unix V4.0 with SuperHero C V4.0 and
+   SuperHero C++ V4.0, you may take that as an assertion by the vendor
+   that the listed versions of Unix, C, and C++ will successfully
+   compile and run the SPEC CINT2000 suite on the listed machine.
+
+   <p>For systems that have not (yet) been reported by vendors, SPEC can
+   provide limited technical support to resolve portability issues. 
+   See <a href=techsupport.txt>techsupport.txt</a> 
+   for information.
+
+<hr>
+Copyright (C) 1999-2001 Standard Performance Evaluation Corporation
+<br>All Rights Reserved
+</body>
+</html>
+

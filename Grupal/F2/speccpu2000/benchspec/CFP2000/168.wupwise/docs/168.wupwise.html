@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>168.wupwise: SPEC CPU2000 Benchmark Description</TITLE>
+<META GENERATOR="Cloyce+VIM 5.3">
+<META REVISION="$Id: 168.wupwise.html 1393 2005-06-14 15:55:21Z cloyce $">
+</HEAD>
+
+<BODY>
+<CENTER><H1>168.wupwise<BR>
+SPEC CPU2000 Benchmark Description File</H1></CENTER>
+
+<H2>Benchmark Name</H2>
+<P>168.wupwise</P>
+<HR>
+
+<H2>Benchmark Authors</H2>
+<P>Bjoern Medeke (<A HREF="mailto:medeke@math.uni-wuppertal.de">medeke@math.uni-wuppertal.de</A>)<BR>
+Institute of Applied Computer Science<BR>
+University of Wuppertal<BR>
+Gauss-Strasse 20<BR>
+D-42097 Wuppertal<BR>
+Germany<BR></P>
+<HR>
+
+<H2>Benchmark Program General Category</H2>
+<P>Physics / Quantum Chromodynamics</P>
+<HR>
+
+<H2>Benchmark Description</H2>
+<P>"wupwise" is an acronym for "Wuppertal Wilson Fermion Solver", a program
+in the area of lattice gauge theory (quantum chromodynamics).</P>
+
+<P>Lattice gauge theory is a discretization of quantum
+chromodynamics which is generally accepted to be the fundamental
+physical theory of strong interactions among the quarks as
+constituents of matter. The most time-consuming part of a
+numerical simulation in lattice gauge theory with Wilson
+fermions on the lattice is the computation of quark propagators
+within a chromodynamic background gauge field. These
+computations use up a major part of the world's high performance
+computing power.</P>
+
+<P>Quark propagators are obtained by solving the inhomogeneous
+lattice-Dirac equation. The Wuppertal Wilson Fermion Solver
+(wupwise) solves the inhomogeneous lattice-Dirac equation via
+the BiCGStab iterative method which has established itself as a
+method of choice.</P>
+
+<P>A more detailed characterization of the program can be found in the
+Postscript file "wupwise.ps" in the "docs" subdirectory.</P>
+<HR>
+
+<H2>Input Description</H2>
+<P>The input file wupwise.in contains a few parameters from which the
+problem is built, among them:
+<UL>
+<LI>SEED	seed value for a random number generator which
+		supplies initial data
+<LI>NITER	number of iterations
+<LI>KAPPA	parameter characterizing the matrix M = I - KAPPA * D
+</UL></P>
+<HR>
+
+<H2>Output Description</H2>
+<P>The main output file is "wupwise.out", containing a check value (EPS)
+for each the NITER iterations, and a final value EPSILON characterizing
+the BiCGStab result.</P>
+
+<P>In addition, there is a file "te.out", containing the value
+"TRUE EPSILON". Since this value (in the magnitude of 0.6E-5) has been 
+found to vary more between systems, it is written to a separate file
+for which the SPEC-imposed accuracy requirements are different from
+those required for the main output file (see values $reltol in
+file 168.wupwise/Spec/object.pm).</P>
+<HR>
+
+<H2>Programming Language</H2>
+<P>Fortran 77, with the change that (as in all of SPEC's Fortran benchmarks)
+the type
+<PRE>
+	DOUBLE PRECISION
+</PRE>
+has been replaced by
+<PRE>
+	REAL*8
+</PRE>
+thus making the size of the relevant floating-point data uniform
+across systems - an important consideration for fair benchmarking.
+While the type REAL*8 is not part of the strict FORTRAN77 or Fortran90  
+standards, it is a common language extension recognized by
+all Fortran compilers the SPEC CPU subcomittee has used in its tests.</P>
+<HR>
+
+<H2>Known portability issues</H2>
+<P>The source code as prepared by SPEC contains FORTRAN77 versions of
+common LINPACK BLAS functions (zaxpy.f, zcopy.f, zdotc.f, zgemm.f, zscal.f).
+According to the CPU2000 Run and Reporting Rules (2.1.2), the level 1, 2, 
+and 3 BLAS functions may be substituted by precomputed (library-based)
+subroutines (compilation for peak runs only, not for baseline runs).
+For the case that this is not done (e.g., for baseline runs, or if
+optimized libraries are not available), all BLAS functions needed by 
+the benchmark are provided in the source directory.</P>
+
+<P>Note that since these source functions were taken unchanged from the 
+respective source code libraries, the spelling of their names has been 
+retained: They are defined in the files z*.f in lower case, but called in
+upper case. For Fortran compilers that insist on a strict FORTRAN77
+standard (which only recognizes upper-case letters in identifiers),
+a suitable portability flag like
+<PRE>
+	-fu	Convert all lower-case identifiers to uppercase
+</PRE>
+may be necessary.</P>
+<HR>
+Last updated: 8 November 1999
+</BODY>
+</HTML>
+

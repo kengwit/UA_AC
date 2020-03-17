@@ -1,0 +1,75 @@
+SPEC CPU2000 Benchmark Description File
+ 
+Benchmark Name: 253.perlbmk
+ 
+Benchmark Author: Larry Wall, et. al.
+ 
+Benchmark Program General Category: programming language
+ 
+Benchmark Description:
+
+  253.perlbmk is a cut-down version of Perl v5.005_03, the popular scripting
+  language.  SPEC's version of Perl has had most of OS-specific features
+  removed.  In addition to the core Perl interpreter, several third-party
+  modules are used:
+	  MD5 v1.7
+	  MHonArc v2.3.3
+	  IO-stringy v1.205
+	  MailTools v1.11
+	  TimeDate v1.08
+
+  Sources for all of the freely-available components used in 253.perlbmk can
+  be found in $SPEC/original.src/253.perlbmk.
+
+Input Description:
+
+  The reference workload for 253.perlbmk consists of four scripts:
+
+   The primary component of the workload is the freeware email-to-HTML
+   converter MHonArc.  Email messages are generated from a set of random
+   components and converted to HTML.  In addition to MHonArc, which was
+   lightly patched to avoid file I/O, this component also uses several
+   standard modules from the CPAN (Comprehensive Perl Archive Network).
+
+   Another script (which also uses the mail generator for convienience)
+   excercises a slightly-modified version of the 'specdiff' script, which is
+   a part of the CPU2000 tool suite.
+
+   The third script finds perfect numbers using the standard iterative
+   algorithm.  Both native integers and the Math::BigInt module are used.
+
+   Finally, the fourth script tests only that the psuedo-random numbers are
+   coming out in the expected order, and does not really contribute very much
+   to the overall runtime.
+
+  The training workload is similar, but not identical, to the reference
+  workload.  The test workload consists of the non-system-specific parts of
+  the acutal Perl 5.005_03 test harness.
+
+Output Description:
+
+  In the case of the mail-based benchmarks, a line with salient
+  characteristics (number of header lines, number of body lines, etc) is
+  output for each message generated.  During processing, MD5 hashes of the
+  contents of output "files" (in memory) are computed and output.
+
+  For the perfect number finder, the operating mode (BigInt or native) is
+  output, along with intermediate progress and, of course, the perfect
+  numbers.
+
+  Output for the random number check is simply every 1000th random number
+  generated.
+ 
+Programming Language: ANSI C
+ 
+Known portability issues:
+
+  Perl is not 64-bit clean, and causes problems with at least one vendor's
+  compiler when compiled in 64-bit mode with very high optimization.
+ 
+References:
+
+  Perl Mongers: http://www.perl.org/
+  O'Reilly's Perl Pages: http://www.perl.com/
+  The Comprehensive Perl Archive Network: http://www.cpan.org/
+  MHonArc: http://www.oac.uci.edu/indiv/ehood/mhonarc.html

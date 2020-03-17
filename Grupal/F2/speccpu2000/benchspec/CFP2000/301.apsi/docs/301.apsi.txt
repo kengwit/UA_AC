@@ -1,0 +1,44 @@
+SPEC CPU2000 Benchmark Description File
+
+Benchmark Name: 301.apsi
+
+Benchmark Author: Zaphiris D. Christidis, IBM Yorktown Heights
+
+Benchmark Program General Category: Weather Prediction
+
+Benchmark Description:
+
+  Program to solve for the mesoscale and synoptic variations of potential
+  temperature, U AND V wind components, and the mesoscale vertical velocity
+  W pressure and distribution of pollutants C having sources Q.  The
+  synoptic scale components are in quassi-steady state balance, while the
+  mesoscale pressure and velocity W are found diagnostically.
+
+  The solution of the complete system is performed by using the
+  splitting-up method.  In specific the horizontal advection is carried out
+  by an explicit leapfrog scheme, the horizontal diffusion is performed by
+  the method of the eigenvalues, or equvalently by vertical multiplying the
+  fourier coefficients by appropriate exponentials.  The vertical diffusion
+  is treated with a semi-implicit pade-crank-nickolson, as well as the
+  vertical advection.  The pressure derivative terms are treated with the
+  so-called pressure averaging technique.  Finally other terms will be
+  dubbed in the advection part (coriolis).  The model calculates
+  prognostically the the potential temperature, U,V wind components and
+  concentrations of pollutants C (POTT,UX,VY,C).  The pressure and the
+  vertical velocity will be calculated diagnostically (PRES,WZ).  The
+  diffusivities are also calculated diagnostically using information on
+  UX,VY, POTT.
+
+Input Description:
+
+It reads a 112x112x112 area array of data and iterates over 70 timesteps.
+ 
+Output Description:
+
+It prints the diagonal elements of the velocity field.
+
+Programming Language: FORTRAN 77
+
+Known portability issues: None
+
+References: None

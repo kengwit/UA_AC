@@ -1,0 +1,2 @@
+"COMP: cl -c -Fooptions.obj              /Ox /GL /Op "
+"LINK: cl       /Ox /GL /Op       -Feoptions"

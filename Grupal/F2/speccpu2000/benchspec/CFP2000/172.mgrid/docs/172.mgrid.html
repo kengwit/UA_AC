@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>172.mgrid: SPEC CPU2000 Benchmark Description</TITLE>
+<META GENERATOR="Cloyce+VIM 5.3">
+<META REVISION="$Id: 172.mgrid.html 1393 2005-06-14 15:55:21Z cloyce $">
+</HEAD>
+
+<BODY>
+<CENTER><H1>172.mgrid<BR>
+SPEC CPU2000 Benchmark Description File</H1></CENTER>
+
+<H2>Benchmark Name</H2>
+<P>172.mgrid</P>
+<HR>
+
+<H2>Benchmark Author</H2>
+<P>Eric Barszcz, Paul O. Frederickson</P>
+<HR>
+
+<H2>Benchmark Program General Category</H2>
+<P>Multi-grid Solver: 3D Potential Field</P>
+<HR>
+
+<H2>Benchmark Description</H2>
+
+<P>172.mgrid demonstrates the capabilities of a very simple multigrid
+solver in computing a three dimensional potential field.</P>
+
+<P>Adapted by SPEC from the NAS Parallel Benchmarks with modifications
+for portability and a different workload.</P>
+
+<HR>
+
+<H2>Input Description</H2>
+
+<OL>
+<LI>            It solves only a constant coefficient equation,
+                and only on a uniform cubical grid.
+
+
+<LI>            It solves only a single equation, representing
+		a scalar field rather than a vector field.
+
+</OL>
+
+<HR>
+
+<H2>Output Description</H2>
+
+<P>In addition to echoing some of the inputs, the main part of the output
+  is from the smoothed approximate inverse.  Only a small fraction of the
+  smoothed output is printed, just enough to assure that all work is being
+  done and at to check intermediate results for accuracy.  In addition the
+  L2 norm and Inf norms are are used as a checksum of the output.</P>
+<HR>
+
+<H2>Programming Language</H2>
+<P>Fortran 77</P>
+<HR>
+
+<H2>Known portability issues</H2>
+<P>None</P>
+<HR>
+
+<H2>Reference</H2>
+
+  <P><A HREF="http://www.nas.nasa.gov/Pubs/TechReports/NASreports/NAS-95-020">http://www.nas.nasa.gov/Pubs/TechReports/NASreports/NAS-95-020</A></P>
+<HR>
+Last update: 16 August 2000
+</BODY>
+</HTML>

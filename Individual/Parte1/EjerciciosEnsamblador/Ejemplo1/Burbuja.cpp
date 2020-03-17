@@ -43,17 +43,15 @@ int main(void)
 
 void bubbleSort(int* arr, int size)
 {
-    --size;
-    int* a = &size;
+    int a = size - 2;
 
     __asm {
-            mov edi, a;         // tamaño.
-            mov eax, edi;       // contador externo.
+            mov esi, arr        // Asingamos la dir del inicio del array a esi
+            mov edi, a;         // Asignamos el tamaño del array a edi.
+            mov eax, edi;       // eax = contador externo.
         
         externo:                // Tag del bucle externo.
-            mov esi, arr;       // Inicio del array.
-            mov ebx, edi;       // contador interno.
-            sub ebx, eax;
+            mov ebx, edi;       // ebx = contador interno.
 
         interno:                // Tag del bucle interno.
             mov ecx, [esi];     // Valor actual.
@@ -63,33 +61,20 @@ void bubbleSort(int* arr, int size)
 
             xchg ecx, edx;      // Intercambiamos.
 
+        guardar:                // Tag  de las operaciones comunes por iteracion.
             mov [esi], ecx;     // Guardamos el valor actual.
             mov [esi + 4], edx; // Guardamos el valor siguiente.
 
-       guardar:                 // Tag  de las operaciones comunes por iteracion.
             add esi, 4;         // Siguiente iteracion
+
             dec ebx;            // Decretemntamos 1 en el contador interno.
             jnz interno;        // Si no es 0, repetimos el bucle interno.
 
+            mov esi, arr        // Re-asingamos la dir del inicio del array a esi
             dec eax;            // Decrementamos 1 en el contador externo.
             jnz externo;        // Si no es 0, repetimos el bucle externo.
     
     }
-
-    /*
-     for (int i = 0; i < size - 1; i++)
-        for (int j = 0; j < size - i - 1; j++)
-            if (arr[j] > arr[j + 1]) {
-
-                printf_s("%d", arr[j]);
-                printf_s(" = ");
-
-                swapNumber(&arr[j], &arr[j+1]);
-
-                printf_s("%d \n", arr[j]);
-              
-            }*/
-            
 }
 
 void swapNumber(int* a, int* b /*, int* size*/ ) {

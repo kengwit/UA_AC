@@ -1,0 +1,38 @@
+#!/bin/ksh
+
+str=.
+interval=1
+output=/tmp/membackground.pid
+
+if [[ $# -gt 0 ]]; then
+    str=$1
+    shift
+fi
+
+if [[ $# -gt 0 ]]; then
+    interval=$1
+    shift
+fi
+
+if [[ $# -gt 0 ]]; then
+    output=$1
+    shift
+fi
+
+echo "$$" > $output
+
+rm -f memdata.lwx memdata.vwx
+touch memdata.lwx memdata.vwx
+ps lwx | head -1 >> memdata.lwx
+ps vwx | head -1 >> memdata.vwx
+
+while true; do
+    ps lwx | grep $str | grep -v grep >> memdata.lwx
+    echo "---"                        >> memdata.lwx
+    ps vwx | grep $str | grep -v grep >> memdata.vwx
+    echo "---"                        >> memdata.vwx
+    if [[ ! -f $output ]]; then
+	break
+    fi
+    sleep $interval
+done

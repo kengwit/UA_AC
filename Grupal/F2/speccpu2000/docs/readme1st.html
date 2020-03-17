@@ -1,0 +1,619 @@
+<html><head>
+<title>SPEC CPU2000: Read Me First</title>
+</head>
+<body bgcolor=white>
+<pre>
+
+
+</pre>
+<center>
+<h1>SPEC CPU2000: Read Me First</h1>
+<h4>Last updated: 30-Oct-2001 jh</h4>
+
+(To check for possible updates to this document,
+please see 
+<a href=http://www.spec.org/cpu2000/docs/>http://www.spec.org/cpu2000/docs/</a> ) 
+
+</center>
+<pre>
+
+</pre>
+
+<table border=0>
+
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+<tr><td colspan=2><big><big><b>Contents</b></big></big></td></tr>
+
+<tr><td colspan=2><a href=#doc><font color=blue><b><big>Documentation Overview</big></b></font></a></td></tr>
+<tr><td></td><td><a href=#loc><font color=blue>    Location                  </font></a></td></tr>
+<tr><td></td><td><a href=#ord><font color=blue>    Suggested reading order   </font></a></td></tr>
+<tr><td></td><td><a href=#lst><font color=blue>    List of documents         </font></a></td></tr>
+
+<tr><td colspan=2><a href=#ovw><font color=blue><big><b>SPEC CPU2000 Overview (What 
+                                                  is it, and why 
+                                                  does it exist?)                  </b></big></font></a></td></tr>
+<tr><td></td><td><a href=#Q1 ><font color=blue>    Q1. What is SPEC?                         </font></a></td></tr>
+<tr><td></td><td><a href=#Q2 ><font color=blue>    Q2. What is a benchmark?                  </font></a></td></tr>
+<tr><td></td><td><a href=#Q3 ><font color=blue>    Q3. Why use a benchmark?                  </font></a></td></tr>
+<tr><td></td><td><a href=#Q4 ><font color=blue>    Q4. What options are viable in this case? </font></a></td></tr>
+<tr><td></td><td><a href=#Q5 ><font color=blue>    Q5. What does SPEC CPU2000 measure?       </font></a></td></tr>
+<tr><td></td><td><a href=#Q6 ><font color=blue>    Q6. Why use SPEC CPU2000?                 </font></a></td></tr>
+<tr><td></td><td><a href=#Q7 ><font color=blue>    Q7. What are the limitations of 
+                                                       SPEC CPU2000?                         </font></a></td></tr>
+<tr><td></td><td><a href=#Q8 ><font color=blue>    Q8. What is included in the SPEC 
+                                                       CPU2000 package?                      </font></a></td></tr>
+<tr><td></td><td><a href=#Q9 ><font color=blue>    Q9. What does the user of the SPEC 
+                                                       CPU2000 suite have to provide?        </font></a></td></tr>
+<tr><td></td><td><a href=#Q10><font color=blue>    Q10. What are the basic steps in 
+                                                        running the benchmarks?              </font></a></td></tr>
+<tr><td></td><td><a href=#Q11><font color=blue>    Q11. What source code is provided?  
+                                                        What exactly makes up these suites?  </font></a></td></tr>
+<tr><td></td><td><a href=#Q12><font color=blue>    Q12. Some of the benchmark names sound 
+                                                        familiar; are 
+                                                        these comparable to other programs?  </font></a></td></tr>
+<tr><td></td><td><a href=#Q13><font color=blue>    Q13. What metrics can be measured?        </font></a></td></tr>
+<tr><td></td><td><a href=#Q14><font color=blue>    Q14. What is the difference between a 
+                                                        "base" metric and a "peak" metric?   </font></a></td></tr>
+<tr><td></td><td><a href=#Q15><font color=blue>    Q15. What is the difference between 
+                                                        a "rate" and a "speed" metric?       </font></a></td></tr>
+<tr><td></td><td><a href=#Q16><font color=blue>    Q16. Which SPEC CPU2000 metric should 
+                                                        be used to compare performance?      </font></a></td></tr>
+<tr><td></td><td><a href=#Q17><font color=blue>    Q17. How do I contact SPEC for more 
+                                                        information or 
+                                                        for technical support?               </font></a></td></tr>
+<tr><td></td><td><a href=#Q18><font color=blue>    Q18. Now that I've read this document, 
+                                                        what should I do next?               </font></a></td></tr>
+</table>
+
+<pre>
+</pre>
+<hr>
+
+<a name=doc><h2>Documentation Overview</h2></a>
+
+<a name=loc><h3>Location</h3></a>
+
+The SPEC CPU2000 documents are available in several
+locations:
+<ul>
+<li><a href=http://www.spec.org/cpu2000/docs/>
+     www.spec.org/cpu2000/docs/</a>
+<li>The <tt><big><b>$SPEC/docs/    </b></big></tt> directory on a Unix system where SPEC CPU2000 has been installed.
+<li>The <tt><big><b>%spec%\docs.nt\</b></big></tt> directory on a Windows/NT system where SPEC CPU2000 has been installed.
+<li>The <tt><big><b>docs/          </b></big></tt> or
+        <tt><big><b>docs.nt\       </b></big></tt> directory on your SPEC CPU2000 distribution cdrom.
+</ul>
+
+
+<center><table width=80%>
+<tr><td>
+<i>(Note: links to SPEC CPU2000 documents from this web page
+assume that you are reading the page in a directory that also
+contains the other documents.  If by some chance you are
+reading this web page from a location where the links do
+not work, try accessing the referenced documents at one
+of the above locations.)
+</td></tr></table></center>
+
+
+<a name=ord><h3>Suggested reading order:</h3></a>
+
+  If you are just getting started with SPEC CPU2000, here is a suggested
+  reading order for the various documents supplied by SPEC:
+
+<ol>
+    <li> readme1st.html (the document you are reading now)
+    <li> <a href=system_requirements.html>system_requirements.html</a>
+    <li> <a href=install_guide_unix.html>install_guide_unix.html</a>
+         or <a href=install_guide_nt.html>install_guide_nt.html</a></center>
+    <li> <a href=runspec.html>runspec.html</a>
+    <li> other documents as needed
+</ol>
+
+<a name=lst><h3>List of documents</h3></a>
+
+<table>
+
+<tr><td valign=top><a href=config.html>            
+     config.html</a></td>
+                          <td>To run SPEC CPU2000, you need a config file.  This 
+                          document tells you how to write one.</td></tr>
+<tr><td valign=top><a href=errata.txt>              
+     errata.txt</a></td>
+                          <td>Debugging and errata information.</td></tr>
+<tr><td valign=top><a href=example-advanced.cfg>      
+     example-advanced.cfg</a></td>
+                          <td>A complex sample config file with commentary. </td></tr>
+<tr><td valign=top><a href=example-medium.cfg>    
+     example-medium.cfg</a></td>
+                          <td>A complete, but not very complex, sample config 
+                          file with commentary.</td></tr>
+<tr><td valign=top><a href=example-simple.cfg>        
+     example-simple.cfg</a></td>
+                          <td>A simple configuration file with commentary. A
+                          first time user could take this as a template for 
+                          a first run of SPEC CPU2000. </td></tr>
+<tr><td valign=top><a href=execution_without_SPEC_tools.txt>
+      execution_without_
+      <br>SPEC_tools.txt</a></td>
+                          <td>A new document, added for V1.1: how 
+                                     to use the SPEC-supplied tools for the 
+                                     shortest possible time, jump quickly
+                                     into working with the source code, and 
+                                     run the benchmarks by hand. </td></tr>
+
+<tr><td valign=top><a href=install_guide_unix.html>      
+     install_guide_unix.html</a></td>
+                          <td>How to install SPEC CPU2000 on UNIX systems.
+                          Includes an example installation and an example
+                          of running the first benchmark. </td></tr>
+<tr><td valign=top><a href=install_guide_nt.html>      
+     install_guide_nt.html</a></td>
+                          <td>How to install SPEC CPU2000 on Windows/NT
+                          systems.  Includes an example installation and 
+                          an example of running the first benchmark. </td></tr>
+
+<tr><td valign=top><a href=legal.txt>                 
+     legal.txt</a></td>
+                          <td>Copyright notice and other legal information.</td></tr>
+
+<tr><td valign=top><a href=makevars.txt>              
+     makevars.txt</a></td>
+                          <td>Advanced users of the suite who want to understand 
+                          exactly how the benchmarks are built can use this 
+                          file to help decipher the process.</td></tr>
+
+<tr><td valign=top><a href=readme1st.html>             
+     readme1st.html</a></td>
+                          <td>The document you are reading now, contains a 
+                          documentation overview and question and answers 
+                          regarding the purpose and intent of SPEC CPU2000.</td></tr>
+<tr><td valign=top><a href=runrules.html>              
+     runrules.html</a></td>
+                          <td>The SPEC CPU2000 Run and reporting rules. These must 
+                          be followed for generating publicly disclosed 
+                          results.</td></tr>
+<tr><td valign=top><a href=runspec.html>               
+     runspec.html</a></td>
+                          <td>Information on the "runspec" command, which is the 
+                          primary user interface for running SPEC CPU2000 
+                          benchmarks.  </td></tr>
+<tr><td valign=top><a href=system_requirements.html>     
+     system_requirements.html </a></td>
+                          <td>A list of the hardware and software needed
+                          in order to run the SPEC CPU2000 suite.</td></tr>
+<tr><td valign=top><a href=techsupport.txt>           
+     techsupport.txt</a></td>
+                          <td>Information on SPEC technical support.</td></tr>
+<tr><td valign=top><a href=tools_build.txt>           
+     tools_build.txt</a></td>
+                          <td>How to build (or re-build) the tools such as runspec</td></tr>
+<tr><td valign=top><a href=utility.html>               
+     utility.html</a></td>
+                          <td>How to use various utilities, such as specinvoke,
+                          specdiff, and specmake.  </td></tr>
+</table>
+
+<p>
+  In addition, each individual benchmark in the suite has its own documents,
+  found in the benchmark "docs" subdirectory.  For example, the description
+  of the benchmark 164.gzip may be found in:
+  <pre>
+     $SPEC/benchspec/CINT2000/164.gzip/docs/164.gzip.txt (Unix) or
+    %SPEC%\benchspec\CINT2000\164.gzip\docs\164.gzip.txt (NT)
+  </pre>
+
+Only on the CD, you will find:
+
+<table><tr><td valign=top>
+    original.src/README&nbsp;</td>
+                     <td>Information about freely-available sources
+                         that have been incorporated in SPEC CPU2000
+</td></tr></table>
+<pre>
+</pre>
+
+
+<hr>
+<p><a name=ovw><h2>SPEC CPU2000 Overview (What is it, and why does it exist?)</h2></a></p><p>
+
+<p><b>Background </b>
+
+<p>    By providing this background, SPEC hopes to help users set their
+    expectations and usage appropriately to get the most efficient and 
+    beneficial use out of this benchmark product.
+
+<p>    Overall, SPEC designed SPEC CPU2000 to provide a comparative measure
+    of compute intensive performance across the widest practical range of 
+    hardware.  This resulted in source code benchmarks developed from real 
+    user applications.  These benchmarks are dependent on the processor, 
+    memory and compiler on the tested system.
+
+
+<p><a name=Q1><b>Q1. What is SPEC?</b></a></p><p>
+
+    SPEC is an acronym for the Standard Performance Evaluation 
+    Corporation.  SPEC is a non-profit organization composed of computer 
+    vendors, systems integrators, universities, research organizations, 
+    publishers and consultants whose goal is to establish, maintain and 
+    endorse a standardized set of relevant benchmarks for computer
+    systems.  Although no one set of tests can fully characterize overall
+    system performance, SPEC believes that the user community will
+    benefit from an objective series of tests which can serve as a common
+    reference point.
+
+
+<p><a name=Q2><b>Q2. What is a benchmark?</b></a></p><p>
+
+    The definition from Webster's II Dictionary states that a benchmark is 
+    "A standard of measurement or evaluation."  A computer benchmark is 
+    typically a computer program that performs a strictly defined set of 
+    operations (a workload) and returns some form of result (a metric) 
+    describing how the tested computer performed.  Computer benchmark 
+    metrics usually measure speed (how fast was the workload completed) or 
+    throughput (how many workloads per unit time were measured).  Running
+    the same computer benchmark on multiple computers allows a comparison
+    to be made.
+
+
+<p><a name=Q3><b>Q3. Why use a benchmark?</b></a></p><p>
+
+    Ideally, the best comparison test for systems would be your own
+    application with your own workload.  Unfortunately, it is often very
+    difficult to get a wide base of reliable, repeatable and comparable
+    measurements for comparisons of different systems on your own
+    application with your own workload.  This might be due to time,
+    money, confidentiality, or other constraints.  
+
+
+<p><a name=Q4><b>Q4. What options are viable in this case?</b></a></p><p>
+
+    At this point, you can consider using standardized benchmarks as a 
+    reference point.  Ideally, a standardized benchmark will be portable
+    and maybe already run on the platforms that you are interested in. 
+    However,  before you consider the results you need to be sure that you
+    understand the correlation between your application/computing needs
+    and what the benchmark is measuring.  Are the workloads similar and
+    do they have the same characteristics?  Based on your answers to
+    these questions, you can begin to see how the benchmark may
+    approximate your reality. </p><p>
+
+    Note: It is not intended that the SPEC benchmark suites be used as a
+    replacement for the benchmarking of actual customer applications to
+    determine vendor or product selection.
+
+
+<p><a name=Q5><b>Q5. What does SPEC CPU2000 measure?</b></a></p><p>
+
+    SPEC CPU2000 focuses on compute intensive performance, which means
+    these benchmarks emphasize the performance of:
+    <ul>
+       <li> the computer's processor (CPU), 
+       <li> the memory architecture, and 
+       <li> the compilers. 
+    </ul>
+    It is important to remember the contribution of the latter two 
+    components; performance is more than just the processor.</p><p>
+
+    SPEC CPU2000 is made up of two subcomponents that focus on two
+    different types of compute intensive performance:
+    <ul>
+       <li> CINT2000 for measuring and comparing compute-intensive integer 
+         performance, and 
+       <li> CFP2000 for measuring and comparing compute-intensive floating 
+         point performance.
+    </ul>
+
+    Note that SPEC CPU2000 does not stress other computer components such
+    as I/O (disk drives), networking, operating system or graphics.  It
+    might be possible to configure a system in such a way that one or more
+    of these components impact the performance of CINT2000 and CFP2000,
+    but that is not the intent of the suites.
+
+
+<p><a name=Q6><b>Q6. Why use SPEC CPU2000?</b></a></p><p>
+
+    As mentioned above, SPEC CPU2000 provides a comparative measure of
+    integer and/or floating point compute intensive performance.  If this
+    matches with the type of workloads you are interested in, SPEC
+    CPU2000 provides a good reference point.</p><p>
+
+    Other advantages to using SPEC CPU2000:
+    <ul>
+      <li> Benchmark programs are developed from actual end-user 
+        applications as opposed to being synthetic benchmarks.
+      <li> Multiple vendors use the suite and support it.
+      <li> SPEC CPU2000 is highly portable.
+      <li> A wide range of results are available at 
+          <a href=http://www.spec.org>http://www.spec.org</a>
+      <li> The benchmarks are required to be run and reported according
+        to a set of rules to ensure comparability and repeatability.
+    </ul>
+
+
+<p><a name=Q7><b>Q7. What are the limitations of SPEC CPU2000?</b></a></p><p>
+
+    As described above under "Why use a benchmark?", the ideal benchmark 
+    for vendor or product selection would be your own workload on your 
+    own application.  Please bear in mind that no standardized benchmark 
+    can provide a perfect model of the realities of your particular system 
+    and user community.
+
+
+<p><a name=Q8><b>Q8. What is included in the SPEC CPU2000 package?</b></a></p><p>
+
+    SPEC provides the following on the SPEC CPU2000 Media:
+    <ul>
+      <li> Source code for the CINT2000 benchmarks
+      <li> Source code for the CFP2000 benchmarks
+      <li> A tool set for compiling, running, validating and reporting 
+        on the benchmarks 
+      <li> Pre-compiled tools for a variety of operating systems.
+      <li> Source code for the SPEC CPU2000 tools, for systems not covered
+        by the pre-compiled tools
+      <li> Run and reporting rules defining how the benchmarks should be 
+        used to produce SPEC CPU2000 results.
+      <li> Documentation
+    </ul>
+
+
+<p><a name=Q9><b>Q9. What does the user of the SPEC CPU2000 suite have to provide?</b></a></p><p>
+
+    Briefly, you need a Unix or NT system with 256MB of memory,
+    1GB of disk, and a set of compilers.  Please see the details 
+    in the file <a href=system_requirements.html>system_requirements.html</a>
+
+
+<p><a name=Q10><b>Q10. What are the basic steps in running the benchmarks?</b></a></p><p>
+
+    Installation and use are covered in detail in the SPEC CPU2000 User 
+    Documentation.  The basic steps are as follows: 
+
+     <ul>
+        <li> Install SPEC CPU2000 from media. 
+        <li> Run the installation scripts to set up the appropriate 
+          directory structure and install (and build, if necessary) 
+          the SPEC CPU2000 tools. 
+        <li> Determine which metric you wish to run. 
+        <li> Read the Run and Reporting Rules to ensure that you understand
+          the rules for generating that metric.
+        <li> Create a configuration file according to the rules for that 
+          metric.  In this file, you specify compiler flags and other 
+          system-dependent information.  The example-simple.cfg file contains
+          a template for creating an initial config file.  After
+          you become comfortable with this, you can read other
+          documentation to see how you can use the more complex
+          features of the SPEC CPU2000 tools.
+        <li> Run the SPEC tools to build (compile), run and validate the 
+          benchmarks. 
+        <li> If the above steps are successful, generate a report based on 
+          the run times and metric equations. 
+     </ul>
+
+
+<p><a name=Q11><b>Q11. What source code is provided?  What exactly makes up these suites?</b></a></p><p>
+
+    CINT2000 and CFP2000 are based on compute-intensive applications
+    provided as source code.  CINT2000 contains eleven applications
+    written in C and 1 in C++ (252.eon) that are used as benchmarks: 
+    <pre>
+      Name        Ref Time Remarks
+      164.gzip      1400   Data compression utility
+      175.vpr       1400   FPGA circuit placement and routing
+      176.gcc       1100   C compiler
+      181.mcf       1800   Minimum cost network flow solver
+      186.crafty    1000   Chess program
+      197.parser    1800   Natural language processing
+      252.eon       1300   Ray tracing
+      253.perlbmk   1800   Perl
+      254.gap       1100   Computational group theory
+      255.vortex    1900   Object Oriented Database
+      256.bzip2     1500   Data compression utility
+      300.twolf     3000   Place and route simulator</pre>
+
+    CFP2000 contains 14 applications (6 Fortran-77, 4 Fortran-90 and 4 C) 
+    that are used as benchmarks: 
+
+    <pre>
+      Name        Ref Time Remarks
+      168.wupwise   1600   Quantum chromodynamics
+      171.swim      3100   Shallow water modeling
+      172.mgrid     1800   Multi-grid solver in 3D potential field
+      173.applu     2100   Parabolic/elliptic partial differential
+                           equations
+      177.mesa      1400   3D Graphics library
+      178.galgel    2900   Fluid dynamics: analysis of oscillatory instability
+      179.art       2600   Neural network simulation; adaptive resonance theory
+      183.equake    1300   Finite element simulation; earthquake modeling
+      187.facerec   1900   Computer vision: recognizes faces
+      188.ammp      2200   Computational chemistry 
+      189.lucas     2000   Number theory: primality testing
+      191.fma3d     2100   Finite element crash simulation
+      200.sixtrack  1100   Particle accelerator model
+      301.apsi      2600   Solves problems regarding temperature, wind,
+                           velocity and distribution of pollutants</pre>
+
+    More detailed descriptions on the benchmarks (with reference to
+    papers, web sites, etc.) can be found in the individual benchmark
+    directories in the SPEC benchmark tree. </p><p>
+
+    The numbers used as part of the benchmarks names provide an identifier
+    to help distinguish programs from one another.  For example, some
+    programs were updated from SPEC CPU95 and need to be distinguished
+    from their previous version.
+
+
+<p><a name=Q12><b>Q12. Some of the benchmark names sound familiar; are these comparable to 
+other programs?</b></a></p><p>
+
+    Many of the SPEC benchmarks have been derived from publicly available
+    application programs and all have been developed to be portable to as
+    many current and future hardware platforms as practical.  Hardware
+    dependencies have been minimized to avoid unfairly favoring one
+    hardware platform over another.  For this reason, the application
+    programs in this distribution should not be used to assess the
+    probable performance of commercially available, tuned versions of the
+    same application.  The individual benchmarks in this suite may be
+    similar, but NOT identical to benchmarks or programs with the same
+    name which are available from sources other than SPEC; therefore, it
+    is not valid to compare SPEC CPU2000 benchmark results with anything
+    other than other SPEC CPU2000 benchmark results.  (Note: This also
+    means that it is not valid to compare SPEC CPU2000 results to older
+    SPEC CPU benchmarks; these benchmarks have been changed and should be
+    considered different and not comparable.)
+
+
+<p><a name=Q13><b>Q13. What metrics can be measured?</b></a></p><p>
+
+    The CINT2000 and CFP2000 suites can be used to measure and calculate
+    the following metrics: </p><p>
+
+    CINT2000 (for integer compute intensive performance comparisons): 
+    <ul>
+        <li> <b>SPECint2000</b>: The geometric mean of twelve normalized ratios (one 
+          for each integer benchmark) when compiled with aggressive 
+          optimization for each benchmark.
+        <li> <b>SPECint_base2000</b>: The geometric mean of twelve normalized ratios 
+          when compiled with conservative optimization for each benchmark.
+        <li> <b>SPECint_rate2000</b>: The geometric mean of twelve normalized 
+          throughput ratios when compiled with aggressive optimization for 
+          each benchmark.
+        <li> <b>SPECint_rate_base2000</b>: The geometric mean of twelve normalized
+          throughput ratios when compiled with conservative optimization 
+          for each benchmark.
+    </ul>
+
+    CFP2000 (for floating point compute intensive performance comparisons: 
+    <ul>
+        <li> <b>SPECfp2000</b>: The geometric mean of fourteen normalized ratios (one
+          for each floating point benchmark) when compiled with aggressive
+          optimization for each benchmark.
+        <li> <b>SPECfp_base2000</b>: The geometric mean of fourteen normalized ratios
+          when compiled with conservative optimization for each benchmark.
+        <li> <b>SPECfp_rate2000</b>: The geometric mean of fourteen normalized
+          throughput ratios when compiled with aggressive optimization for
+          each benchmark.
+        <li> <b>SPECfp_rate_base2000</b>: The geometric mean of fourteen normalized
+          throughput ratios when compiled with conservative optimization
+          for each benchmark.
+     </ul>
+
+    The ratio for each of the benchmarks is calculated using a SPEC-
+    determined reference time and the run time of the benchmark.</p><p>
+
+    A higher score means "better performance" on the given workload.
+
+
+<p><a name=Q14><b>Q14. What is the difference between a "base" metric and a "peak" metric?</b></a></p><p>
+
+    In order to provide comparisons across different computer hardware,
+    SPEC provides the benchmarks as source code.  Thus, in order to run
+    the benchmarks, they must be compiled.  There is agreement that the 
+    benchmarks should be compiled the way users compile programs.  But how
+    do users compile programs? </p><p>
+
+    Some people might experiment with many different compilers and 
+    compiler flags to achieve the best performance.  Other people might 
+    just compile with the basic options suggested by the compiler vendor. 
+    SPEC recognizes that it cannot exactly match how everyone uses 
+    compilers, but two reference points are possible:
+
+    <ul>
+        <li><p> The base metrics (e.g. SPECint_base2000) are required for all 
+          reported results and have set guidelines for compilation.
+          For example, the same flags must be used in the same order 
+          for all benchmarks, and only a limited number of flags are 
+          allowed. This is the point closest to those who simply use the 
+          recommended compiler flags for compilation.</p>
+
+        <li><p> The peak metrics (e.g. SPECint2000) are optional and have 
+          less strict requirements.  For example, different compiler 
+          options may be used on each benchmark.  This is the point 
+          closest to those who may experiment with different compiler 
+          options to get the best possible performance possible.</p>
+    </ul>
+
+    Note that the base metric rules are a subset of the peak metric 
+    rules.  For example, a legal base metric is also legal under the peak
+    rules but a legal peak metric is NOT legal under the base rules.</p><p>
+
+    A full description of the distinctions and required guidelines can be 
+    found in the <a href=runrules.html>SPEC CPU2000 Run and Reporting Rules</a> 
+    available with SPEC CPU2000.
+
+
+<p><a name=Q15><b>Q15. What is the difference between a "rate" and a "speed" metric?</b></a></p><p>
+
+    There are several different ways to measure computer performance.  One 
+    way is to measure how fast the computer completes a single task; this
+    is a speed measure.  Another way is to measure how many tasks a
+    computer can accomplish in a certain amount of time; this is called a
+    throughput,  capacity or rate measure. 
+    <ul>
+        <li> The SPEC speed metrics (e.g., SPECint2000) are used for comparing 
+          the ability of a computer to complete single tasks. 
+        <li> The SPEC rate metrics (e.g., SPECint_rate2000) measure the 
+          throughput or rate of a machine carrying out a number of tasks. 
+    </ul>
+    For the rate metrics, multiple copies of the benchmarks are run 
+    simultaneously.  Typically, the number of copies is the same as
+    the number of CPUs on the machine, but this is not a requirement.  
+    For example, it would be perfectly acceptable to run 63 copies of 
+    the benchmarks on a 64-CPU machine (thereby leaving one CPU free 
+    to handle system overhead).</p><p>
+
+    (Note: a speed run which uses a parallelizing compiler to
+    distribute one copy of a benchmark over multiple CPUs is still a 
+    speed run, and uses the speed metrics.  You can identify such 
+    runs by the field "parallel", newly introduced with CPU2000.)
+
+
+<p><a name=Q16><b>Q16. Which SPEC CPU2000 metric should be used to compare performance?</b></a></p><p>
+
+    It depends on your needs. SPEC provides the benchmarks and results as 
+    tools for you to use.  You need to determine how you use a computer or 
+    what your performance requirements are and then choose the appropriate 
+    SPEC benchmark or metrics. </p><p>
+
+    A single user running a compute-intensive integer program, for
+    example,  might only be interested in SPECint2000 or SPECint_base2000. 
+    On the other hand, a person who maintains a machine used by multiple
+    scientists running floating point simulations might be more concerned
+    with SPECfp_rate2000 or SPECfp_rate_base2000. 
+
+
+<p><a name=Q17><b>Q17. How do I contact SPEC for more information or for technical support?</b></a></p><p>
+
+    SPEC can be contacted in several ways. For general information,
+    including other means of contacting SPEC, please see SPEC's World 
+    Wide Web Site at:</p><p>
+
+<center><a href=http://www.spec.org/><big><b>http://www.spec.org/</b></big></a></center>
+
+    <p>General questions can be emailed to: 
+          <a href=&#109;ailto&#58;info&#64;spec.&#111;rg>info&#64;spec.&#111;rg</a>
+
+    <br>CPU2000 Technical Support Questions can be sent to: 
+          <a href=&#109;ailto&#58;cpu2000support&#64;spec.&#111;rg>cpu2000support&#64;spec.&#111;rg</a>
+
+
+<p><a name=Q18><b>Q18. Now that I've read this document, what should I do next?</b></a></a></p><p>
+   
+    You should verify that your system meets the requirements
+    as described in 
+
+<br><center><a href=system_requirements.html>system_requirements.html</a></center>
+
+    and then you can install the suite, following the instructions in
+    
+<br><center><a href=install_guide_unix.html>install_guide_unix.html</a>
+         or <a href=install_guide_nt.html>install_guide_nt.html</a></center>
+
+</P>
+
+<hr>
+Copyright (C) 1999-2001 Standard Performance Evaluation Corporation
+<br>All Rights Reserved
+</body>
+</html>
+

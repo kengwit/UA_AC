@@ -1,0 +1,256 @@
+
+          Document Title: changes_in_V1.1.txt
+
+                 Subject: New features and bugfixes in SPEC CPU2000 V1.1
+
+            Last updated: 2-Dec-00 jh (original by cds)
+                          (To check for possible updates to this document,
+                          please see http://www.spec.org/cpu2000 ) 
+
+------------------------------------------------------------------------
+
+
+
+
+        Contents
+        --------
+
+            I. Introduction
+           II. Documentation changes
+          III. Changes to installation procedure
+           IV. Changes required for user config files
+            V. Tools changes
+               A. New features 
+               B. Bug fixes in runspec
+           VI. Changes in the benchmarks
+          VII. Benchmark source tree cleanup
+
+
+
+I. Introduction
+---------------
+
+The release of SPEC CPU2000 v1.1 includes various bug fixes and some 
+changes that may affect the way that you use the CPU2000 suite.  This 
+document is meant to outline those changes.  In the case of new 
+features, please refer to the appropriate documentation (config.txt or 
+runspec.txt) for more in-depth coverage and usage information.  
+
+
+II. Documentation changes
+-------------------------
+
+The documentation set for CPU2000 has been updated and expanded.  The 
+initial install guides have been improved, and some of the more 
+confusing details concerning the inner workings of the tools have been 
+clarified.  
+
+If you would like to use the SPEC benchmarks without the aid of the 
+tools, a new document has been added that may help you:
+
+         $SPEC/docs/execution_without_SPEC_tools.txt (Unix) or
+     %SPEC%\docs.nt\execution_without_SPEC_tools.txt (NT)
+
+
+III. Changes to installation procedure
+--------------------------------------
+
+    The UNIX install process was quieted: as files are installed on your
+    computer, their names are no longer echoed on the screen.  This can
+    speed up an installation if your terminal screen is slow.  But if 
+    you prefer to see all the files, the old behavior can be had by 
+    setting VERBOSE=1 in your environment before installing.
+
+
+IV. Changes required for user config files
+------------------------------------------
+
+    For the benchmark 252.eon, the math library is no longer supplied 
+    by default.  You may need to add
+              
+        252.eon=default=default=default:
+        EXTRA_LIBS=-lm
+
+    to your config file.
+
+
+
+V. Tools Changes
+----------------
+
+A. New features 
+
+  The following new environment variables have been added:
+
+    SPEC_CPU2000_NO_RUNDIR_NUKE   If this environment variable is set
+                                  to a non-empty value, runspec will *never* 
+                                  touch a used rundir.   This feature might
+                                  be useful when trying to preserve 
+                                  evidence about an intermittent failure.
+                                  Note: Do *not* use this feature lightly! 
+                                  It causes severe benchmark tree bloat!
+
+    SPEC_NEVER_TRY_PDF            If set to a non-empty value, PDF will
+                                  not be attempted.  By default, PDF is
+                                  available.
+ 
+
+  The following new config file directives have been added:
+
+    command_add_redirect          If set, the generated command will have
+                                  ">", "<", and "2>" redirection operators
+                                  added to it, so that the shell will do
+                                  I/O re-direction.  For more information, 
+                                  and an example of where this feature is 
+                                  useful, see config.txt (section on Variable 
+                                  Substitution by runspec).
+
+   srcalt                         If set, the tools will look for an 
+                                  approved alternate source in the
+                                  named subdirectory.  At the moment, the
+                                  only benchmark where this is likely to 
+                                  be useful is for 186.crafty: an alternate
+                                  source is available for main.c, if your
+                                  compiler does not ignore the dangling
+                                  half-comment on line 1984.
+
+
+
+V. Tools changes (continued) 
+
+B. Bug fixes in runspec
+
+  The six problems listed in the 'CLOSED PROBLEM REPORTS' section in
+  errata.txt have been fixed.
+
+  The following bugs have also been fixed:
+
+    * The process of comparing results for some benchmarks (like 177.mesa)
+      took far too long.  A performance bug in specdiff was identified and
+      fixed.  Thank you to Alexander Ostanewich of Sun Microsystems.
+
+    * Per-benchmark basepeak didn't work properly in certain situations:
+      it was run properly, but reported as if full-suite basepeak had 
+      been enabled.
+
+    * Notes spilled over onto another page had the wrong (non-proportional)
+      font.
+
+    * Running in rate mode on NT failed for more than 4 users.  Bug
+      identification and fix courtesy of Wilfried Stehling of
+      Fujitsu-Siemens.
+
+    * Rawformat died with a very unhelpful message when presented with
+      empty raw files.
+
+    * Formatters would occasionally die mysteriously, producing no reports.
+
+    * Formatters would die horribly if they couldn't write into
+      $SPEC/result/images
+
+    * There was always an extra blank line in the errors section of the
+      HTML output.
+
+    * specdiff treated *all* benchmarks as FP
+      (Note: this bug only affected the speed, not the accuracy of the
+             results verification.)
+
+    * specinvoke only expanded the first instance of $SPECUSERNUM
+
+    * runspec -V was broken on NT/Win2k.  runspec -v was also broken
+      everywhere.
+
+    * PDF reporting didn't work on Alpha/NT.
+      (Note: on all versions of NT, a warning about the Symbol font's
+             encoding is generated.  It can be safely ignored.)
+
+    * max_active_compares set too high formerly generated miscompares
+
+    * The placement of the result bars was inconsistent from output format
+      to output format;  the base result bar is now always on top in all
+      formats.
+
+
+
+VI. Changes in the benchmarks
+-----------------------------
+
+  * 164.gzip: In gzip.c (line 55) and spec.c (line 9), include io.h 
+    if compiled with -DNEED_IO_H.  In gzip.c (line 135), if S_IFMT 
+    (type of file) is not already defined, then we supply a default.  
+    The default value may be incorrect, but as it's never used during the
+    course of a benchmark run, this should not matter.
+
+  * 176.gcc: newer versions of gcc no longer need the kludge near line 
+    938 of bc-emit.c.  If you are compiling the benchmark 176.gcc using
+    a version of gcc older than about 2.6, you may now need to set
+       -D__OLDANDBUGGY__GNUC__
+
+  * 178.galgel: In eigQR.f90, Lwork is initialized (at line 24), 
+    instead of being left uninitialized.  The lack of initialization was
+    harmless for users of lapak version 2, but it is needed if you use v3.
+   
+  * 181.mcf: When opening files, use "r" and "w" modes rather than
+    "rt" or "wt" (an older syntax that indicated text files).  This
+    change occurs in output.c (line 40) and readmin.c (line 38).
+
+  * 187.facerec: In fft2d.f90 (near line 70), don't check the
+    shape of STemp until after we first ensure that it exists.
+
+  * 191.fma3d: In fma1.f90 (lines 2297 and 2832), and in include_file_.f90
+    (line 15), allow for much longer directory strings.  This is useful
+    if you install the SPEC CPU2000 distribution in a directory which is 
+    already several levels deep, such as:
+       /usr/users1776/manas/simulator/version34a-229/myprojects/new/spec
+    and then try to add to this a long CPU2000 directory string.
+
+  * 252.eon: ggRasterSurfaceTexture.cc line 57 now uses simply 
+    "char" instead of "unsigned char" because the ANSI standard says
+    that in.get() can only take arguments of type "char".   In file
+    ggIO.cc, there are multiple changes to use type "char" as the
+    input to get, for the same reason, and then separately cast it
+    to where we need it.   Finally, for 252.eon, the math library
+    is no longer supplied by default.  As mentioned above, you may 
+    need to add
+              
+        252.eon=default=default=default:
+        EXTRA_LIBS=-lm
+
+    to your config file.
+
+  * 253.perl: In perly.c, extraneous #line directives have been
+    removed to aid in debugging.  In pp.c, at line 1623, "value" is
+    cast as an unsigned int.  In order to ensure that we don't end
+    up trying to cast a negative number here, line 1620 has been
+    changed to test for >1.0 instead of exactly equal to 1.0. 
+    Finally, initial support for Linux on IA-64 has been incorporated 
+    into spec_config.h.  Set 
+        -DSPEC_CPU2000_LINUX_IA64
+    to use it.
+
+
+
+VII. Benchmark source tree cleanup
+----------------------------------
+
+During the initial development of CPU2000, the CPU subcomittee was
+concerned primarily with portability of the various benchmarks.  As such,
+housekeeping (at least as it concerns the source code trees of the various
+benchmarks) suffered in some cases.  Primarily this manifested as files
+used only for testing being left in the source directories.  In other cases
+there was old, duplicate, or otherwise misplaced documentation.
+
+These unintended inclusions did not affect the workings of the benchmarks
+or the tools harness.  As such, they're not really a problem for the
+majority of the CPU2000 users.  They could prove to be a significant source
+of confusion to users wishing to scrutinize the benchmark source ("which
+files, exactly?" "What makefile is used?") or the datasets ("is this 'raw'
+directory ever used?").  For complete details of this cleaning, please see
+the "kit 100" heading in $SPEC/revisions.
+
+-----------------------------------------------------------------------------
+Copyright (C) 2000 Standard Performance Evaluation Corporation
+All Rights Reserved
+
+
+

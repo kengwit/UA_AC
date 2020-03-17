@@ -1,0 +1,1147 @@
+<html>
+<head>
+<title>SPEC CPU2000: The runspec Command and Its Options</title>
+<!-- $Id: runspec.html 1393 2005-06-14 15:55:21Z cloyce $ -->
+</head>
+<body bgcolor=white>
+
+<pre>
+
+
+
+
+
+</pre>
+<center>
+<h1>SPEC CPU2000: The runspec Command</h1>
+<h4> Last updated: 18-Oct-2001 jh</h4>
+
+(To check for possible updates to this document, 
+please 
+see <a href=http://www.spec.org/cpu2000/docs/>http://www.spec.org/cpu2000/docs/</a>  ) 
+</center>
+<pre>
+
+</pre>
+
+
+<table border=0>
+<tr> <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> </tr>
+<tr> <td colspan=4><h2>Table of Contents</h2></td></tr>
+
+<tr>           <td colspan=3><a href=#toc_I.   ><font color=blue><big>I. Introduction</big>              </font></a></td></tr>
+
+<tr> <td></td> <td colspan=2><a href=#toc_I.A. ><font color=blue>       A. Who Needs runspec?                </font></a></td></tr>
+<tr> <td></td> <td colspan=2><a href=#toc_I.B. ><font color=blue>       B. About Config Files                </font></a></td></tr>
+<tr> <td></td> <td colspan=2><a href=#toc_I.C. ><font color=blue>       C. About Defaults                    </font></a></td></tr>
+<tr> <td></td> <td colspan=2><a href=#toc_I.D. ><font color=blue>       D. About Disk Usage and Support for Multiple Users  </font></a></td></tr>
+
+<tr><td>&nbsp;</td></tr>
+<tr>           <td colspan=3><a href=#toc_II.  ><font color=blue><big>II. Before Using runspec</big>         </font></a></td></tr>
+<tr> <td></td> <td colspan=2> 
+    <a href=#toc_II.install><font color=blue>  Install kit            </font></a>
+<br><a href=#toc_II.config><font color=blue>   Have a config file     </font></a>
+<br><a href=#toc_II.env><font color=blue>      Clean the environment  </font></a>
+<br><a href=#toc_II.unixshrc><font color=blue> Set your path: Unix    </font></a>
+<br><a href=#toc_II.ntshrc><font color=blue>   Set your path: NT      </font></a>
+<br><a href=#toc_II.disk><font color=blue>     Check your disk space  </font></a>
+</td></tr>
+
+<tr><td>&nbsp;</td></tr>
+<tr>           <td colspan=3><a href=#toc_III. ><font color=blue><big>III. Using runspec</big>                </font></a></td></tr>
+<tr> <td></td> <td colspan=2><a href=#toc_III.A. ><font color=blue>       A. Simplest usage                   </font></a></td></tr>
+<tr> <td></td> <td></td> <td><a href=#toc_III.A.1. ><font color=blue>          1. Reportable run              </font></a></td></tr>
+<tr> <td></td> <td></td> <td><a href=#toc_III.A.2. ><font color=blue>          2. Running selected benchmarks </font></a></td></tr>
+<tr> <td></td> <td></td> <td><a href=#toc_III.A.3. ><font color=blue>          3. Output files                </font></a></td></tr>
+<tr> <td></td> <td colspan=2><a href=#toc_III.B. ><font color=blue>       B. Syntax                           </font></a></td></tr>
+<tr> <td></td> <td colspan=2><a href=#toc_III.C. ><font color=blue>       C. Actions                          </font></a></td></tr>
+
+<tr> <td></td> <td colspan=2><a href=#toc_III.D. ><font color=blue>       D. Commonly used options         </font></a></td></tr>
+<tr> <td></td> <td></td> <td bgcolor=lightyellow>
+
+                   <a href=#toc_a ><font color=blue>      <nobr>--action</nobr>         </font></a> &nbsp; &nbsp;
+                   <a href=#toc_c ><font color=blue>      <nobr>--config</nobr>         </font></a> &nbsp; &nbsp;
+                   <a href=#toc_h ><font color=blue>      <nobr>--help</nobr>           </font></a> &nbsp; &nbsp;
+                   <a href=#toc_I ><font color=blue>      <nobr>--ignore_errors</nobr>  </font></a> &nbsp; &nbsp;
+                   <a href=#toc_it ><font color=blue>     <nobr>--iterations</nobr>     </font></a> &nbsp; &nbsp;
+                   <a href=#toc_loo ><font color=blue>    <nobr>--loose</nobr>          </font></a> &nbsp; &nbsp;
+                   <a href=#toc_o ><font color=blue>      <nobr>--output_format</nobr>  </font></a> &nbsp; &nbsp;
+                   <a href=#toc_r ><font color=blue>      <nobr>--rate</nobr>           </font></a> &nbsp; &nbsp;
+                   <a href=#toc_raw ><font color=blue>    <nobr>--rawformat</nobr>      </font></a> &nbsp; &nbsp;
+                   <a href=#toc_D ><font color=blue>      <nobr>--rebuild</nobr>        </font></a> &nbsp; &nbsp;
+                   <a href=#toc_s ><font color=blue>      <nobr>--reportable</nobr>     </font></a> &nbsp; &nbsp;
+                   <a href=#toc_T ><font color=blue>      <nobr>--tune</nobr>           </font></a> &nbsp; &nbsp;
+                   <a href=#toc_u ><font color=blue>      <nobr>--users</nobr>          </font></a> &nbsp; &nbsp;
+
+</td></tr>
+
+<tr> <td></td> <td colspan=2><a href=#toc_III.E. ><font color=blue>       E. Less commonly used options      </font></a></td></tr>
+<tr> <td></td> <td></td> <td bgcolor=lightyellow>
+
+                   <a href=#toc_de ><font color=blue>      <nobr>--deletework</nobr>       </font></a> &nbsp; &nbsp;
+                   <a href=#toc_e ><font color=blue>       <nobr>--extension</nobr>        </font></a> &nbsp; &nbsp;
+                   <a href=#toc_m ><font color=blue>       <nobr>--machine</nobr>          </font></a> &nbsp; &nbsp;
+                   <a href=#toc_mnc ><font color=blue>     <nobr>--make_no_clobber</nobr>  </font></a> &nbsp; &nbsp;
+                   <a href=#toc_mc ><font color=blue>      <nobr>--maxcompares</nobr>      </font></a> &nbsp; &nbsp;
+                   <a href=#toc_spg ><font color=blue>     <nobr>--[no]setprocgroup</nobr> </font></a> &nbsp; &nbsp;
+                   <a href=#toc_size ><font color=blue>    <nobr>--size</nobr>             </font></a> &nbsp; &nbsp;
+                   <a href=#toc_tab ><font color=blue>     <nobr>--[no]table</nobr>        </font></a> &nbsp; &nbsp;
+                   <a href=#toc_f ><font color=blue>       <nobr>--unbuffer</nobr>         </font></a> &nbsp; &nbsp;
+                   <a href=#toc_unm ><font color=blue>     <nobr>--username</nobr>         </font></a> &nbsp; &nbsp;
+                   <a href=#toc_v ><font color=blue>       <nobr>--verbose</nobr>          </font></a> &nbsp; &nbsp;
+                   <a href=#toc_ver ><font color=blue>     <nobr>--version</nobr>          </font></a> &nbsp; &nbsp;
+
+</td></tr>
+
+<tr><td>&nbsp;</td></tr>
+<tr>           <td colspan=3><a href=#toc_IV. ><font color=blue><big>IV. Quick reference</big>              </font></a></td></tr>
+
+</table>
+<pre>
+
+
+</pre>
+
+<hr>
+<a name=toc_I. ><h2>I. Introduction</h2> </a>
+
+<a name=toc_I.A. ><h3>A. Who Needs runspec?</h3></a>
+
+   Everyone who uses SPEC CPU2000 needs <tt><b>runspec</b></tt>.  It is the primary tool in 
+   the suite.  It is used to build the benchmarks, run them, and report on 
+   their results.  All users of CPU2000 should read this document.
+
+<a name=about_config>
+<a name=toc_I.B.><h3>B. About Config Files</h3></a></a>
+
+   In order to use <tt><b>runspec</b></tt>, you need a "config file", which contains
+   detailed instructions about how to build and run the benchmarks.
+   You may not have to learn much about config files in order to 
+   get started.  Typically, you start off using a config file that 
+   someone else has previously written.
+
+<p>   Where can you find such a config file?  There are 2 primary sources:
+
+<ol> 
+<li><p>Look in directory <tt>$SPEC/config</tt> (Unix) or <tt>%SPEC%\config</tt> (NT).  
+        You may find that there is a already a config file there with 
+        a name that indicates that it is appropriate for your system.  
+        You may even find that <tt>default.cfg</tt> already contains settings 
+        that would be a good starting place for your system.</p>
+
+     <li><p>Look at the SPEC web site 
+(<a href=http://www.spec.org/cpu2000/>http://www.spec.org/cpu2000/</a>) 
+ for a CPU2000 
+        result submission that used your system, or a system similar to 
+        yours.  You can download the config file from that submission.</p>
+</ol>
+
+   Alternatively, you can write your own, using the instructions in
+   <a href=config.html>config.html</a></p>
+
+
+<hr width=80%>
+<center><table width=75%><tr><td>
+<i>Note: links to SPEC CPU2000 documents on this web page
+assume that you are reading the page from a directory that
+also contains the other SPEC CPU2000 documents.  If by
+some chance you are reading this web page from a location
+where the links do not work, try accessing the referenced
+documents at one of the following locations:</i>
+<ul>
+<li><a href=http://www.spec.org/cpu2000/docs/>
+     www.spec.org/cpu2000/docs/</a>
+<li><i>The </i><tt><big><b>$SPEC/docs/    </b></big></tt><i> directory on a Unix
+ system where SPEC CPU2000 has been installed.
+<li>   The </i><tt><big><b>%spec%\docs.nt\</b></big></tt><i> directory on a Wind
+ows/NT system where SPEC CPU2000 has been installed.
+<li>   The </i><tt><big><b>docs/          </b></big></tt><i> or
+           </i><tt><big><b>docs.nt\       </b></big></tt><i> directory on your S
+PEC CPU2000 distribution cdrom.</i>
+</ul>
+</td></tr></table>
+<hr width=75%>
+</center></p>
+
+   See also the examples in 
+
+<pre>   $SPEC/docs/*.cfg (Unix) or 
+   %SPEC%\docs.nt\*.cfg (NT).
+</pre>
+
+<a name=toc_I.C.><h3>C. About Defaults</h3></a>
+
+   The SPEC tools have followed two design principles regarding defaults: 
+<ol><li>
+      There should always be a default for everything
+<li>      It should be easy to change the defaults
+</ol>
+
+   This means (the good news) that something sensible will usually 
+   happen, even when you aren't explicit about what you want.  But 
+   it also means (the bad news) that if something unexpected happens,
+   you may have to look in several places in order to figure out why 
+   it behaves differently than you expect.
+
+  <p> The order of precedence for settings is:</p>
+
+<center><table border=0>
+<tr><td>
+     Highest precedence:&nbsp;&nbsp;</td><td> <tt><b>runspec</b></tt> command
+<tr><td>
+     Middle:</td><td>             config file
+<tr><td>
+     Lowest:</td><td>             the tools as shipped by SPEC
+</table>
+</center>
+
+   <p>Therefore, when this document tells you that something is the
+   default, bear in mind that your config file may have changed that
+   setting.  If in doubt, check the config file.
+
+
+<a name=disk_usage>
+<a name=toc_I.D.><h3>D. About Disk Usage and Support for Multiple Users</h3></a>
+</a>
+
+
+   The structure of the CPU2000 directory tree is:
+
+<pre>    $SPEC or %SPEC% - the root directory
+       benchspec 
+          CFP2000   - floating point benchmarks
+          CINT2000  - integer benchmarks
+       bin          - tools to run and report on the suite
+       config       - config files
+       result       - log files and reports
+       tools        - sources for the CPU2000 tools
+</pre>
+   Within each of the individual benchmarks, the structure is:
+
+<pre>    nnn.benchmark - root for this benchmark
+       Spec       - SPEC metadata about the benchmark
+       data        
+         all      - data used by all runs (if needed by the benchmark)
+         ref      - the real data set, required for all result reporting
+         test     - data for a simple test that an executable is functional
+         train    - data for feedback-directed optimization
+       exe        - compiled versions of the benchmark
+       run        - all builds and runs take place here
+       src        - the sources for the benchmark
+</pre>
+   When you find yourself wondering "Where did all my disk space go?",
+   the answer is "The run directories."  All build and run activity 
+   takes place in numbered run directories - e.g.
+
+<pre>    $SPEC/benchspec/CINT2000/164.gzip/run/00000001
+</pre>
+
+   To get your disk space back, see the documentation of the various 
+   <a href=#cleaning><font color=blue>cleaning options</font></a>, below; 
+   or issue a command such as the following 
+   (on Unix systems; NT users can select the files with Explorer):
+
+<pre>    rm -Rf $SPEC/benchspec/C*/*/run
+</pre>
+
+   Because all the build and run activity takes place in separately
+   created directories, the tools are able to provide limited support 
+   for multiple users of the same directory tree:  
+<ul>
+
+<li>Each numbered run directory is tagged with the name of the 
+        user that it belongs to (in the file <tt>nnn.benchmark/run/list</tt>).
+
+<li>Multiple jobs can be submitted at the same time by one or 
+        more users.
+
+<li>Different users can be doing simultaneous builds in different
+        run subdirectories, or even simultaneous runs.  (Of course, if
+        multiple jobs compete with each other for resources, it is
+        likely that they will run more slowly.)
+</ul>
+
+   The support for multiple users is subject to some limitations:
+
+<ol>
+<li><p>The directory tree must be writable by each of the users, which means 
+        that the users have to trust each other not to modify or delete 
+        each others' files.  </p>
+
+<li><p>Directories such as <tt>config</tt>, <tt>result</tt>, 
+        and <tt>exe</tt> are not segregated 
+        by user, so you can only have one version of (for example) 
+        <tt>config/phil.cfg</tt> or 
+        <tt>benchspec/CINT2000/164.gzip/exe/gzip_base.les</tt> </p>
+
+<li><p>Support for multiple users has received only limited testing
+        during the development of CPU2000, and may have bugs.  If you
+        encounter a problem, please report it to SPEC.</p>
+</ol>
+   If these limitations cause concern, you should give each user 
+   their own copy of the entire SPEC CPU2000 directory tree, and 
+   use your operating system's file protection scheme.</p>
+     
+<hr>
+
+<a name=toc_II. ><h2>II. Before Using runspec</h2> </a>
+
+Before using <tt><b>runspec</b></tt>, you need to:
+
+<ol>
+
+<a name=toc_II.install>
+<li><p>Successfully install CPU2000.
+</a>
+   <tt><b>Runspec</tt></b> uses 
+      perl version 5.005_03, 
+      which is installed as <tt>specperl</tt> when you install CPU2000.  
+
+      <p>Please see <a href=install_guide_unix.html>install_guide_unix.html</a>
+      or <a href=install_guide_nt.html>install_guide_nt.html</a>.
+
+       
+</pre>
+
+<a name=toc_II.config>
+<li><p>Find a config file.  
+</a>
+You won't get anywhere unless you have a config file, but fortunately
+you can get started by using a pre-existing config file. See 
+<a href=#toc_I.B.><font color=blue>About Config Files</font></a>, above.</p>
+
+<a name=toc_II.env>
+<li>
+  Make  sure that the environment variable <tt><b>SPEC</b></tt> is 
+  NOT defined when you start out. 
+</a> 
+  If it is already defined (e.g. from a run of some 
+  other SPEC benchmark suite), you should undefine it first, e.g.
+  by logging out and logging in, or by using <tt>unset</tt>. </p>
+
+  <p>To check whether the variable is already defined, type
+<pre>   <b>echo $SPEC</b> (Unix)
+  or
+   <b>echo %SPEC%</b> (NT)
+</pre>
+On Unix systems, the desired output is nothing at all; on
+NT systems, the desired output is <tt>%SPEC%</tt>.</p></li>
+
+
+
+<li><p>Set your path appropriately for your system type (Unix or 
+NT/Windows 2000)</p>
+
+
+<a name=toc_II.unixshrc>
+<u>a. If you are using a Unix system:</u>
+</a>
+
+
+<p>           Change your current directory to the top-level SPEC directory and
+
+
+<pre><b>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!  START A BOURNE-COMPATIBLE SHELL !!!!!!!!!!!!!
+!             (if you are not already in one)             !
+!                                                         !
+!  That is, you need to use a command interpreter that    !
+!  supports the syntax used by shrc, which tries to be    !
+!  highly portable by avoiding proprietary or uncommon    !
+!  shell features.  Many shells -- such as ash, bash,     !
+!  ksh, and zsh -- provide some degree of compatibility   !
+!  with the Bourne shell.   The C shell (csh) definitely  !
+!  is NOT compatible with Bourne shell syntax.  If you    !
+!  are in doubt, or if you see unexpected error messages  !
+!  from shrc, you can usually start a Bourne shell by     !
+!  typing 'sh'.                                           !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+</b></pre>
+
+           <p>Then, source the file <tt>shrc</tt>.  If you 
+           prefer some other shell, 
+           you can probably spawn it after sourcing <tt>shrc</tt>; when 
+           you do so,
+           please be sure that your new shell does not clear the path 
+           variables set up by <tt>shrc</tt>! For example:
+
+<pre>   % <b>cd /usr/rahul/cpu2000</b>
+   % <b>sh</b>
+   $ <b>. ./shrc</b>        <- that's dot-space-dot-slash-shrc
+   $ <b>csh</b>
+   %
+</pre>
+
+
+<a name=toc_II.ntshrc>
+<u>b. If you are using a Windows/NT system:</u>
+</a>
+
+<p>           Start a command window, then type:
+
+              <pre>    <b>notepad shrc.bat</b>
+</pre>
+           and make the appropriate edits for your compiler paths.
+
+<p>     <cite><b>Caution</b>: you may find that the lines are not 
+           correctly formatted
+           (the text appears to be all run together) when you edit this 
+           file.  If so, see the section 
+           <a href=install_guide_nt.html#text>"Using Text Files on NT" in
+           the NT installation guide</a>.  </cite>
+
+<p>          Then set the path using your edited shrc.bat, for example:
+
+<pre>    F:\bodo\cpu2000> <b>shrc</b>
+</pre>
+
+
+<a name=toc_II.disk>
+<li>Make sure that you have enough disk space.  
+</a>
+       Typically, you will
+       want to have at least 1/2 GB free disk space at the start of a 
+       run.  Please see 
+       <a href=#toc_I.D.><font color=blue>About Disk Usage 
+       and Support for Multiple Users</font></a>, above.</li>
+</ol>
+
+<hr>
+
+<a name=toc_III. ><h2>III. Using runspec</h2> </a>
+
+<a name=toc_III.A. ><h3>A. Simplest usage</h3> </a>
+
+<a name=toc_III.A.1. >   <h4>1. Reportable run</h4> </a>
+
+      <tt><b>Runspec</b></tt> is easiest to use when:
+<ul>
+<li>Some kind person has already compiled the benchmarks.</li>
+
+<li>That kind person provides both the compiled images and their 
+        corresponding config file (see 
+        <a href=#toc_I.B.><font color=blue>About Config Files</font></a>
+        above).</li>
+
+<li>The config file does not change the defaults in surprising or 
+        esoteric ways (see 
+     <a href=#toc_I.C.><font color=blue>About Defaults</font></a>
+     above).</li>
+</ul>
+
+      In this lucky circumstance, all that needs to be done is to name 
+      the config file, select which benchmark suite is to be run:
+      <tt><b>int</b></tt> for CINT2000 
+      or <tt><b>fp</b></tt> for CFP2000, and say 
+      <tt><b>--reportable</b></tt> if 
+      one wants to attempt a full run that complies with the SPEC 
+      CPU2000 run rules.  
+
+      <p>For example, suppose that Wilfried has given Ryan a config file
+      with some new integer optimizations for a Unix system.  Ryan
+      could say:
+
+<pre>  % <b>cd /usr/ryan/cpu2000</b>
+  % <b>sh</b>
+  $ <b>. ./shrc</b>
+  $ <b>runspec --config wilfried_new.cfg --reportable int</b>
+</pre>
+      As a another example, suppose that Reinhold has given Kaivalya an 
+      NT config file with changes from 12 August, and Kaivalya wants to 
+      run the floating point suite.  He might say something like this:
+
+<pre>  F:\kaivalya\cpu2000> <b>shrc</b>
+  F:\kaivalya\cpu2000> <b>runspec --config reinhold_aug12a --reportable fp</b>
+</pre>
+
+<a name=toc_III.A.2. >   <h4>2. Running selected benchmarks</h4> </a>
+
+      If you want to run a subset of the benchmarks, rather than running
+      the whole suite, you can name them.  Since a reportable run uses an 
+      entire suite, you'll need to turn off reportable:
+
+<pre>  % <b>runspec --config arrian_dec25j.cfg --noreportable 252.eon 181.mcf</b>
+</pre>
+
+
+<a name=toc_III.A.3. >   <h4>3. Output files</h4> </a>
+
+      Look for the output of your <tt><b>runspec</b></tt> command in the directory
+      <tt>$SPEC/result</tt> (Unix) or 
+      <tt>%SPEC%\result</tt> (NT).  There, you will find 
+      log files and result files.  More information about log files 
+      can be found in <a href=config.html>config.html</a>.
+
+      <p>The format of the result files depends on what was selected in 
+      your config file, but will typically include at least <tt>.asc</tt> for 
+      ASCII text, and will always include <tt>.raw</tt>, for raw (unformatted) 
+      run data.  More information about result formats can be found 
+      below, under 
+      <a href=#toc_o><font color=blue><tt>--output_format</tt></font></a>.  Note 
+      that you can always re-generate 
+      the output, using the 
+      <a href=#toc_raw><font color=blue><tt>--rawformat</tt></font></a> option, 
+      also documented below.
+
+<p><center><b>.........................................</b>
+<br>This concludes the section on simplest usage;
+<br>if simple commands such as the above don't seem
+<br>to do what you like, then you'll have to keep 
+<br>reading this document.  
+<br><b>.........................................</b></center>
+
+<a name=toc_III.B. ><h3>B. Syntax</h3> </a>
+
+   The syntax for the <tt><b>runspec</b></tt> command is:
+
+<pre><b>   runspec [options] [list of benchmarks to run]
+</b></pre>
+
+   Options are described in the following sections.  There, you 
+   you will notice that many options have both long and short 
+   names.  The long names are invoked using two dashes, and the 
+   short names use only a single dash.  For long names that take 
+   a parameter, you can optionally use an equals sign.  Long 
+   names can also be abbreviated, provided that you still enter 
+   enough letters for uniqueness.  For example, the following 
+   commands all do the same thing: 
+
+<pre><b>   runspec --config=dianne_july25a --debug=99 fp 
+   runspec --config dianne_july25a --debug 99 fp 
+   runspec --conf dianne_july25a   --deb 99   fp 
+   runspec -c dianne_july25a       -v 99      fp 
+</b></pre>
+
+   The list of benchmarks to run can be either an entire suite
+   ("int" or "fp") or one or more individual benchmarks.  Individual
+   benchmarks can be named, numbered, or both; and they can be
+   abbreviated, as long as you enter enough characters for 
+   uniqueness.  For example, each of the following commands does
+   the same thing:
+
+<pre><b>   runspec -c jason_july09d --noreportable 187.facerec 168.wupwise
+   runspec -c jason_july09d --noreportable 187 168
+   runspec -c jason_july09d --noreportable facerec wupwise
+   runspec -c jason_july09d --noreportable face wup
+</b></pre>
+
+   It is also possible to exclude a benchmark, using a hat 
+   (<tt><b>^</b></tt>, also known as carat, typically found as shift-6).  For 
+   example, suppose your system lacks a C++ compiler, and you
+   therefore cannot run the benchmark 252.eon.  You could run
+   all of the integer benchmarks except eon by entering a 
+   command such as this one:
+
+<pre><b>   runspec --noreportable -c kathy_sep14c int ^eon
+</b></pre>
+
+   Note that if hat has significance to your shell, you may need
+   to protect it from interpretation by the shell, for example by 
+   putting it in single quotes.  On NT, you will need to use both
+   a hat and two quotes for each benchmark you want to exclude, like
+   this:
+
+<pre><b>   E:\cpu2000> runspec --noreportable -c debbie_apr26a int "^gzip" "^eon"
+</b></pre>
+
+
+<a name=toc_III.C. ><h3>C. Actions</h3> </a>
+
+   Every time <tt><b>runspec</b></tt> is used, it normally takes some kind of action for
+   the set of benchmarks specified at the end of the command line (or 
+   defaulted from the config file).  The default action is <tt><b>validate</b></tt>, 
+   which means that the benchmarks will be built if necessary, the run 
+   directories will be setup, the benchmarks will be run, and reports 
+   will be generated.
+
+<p>   If you want to force a different action, then you can enter one of 
+   the following <tt><b>runspec</b></tt> options:
+   
+<table border=0>
+<tr><td valign=top>
+     <tt><b>--action build</b></tt></td><td>    Compile the benchmarks.  More information about 
+                       compiling may be found in <a href=config.html>config.html</a>, including 
+                       information about additional files that are output 
+                       during a build.</td></tr>
+
+<tr><td valign=top>
+     <tt><b>--action run</b></tt></td><td>      Run the benchmarks but do not bother to verify that 
+                       they got the correct answers.  This option is not 
+                       normally useful, but can be selected if, for example, 
+                       you are generating a performance trace and wish to 
+                       avoid tracing some of the tools overhead.</td></tr>
+
+<tr><td valign=top>
+     <tt><b>--action setup</b></tt></td><td>    Setup the run directories.  Copy executables and data 
+                       to work directories.</td></tr>
+
+<tr><td valign=top>
+     <pre><b>--action validate</b></pre> </td><td valign=top> Build (if needed), run, and generate reports</td></tr>
+
+<tr><td colspan=2>
+<a name=cleaning>
+ In addition, the following cleanup actions are available (in order by
+   level of vigor):</td></tr>
+</a>
+<tr><td valign=top>
+     <tt><b>--action clean</b></tt></td><td>    Empty all run and build directories for the 
+                       specified benchmark set.  For example, if user
+                       Jeff enters the command:
+
+                        runspec --action clean --config may12a fp
+
+                       the tools would remove run directories for the 
+                       floating point benchmarks which are tagged as 
+                       belonging to Jeff and which contain benchmarks
+                       generated by config file may12a.cfg.</td></tr>
+
+<tr><td valign=top>
+     <tt><b>--action trash</b></tt></td><td>     Same as clean, but do it for all users of this SPEC
+                        directory tree.    </td></tr>
+
+<tr><td valign=top>
+     <tt><b>--action realclean</b></tt></td><td> A synonym for --action trash</td></tr>
+
+<tr><td valign=top>
+     <tt><b>--action clobber</b></tt></td><td>  Clean + remove all executables of the current type</td></tr>
+
+<tr><td valign=top>
+     <tt><b>--action nuke</b></tt></td><td>     Remove everybody's run and build directories and all 
+                       executables</td></tr>
+</table>
+
+<p>  On the other hand, if you prefer to do all cleaning by hand (perhaps
+  after reviewing the results of each run), you can ask the tools to never 
+  touch a used run directory.  Do this by setting the environment variable:
+       <tt><b>SPEC_CPU2000_NO_RUNDIR_NUKE</b></tt>
+
+
+<p>   Alternative cleaning method:
+
+  <p>      If you prefer, you can clean disk space by entering commands
+        such as the following (on Unix systems):
+
+<pre>
+    rm -Rf $SPEC/benchspec/C*/*/run
+    rm -Rf $SPEC/benchspec/C*/*/exe
+</pre>
+
+<p>        NT users can achieve a similar effect using Windows NT Explorer.
+        Notice that the above commands not only empty the contents of
+        the run and exe directories; they also delete the directories
+        themselves.  That's fine; the tools will re-create the run and
+	exe directories if they are needed again later on.
+
+
+
+<a name=toc_III.D. ><h3>D. Commonly used options</h3> </a>
+
+   Most users of <tt><b>runspec</b></tt> will want to become familiar with the following 
+   options. 
+
+<a name=toc_a >  <h4>--action <i>action</i></h4> </a>
+<ul>
+<li>          Synonym:  <tt><b>-a <i>action</i></b></tt>
+<li>          Default:  <tt><b>validate</b></tt>
+<li>          Meaning:  One of the following actions that runspec can do for you: &nbsp; &nbsp;
+               <tt><b>build clean clobber nuke run setup trash</b></tt> or <tt><b>validate</b></tt>.
+               For more information, see <a href=#toc_III.C. ><font color=blue>Actions</font></a>, above
+</ul>
+
+<a name=toc_c >  <h4>--config <i>name</i></h4> </a>
+<ul>
+<li>          Synonym:  <tt><b>-c <i>name</i></b></tt>
+<li>          Default:  <tt><b>default.cfg</b></tt>
+<li>          Meaning:  Use config file <tt><b>config/<i>name</i>.cfg</b></tt>.  If not specified, the
+                    tools will try <tt><b>config/default.cfg</b></tt>   
+</ul>
+
+<a name=toc_h >  <h4>--help</h4> </a>
+<ul>
+<li>          Synonyms: <tt><b>-h</b></tt>, <tt><b>-?</b></tt>
+<li>          Default:  Help text is not displayed.
+<li>          Meaning:  Print helpful text
+</ul>
+<a name=toc_I >  <h4>--ignore_errors</h4> </a>
+<ul>
+<li>          Synonyms: <tt><b>-I,</b></tt> <tt><b>--ignoreerror</b></tt>
+<li>          Default:  Stop on first error.
+<li>          Meaning:  Continue running even if errors occur.  Note that a run 
+                    with <tt><b>--ignore_errors</b></tt> cannot be submitted to SPEC.
+</ul>
+
+<a name=toc_it >  <h4>--iterations <i>number</i></h4> </a>
+<ul>
+<li>          Synonym: <tt><b>-n <i>number</i></b></tt>
+<li>          Default: <tt><b>3</b></tt>
+<li>          Meaning: How many times to run each benchmark.  For a reportable 
+                   run, must be an odd number >= 3.  
+</ul>
+
+<a name=toc_loo> <h4>--loose</h4> </a>
+<ul>
+<li>          Synonyms: <tt><b>-l</b></tt>, <tt><b>--nostrict</b></tt>, <tt><b>--noreportable</b></tt>
+<li>          Default: <tt><b>loose</b></tt>
+<li>          Meaning: Unset <tt><b>reportable</b></tt>.   For example, suppose that you have 
+                   a golden config file that is used for reportable runs, 
+                   and which sets the config file option <tt><b>reportable</b></tt>.  But 
+                   you aren't ready to do a reportable run, because you first 
+                   want to ensure that the system under test is adequately 
+                   configured to run the benchmark 252.eon.  Since the config 
+                   file sets the option <tt><b>reportable</b></tt>, the following command 
+                   will result in an error message:
+<pre>
+     <b>runspec --config golden --iterations 1 eon</b>
+</pre>
+                   as the SPEC tools will inform you that you cannot change 
+                   the number of iterations on a reportable run.  But either of the 
+                   following commands will override the config file and just 
+                   run eon once:
+<pre>
+    <b>runspec --config golden --iterations 1 --loose eon</b>
+    <b>runspec --config golden --iterations 1 --noreportable eon</b>
+</pre>
+</ul>
+
+<a name=toc_o >  <h4>--output_format <i>format</i></h4> </a>
+<ul>
+<li>          Synonym: <tt><b>-o <i>format</i></b></tt>
+<li>          Default: all available formats
+<li>          Meaning: Desired report format, one or more of 
+                <ul>
+		<li><tt><b>all</b></tt>    - all of the following
+                <li><tt><b>asc</b></tt>    - ASCII text
+                <li><tt><b>config</b></tt> - config file used for this run
+                <li><tt><b>html</b></tt>   - web page
+                <li><tt><b>pdf</b></tt>    - Portable Document Format
+                <li><tt><b>ps</b></tt>     - Postscript
+                </ul>
+                If more than one option is used, separate them by commas.
+</ul>
+
+
+<a name=toc_r >  <h4>--rate</h4> </a>
+<ul>
+<li>          Synonym:  <tt><b>-r</b></tt>
+<li>          Default: speed run (i.e. non-rate)
+<li>          Meaning: Select rate run instead of speed.  Normally you would
+                   also specify <tt><b>--users</b></tt>.  For example, the following command 
+                   might be used for a 4-user SPECint_rate2000 run:
+
+<pre>   <b>runspec --config ken_may12a --rate --users 4 int</b>
+</pre>
+
+                   If you have also entered <tt><b>--rawformat</b></tt>, then the effect of 
+                   <tt><b>--rate</b></tt> is to format the rawfile for rate even if it was 
+                   originally a speed run.  That is, it is valid to report 
+                   a single user run as both speed and rate, but only for 
+                   the case where you first run it as a speed run, and 
+                   then reformat for rate.
+</ul>
+
+<a name=toc_raw >  <h4>--rawformat <i>rawfiles</i></h4> </a>
+<ul>
+<li>          Synonym: <tt><b>-R <i>rawfile</i>  </b></tt>
+<li>          Default: Do not use rawformat mode.
+<li>          Meaning: Take an existing run and just generate the reports.  
+                   This option is useful if (for example) you are just 
+                   doing ASCII output during most of your runs, but now 
+		   you would like to create additional reports for one 
+		   or more especially interesting runs.  To create the 
+		   html and postscript files for experiment number 324, 
+		   you could say:
+
+<pre>   <b>runspec --rawformat --output_format html,ps \
+      result/CINT2000.324.raw</b>
+</pre>
+
+                   You can achieve the same effect by using rawformat:
+
+<pre>   <b>rawformat --output_format html,ps \
+      result/CINT2000.324.raw</b>
+</pre>
+
+                   For more information about rawformat, please see
+                   <a href=utility.html#rawformat>utility.html</a>
+</ul>
+
+<a name=toc_D >  <h4>--rebuild</h4> </a>
+<ul>
+<li>          Synonym:  <tt><b>-D</b></tt>
+<li>          Default: Do not rebuild unless binary is missing or does
+                   not match the config file.
+<li>          Meaning: Delete existing binaries and recompile.  Use this if, for
+                   example, you have installed a new version of your compiler
+                   and want to force a rebuild of the benchmarks.
+</ul>
+
+<a name=toc_s >  <h4>--reportable</h4> </a>
+<ul>
+<li>          Synonyms: <tt><b>-s</b></tt>, <tt><b>--strict</b></tt>, <tt><b>--noloose</b></tt>
+<li>          Default:  <tt><b>loose</b></tt>
+<li>          Meaning:  Wherever it is practical to do so in an automated fashion, 
+                    enforce the CPU2000 run rules, so as to produce a result 
+                    which is suitable for public reporting and/or submission 
+                    to SPEC.  Note that this option forces various other 
+                    options, such as iterations odd and >=3.  
+</ul>
+
+
+
+<a name=toc_T >  <h4>--tune <i>tuning</i></h4> </a>
+<ul>
+<li>          Synonyms: <tt><b>--tuning <i>tuning</i></b></tt>, <tt><b>-T <i>tuning</i></b></tt>
+<li>          Default: <tt><b>base</b></tt>
+<li>          Meaning: Selects tuning to use: <tt><b>base</b></tt>, <tt><b>peak</b></tt>, or <tt><b>all</b></tt>.  For a 
+                   reportable run, must be either <tt><b>base</b></tt> or <tt><b>all</b></tt>.  
+                   Reportable runs always run base first, then peak.
+</ul>
+
+<a name=toc_u >  <h4>--users <i>number</i></h4> </a>
+<ul>
+<li>          Synonyms: <tt><b>-u <i>number</i></b></tt>
+<li>          Default:  <tt><b>1</b></tt>
+<li>          Meaning:  Use <i>number</i> copies for a SPECrate run.  See <tt><b>--rate</b></tt>.
+</ul>
+
+
+<a name=toc_III.E. ><h3>E. Less commonly used options</h3> </a>
+
+<a name=toc_de >  <h4>--deletework</h4> </a>
+<ul>
+<li>          Synonym: <tt><b>-d</b></tt>       
+<li>          Default: Do not delete working directories.
+<li>          Meaning: Delete run directories and re-populate.  Use this if you 
+                   suspect that the run directories may have been corrupted, 
+                   for example due to a system crash during setup of an 
+                   earlier run.  You might also use this if you just wish 
+                   to ensure clean run directories, but note that the tools 
+                   will automatically provide what they deem to be a 
+                   sufficient level of cleaning.
+</ul>
+
+<a name=toc_e >  <h4>--extension <i>name</i></h4> </a>
+<ul>
+<li>          Synonyms: <tt><b>--ext <i>name</i></b></tt>, <tt><b>-e <i>name</i></b></tt>
+<li>          Default:  <tt><b>none</b></tt>
+<li>          Meaning:  Extension to build or run.  Normally used only if the 
+                    config file has been written to handle more than one 
+                    extension.  The config file author should tell you what 
+                    extensions to enter under which circumstances.
+</ul>
+
+<a name=toc_m >  <h4>--machine <i>name</i></h4> </a>
+<ul>
+<li>          Synonym: <tt><b>--mach <i>name</i></b></tt>, <tt><b>-m <i>name</i></b></tt>     
+<li>          Default: none
+<li>          Meaning: The machine to build for or to run.  Normally used only 
+                   if the config file has been written to handle more than 
+                   one machine type.  The config file author should tell 
+                   you what machines are supported by the config file.
+</ul>
+
+<a name=toc_mnc >  <h4>--make_no_clobber</h4> </a>
+<ul>
+<li>          Synonym: <tt><b>-C</b></tt> 
+<li>          Default: clobber
+<li>          Meaning: Do not delete existing object files before attempting to 
+                   build.  This option should only be used for troubleshooting 
+                   a problematic compile.  It is against the run rules to use 
+                   it when building binaries for an actual submission.
+
+<p>                   For a better way of troubleshooting a problematic compile,
+                   see the information about
+                   specmake in <a href=utility.html#specmake>utility.html</a>
+</ul>
+
+<a name=toc_mc >  <h4>--maxcompares <i>N</i>   </h4> </a>
+<ul>
+<li>          Synonym: <tt><b>--max_active_compares <i>N</i></b></tt>
+<li>          Default: the same as number specified for --users
+<li>          Meaning: Set the number of concurrent compares to N.  This option is
+                   useful if you have multiple CPUs and are doing a rate run.
+                   Do not exceed the value that was specified for --users.
+</ul>
+
+<a name=toc_spg >  <h4>--setprocgroup, --nosetprocgroup </h4> </a>
+<ul>
+<li>          Synonyms: none
+<li>          Default:  <tt><b>--setprocgroup</b></tt>
+<li>          Meaning:  Attempt to create all processes in a single group.  
+                    Improves the chances that ^C will get the whole run, 
+                    not just one of the children.
+</ul>
+
+
+<a name=toc_size >  <h4>--size <i>size</i></h4> </a>
+<ul>
+<li>          Synonyms: <tt><b>-i <i>size</i></b></tt>, <tt><b>--input <i>size</i></b></tt>     
+<li>          Default: <tt><b>ref</b></tt>
+<li>          Meaning: Selects size of input data to run: <tt><b>test</b></tt>, <tt><b>train</b></tt>, or <tt><b>ref</b></tt>.
+                   Reportable runs always use <tt><b>ref</b></tt>.  You might choose to use
+                   a smaller data size while debugging a set of compilation
+                   options.
+</ul>
+
+<a name=toc_tab >  <h4>--table, --notable   </h4> </a>
+<ul>
+<li>          Synonyms: none
+<li>          Default:  <tt><b>--table</b></tt>
+<li>          Meaning:  For ASCII reports, include a detailed table of all runs 
+</ul>
+
+<a name=toc_f >  <h4>--unbuffer</h4> </a>
+<ul>
+<li>          Synonym: <tt><b>-f</b></tt>
+<li>          Default: buffer
+<li>          Meaning: Do not buffer output.  For SPEC CPU95, there were 
+                   occasional complaints about redundant output when a child 
+                   process would flush its buffer.  If similar problems 
+                   occur for CPU2000, try <tt><b>--unbuffer</b></tt>.
+</ul>
+
+<a name=toc_unm >  <h4>--username <i>name</i></h4> </a>
+<ul>
+<li>          Synonym: <tt><b>-U <i>name</i></b></tt>     
+<li>          Default: same as current process
+<li>          Meaning: Name of user.  Useful if multiple users are sharing a SPEC 
+                   tree.  Please see "About Disk Usage and Support for 
+                   Multiple Users", above.
+</ul>
+
+<a name=toc_v >  <h4>--verbose <i>n</i></h4> </a>
+<ul>
+<li>          Synonyms: <tt><b>--debug <i>n</i></b></tt>, <tt><b>-v <i>n</i></b></tt>
+<li>          Default:  <tt><b>5</b></tt>
+<li>          Meaning:  Set verbosity level to a level between <tt><b>1</b></tt> and <tt><b>99</b></tt>.  For 
+                    more information, see <a href=config.html>config.html</a>
+</ul>
+
+<a name=toc_ver >  <h4>--version</h4> </a>
+<ul>
+<li>          Synonym: <tt><b>-V</b></tt>            
+<li>          Default: Print short version information.
+<li>          Meaning: Print detailed version information for the SPEC CPU tool 
+                   suite.
+</ul>
+
+
+
+<hr>
+<a name=toc_IV. ><h2>IV. Quick reference</h2> </a>
+
+<table border=0 cellspacing=0 cellpadding=0>
+<tr valign=top>
+   <td><tt><b>-a             </b></tt></td><td>Same as <a href=#toc_a>    <font color=blue><tt>--action           </tt></font></a></td></tr>
+<tr valign=top>
+   <td><a href=#toc_a><font color=blue><tt>
+       --action</a></tt></font> <i>action</i></td>
+   <td>Do: <tt><b>build clean clobber nuke run
+       setup trash </b>or<b> validate</b></tt></td>
+</tr>
+<tr valign=top>
+   <td><tt><b>-C             </b></tt></td><td>Same as <a href=#toc_mnc>  <font color=blue><tt>--make_no_clobber  </tt></font></a></td></tr>
+<tr valign=top>
+   <td><tt><b>-c             </b></tt></td><td>Same as <a href=#toc_c>    <font color=blue><tt>--config           </tt></font></a></td></tr>
+<tr valign=top>
+    <td><a href=#toc_c><font color=blue><tt>
+        --config</font></a></tt> <i>file</i></td>
+    <td>Set config file for <tt>runspec</tt> 
+        to use</td>
+</tr>
+<tr valign=top>
+   <td><tt><b>-D             </b></tt></td><td>Same as <a href=#toc_D>    <font color=blue><tt>--rebuild          </tt></font></a></td></tr>
+<tr valign=top>
+   <td><tt><b>-d             </b></tt></td><td>Same as <a href=#toc_de>   <font color=blue><tt>--deletework       </tt></font></a></td></tr>
+<tr valign=top>
+   <td><tt><b>--debug        </b></tt></td><td>Same as <a href=#toc_v>    <font color=blue><tt>--verbose          </tt></font></a></td></tr>
+<tr valign=top>
+    <td><a href=#toc_de><font color=blue><tt>
+        --deletework     </tt></font></a></td>
+    <td>Force work directories to be rebuilt</td>
+</tr>
+<tr valign=top>
+   <td><tt><b>-e             </b></tt></td><td>Same as <a href=#toc_e>    <font color=blue><tt>--extension        </tt></font></a></td></tr>
+<tr valign=top>
+   <td><tt><b>--ext          </b></tt></td><td>Same as <a href=#toc_e>    <font color=blue><tt>--extension        </tt></font></a></td></tr>
+<tr valign=top>
+    <td><a href=#toc_e><font color=blue><tt>
+        --extension</font></a></tt> <i>ext</i> </td>
+   <td>Set the extension</td>
+</tr>
+<tr valign=top>
+   <td><tt><b>-f             </b></tt></td><td>Same as <a href=#toc_f>    <font color=blue><tt>--unbuffer         </tt></font></a></td></tr>
+<tr valign=top>
+   <td><tt><b>-h             </b></tt></td><td>Same as <a href=#toc_h>    <font color=blue><tt>--help             </tt></font></a></td></tr>
+<tr valign=top>
+    <td><a href=#toc_h><font color=blue><tt>
+        --help           </tt></font></a></td>
+    <td>Print usage message</td>
+</tr>
+<tr valign=top>
+   <td><tt><b>-I             </b></tt></td><td>Same as <a href=#toc_I>    <font color=blue><tt>--ignore_errors    </tt></font></a></td></tr>
+<tr valign=top>
+   <td><tt><b>-i             </b></tt></td><td>Same as <a href=#toc_size> <font color=blue><tt>--size             </tt></font></a></td></tr>
+<tr valign=top>
+    <td><a href=#toc_I><font color=blue><tt>
+        --ignore_errors  </tt></font></a></td>
+    <td>Continue with benchmark runs 
+        even if some fail</td>
+</tr>
+<tr valign=top>
+   <td><tt><b>--ignoreerror  </b></tt></td><td>Same as <a href=#toc_I>    <font color=blue><tt>--ignore_errors    </tt></font></a></td></tr>
+<tr valign=top>
+   <td><tt><b>--input        </b></tt></td><td>Same as <a href=#toc_size> <font color=blue><tt>--size             </tt></font></a></td></tr>
+<tr valign=top>
+   <td><a href=#toc_it><font color=blue><tt>
+       --iterations</tt></font></a> <i>N</i>   </td>
+    <td>Run each benchmark N times </td>
+</tr>
+<tr valign=top>
+   <td><tt><b>-l             </b></tt></td><td>Same as <a href=#toc_loo>  <font color=blue><tt>--loose            </tt></font></a></td></tr>
+<tr valign=top>
+   <td><a href=#toc_loo><font color=blue><tt>
+       --loose           </tt></font></a></td>
+    <td>Do not produce a reportable result</td>
+</tr>
+<tr valign=top>
+   <td><tt><b>--noloose      </b></tt></td><td>Same as <a href=#toc_s>    <font color=blue><tt>--reportable       </tt></font></a></td></tr>
+<tr valign=top>
+   <td><tt><b>-m             </b></tt></td><td>Same as <a href=#toc_m>    <font color=blue><tt>--machine          </tt></font></a></td></tr>
+<tr valign=top>
+   <td><tt><b>--mach         </b></tt></td><td>Same as <a href=#toc_m>    <font color=blue><tt>--machine          </tt></font></a></td></tr>
+<tr valign=top>
+   <td><a href=#toc_m><font color=blue><tt>
+       --machine</tt></font></a> <i>name</i>   </td>
+    <td>Set the machine type</td>
+</tr>
+<tr valign=top>
+   <td><a href=#toc_mnc><font color=blue><tt>
+       --make_no_clobber </tt></font></a></td>
+    <td>Do not delete existing object files before 
+        building.   </td>
+</tr>
+<tr valign=top>
+   <td><tt><b>--max_active_compares</b></tt>&nbsp;</td>
+                                            <td>Same as <a href=#toc_mc>   <font color=blue><tt>--maxcompares      </tt></font></a></td></tr>
+<tr valign=top>
+   <td><a href=#toc_mc><font color=blue><tt>
+       --maxcompares</tt></font></a> <i>N</i>  </td>
+    <td>Set the number of concurrent compares 
+        to N</td>
+</tr>
+<tr valign=top>
+   <td><tt><b>-n             </b></tt></td><td>Same as <a href=#toc_it>   <font color=blue><tt>--iterations       </tt></font></a></td></tr>
+<tr valign=top>
+   <td><tt><b>--noreportable </b></tt></td><td>Same as <a href=#toc_loo>  <font color=blue><tt>--loose            </tt></font></a></td></tr>
+<tr valign=top>
+   <td><tt><b>-o             </b></tt></td><td>Same as <a href=#toc_o>    <font color=blue><tt>--output_format    </tt></font></a></td></tr>
+<tr valign=top>
+   <td><a href=#toc_o><font color=blue><tt>
+       --output_format</tt></font></a> <i>format</i></td>
+    <td>Generate report, one or more of: 
+       <tt><b>asc html pdf ps config </b></tt></td>
+</tr>
+<tr valign=top>
+   <td><tt><b>-R             </b></tt></td><td>Same as <a href=#toc_raw>  <font color=blue><tt>--rawformat        </tt></font></a></td></tr>
+<tr valign=top>
+   <td><tt><b>-r             </b></tt></td><td>Same as <a href=#toc_r>    <font color=blue><tt>--rate             </tt></font></a></td></tr>
+<tr valign=top>
+   <td><a href=#toc_r><font color=blue><tt>
+       --rate            </tt></font></a></td>
+    <td>Do a throughput (rate) run </td>
+</tr>
+<tr valign=top>
+   <td><a href=#toc_raw><font color=blue><tt>
+       --rawformat       </tt></font></a></td>
+    <td>Format raw file</td>
+</tr>
+<tr valign=top>
+   <td><a href=#toc_D><font color=blue><tt>
+       --rebuild         </tt></font></a></td>
+    <td>Force a rebuild of binaries</td>
+</tr>
+<tr valign=top>
+   <td><a href=#toc_s><font color=blue><tt>
+       --reportable      </tt></font></a></td>
+    <td>Produce a reportable result</td>
+</tr>
+<tr valign=top>
+   <td><tt><b>-s             </b></tt></td><td>Same as <a href=#toc_s>    <font color=blue><tt>--reportable       </tt></font></a></td></tr>
+<tr valign=top>
+   <td><a href=#toc_spg><font color=blue><tt>
+       --[no]setprocgroup</tt></font></a></td>
+    <td>[Don't] try to create all processes 
+        in one group.</td>
+</tr>
+<tr valign=top>
+   <td><a href=#toc_size><font color=blue><tt>
+       --size            </tt></font></a></td>
+    <td>Select data set, one of: <tt><b>test 
+        train ref </b></tt></td>
+</tr>
+<tr valign=top>
+   <td><tt><b>--strict       </b></tt></td><td>Same as <a href=#toc_s>    <font color=blue><tt>--reportable       </tt></font></a></td></tr>
+<tr valign=top>
+   <td><tt><b>--nostrict     </b></tt></td><td>Same as <a href=#toc_loo>  <font color=blue><tt>--loose            </tt></font></a></td></tr>
+<tr valign=top>
+   <td><tt><b>-T             </b></tt></td><td>Same as <a href=#toc_T>    <font color=blue><tt>--tune             </tt></font></a></td></tr>
+<tr valign=top>
+   <td><a href=#toc_tab><font color=blue><tt>
+       --[no]table       </tt></font></a></td>
+    <td>Do [not] include a detailed table 
+        of results</td>
+</tr>
+<tr valign=top>
+   <td><a href=#toc_T><font color=blue><tt>
+       --tune            </tt></font></a></td>
+    <td>Set the tuning levels to one of: 
+        <tt><b>base peak all</b></tt></td>
+</tr>
+<tr valign=top>
+   <td><tt><b>--tuning       </b></tt></td><td>Same as <a href=#toc_T>    <font color=blue><tt>--tune             </tt></font></a></td></tr>
+<tr valign=top>
+   <td><tt><b>-u             </b></tt></td><td>Same as <a href=#toc_u>    <font color=blue><tt>--users            </tt></font></a></td></tr>
+<tr valign=top>
+   <td><a href=#toc_u><font color=blue><tt>
+       --users           </tt></font></a></td>
+    <td>Set the number of users for a rate run</td>
+</tr>
+<tr valign=top>
+   <td><tt><b>-U             </b></tt></td><td>Same as <a href=#toc_unm>  <font color=blue><tt>--username         </tt></font></a></td></tr>
+<tr valign=top>
+   <td><a href=#toc_f><font color=blue><tt>
+       --unbuffer        </tt></font></a></td>
+    <td>Turn output buffering off</td>
+</tr>
+<tr valign=top>
+   <td><a href=#toc_unm><font color=blue><tt>
+       --username        </tt></font></a></td>
+    <td>Name of user to tag as owner for run 
+        directories</td>
+</tr>
+<tr valign=top>
+   <td><tt><b>-v             </b></tt></td><td>Same as <a href=#toc_v>    <font color=blue><tt>--verbose          </tt></font></a></td></tr>
+<tr valign=top>
+   <td><a href=#toc_v><font color=blue><tt>
+       --verbose         </tt></font></a></td>
+    <td>Set verbosity level for messages to N</td>
+</tr>
+<tr valign=top>
+   <td><tt><b>-V             </b></tt></td><td>Same as <a href=#toc_ver>  <font color=blue><tt>--version          </tt></font></a></td></tr>
+<tr valign=top>
+   <td><a href=#toc_ver><font color=blue><tt>
+       --version         </tt></font></a></td>
+    <td>Output <u>lots</u> of version information</td>
+</tr>
+<tr valign=top>
+   <td><tt><b>-?</tt>        </b></tt></td><td>Same as <a href=#toc_h>    <font color=blue><tt>--help             </tt></font></a></td></tr>
+</table>
+
+<hr>
+Copyright (C) 1999-2001 Standard Performance Evaluation Corporation
+All Rights Reserved
+</body></html>
+
+

@@ -1,0 +1,17 @@
+running commands in compare.cmd 1 times
+runs started at 1583843811, 79000000, Tue Mar 10 13:36:51 2020
+run 1 started at 1583843811, 79000000, Tue Mar 10 13:36:51 2020
+child started: 0, 1583843811, 79000000, pid=2800, 'C:/speccpu2000/bin/specdiff.bat -m -l 10 C:/speccpu2000/benchspec/CINT2000/176.gcc/data/ref/output/166.s 166.s'
+child finished: 0, 1583843811, 572000000, sec=0, nsec=493000000, pid=2800, rc=0
+child started: 0, 1583843811, 572000000, pid=7032, 'C:/speccpu2000/bin/specdiff.bat -m -l 10 C:/speccpu2000/benchspec/CINT2000/176.gcc/data/ref/output/200.s 200.s'
+child finished: 0, 1583843813, 887000000, sec=2, nsec=315000000, pid=7032, rc=0
+child started: 0, 1583843813, 887000000, pid=4628, 'C:/speccpu2000/bin/specdiff.bat -m -l 10 C:/speccpu2000/benchspec/CINT2000/176.gcc/data/ref/output/expr.s expr.s'
+child finished: 0, 1583843814, 298000000, sec=0, nsec=411000000, pid=4628, rc=0
+child started: 0, 1583843814, 298000000, pid=7068, 'C:/speccpu2000/bin/specdiff.bat -m -l 10 C:/speccpu2000/benchspec/CINT2000/176.gcc/data/ref/output/integrate.s integrate.s'
+child finished: 0, 1583843814, 670000000, sec=0, nsec=372000000, pid=7068, rc=0
+child started: 0, 1583843814, 670000000, pid=5344, 'C:/speccpu2000/bin/specdiff.bat -m -l 10 C:/speccpu2000/benchspec/CINT2000/176.gcc/data/ref/output/scilab.s scilab.s'
+child finished: 0, 1583843816, 122000000, sec=1, nsec=452000000, pid=5344, rc=0
+run 1 finished at: 1583843816, 122000000, Tue Mar 10 13:36:56 2020
+run 1 elapsed time: 5, 43000000, 5.043000000
+runs finished at 1583843816, 122000000, Tue Mar 10 13:36:56 2020
+runs elapsed time: 5, 43000000, 5.043000000

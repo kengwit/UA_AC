@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>254.gap: SPEC CPU2000 Benchmark Description</TITLE>
+<META GENERATOR="Cloyce+VIM 5.3">
+<META REVISION="$Id: 254.gap.html 1393 2005-06-14 15:55:21Z cloyce $">
+</HEAD>
+
+<BODY>
+<CENTER><H1>254.gap<BR>
+SPEC CPU2000 Benchmark Description File</H1></CENTER>
+
+<H2>Benchmark Name</H2>
+<P>254.gap</P>
+<HR>
+
+<H2>Benchmark Author</H2>
+<P>Martin Schoenert</P>
+<HR>
+
+<H2>Benchmark Program General Category</H2>
+<P>Group theory, interpreter</P>
+<HR>
+
+<H2>Benchmark Description</H2>
+
+<P>It implements a language and library designed mostly for computing in
+groups (GAP is an acronym for Groups, Algorithms and Programming).</P>
+<HR>
+
+<H2>Input Description</H2>
+
+<P>It has multiple parts, one part of it is the standard gap
+speed-benchmark, excercising mostly the combinatorial functions and big
+number library, then some test functions for the finite field,
+permutation group and subgroup lattice computations, a program comparing
+two different methods of finding normalizers in solvable groups and
+finally a test excercising the collector for so-called ag-groups, this is
+a piece where the bulk of the computation is not done by the interpreter.</P>
+<HR>
+
+<H2>Output Description</H2>
+
+<P>The output consitsts of the results of these tests.</P>
+<HR>
+
+<H2>Programming Language</H2>
+<P>ANSI C</P>
+<HR>
+
+<H2>Known portability issues</H2>
+
+<P>The program has, in module system.c, several function prototype
+  definitions for common Unix system calls. In case that these functions
+  have already function prototypes defined by the compilation system,
+  the program-supplied prototypes need to be deactivated to avoid
+  multiple function definitions. This is done by supplying one or more of
+  the following -D arguments as compilation switches for the compiler
+  invocation command line:</P>
+<PRE>
+
+  -DSYS_HAS_SIGNAL_PROTO
+  -DSYS_HAS_TIME_PROTO
+  -DSYS_HAS_SIGNAL_PROTO
+  -DSYS_HAS_ANSI
+  -DSYS_HAS_MALLOC_PROTO
+  -DSYS_HAS_CALLOC_PROTO
+  -DSYS_HAS_READ_PROTO
+  -DHAS_STDIO_PROTO
+  -DSYS_HAS_IOCTL_PROTO
+  -DSYS_HAS_STRING_PROTO
+  -DSYS_HAS_MEMSET_PROTO
+  -DSYS_HAS_MISC_PROTO
+   ...
+</PRE>
+<P>In addition, compilation switches of the form:
+<PRE>
+
+-DSYS_IS_xxx
+</PRE>
+control conditional compilaton for specific operating system dependent parts.
+ The standard SPEC flag:
+<PRE>
+
+-DSPEC_CPU2000_LP64
+</PRE>
+ deals with 64-bit integers and pointers.</P>
+
+<P>Please consult previous submissions and vendor config files if there are
+ questions with portability.</P>
+<HR>
+
+
+<H2>Reference</H2>
+
+<P><A HREF="http://www.math.rwth-aachen.de/~GAP">http://www.math.rwth-aachen.de/~GAP</A></P>
+<HR>
+Last updated: 11 December 1999
+</BODY>
+</HTML>

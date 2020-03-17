@@ -1,0 +1,2 @@
+-u C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/186.crafty/run/00000003
+-i crafty.in -o crafty.out -e crafty.err ../00000003/crafty_base.vc7.x87.exe

@@ -1,0 +1,5 @@
+#!/bin/sh 
+
+cp -pr ../../src/* .
+tprof -v -s -k -e -p $1 -x waiter /tmp/foo > tprof.out 2>&1 &
+exit 0

@@ -1,0 +1,32 @@
+August 1999
+	Bodo Parady
+		Widened integer output for first line of output
+		to eliminate "*" in output
+August 1999
+	Bodo Parady
+		Took the 0.0D0 coefficients out of the input and put
+		in small values.
+
+August 1999
+	Bodo Parady
+		Changed arrays A and C to be read in to guard against
+		constant propagation
+
+March 1999
+	Bodo Parady
+		Increased NTIMES back up to 25
+		New test, train, and ref
+October 1998
+	Bodo Parady
+		Increased NTIMES to 25 from 10
+August 1998
+	Bodo Parady
+		Shorted the iterations to 40 and cut run time
+		to about 5 minutes on reference machine.
+
+October 1997
+	Bodo Parady
+		Initial version.  Fixed -O in Makefile
+		Initial size set to  about 64MB
+
+

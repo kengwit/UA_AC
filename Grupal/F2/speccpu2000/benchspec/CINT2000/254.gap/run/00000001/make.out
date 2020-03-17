@@ -1,0 +1,105 @@
+cl -c -Foagcollec.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  agcollec.c
+agcollec.c
+cl -c -Foaggroup.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  aggroup.c
+aggroup.c
+cl -c -Foblister.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  blister.c
+blister.c
+cl -c -Focoding.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  coding.c
+coding.c
+cl -c -Focostab.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  costab.c
+costab.c
+cl -c -Focyclotom.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  cyclotom.c
+cyclotom.c
+cl -c -Foeval.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  eval.c
+eval.c
+cl -c -Fofinfield.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  finfield.c
+finfield.c
+cl -c -Fofunction.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  function.c
+function.c
+cl -c -Fogap.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  gap.c
+gap.c
+cl -c -Fogasman.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  gasman.c
+gasman.c
+cl -c -Foidents.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  idents.c
+idents.c
+cl -c -Fointeger.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  integer.c
+integer.c
+cl -c -Folist.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  list.c
+list.c
+cl -c -Fopcpresen.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  pcpresen.c
+pcpresen.c
+cl -c -Fopermutat.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  permutat.c
+permutat.c
+cl -c -Foplist.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  plist.c
+plist.c
+cl -c -Fopolynom.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  polynom.c
+polynom.c
+cl -c -Forange.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  range.c
+range.c
+cl -c -Forational.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  rational.c
+rational.c
+cl -c -Foread.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  read.c
+read.c
+cl -c -Forecord.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  record.c
+record.c
+cl -c -Foscanner.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  scanner.c
+scanner.c
+cl -c -Foset.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  set.c
+set.c
+cl -c -Fostatemen.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  statemen.c
+statemen.c
+cl -c -Fostring.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  string.c
+string.c
+cl -c -Fosystem.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  system.c
+system.c
+system.c(535): warning C4391: 'int strlen()': tipo incorrecto de valor devuelto para la funci¢n intr¡nseca, se esperaba 'unsigned int'
+cl -c -Fotietze.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  tietze.c
+tietze.c
+cl -c -Founknown.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  unknown.c
+unknown.c
+cl -c -Fovecffe.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  vecffe.c
+vecffe.c
+cl -c -Fovector.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  vector.c
+vector.c
+cl -c -Foword.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op  word.c
+word.c
+cl       /Ox /GL /Op  agcollec.obj aggroup.obj blister.obj coding.obj costab.obj cyclotom.obj eval.obj finfield.obj function.obj gap.obj gasman.obj idents.obj integer.obj list.obj pcpresen.obj permutat.obj plist.obj polynom.obj range.obj rational.obj read.obj record.obj scanner.obj set.obj statemen.obj string.obj system.obj tietze.obj unknown.obj vecffe.obj vector.obj word.obj     -Fegap
+Microsoft (R) Incremental Linker Version 14.24.28315.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/ltcg 
+/out:gap.exe 
+agcollec.obj 
+aggroup.obj 
+blister.obj 
+coding.obj 
+costab.obj 
+cyclotom.obj 
+eval.obj 
+finfield.obj 
+function.obj 
+gap.obj 
+gasman.obj 
+idents.obj 
+integer.obj 
+list.obj 
+pcpresen.obj 
+permutat.obj 
+plist.obj 
+polynom.obj 
+range.obj 
+rational.obj 
+read.obj 
+record.obj 
+scanner.obj 
+set.obj 
+statemen.obj 
+string.obj 
+system.obj 
+tietze.obj 
+unknown.obj 
+vecffe.obj 
+vector.obj 
+word.obj 
+Generando código
+Generación de código finalizada

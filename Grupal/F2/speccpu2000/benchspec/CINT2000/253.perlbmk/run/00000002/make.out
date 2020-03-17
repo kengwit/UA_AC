@@ -1,0 +1,188 @@
+cl -c -Foav.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  av.c
+av.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Fobyterun.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  byterun.c
+byterun.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Fodeb.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  deb.c
+deb.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Fodoio.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  doio.c
+doio.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Fodoop.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  doop.c
+doop.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Fodump.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  dump.c
+dump.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Foebcdic.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  ebcdic.c
+ebcdic.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Fofake_dyna.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  fake_dyna.c
+fake_dyna.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Foglobals.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  globals.c
+globals.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Fogv.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  gv.c
+gv.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Fohv.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  hv.c
+hv.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Fomg.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  mg.c
+mg.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Foop.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  op.c
+op.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Foperl.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  perl.c
+perl.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Foperlio.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  perlio.c
+perlio.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Foperly.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  perly.c
+perly.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Fopp.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  pp.c
+pp.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Fopp_ctl.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  pp_ctl.c
+pp_ctl.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Fopp_hot.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  pp_hot.c
+pp_hot.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Fopp_sys.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  pp_sys.c
+pp_sys.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+pp_sys.c(834): warning C4133: 'funci¢n': tipos incompatibles, de 'int *' a 'Perl_fd_set *'
+cl -c -Foregcomp.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  regcomp.c
+regcomp.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Foregexec.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  regexec.c
+regexec.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Forun.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  run.c
+run.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Foscope.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  scope.c
+scope.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Fosv.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  sv.c
+sv.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Fotaint.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  taint.c
+taint.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Fotoke.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  toke.c
+toke.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Founiversal.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  universal.c
+universal.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Foutil.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  util.c
+util.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -FoMD5.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  MD5.c
+MD5.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Fomd5c.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  md5c.c
+md5c.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Font_perlmain.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  nt_perlmain.c
+nt_perlmain.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Fowin32.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  win32.c
+win32.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+win32.c(2073): warning C4047: 'return': 'char *' es distinto en los niveles de direccionamiento indirecto de 'int'
+cl -c -Fowin32sck.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  win32sck.c
+win32sck.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl -c -Foperllib.obj  -DSPEC_CPU2000_NTOS -DPERLDLL /MT        -Iwin32 -I. -DWIN32 -D_CONSOLE    /Ox /GL /Op  perllib.c
+perllib.c
+win32\sys/socket.h(54): warning C4005: 'ENOTSOCK': redefinici¢n de macro
+F:\Windows Kits\10\include\10.0.18362.0\ucrt\errno.h(113): note: vea la definici¢n anterior de 'ENOTSOCK'
+cl       /Ox /GL /Op  av.obj byterun.obj deb.obj doio.obj doop.obj dump.obj ebcdic.obj fake_dyna.obj globals.obj gv.obj hv.obj mg.obj op.obj perl.obj perlio.obj perly.obj pp.obj pp_ctl.obj pp_hot.obj pp_sys.obj regcomp.obj regexec.obj run.obj scope.obj sv.obj taint.obj toke.obj universal.obj util.obj MD5.obj md5c.obj nt_perlmain.obj win32.obj win32sck.obj perllib.obj advapi32.lib wsock32.lib    -Feperlbmk
+Microsoft (R) Incremental Linker Version 14.24.28316.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/ltcg 
+/out:perlbmk.exe 
+av.obj 
+byterun.obj 
+deb.obj 
+doio.obj 
+doop.obj 
+dump.obj 
+ebcdic.obj 
+fake_dyna.obj 
+globals.obj 
+gv.obj 
+hv.obj 
+mg.obj 
+op.obj 
+perl.obj 
+perlio.obj 
+perly.obj 
+pp.obj 
+pp_ctl.obj 
+pp_hot.obj 
+pp_sys.obj 
+regcomp.obj 
+regexec.obj 
+run.obj 
+scope.obj 
+sv.obj 
+taint.obj 
+toke.obj 
+universal.obj 
+util.obj 
+MD5.obj 
+md5c.obj 
+nt_perlmain.obj 
+win32.obj 
+win32sck.obj 
+perllib.obj 
+advapi32.lib 
+wsock32.lib 
+win32.obj : error LNK2001: símbolo externo __set_osfhnd sin resolver
+win32.obj : error LNK2001: símbolo externo __unlock_fhandle sin resolver
+perlbmk.exe : fatal error LNK1120: 2 externos sin resolver

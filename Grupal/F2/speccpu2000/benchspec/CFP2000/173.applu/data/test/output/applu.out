@@ -1,0 +1,792 @@
+           Initial residual norms
+ 
+
+ RMS-norm of steady-state residual for first pde  =  6.78774E+04
+ RMS-norm of steady-state residual for second pde =  6.86567E+03
+ RMS-norm of steady-state residual for third pde  =  1.73739E+04
+ RMS-norm of steady-state residual for fourth pde =  1.46532E+04
+ RMS-norm of steady-state residual for fifth pde  =  9.76824E+04
+
+     pseudo-time SSOR iteration no.=   1
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  2.68963E+02
+ RMS-norm of SSOR-iteration correction for second pde =  2.53993E+01
+ RMS-norm of SSOR-iteration correction for third pde  =  6.75723E+01
+ RMS-norm of SSOR-iteration correction for fourth pde =  5.75706E+01
+ RMS-norm of SSOR-iteration correction for fifth pde  =  4.22316E+02
+
+ RMS-norm of steady-state residual for first pde  =  1.51586E+04
+ RMS-norm of steady-state residual for second pde =  1.38033E+03
+ RMS-norm of steady-state residual for third pde  =  3.79741E+03
+ RMS-norm of steady-state residual for fourth pde =  3.24319E+03
+ RMS-norm of steady-state residual for fifth pde  =  2.45403E+04
+
+     pseudo-time SSOR iteration no.=   2
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  9.36704E+01
+ RMS-norm of SSOR-iteration correction for second pde =  8.22974E+00
+ RMS-norm of SSOR-iteration correction for third pde  =  2.35135E+01
+ RMS-norm of SSOR-iteration correction for fourth pde =  2.01889E+01
+ RMS-norm of SSOR-iteration correction for fifth pde  =  1.64366E+02
+
+ RMS-norm of steady-state residual for first pde  =  7.24515E+03
+ RMS-norm of steady-state residual for second pde =  6.04810E+02
+ RMS-norm of steady-state residual for third pde  =  1.81204E+03
+ RMS-norm of steady-state residual for fourth pde =  1.56545E+03
+ RMS-norm of steady-state residual for fifth pde  =  1.31139E+04
+
+     pseudo-time SSOR iteration no.=   3
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  5.21228E+01
+ RMS-norm of SSOR-iteration correction for second pde =  4.24017E+00
+ RMS-norm of SSOR-iteration correction for third pde  =  1.31432E+01
+ RMS-norm of SSOR-iteration correction for fourth pde =  1.14469E+01
+ RMS-norm of SSOR-iteration correction for fifth pde  =  1.01353E+02
+
+ RMS-norm of steady-state residual for first pde  =  4.36864E+03
+ RMS-norm of steady-state residual for second pde =  3.34786E+02
+ RMS-norm of steady-state residual for third pde  =  1.09581E+03
+ RMS-norm of steady-state residual for fourth pde =  9.62751E+02
+ RMS-norm of steady-state residual for fifth pde  =  8.66685E+03
+
+     pseudo-time SSOR iteration no.=   4
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  3.38646E+01
+ RMS-norm of SSOR-iteration correction for second pde =  2.54409E+00
+ RMS-norm of SSOR-iteration correction for third pde  =  8.57452E+00
+ RMS-norm of SSOR-iteration correction for fourth pde =  7.59875E+00
+ RMS-norm of SSOR-iteration correction for fifth pde  =  7.08988E+01
+
+ RMS-norm of steady-state residual for first pde  =  2.93603E+03
+ RMS-norm of steady-state residual for second pde =  2.08691E+02
+ RMS-norm of steady-state residual for third pde  =  7.39180E+02
+ RMS-norm of steady-state residual for fourth pde =  6.60514E+02
+ RMS-norm of steady-state residual for fifth pde  =  6.22287E+03
+
+     pseudo-time SSOR iteration no.=   5
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  2.36914E+01
+ RMS-norm of SSOR-iteration correction for second pde =  1.68851E+00
+ RMS-norm of SSOR-iteration correction for third pde  =  6.01663E+00
+ RMS-norm of SSOR-iteration correction for fourth pde =  5.40944E+00
+ RMS-norm of SSOR-iteration correction for fifth pde  =  5.21748E+01
+
+ RMS-norm of steady-state residual for first pde  =  2.08727E+03
+ RMS-norm of steady-state residual for second pde =  1.44020E+02
+ RMS-norm of steady-state residual for third pde  =  5.27377E+02
+ RMS-norm of steady-state residual for fourth pde =  4.77137E+02
+ RMS-norm of steady-state residual for fifth pde  =  4.62828E+03
+
+     pseudo-time SSOR iteration no.=   6
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  1.72287E+01
+ RMS-norm of SSOR-iteration correction for second pde =  1.22743E+00
+ RMS-norm of SSOR-iteration correction for third pde  =  4.38537E+00
+ RMS-norm of SSOR-iteration correction for fourth pde =  3.97915E+00
+ RMS-norm of SSOR-iteration correction for fifth pde  =  3.92280E+01
+
+ RMS-norm of steady-state residual for first pde  =  1.53040E+03
+ RMS-norm of steady-state residual for second pde =  1.08261E+02
+ RMS-norm of steady-state residual for third pde  =  3.87867E+02
+ RMS-norm of steady-state residual for fourth pde =  3.53442E+02
+ RMS-norm of steady-state residual for fifth pde  =  3.49650E+03
+
+     pseudo-time SSOR iteration no.=   7
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  1.28051E+01
+ RMS-norm of SSOR-iteration correction for second pde =  9.52667E-01
+ RMS-norm of SSOR-iteration correction for third pde  =  3.26457E+00
+ RMS-norm of SSOR-iteration correction for fourth pde =  2.97596E+00
+ RMS-norm of SSOR-iteration correction for fifth pde  =  2.97884E+01
+
+ RMS-norm of steady-state residual for first pde  =  1.14259E+03
+ RMS-norm of steady-state residual for second pde =  8.56992E+01
+ RMS-norm of steady-state residual for third pde  =  2.90191E+02
+ RMS-norm of steady-state residual for fourth pde =  2.65293E+02
+ RMS-norm of steady-state residual for fifth pde  =  2.66157E+03
+
+     pseudo-time SSOR iteration no.=   8
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  9.64283E+00
+ RMS-norm of SSOR-iteration correction for second pde =  7.63898E-01
+ RMS-norm of SSOR-iteration correction for third pde  =  2.45995E+00
+ RMS-norm of SSOR-iteration correction for fourth pde =  2.24620E+00
+ RMS-norm of SSOR-iteration correction for fifth pde  =  2.27357E+01
+
+ RMS-norm of steady-state residual for first pde  =  8.62662E+02
+ RMS-norm of steady-state residual for second pde =  6.92606E+01
+ RMS-norm of steady-state residual for third pde  =  2.19272E+02
+ RMS-norm of steady-state residual for fourth pde =  2.00625E+02
+ RMS-norm of steady-state residual for fifth pde  =  2.03421E+03
+
+     pseudo-time SSOR iteration no.=   9
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  7.32177E+00
+ RMS-norm of SSOR-iteration correction for second pde =  6.18392E-01
+ RMS-norm of SSOR-iteration correction for third pde  =  1.86689E+00
+ RMS-norm of SSOR-iteration correction for fourth pde =  1.70470E+00
+ RMS-norm of SSOR-iteration correction for fifth pde  =  1.74021E+01
+
+ RMS-norm of steady-state residual for first pde  =  6.56025E+02
+ RMS-norm of steady-state residual for second pde =  5.61439E+01
+ RMS-norm of steady-state residual for third pde  =  1.66637E+02
+ RMS-norm of steady-state residual for fourth pde =  1.52402E+02
+ RMS-norm of steady-state residual for fifth pde  =  1.55834E+03
+
+     pseudo-time SSOR iteration no.=  10
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  5.58930E+00
+ RMS-norm of SSOR-iteration correction for second pde =  4.99679E-01
+ RMS-norm of SSOR-iteration correction for third pde  =  1.42271E+00
+ RMS-norm of SSOR-iteration correction for fourth pde =  1.29814E+00
+ RMS-norm of SSOR-iteration correction for fifth pde  =  1.33419E+01
+
+ RMS-norm of steady-state residual for first pde  =  5.01253E+02
+ RMS-norm of steady-state residual for second pde =  4.53051E+01
+ RMS-norm of steady-state residual for third pde  =  1.27051E+02
+ RMS-norm of steady-state residual for fourth pde =  1.16087E+02
+ RMS-norm of steady-state residual for fifth pde  =  1.19547E+03
+
+     pseudo-time SSOR iteration no.=  11
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  4.28191E+00
+ RMS-norm of SSOR-iteration correction for second pde =  4.01288E-01
+ RMS-norm of SSOR-iteration correction for third pde  =  1.08678E+00
+ RMS-norm of SSOR-iteration correction for fourth pde =  9.90663E-01
+ RMS-norm of SSOR-iteration correction for fifth pde  =  1.02394E+01
+
+ RMS-norm of steady-state residual for first pde  =  3.84208E+02
+ RMS-norm of steady-state residual for second pde =  3.63087E+01
+ RMS-norm of steady-state residual for third pde  =  9.70378E+01
+ RMS-norm of steady-state residual for fourth pde =  8.85684E+01
+ RMS-norm of steady-state residual for fifth pde  =  9.17935E+02
+
+     pseudo-time SSOR iteration no.=  12
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  3.28809E+00
+ RMS-norm of SSOR-iteration correction for second pde =  3.19989E-01
+ RMS-norm of SSOR-iteration correction for third pde  =  8.31201E-01
+ RMS-norm of SSOR-iteration correction for fourth pde =  7.56993E-01
+ RMS-norm of SSOR-iteration correction for fifth pde  =  7.86320E+00
+
+ RMS-norm of steady-state residual for first pde  =  2.95123E+02
+ RMS-norm of steady-state residual for second pde =  2.88970E+01
+ RMS-norm of steady-state residual for third pde  =  7.41708E+01
+ RMS-norm of steady-state residual for fourth pde =  6.76298E+01
+ RMS-norm of steady-state residual for fifth pde  =  7.05257E+02
+
+     pseudo-time SSOR iteration no.=  13
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  2.52897E+00
+ RMS-norm of SSOR-iteration correction for second pde =  2.53442E-01
+ RMS-norm of SSOR-iteration correction for third pde  =  6.36053E-01
+ RMS-norm of SSOR-iteration correction for fourth pde =  5.78835E-01
+ RMS-norm of SSOR-iteration correction for fifth pde  =  6.04071E+00
+
+ RMS-norm of steady-state residual for first pde  =  2.27023E+02
+ RMS-norm of steady-state residual for second pde =  2.28553E+01
+ RMS-norm of steady-state residual for third pde  =  5.66979E+01
+ RMS-norm of steady-state residual for fourth pde =  5.16541E+01
+ RMS-norm of steady-state residual for fifth pde  =  5.42089E+02
+
+     pseudo-time SSOR iteration no.=  14
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  1.94721E+00
+ RMS-norm of SSOR-iteration correction for second pde =  1.99543E-01
+ RMS-norm of SSOR-iteration correction for third pde  =  4.86724E-01
+ RMS-norm of SSOR-iteration correction for fourth pde =  4.42699E-01
+ RMS-norm of SSOR-iteration correction for fifth pde  =  4.64171E+00
+
+ RMS-norm of steady-state residual for first pde  =  1.74813E+02
+ RMS-norm of steady-state residual for second pde =  1.79813E+01
+ RMS-norm of steady-state residual for third pde  =  4.33242E+01
+ RMS-norm of steady-state residual for fourth pde =  3.94430E+01
+ RMS-norm of steady-state residual for fifth pde  =  4.16810E+02
+
+     pseudo-time SSOR iteration no.=  15
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  1.50040E+00
+ RMS-norm of SSOR-iteration correction for second pde =  1.56310E-01
+ RMS-norm of SSOR-iteration correction for third pde  =  3.72313E-01
+ RMS-norm of SSOR-iteration correction for fourth pde =  3.38520E-01
+ RMS-norm of SSOR-iteration correction for fifth pde  =  3.56723E+00
+
+ RMS-norm of steady-state residual for first pde  =  1.34705E+02
+ RMS-norm of steady-state residual for second pde =  1.40847E+01
+ RMS-norm of steady-state residual for third pde  =  3.30794E+01
+ RMS-norm of steady-state residual for fourth pde =  3.00994E+01
+ RMS-norm of steady-state residual for fifth pde  =  3.20572E+02
+
+     pseudo-time SSOR iteration no.=  16
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  1.15672E+00
+ RMS-norm of SSOR-iteration correction for second pde =  1.21924E-01
+ RMS-norm of SSOR-iteration correction for third pde  =  2.84599E-01
+ RMS-norm of SSOR-iteration correction for fourth pde =  2.58720E-01
+ RMS-norm of SSOR-iteration correction for fifth pde  =  2.74178E+00
+
+ RMS-norm of steady-state residual for first pde  =  1.03851E+02
+ RMS-norm of steady-state residual for second pde =  1.09933E+01
+ RMS-norm of steady-state residual for third pde  =  2.52298E+01
+ RMS-norm of steady-state residual for fourth pde =  2.29466E+01
+ RMS-norm of steady-state residual for fifth pde  =  2.46616E+02
+
+     pseudo-time SSOR iteration no.=  17
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  8.92098E-01
+ RMS-norm of SSOR-iteration correction for second pde =  9.47712E-02
+ RMS-norm of SSOR-iteration correction for third pde  =  2.17339E-01
+ RMS-norm of SSOR-iteration correction for fourth pde =  1.97569E-01
+ RMS-norm of SSOR-iteration correction for fifth pde  =  2.10754E+00
+
+ RMS-norm of steady-state residual for first pde  =  8.00946E+01
+ RMS-norm of steady-state residual for second pde =  8.55616E+00
+ RMS-norm of steady-state residual for third pde  =  1.92169E+01
+ RMS-norm of steady-state residual for fourth pde =  1.74717E+01
+ RMS-norm of steady-state residual for fifth pde  =  1.89766E+02
+
+     pseudo-time SSOR iteration no.=  18
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  6.88209E-01
+ RMS-norm of SSOR-iteration correction for second pde =  7.34590E-02
+ RMS-norm of SSOR-iteration correction for third pde  =  1.65776E-01
+ RMS-norm of SSOR-iteration correction for fourth pde =  1.50707E-01
+ RMS-norm of SSOR-iteration correction for fifth pde  =  1.62019E+00
+
+ RMS-norm of steady-state residual for first pde  =  6.17902E+01
+ RMS-norm of steady-state residual for second pde =  6.64471E+00
+ RMS-norm of steady-state residual for third pde  =  1.46145E+01
+ RMS-norm of steady-state residual for fourth pde =  1.32834E+01
+ RMS-norm of steady-state residual for fifth pde  =  1.46053E+02
+
+     pseudo-time SSOR iteration no.=  19
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  5.31037E-01
+ RMS-norm of SSOR-iteration correction for second pde =  5.68163E-02
+ RMS-norm of SSOR-iteration correction for third pde  =  1.26270E-01
+ RMS-norm of SSOR-iteration correction for fourth pde =  1.14812E-01
+ RMS-norm of SSOR-iteration correction for fifth pde  =  1.24570E+00
+
+ RMS-norm of steady-state residual for first pde  =  4.76798E+01
+ RMS-norm of steady-state residual for second pde =  5.15196E+00
+ RMS-norm of steady-state residual for third pde  =  1.10957E+01
+ RMS-norm of steady-state residual for fourth pde =  1.00829E+01
+ RMS-norm of steady-state residual for fifth pde  =  1.12432E+02
+
+     pseudo-time SSOR iteration no.=  20
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  4.09834E-01
+ RMS-norm of SSOR-iteration correction for second pde =  4.38755E-02
+ RMS-norm of SSOR-iteration correction for third pde  =  9.60295E-02
+ RMS-norm of SSOR-iteration correction for fourth pde =  8.73398E-02
+ RMS-norm of SSOR-iteration correction for fifth pde  =  9.57926E-01
+
+ RMS-norm of steady-state residual for first pde  =  3.67986E+01
+ RMS-norm of steady-state residual for second pde =  3.99021E+00
+ RMS-norm of steady-state residual for third pde  =  8.40928E+00
+ RMS-norm of steady-state residual for fourth pde =  7.64083E+00
+ RMS-norm of steady-state residual for fifth pde  =  8.65677E+01
+
+     pseudo-time SSOR iteration no.=  21
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  3.16344E-01
+ RMS-norm of SSOR-iteration correction for second pde =  3.38481E-02
+ RMS-norm of SSOR-iteration correction for third pde  =  7.29110E-02
+ RMS-norm of SSOR-iteration correction for fourth pde =  6.63387E-02
+ RMS-norm of SSOR-iteration correction for fifth pde  =  7.36764E-01
+
+ RMS-norm of steady-state residual for first pde  =  2.84053E+01
+ RMS-norm of steady-state residual for second pde =  3.08851E+00
+ RMS-norm of steady-state residual for third pde  =  6.36200E+00
+ RMS-norm of steady-state residual for fourth pde =  5.78061E+00
+ RMS-norm of steady-state residual for fifth pde  =  6.66642E+01
+
+     pseudo-time SSOR iteration no.=  22
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  2.44215E-01
+ RMS-norm of SSOR-iteration correction for second pde =  2.60991E-02
+ RMS-norm of SSOR-iteration correction for third pde  =  5.52643E-02
+ RMS-norm of SSOR-iteration correction for fourth pde =  5.03083E-02
+ RMS-norm of SSOR-iteration correction for fifth pde  =  5.66776E-01
+
+ RMS-norm of steady-state residual for first pde  =  2.19295E+01
+ RMS-norm of steady-state residual for second pde =  2.39007E+00
+ RMS-norm of steady-state residual for third pde  =  4.80478E+00
+ RMS-norm of steady-state residual for fourth pde =  4.36634E+00
+ RMS-norm of steady-state residual for fifth pde  =  5.13440E+01
+
+     pseudo-time SSOR iteration no.=  23
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  1.88555E-01
+ RMS-norm of SSOR-iteration correction for second pde =  2.01225E-02
+ RMS-norm of SSOR-iteration correction for third pde  =  4.18177E-02
+ RMS-norm of SSOR-iteration correction for fourth pde =  3.80925E-02
+ RMS-norm of SSOR-iteration correction for fifth pde  =  4.36096E-01
+
+ RMS-norm of steady-state residual for first pde  =  1.69322E+01
+ RMS-norm of steady-state residual for second pde =  1.84978E+00
+ RMS-norm of steady-state residual for third pde  =  3.62268E+00
+ RMS-norm of steady-state residual for fourth pde =  3.29320E+00
+ RMS-norm of steady-state residual for fifth pde  =  3.95489E+01
+
+     pseudo-time SSOR iteration no.=  24
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  1.45599E-01
+ RMS-norm of SSOR-iteration correction for second pde =  1.55186E-02
+ RMS-norm of SSOR-iteration correction for third pde  =  3.15905E-02
+ RMS-norm of SSOR-iteration correction for fourth pde =  2.88002E-02
+ RMS-norm of SSOR-iteration correction for fifth pde  =  3.35612E-01
+
+ RMS-norm of steady-state residual for first pde  =  1.30752E+01
+ RMS-norm of steady-state residual for second pde =  1.43214E+00
+ RMS-norm of steady-state residual for third pde  =  2.72714E+00
+ RMS-norm of steady-state residual for fourth pde =  2.48048E+00
+ RMS-norm of steady-state residual for fifth pde  =  3.04658E+01
+
+     pseudo-time SSOR iteration no.=  25
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  1.12440E-01
+ RMS-norm of SSOR-iteration correction for second pde =  1.19742E-02
+ RMS-norm of SSOR-iteration correction for third pde  =  2.38267E-02
+ RMS-norm of SSOR-iteration correction for fourth pde =  2.17445E-02
+ RMS-norm of SSOR-iteration correction for fifth pde  =  2.58326E-01
+
+ RMS-norm of steady-state residual for first pde  =  1.00979E+01
+ RMS-norm of steady-state residual for second pde =  1.10939E+00
+ RMS-norm of steady-state residual for third pde  =  2.04998E+00
+ RMS-norm of steady-state residual for fourth pde =  1.86606E+00
+ RMS-norm of steady-state residual for fifth pde  =  2.34699E+01
+
+     pseudo-time SSOR iteration no.=  26
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  8.68423E-02
+ RMS-norm of SSOR-iteration correction for second pde =  9.24565E-03
+ RMS-norm of SSOR-iteration correction for third pde  =  1.79440E-02
+ RMS-norm of SSOR-iteration correction for fourth pde =  1.63962E-02
+ RMS-norm of SSOR-iteration correction for fifth pde  =  1.98867E-01
+
+ RMS-norm of steady-state residual for first pde  =  7.79936E+00
+ RMS-norm of steady-state residual for second pde =  8.59920E-01
+ RMS-norm of steady-state residual for third pde  =  1.53889E+00
+ RMS-norm of steady-state residual for fourth pde =  1.40234E+00
+ RMS-norm of steady-state residual for fifth pde  =  1.80809E+01
+
+     pseudo-time SSOR iteration no.=  27
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  6.70783E-02
+ RMS-norm of SSOR-iteration correction for second pde =  7.14439E-03
+ RMS-norm of SSOR-iteration correction for third pde  =  1.34946E-02
+ RMS-norm of SSOR-iteration correction for fourth pde =  1.23489E-02
+ RMS-norm of SSOR-iteration correction for fifth pde  =  1.53112E-01
+
+ RMS-norm of steady-state residual for first pde  =  6.02457E+00
+ RMS-norm of steady-state residual for second pde =  6.67000E-01
+ RMS-norm of steady-state residual for third pde  =  1.15378E+00
+ RMS-norm of steady-state residual for fourth pde =  1.05284E+00
+ RMS-norm of steady-state residual for fifth pde  =  1.39293E+01
+
+     pseudo-time SSOR iteration no.=  28
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  5.18170E-02
+ RMS-norm of SSOR-iteration correction for second pde =  5.52522E-03
+ RMS-norm of SSOR-iteration correction for third pde  =  1.01352E-02
+ RMS-norm of SSOR-iteration correction for fourth pde =  9.29071E-03
+ RMS-norm of SSOR-iteration correction for fifth pde  =  1.17896E-01
+
+ RMS-norm of steady-state residual for first pde  =  4.65405E+00
+ RMS-norm of steady-state residual for second pde =  5.17716E-01
+ RMS-norm of steady-state residual for third pde  =  8.64056E-01
+ RMS-norm of steady-state residual for fourth pde =  7.89789E-01
+ RMS-norm of steady-state residual for fifth pde  =  1.07308E+01
+
+     pseudo-time SSOR iteration no.=  29
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  4.00312E-02
+ RMS-norm of SSOR-iteration correction for second pde =  4.27655E-03
+ RMS-norm of SSOR-iteration correction for third pde  =  7.60263E-03
+ RMS-norm of SSOR-iteration correction for fourth pde =  6.98312E-03
+ RMS-norm of SSOR-iteration correction for fifth pde  =  9.07852E-02
+
+ RMS-norm of steady-state residual for first pde  =  3.59561E+00
+ RMS-norm of steady-state residual for second pde =  4.02111E-01
+ RMS-norm of steady-state residual for third pde  =  6.46395E-01
+ RMS-norm of steady-state residual for fourth pde =  5.92018E-01
+ RMS-norm of steady-state residual for fifth pde  =  8.26651E+00
+
+     pseudo-time SSOR iteration no.=  30
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  3.09287E-02
+ RMS-norm of SSOR-iteration correction for second pde =  3.31275E-03
+ RMS-norm of SSOR-iteration correction for third pde  =  5.69636E-03
+ RMS-norm of SSOR-iteration correction for fourth pde =  5.24407E-03
+ RMS-norm of SSOR-iteration correction for fifth pde  =  6.99120E-02
+
+ RMS-norm of steady-state residual for first pde  =  2.77811E+00
+ RMS-norm of steady-state residual for second pde =  3.12519E-01
+ RMS-norm of steady-state residual for third pde  =  4.83090E-01
+ RMS-norm of steady-state residual for fourth pde =  4.43480E-01
+ RMS-norm of steady-state residual for fifth pde  =  6.36793E+00
+
+     pseudo-time SSOR iteration no.=  31
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  2.38978E-02
+ RMS-norm of SSOR-iteration correction for second pde =  2.56815E-03
+ RMS-norm of SSOR-iteration correction for third pde  =  4.26348E-03
+ RMS-norm of SSOR-iteration correction for fourth pde =  3.93497E-03
+ RMS-norm of SSOR-iteration correction for fifth pde  =  5.38393E-02
+
+ RMS-norm of steady-state residual for first pde  =  2.14664E+00
+ RMS-norm of steady-state residual for second pde =  2.43033E-01
+ RMS-norm of steady-state residual for third pde  =  3.60717E-01
+ RMS-norm of steady-state residual for fourth pde =  3.32019E-01
+ RMS-norm of steady-state residual for fifth pde  =  4.90521E+00
+
+     pseudo-time SSOR iteration no.=  32
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  1.84666E-02
+ RMS-norm of SSOR-iteration correction for second pde =  1.99240E-03
+ RMS-norm of SSOR-iteration correction for third pde  =  3.18783E-03
+ RMS-norm of SSOR-iteration correction for fourth pde =  2.95054E-03
+ RMS-norm of SSOR-iteration correction for fifth pde  =  4.14623E-02
+
+ RMS-norm of steady-state residual for first pde  =  1.65883E+00
+ RMS-norm of steady-state residual for second pde =  1.89103E-01
+ RMS-norm of steady-state residual for third pde  =  2.69121E-01
+ RMS-norm of steady-state residual for fourth pde =  2.48448E-01
+ RMS-norm of steady-state residual for fifth pde  =  3.77832E+00
+
+     pseudo-time SSOR iteration no.=  33
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  1.42707E-02
+ RMS-norm of SSOR-iteration correction for second pde =  1.54681E-03
+ RMS-norm of SSOR-iteration correction for third pde  =  2.38133E-03
+ RMS-norm of SSOR-iteration correction for fourth pde =  2.21096E-03
+ RMS-norm of SSOR-iteration correction for fifth pde  =  3.19307E-02
+
+ RMS-norm of steady-state residual for first pde  =  1.28196E+00
+ RMS-norm of steady-state residual for second pde =  1.47217E-01
+ RMS-norm of steady-state residual for third pde  =  2.00635E-01
+ RMS-norm of steady-state residual for fourth pde =  1.85837E-01
+ RMS-norm of steady-state residual for fifth pde  =  2.91020E+00
+
+     pseudo-time SSOR iteration no.=  34
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  1.10290E-02
+ RMS-norm of SSOR-iteration correction for second pde =  1.20168E-03
+ RMS-norm of SSOR-iteration correction for third pde  =  1.77733E-03
+ RMS-norm of SSOR-iteration correction for fourth pde =  1.65581E-03
+ RMS-norm of SSOR-iteration correction for fifth pde  =  2.45902E-02
+
+ RMS-norm of steady-state residual for first pde  =  9.90783E-01
+ RMS-norm of steady-state residual for second pde =  1.14664E-01
+ RMS-norm of steady-state residual for third pde  =  1.49481E-01
+ RMS-norm of steady-state residual for fourth pde =  1.38959E-01
+ RMS-norm of steady-state residual for fifth pde  =  2.24145E+00
+
+     pseudo-time SSOR iteration no.=  35
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  8.52428E-03
+ RMS-norm of SSOR-iteration correction for second pde =  9.34154E-04
+ RMS-norm of SSOR-iteration correction for third pde  =  1.32548E-03
+ RMS-norm of SSOR-iteration correction for fourth pde =  1.23945E-03
+ RMS-norm of SSOR-iteration correction for fifth pde  =  1.89370E-02
+
+ RMS-norm of steady-state residual for first pde  =  7.65794E-01
+ RMS-norm of steady-state residual for second pde =  8.93509E-02
+ RMS-norm of steady-state residual for third pde  =  1.11311E-01
+ RMS-norm of steady-state residual for fourth pde =  1.03885E-01
+ RMS-norm of steady-state residual for fifth pde  =  1.72632E+00
+
+     pseudo-time SSOR iteration no.=  36
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  6.58881E-03
+ RMS-norm of SSOR-iteration correction for second pde =  7.26621E-04
+ RMS-norm of SSOR-iteration correction for third pde  =  9.87813E-04
+ RMS-norm of SSOR-iteration correction for fourth pde =  9.27399E-04
+ RMS-norm of SSOR-iteration correction for fifth pde  =  1.45833E-02
+
+ RMS-norm of steady-state residual for first pde  =  5.91936E-01
+ RMS-norm of steady-state residual for second pde =  6.96554E-02
+ RMS-norm of steady-state residual for third pde  =  8.28539E-02
+ RMS-norm of steady-state residual for fourth pde =  7.76562E-02
+ RMS-norm of steady-state residual for fifth pde  =  1.32952E+00
+
+     pseudo-time SSOR iteration no.=  37
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  5.09313E-03
+ RMS-norm of SSOR-iteration correction for second pde =  5.65517E-04
+ RMS-norm of SSOR-iteration correction for third pde  =  7.35721E-04
+ RMS-norm of SSOR-iteration correction for fourth pde =  6.93700E-04
+ RMS-norm of SSOR-iteration correction for fifth pde  =  1.12303E-02
+
+ RMS-norm of steady-state residual for first pde  =  4.57578E-01
+ RMS-norm of steady-state residual for second pde =  5.43232E-02
+ RMS-norm of steady-state residual for third pde  =  6.16577E-02
+ RMS-norm of steady-state residual for fourth pde =  5.80532E-02
+ RMS-norm of steady-state residual for fifth pde  =  1.02390E+00
+
+     pseudo-time SSOR iteration no.=  38
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  3.93724E-03
+ RMS-norm of SSOR-iteration correction for second pde =  4.40369E-04
+ RMS-norm of SSOR-iteration correction for third pde  =  5.47699E-04
+ RMS-norm of SSOR-iteration correction for fourth pde =  5.18790E-04
+ RMS-norm of SSOR-iteration correction for fifth pde  =  8.64816E-03
+
+ RMS-norm of steady-state residual for first pde  =  3.53740E-01
+ RMS-norm of steady-state residual for second pde =  4.23817E-02
+ RMS-norm of steady-state residual for third pde  =  4.58824E-02
+ RMS-norm of steady-state residual for fourth pde =  4.34087E-02
+ RMS-norm of steady-state residual for fifth pde  =  7.88510E-01
+
+     pseudo-time SSOR iteration no.=  39
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  3.04387E-03
+ RMS-norm of SSOR-iteration correction for second pde =  3.43090E-04
+ RMS-norm of SSOR-iteration correction for third pde  =  4.07591E-04
+ RMS-norm of SSOR-iteration correction for fourth pde =  3.87958E-04
+ RMS-norm of SSOR-iteration correction for fifth pde  =  6.65961E-03
+
+ RMS-norm of steady-state residual for first pde  =  2.73484E-01
+ RMS-norm of steady-state residual for second pde =  3.30767E-02
+ RMS-norm of steady-state residual for third pde  =  3.41504E-02
+ RMS-norm of steady-state residual for fourth pde =  3.24727E-02
+ RMS-norm of steady-state residual for fifth pde  =  6.07220E-01
+
+     pseudo-time SSOR iteration no.=  40
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  2.35335E-03
+ RMS-norm of SSOR-iteration correction for second pde =  2.67427E-04
+ RMS-norm of SSOR-iteration correction for third pde  =  3.03277E-04
+ RMS-norm of SSOR-iteration correction for fourth pde =  2.90149E-04
+ RMS-norm of SSOR-iteration correction for fifth pde  =  5.12824E-03
+
+ RMS-norm of steady-state residual for first pde  =  2.11449E-01
+ RMS-norm of steady-state residual for second pde =  2.58229E-02
+ RMS-norm of steady-state residual for third pde  =  2.54310E-02
+ RMS-norm of steady-state residual for fourth pde =  2.43083E-02
+ RMS-norm of steady-state residual for fifth pde  =  4.67601E-01
+
+     pseudo-time SSOR iteration no.=  41
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  1.81960E-03
+ RMS-norm of SSOR-iteration correction for second pde =  2.08543E-04
+ RMS-norm of SSOR-iteration correction for third pde  =  2.25675E-04
+ RMS-norm of SSOR-iteration correction for fourth pde =  2.17061E-04
+ RMS-norm of SSOR-iteration correction for fifth pde  =  3.94896E-03
+
+ RMS-norm of steady-state residual for first pde  =  1.63496E-01
+ RMS-norm of steady-state residual for second pde =  2.01658E-02
+ RMS-norm of steady-state residual for third pde  =  1.89541E-02
+ RMS-norm of steady-state residual for fourth pde =  1.82141E-02
+ RMS-norm of steady-state residual for fifth pde  =  3.60078E-01
+
+     pseudo-time SSOR iteration no.=  42
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  1.40699E-03
+ RMS-norm of SSOR-iteration correction for second pde =  1.62691E-04
+ RMS-norm of SSOR-iteration correction for third pde  =  1.67986E-04
+ RMS-norm of SSOR-iteration correction for fourth pde =  1.62466E-04
+ RMS-norm of SSOR-iteration correction for fifth pde  =  3.04083E-03
+
+ RMS-norm of steady-state residual for first pde  =  1.26426E-01
+ RMS-norm of steady-state residual for second pde =  1.57522E-02
+ RMS-norm of steady-state residual for third pde  =  1.41446E-02
+ RMS-norm of steady-state residual for fourth pde =  1.36651E-02
+ RMS-norm of steady-state residual for fifth pde  =  2.77274E-01
+
+     pseudo-time SSOR iteration no.=  43
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  1.08801E-03
+ RMS-norm of SSOR-iteration correction for second pde =  1.26969E-04
+ RMS-norm of SSOR-iteration correction for third pde  =  1.25126E-04
+ RMS-norm of SSOR-iteration correction for fourth pde =  1.21695E-04
+ RMS-norm of SSOR-iteration correction for fifth pde  =  2.34151E-03
+
+ RMS-norm of steady-state residual for first pde  =  9.77666E-02
+ RMS-norm of steady-state residual for second pde =  1.23076E-02
+ RMS-norm of steady-state residual for third pde  =  1.05740E-02
+ RMS-norm of steady-state residual for fourth pde =  1.02690E-02
+ RMS-norm of steady-state residual for fifth pde  =  2.13509E-01
+
+     pseudo-time SSOR iteration no.=  44
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  8.41400E-04
+ RMS-norm of SSOR-iteration correction for second pde =  9.91239E-05
+ RMS-norm of SSOR-iteration correction for third pde  =  9.32983E-05
+ RMS-norm of SSOR-iteration correction for fourth pde =  9.12515E-05
+ RMS-norm of SSOR-iteration correction for fifth pde  =  1.80300E-03
+
+ RMS-norm of steady-state residual for first pde  =  7.56088E-02
+ RMS-norm of steady-state residual for second pde =  9.61826E-03
+ RMS-norm of steady-state residual for third pde  =  7.92265E-03
+ RMS-norm of steady-state residual for fourth pde =  7.73241E-03
+ RMS-norm of steady-state residual for fifth pde  =  1.64406E-01
+
+     pseudo-time SSOR iteration no.=  45
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  6.50725E-04
+ RMS-norm of SSOR-iteration correction for second pde =  7.74096E-05
+ RMS-norm of SSOR-iteration correction for third pde  =  6.96704E-05
+ RMS-norm of SSOR-iteration correction for fourth pde =  6.85182E-05
+ RMS-norm of SSOR-iteration correction for fifth pde  =  1.38833E-03
+
+ RMS-norm of steady-state residual for first pde  =  5.84764E-02
+ RMS-norm of steady-state residual for second pde =  7.51799E-03
+ RMS-norm of steady-state residual for third pde  =  5.95306E-03
+ RMS-norm of steady-state residual for fourth pde =  5.83648E-03
+ RMS-norm of steady-state residual for fifth pde  =  1.26594E-01
+
+     pseudo-time SSOR iteration no.=  46
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  5.03292E-04
+ RMS-norm of SSOR-iteration correction for second pde =  6.04689E-05
+ RMS-norm of SSOR-iteration correction for third pde  =  5.21303E-05
+ RMS-norm of SSOR-iteration correction for fourth pde =  5.15380E-05
+ RMS-norm of SSOR-iteration correction for fifth pde  =  1.06902E-03
+
+ RMS-norm of steady-state residual for first pde  =  4.52288E-02
+ RMS-norm of steady-state residual for second pde =  5.87729E-03
+ RMS-norm of steady-state residual for third pde  =  4.48857E-03
+ RMS-norm of steady-state residual for fourth pde =  4.41789E-03
+ RMS-norm of steady-state residual for fifth pde  =  9.74777E-02
+
+     pseudo-time SSOR iteration no.=  47
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  3.89285E-04
+ RMS-norm of SSOR-iteration correction for second pde =  4.72472E-05
+ RMS-norm of SSOR-iteration correction for third pde  =  3.91060E-05
+ RMS-norm of SSOR-iteration correction for fourth pde =  3.88482E-05
+ RMS-norm of SSOR-iteration correction for fifth pde  =  8.23150E-04
+
+ RMS-norm of steady-state residual for first pde  =  3.49846E-02
+ RMS-norm of steady-state residual for second pde =  4.59527E-03
+ RMS-norm of steady-state residual for third pde  =  3.39805E-03
+ RMS-norm of steady-state residual for fourth pde =  3.35490E-03
+ RMS-norm of steady-state residual for fifth pde  =  7.50574E-02
+
+     pseudo-time SSOR iteration no.=  48
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  3.01122E-04
+ RMS-norm of SSOR-iteration correction for second pde =  3.69243E-05
+ RMS-norm of SSOR-iteration correction for third pde  =  2.94285E-05
+ RMS-norm of SSOR-iteration correction for fourth pde =  2.93570E-05
+ RMS-norm of SSOR-iteration correction for fifth pde  =  6.33822E-04
+
+ RMS-norm of steady-state residual for first pde  =  2.70622E-02
+ RMS-norm of steady-state residual for second pde =  3.59330E-03
+ RMS-norm of steady-state residual for third pde  =  2.58429E-03
+ RMS-norm of steady-state residual for fourth pde =  2.55686E-03
+ RMS-norm of steady-state residual for fifth pde  =  5.77934E-02
+
+     pseudo-time SSOR iteration no.=  49
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  2.32939E-04
+ RMS-norm of SSOR-iteration correction for second pde =  2.88621E-05
+ RMS-norm of SSOR-iteration correction for third pde  =  2.22293E-05
+ RMS-norm of SSOR-iteration correction for fourth pde =  2.22496E-05
+ RMS-norm of SSOR-iteration correction for fifth pde  =  4.88039E-04
+
+ RMS-norm of steady-state residual for first pde  =  2.09352E-02
+ RMS-norm of steady-state residual for second pde =  2.81005E-03
+ RMS-norm of steady-state residual for third pde  =  1.97534E-03
+ RMS-norm of steady-state residual for fourth pde =  1.95627E-03
+ RMS-norm of steady-state residual for fifth pde  =  4.45000E-02
+
+     pseudo-time SSOR iteration no.=  50
+
+
+ RMS-norm of SSOR-iteration correction for first pde  =  1.80206E-04
+ RMS-norm of SSOR-iteration correction for second pde =  2.25638E-05
+ RMS-norm of SSOR-iteration correction for third pde  =  1.68644E-05
+ RMS-norm of SSOR-iteration correction for fourth pde =  1.69189E-05
+ RMS-norm of SSOR-iteration correction for fifth pde  =  3.75785E-04
+
+ RMS-norm of steady-state residual for first pde  =  1.61963E-02
+ RMS-norm of steady-state residual for second pde =  2.19767E-03
+ RMS-norm of steady-state residual for third pde  =  1.51799E-03
+ RMS-norm of steady-state residual for fourth pde =  1.50296E-03
+ RMS-norm of steady-state residual for fifth pde  =  3.42641E-02
+
+ RMS-norm of error in soln. to first pde  =  6.42233E-04
+ RMS-norm of error in soln. to second pde =  8.41443E-05
+ RMS-norm of error in soln. to third pde  =  5.85883E-05
+ RMS-norm of error in soln. to fourth pde =  5.84742E-05
+ RMS-norm of error in soln. to fifth pde  =  1.31033E-03
+
+
+     surface integral =  7.84189E+00
+
+
+
+     VERIFICATION TEST FOR RESIDUALS IS SUCCESSFUL
+
+     VERIFICATION TEST FOR SOLUTION ERRORS IS SUCCESSFUL
+
+     VERIFICATION TEST FOR SURFACE INTEGRAL IS SUCCESSFUL
+
+
+          CAUTION
+
+     REFERENCE VALUES CURRENTLY IN THIS VERIFICATION ROUTINE 
+     ARE VALID ONLY FOR RUNS WITH THE FOLLOWING PARAMETER VALUES:
+
+     NX = 12;  NY = 12;  NZ = 12 
+
+     ITMAX = 50
+
+     DT = 5.0d-01
+
+     OMEGA = 1.2
+
+     CHANGE IN ANY OF THE ABOVE VALUES RENDER THE REFERENCE VALUES 
+     INVALID AND CAUSES A FAILURE OF THE VERIFICATION TEST.

@@ -1,0 +1,64 @@
+SPEC CPU2000 Benchmark Description File
+
+Benchmark Name: 255.vortex
+
+Benchmark Author: Peter R. Homan
+
+Benchmark Program General Category:  Database
+
+Benchmark Description:
+
+  VORTEx is a single-user object-oriented database transaction benchmark
+  which which exercises a system kernel coded in integer C.  The VORTEx
+  benchmark is a derivative of a full OODBMS that has been customized to
+  conform to SPEC CINT2000 (component measurement) guidelines.
+
+  The benchmark 255.vortex is a subset of a full object oriented database
+  program called VORTEx.  (VORTEx stands for "Virtual Object Runtime
+  EXpository.")
+
+  Transactions to and from the database are translated though a schema.  (A
+  schema provides the necessary information to generate the mapping of the
+  internally stored data block to a model viewable in the context of the
+  application.)
+
+Input Description: 
+
+  The schema as provided with the benchmark is pre-configured to manipulate
+  three different databases:  mailing list, parts list, and geometric data.
+  Both little-endian and big-endian binaries for the schema are provided.
+
+  The benchmark builds and manipulates three separate, but inter-related
+  databases based on the schema.  The size of the database is scalable, and
+  for CINT2000 guidelines has been restricted to about 200 Mbytes.
+
+  VORTEx been modified to not commit transactions to memory in order to
+  remove input-output activity from this CINT2000 (component) benchmark.
+
+  The workload of VORTEx has been modeled after common object-oriented
+  database benchmarks with modifications to vary the mix of transactions.
+
+  The 255.vortex benchmark is run three different times, each time a
+  different mix of database inserts, deletes and lookups is used to
+  simulate different database usage patterns.
+
+Output Description:
+
+  The benchmark 255.vortex is run using three different workloads
+  (simulating different dataset sizes and access patterns), with each run
+  producing one output file.  Each output file (vortex1.out, vortex2.out,
+  and vortex3.out) is a log of all transactions occurring during the
+  running of the benchmark, these transactions include creating entries in
+  the database, deleting entries, and entry lookups.
+
+Programming Language: C
+
+Known portability issues:
+
+  -DSPEC_CPU2000_LP64  If you are running in a 64-bit environment and using
+       a compiler that supports an LP64 programming model (where "long" and
+       pointers are 64-bits in size).
+
+Reference: 
+
+     http://www.vortex01.com

@@ -1,0 +1,13 @@
+running commands in speccmds.cmd 1 times
+runs started at 1584203444, 158000000, Sat Mar 14 17:30:44 2020
+run 1 started at 1584203444, 158000000, Sat Mar 14 17:30:44 2020
+child started: 0, 1584203444, 158000000, pid=2052, '../00000003/vortex_base.vc7.x87.exe lendian1.raw'
+child finished: 0, 1584203455, 889000000, sec=11, nsec=731000000, pid=2052, rc=0
+child started: 0, 1584203455, 889000000, pid=12920, '../00000003/vortex_base.vc7.x87.exe lendian2.raw'
+child finished: 0, 1584203469, 750000000, sec=13, nsec=861000000, pid=12920, rc=0
+child started: 0, 1584203469, 750000000, pid=4904, '../00000003/vortex_base.vc7.x87.exe lendian3.raw'
+child finished: 0, 1584203483, 409000000, sec=13, nsec=659000000, pid=4904, rc=0
+run 1 finished at: 1584203483, 409000000, Sat Mar 14 17:31:23 2020
+run 1 elapsed time: 39, 251000000, 39.251000000
+runs finished at 1584203483, 409000000, Sat Mar 14 17:31:23 2020
+runs elapsed time: 39, 251000000, 39.251000000

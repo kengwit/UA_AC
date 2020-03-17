@@ -1,0 +1,17 @@
+running commands in speccmds.cmd 1 times
+runs started at 1583843784, 493000000, Tue Mar 10 13:36:24 2020
+run 1 started at 1583843784, 493000000, Tue Mar 10 13:36:24 2020
+child started: 0, 1583843784, 493000000, pid=8292, '../00000002/cc1_base.vc7.x87.exe 166.i -o 166.s'
+child finished: 0, 1583843788, 275000000, sec=3, nsec=782000000, pid=8292, rc=0
+child started: 0, 1583843788, 275000000, pid=2712, '../00000002/cc1_base.vc7.x87.exe 200.i -o 200.s'
+child finished: 0, 1583843800, 964000000, sec=12, nsec=689000000, pid=2712, rc=0
+child started: 0, 1583843800, 964000000, pid=3444, '../00000002/cc1_base.vc7.x87.exe expr.i -o expr.s'
+child finished: 0, 1583843802, 309000000, sec=1, nsec=345000000, pid=3444, rc=0
+child started: 0, 1583843802, 309000000, pid=6080, '../00000002/cc1_base.vc7.x87.exe integrate.i -o integrate.s'
+child finished: 0, 1583843803, 562000000, sec=1, nsec=253000000, pid=6080, rc=0
+child started: 0, 1583843803, 562000000, pid=8440, '../00000002/cc1_base.vc7.x87.exe scilab.i -o scilab.s'
+child finished: 0, 1583843810, 988000000, sec=7, nsec=426000000, pid=8440, rc=0
+run 1 finished at: 1583843810, 988000000, Tue Mar 10 13:36:50 2020
+run 1 elapsed time: 26, 495000000, 26.495000000
+runs finished at 1583843810, 988000000, Tue Mar 10 13:36:50 2020
+runs elapsed time: 26, 495000000, 26.495000000

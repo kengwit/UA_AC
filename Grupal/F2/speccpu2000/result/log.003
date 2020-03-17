@@ -1,0 +1,18 @@
+
+
+
+runspec started at Sat Mar 14 17:48:31 2020
+C:\Users\Anubis\Desktop\UA\UAADCProjects\Grupal\F2\speccpu2000\bin\runspec --action build --tune base --config win32-x86-vc7.cfg gzip
+Identifying output formats...asc...config...html...pdf...ps...raw...
+Verbosity = 5
+Action    = build
+Tune      = base
+Ext       = vc7.x87.exe
+Size      = ref
+Machine   = default
+benchmarks= 164.gzip
+outputs   = raw,ASCII
+We will use: 164.gzip
+Compiling Binaries
+  Up to date 164.gzip ref base vc7.x87.exe default
+Build Complete

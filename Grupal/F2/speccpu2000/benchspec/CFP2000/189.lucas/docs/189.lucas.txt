@@ -1,0 +1,33 @@
+SPEC CPU2000 Benchmark Description File
+
+Benchmark Name: 189.lucas
+
+Benchmark Author: Ernst Mayer
+
+Benchmark Program General Category: Number theory: primality testing
+
+Benchmark Description: 
+
+Performs the Lucas-Lehmer test to check primality of Mersenne numbers
+2^p-1, using arbitrary-precision (array-integer) arithmetic. 
+Accomplishes the Mersenne-mod squaring via the discrete weighted
+transform technique of Crandall and Fagin (Math. Comp. 62 (205), 
+pp.305-324, January 1994).  Uses a data-local, cache-friendly FFT to
+efficiently perform the large-integer squaring of the Lucas-Lehmer
+iterations.
+
+Input Description: Attempt to prove the primality of a large number.
+
+Output Description: The proof (or disproof) is not completed in the 
+time allotted for the benchmark.  Therefore, a hex residue is provided 
+to verify that the algorithm is on track towards the proof (or disproof).
+
+Programming Language: Fortran-90
+
+Known portability issues:  none
+
+Reference: 
+
+ftp://209.133.33.182/pub/mayer/index.html     (Author's homepage)  
+http://www.perfsci.com/free/techpapers/F24.ps (or F24.pdf - a manuscript
+                describing algorithms similar to those in lucas.)

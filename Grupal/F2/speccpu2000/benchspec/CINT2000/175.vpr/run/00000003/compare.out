@@ -1,0 +1,15 @@
+running commands in compare.cmd 1 times
+runs started at 1584202810, 202000000, Sat Mar 14 17:20:10 2020
+run 1 started at 1584202810, 202000000, Sat Mar 14 17:20:10 2020
+child started: 0, 1584202810, 202000000, pid=3296, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10  -r 0.05 C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/175.vpr/data/ref/output/costs.out costs.out'
+child finished: 0, 1584202810, 298000000, sec=0, nsec=96000000, pid=3296, rc=0
+child started: 0, 1584202810, 298000000, pid=6728, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10  -r 0.015 C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/175.vpr/data/ref/output/place_log.out place_log.out'
+child finished: 0, 1584202810, 394000000, sec=0, nsec=96000000, pid=6728, rc=0
+child started: 0, 1584202810, 394000000, pid=13004, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10  -r 0.015 C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/175.vpr/data/ref/output/route.out route.out'
+child finished: 0, 1584202811, 775000000, sec=1, nsec=381000000, pid=13004, rc=0
+child started: 0, 1584202811, 775000000, pid=12956, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10  -r 0.015 C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/175.vpr/data/ref/output/route_log.out route_log.out'
+child finished: 0, 1584202811, 874000000, sec=0, nsec=99000000, pid=12956, rc=0
+run 1 finished at: 1584202811, 874000000, Sat Mar 14 17:20:11 2020
+run 1 elapsed time: 1, 672000000, 1.672000000
+runs finished at 1584202811, 874000000, Sat Mar 14 17:20:11 2020
+runs elapsed time: 1, 672000000, 1.672000000

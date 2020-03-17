@@ -1,0 +1,14 @@
+  SPEC benchmark 171.swim
+  
+ NUMBER OF POINTS IN THE X DIRECTION     512
+ NUMBER OF POINTS IN THE Y DIRECTION     512
+ GRID SPACING IN THE X DIRECTION      25000.
+ GRID SPACING IN THE Y DIRECTION      25000.
+ TIME STEP                               20.
+ TIME FILTER PARAMETER                 0.001
+ NUMBER OF ITERATIONS                     10
+
+ Pcheck =   0.1311E+11
+ Ucheck =   0.5215E+05
+ Vcheck =   0.5215E+05
+

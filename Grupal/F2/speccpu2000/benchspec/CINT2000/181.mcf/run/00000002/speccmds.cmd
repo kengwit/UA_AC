@@ -1,0 +1,2 @@
+-u C:/speccpu2000/benchspec/CINT2000/181.mcf/run/00000002
+-o inp.out -e inp.err ../00000002/mcf_base.vc7.x87.exe inp.in

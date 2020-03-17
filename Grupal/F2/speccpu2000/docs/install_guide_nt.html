@@ -1,0 +1,729 @@
+<html>
+<head>
+<title>SPEC CPU2000 Installation Guide for NT</title>
+</head>
+<body bgcolor=white>
+<pre>
+
+
+</pre>
+
+<h1>Installing SPEC CPU2000 Under Windows NT</h1>
+<h4>Last updated: 30 Oct 2001 jh</h4>
+(To check for possible updates to this document,
+please see <a href=http://www.spec.org/cpu2000/docs/>http://www.spec.org/cpu2000/docs/</a> )
+
+<pre>
+</pre>
+<hr>
+
+
+<h2>Contents</h2>
+
+<ul>
+  <li> <a href=#steps><font color=blue>Installation Steps</font></a>
+  <li> <a href=#text><font color=blue>Using Text Files on NT</font></a>
+  <li> <a href=#example><font color=blue>Example Installation</font></a>
+</ul> 
+
+
+Note: Unless otherwise specified, refererences to "Windows NT" in 
+      this document apply to Windows NT V4.0, Windows 2000, 
+      Windows XP, and Windows Advanced Server.
+
+
+<a name=steps><h2>Installation Steps</h2></a>
+
+The SPEC CPU2000 suite has been tested under both Unix and NT systems.  
+Your CD can be installed under either type of operating system.
+
+<p>The installation procedure for NT is as follows:
+
+<ol>
+<li><p> Review the hardware and software requirements, in
+     <a href=system_requirements.html>system_requirements.html</a></p>
+
+<hr width=80%>
+<center><table width=75%><tr><td>
+<i>Note: links to SPEC CPU2000 documents on this web page
+assume that you are reading the page from a directory that
+also contains the other SPEC CPU2000 documents.  If by
+some chance you are reading this web page from a location
+where the links do not work, try accessing the referenced
+documents at one of the following locations:</i>
+<ul>
+<li><a href=http://www.spec.org/cpu2000/docs/>
+     www.spec.org/cpu2000/docs/</a>
+<li><i>The </i><tt><big><b>$SPEC/docs/    </b></big></tt><i> directory on a Unix
+ system where SPEC CPU2000 has been installed.
+<li>   The </i><tt><big><b>%spec%\docs.nt\</b></big></tt><i> directory on a Wind
+ows/NT system where SPEC CPU2000 has been installed.
+<li>   The </i><tt><big><b>docs/          </b></big></tt><i> or
+           </i><tt><big><b>docs.nt\       </b></big></tt><i> directory on your S
+PEC CPU2000 distribution cdrom.</i>
+</ul>
+</td></tr></table>
+<hr width=75%>
+</center>
+</p></li>
+
+<li><p> Open a Command Prompt ("MSDOS") window.  To do this under NT4.0, 
+   select <br>&nbsp;&nbsp;&nbsp;&nbsp;Start--->Programs--->Command Prompt.   
+   <br>Under Windows 2000, 
+   select 
+   <br>&nbsp;&nbsp;&nbsp;&nbsp;Start--->Programs--->Accessories--->Command Prompt.
+
+   <p>Adjust the properties to allow you to see plenty of lines scrolled 
+   off the top (for example, 9000).  Click the upper left corner of 
+   the Command Prompt window, scroll down to "Properties", click the 
+   "Layout" tab, and in the section labelled "Screen Buffer Size" 
+    enter a new value for "Height".
+</p></li>
+
+<li><p> Check to see whether or not the CPU environment variable is set:
+
+   <pre> 
+       C:\> <b>echo %CPU%</b>
+       i386 </pre>
+
+   If it's set (you see something other than <tt>%CPU%</tt> printed), go on to step 4.
+   If not, you'll need to set it to an appropriate value for your system.  The
+   CPU2000 CD comes with pre-built tools that should work on Intel x86 (IA-32)
+   and Compaq Alpha-based NT systems.  If you have an Intel-based system, set
+   CPU to <b><kbd>i386</kbd></b>, like this:
+
+    <pre>
+       C:\> <b>set CPU=i386</b> </pre>
+
+   If you have an Intel Itanium system running Windows Advanced 
+   Server, you should nevertheless set the CPU type to i386.
+
+   <p>If you have an Alpha-based system, set CPU to <kbd>alpha</kbd>:
+
+    <pre>
+       C:\> <b>set CPU=alpha </b></pre>
+
+   If you have a system based on a different architecture, you'll have
+   to build the tools yourself.  In that case, set the CPU variable to a
+   reasonable value; it'll be used to identify the resultant tools.
+</p></li>
+
+<li><p> <a name=tempset>Check to see whether or not the temp environment variable points to a
+   directory that can be used to hold for temporary files.</a>
+
+   <pre>
+       C:\> <b>echo %temp%</b>
+       %temp% </pre>
+
+   <p>If it's unset (just prints <tt>%temp%</tt>), you should set it to the full
+   pathname (with drive letter) to a directory that can be used as scratch
+   space.  For example, if you want to use the <kbd>C:\TEMP</kbd> directory, you'd
+   use the following command:
+
+   <pre>
+       C:\> <b>set temp=C:\TEMP</b> </pre>
+
+</p></li>
+<li><p> Decide where you want to install the CPU2000 suite.  You should 
+   make sure that your chosen destination disk has at least 1GB free.
+   (For more information on disk usage, see 
+   <a href=system_requirements.html>system_requirements.html</a>.)  
+   For the following examples, we will assume that your destination 
+   is on drive <tt>F:</tt>, in the directory <tt>\cpu2000</tt>.
+</p></li>
+
+<li><p> Change to the CD directory.  For the following examples, we'll assume
+   that your CD is mounted on drive <tt>E:</tt>.
+</p></li>
+
+<li><p> You're now ready to run the installer.  The format for this command is
+
+   <pre>
+       install.bat destination_drive destination_directory </pre>
+   
+   For example, if you decided to install CPU2000 in <tt>F:\cpu2000</tt>, the
+   command you enter would be
+
+   <pre>
+       E:\> <b>install.bat F: \cpu2000 </b></pre>
+   
+   <big>Please notice the space between <kbd>F:</kbd> and <kbd>\cpu2000</kbd>.  
+   It's very important.</big>
+
+   <p>You should see a message similar to the following:
+
+   <pre>
+      The environment variable SPEC should point to the source of the
+      SPEC distribution (as an absolute path).  I will now try to set
+      the variable for you...
+
+      SPEC is set to E:\
+      If this is NOT what you want, press control-C
+      Press any key to continue . . .  </pre>
+
+   If you see a message similar to the above, just press return.
+   If you receive an error message such as <tt>Access is denied</tt>,
+   please verify that <kbd>%temp%</kbd> is defined 
+   (see <a href=#tempset><font color=blue>above</font></a>).  
+
+   <p>If you see the message
+   <pre>
+       First parameter must be in the form c:</pre>
+
+   make sure that you included the space between the drive name
+   and the directory.  If you did, and you still see the message,
+   then make sure that your path includes the usual system directories.
+   If it doesn't, you can fix it by typing:
+   <pre>
+     E:\> <b>set path=%systemroot%\;%systemroot%\system32;%path%</b></pre>
+
+   <p>If all goes well, you'll see several messages indicating that files 
+   are being unpacked.  Please be patient - although only a few
+   messages are printed, thousands of files are installed.
+
+   <p>The installation will consume around 275 - 300MB on your destination 
+   disk.  (It will consume around 400MB if you don't have pre-built tools.)
+
+   <p>After this step completes, you will find yourself in the destination
+   directory that you selected.
+</p></li>
+
+<li><p> Read the comments to the file
+
+   <pre>
+         shrc.bat </pre>
+
+   and make the appropriate edits for your compiler paths.
+   Caution: you may find that the lines are not correctly formatted
+   (the text appears to be all run together) when you edit this 
+   file.  If so, see the section below: 
+   <a href=#text><font color=blue>Using Text Files on NT</font></a>.
+</p></li>
+
+<li><p> Set the environment, using your edited shrc.  For example:
+
+   <pre>
+       F:\cpu2000> <b>shrc.bat</b></pre>
+</p></li>
+
+<li><p> Test that you can build the first benchmark using the config file 
+    supplied for your system.   (For an introduction to config files, 
+    see <a href=runspec.html#about_config>"About Config Files" in 
+    runspec.html</a>.)
+
+    <p>In the example below, "^" (often called "hat" or "carat") indicates 
+    line continuation:
+
+    <pre>
+       F:\cpu2000> <b>runspec --action=build --tune=base ^</b>
+       More?  <b>--config=intel_nt_visual_studio.cfg gzip</b> </pre>
+
+    The <kbd>--tune=base</kbd> indicates that we want to use only the simple
+    tuning, if the file contains more than one kind of tuning.  
+
+
+<pre>
+     +------------------------------------------------------------+
+     | NOTE: if you see a window pop up about an access violation |
+     | just after the runspec prints:                             |
+     |                                                            |
+     |    Identifying output formats...asc...html...              |
+     |                                                            |
+     | then this indicates that there is a problem with the pdf   |
+     | library built for your system.  Disable pdf by entering    | 
+     | the following commands:                                    |
+     |                                                            |
+     |        cd bin                                              |
+     |        rename PSPDF.pm hideme_PSPDF.pm                     |
+     |                                                            |
+     | Enter the above commands ONLY if you see the referenced    |
+     | access violation.                                          |
+     +------------------------------------------------------------+
+</pre>
+</p></li>
+
+<li><p> Test that you can run the first benchmark, using the minimal 
+    input set - the "test" workload.  For example:
+
+    <pre>
+      F:\cpu2000> <b>runspec --size=test --iterations=1 --noreportable ^</b>
+      More?  <b>--config=intel_nt_visual_studio.cfg gzip</b> </pre>
+
+    The <kbd>--noreportable</kbd> ensures that the tools will allow us to run
+    just a single benchmark instead of the whole suite.
+</p></li>
+
+<li><p> Test that you can run the first benchmark using the real input
+    set - the "reference" workload.  For example:
+
+    <pre>
+       F:\cpu2000> <b>runspec --config=intel_nt_visual_studio ^</b>
+       More?   <b>--iterations=1 --noreportable gzip</b> </pre>
+
+</p></li>
+
+<li><p> Have a look at <a href=runspec.html>runspec.html</a> to 
+    learn how to do a full run of the suite.
+</p></li>
+</ol>
+
+<pre>
+</pre>
+<hr>
+
+<a name=text><h2>Using Text Files on NT</h2></a>
+
+   There are many files in the SPEC CPU2000 kit that contain text.  
+   Unfortunately, Unix systems and NT systems have slightly 
+   different conventions for storing text files.  Sometimes, a
+   text file formatted for NT will appear on Unix as if it has 
+   extra Control-M characters.  Sometimes, a text file formatted
+   for Unix will appear on NT as if all the lines were joined
+   together.
+
+   <p>There are at least three ways for NT users to correctly view
+   and edit text files that originated on a Unix system:
+
+<ol>
+     <li><p> Use WordPad.  You can find WordPad by
+           Start-->Programs-->Accessories-->WordPad
+     </p></li>
+
+     <li><p> Use a Command Prompt and type "Edit".  This alternative
+         works only if the file has a short name with 8 characters
+         or fewer, a dot, and then 3 characters or fewer.  If you
+         are trying to use Edit with a longer file name, you can
+         discover that there is an "8 dot 3" synonym for it by
+         typing: <kbd>dir /x</kbd>.
+     </p></li>
+
+     <li><p> Use the editor "vi".  Although vi originated on Unix 
+         systems, it is also often found on NT systems.  For 
+         example, there is a version with a subset of the 
+         traditional Unix vi features in the "Microsoft Windows NT 
+         Workstation 4.0 Resource Kit" (information available 
+         at <a href=http://mspress.microsoft.com>http://mspress.microsoft.com</a>); 
+         a version with 
+         the traditional Unix features in the MKS Toolkit 
+         (<a href=http://www.datafocus.com/products/tk/>http://www.datafocus.com/products/tk/</a>); 
+         and a freeware 
+         version with some non-traditional features known as 
+         "Vi IMproved" (at 
+         <a href=http://www.vim.org/>http://www.vim.org/</a>).
+     </p></li>
+
+</ol>
+
+<pre>
+</pre>
+<hr>
+
+<a name=example><h2>Example Installation </h2></a>
+
+Here is a complete NT installation, with comments in asterisks.
+We assume that Steps 1 and 2 are already done (from the list
+of Installation Steps earlier in this document).
+<pre>
+
+************************************************************
+Step 3: Check to see whether the CPU environment variable
+is set.
+************************************************************
+
+C:\>echo %cpu%
+i386
+
+************************************************************
+Step 4: Check the temp environment variable.
+************************************************************
+
+F:\cpu2000>echo %temp%
+C:\TEMP
+
+************************************************************
+Step 5: Create a place for the suite, and check space.
+************************************************************
+
+C:\>f:
+F:\>mkdir cpu2000
+F:\>cd cpu2000
+
+F:\cpu2000>dir
+ Volume in drive F has no label.
+ Volume Serial Number is 64B6-4E51
+
+ Directory of F:\cpu2000
+
+12/14/99  10:01a        &lt;DIR&gt;          .
+12/14/99  10:01a        &lt;DIR&gt;          ..
+               2 File(s)              0 bytes
+                          1,125,040,128 bytes free
+
+************************************************************
+Note that we have about 1GB of space on the destination
+drive, as recommended.
+************************************************************
+
+************************************************************
+Step 6: change to the drive where the CD is mounted
+************************************************************
+
+F:\cpu2000>e:
+
+************************************************************
+Step 7: Actually do the installation.  Note the presence
+of a space in between "f:" and "\cpu2000".  
+************************************************************
+
+E:\>install.bat f: \cpu2000
+The environment variable SPEC should point to the source of the
+SPEC distribution (as an absolute path).  I will now try to set
+the variable for you...
+
+SPEC is set to E:\
+If this is NOT what you want, press control-C 
+Press any key to continue . . . 
+
+Installing from E:\
+Unpacking benchmark files
+Unpacking tools binaries
+Setting SPEC environment variable to f:\cpu2000
+
+F:\cpu2000>
+
+************************************************************
+Step 8: Edit shrc.bat.  The "fc" command is used below to
+compare the original shrc.bat to our modified copy:
+************************************************************
+
+F:\cpu2000>copy shrc.bat shrc.as-distributed
+        1 file(s) copied.
+
+F:\cpu2000>notepad shrc.bat
+
+F:\cpu2000>fc shrc.as-distributed shrc.bat
+
+Comparing files shrc.as-distributed and SHRC.BAT
+
+***** shrc.as-distributed
+rem following line after you've set the path for your compilers below.
+rem set SHRC_COMPILER_PATH_SET=yes
+rem XXXXXXXX END EDIT HERE XXXXXXXXXXX
+***** SHRC.BAT
+rem following line after you've set the path for your compilers below.
+set SHRC_COMPILER_PATH_SET=yes
+rem XXXXXXXX END EDIT HERE XXXXXXXXXXX
+*****
+
+***** shrc.as-distributed
+rem call "c:\program files\microsoft visual studio\vc98\bin\vcvars32.bat"
+rem call "c:\program files\microsoft visual studio\df98\bin\dfvars.bat"
+***** SHRC.BAT
+call "c:\program files\microsoft visual studio\vc98\bin\vcvars32.bat"
+call "c:\program files\microsoft visual studio\df98\bin\dfvars.bat"
+*****
+
+
+************************************************************
+Step 9: set the environment
+************************************************************
+
+F:\cpu2000>
+F:\cpu2000>shrc
+Setting environment for using Microsoft Visual C++ tools.
+Setting environment for using Visual Fortran tools
+
+PATH=^
+F:\cpu2000\bin;^
+C:\Program Files\Microsoft Visual Studio\Common\Msdev98\BIN;^
+C:\Program Files\Microsoft Visual Studio\DF98\BIN;^
+C:\Program Files\Microsoft Visual Studio\VC98\BIN;^
+C:\Program Files\Microsoft Visual Studio\Common\Tools;^
+C:\Program Files\Microsoft Visual Studio\Common\Tools\WINNT;^
+C:\PROGRA~1\MI017E~1\Common\msdev98\BIN;^
+C:\PROGRA~1\MI017E~1\VC98\BIN;^
+C:\PROGRA~1\MI017E~1\Common\TOOLS\WINNT;^
+C:\PROGRA~1\MI017E~1\Common\TOOLS;^
+C:\winnt\system32;^
+C:\winnt
+
+
+************************************************************
+Step 10.  Use runspec to do a test build:
+************************************************************
+
+F:\cpu2000>runspec --action=build --tune=base ^
+More?  --config=intel_nt_visual_studio.cfg gzip
+runspec v2.00 - Copyright (C) 1999 Standard Performance Evaluation Corporation
+Loading standard modules..............
+Loading runspec modules.............
+Identifying output formats...asc...html...pdf...ps...raw...
+We will use: 164.gzip
+Compiling Binaries
+  Building 164.gzip ref base oct14a default
+Build Complete
+
+************************************************************
+At this point, we've accomplished a lot.  The SPEC tree is
+installed, and we have verified that a benchmark can be 
+compiled using the installed C compiler.  
+************************************************************
+
+
+************************************************************
+Step 11. Now try running the first benchmark, using the 
+minimal test workload.  The test workload runs in a tiny 
+amount of time and does a minimal verification that the 
+benchmark executable can at least start up: 
+************************************************************
+
+F:\cpu2000>runspec --size=test --iterations=1 --noreportable ^
+More?  --config=intel_nt_visual_studio.cfg gzip
+runspec v2.00 - Copyright (C) 1999 Standard Performance Evaluation Corporation
+Loading standard modules..............
+Loading runspec modules.............
+Identifying output formats...asc...html...pdf...ps...raw...
+We will use: 164.gzip
+Compiling Binaries
+  Up to date 164.gzip test base oct14a default
+Setting Up Run Directories
+  Setting up 164.gzip test base oct14a default: created
+Running Benchmarks
+  Running 164.gzip test base oct14a default
+Success: 1x164.gzip
+Producing Reports
+mach: default
+  ext: oct14a
+    size: test
+      set: int
+        format: raw -> F:/cpu2000/result/CINT2000.002.raw
+        format: ASCII -> F:/cpu2000/result/CINT2000.002.asc
+      set: fp
+runspec finished
+
+************************************************************
+Notice 12 lines up the notation "Success: 1x164.gzip".  That
+is what we want to see.  
+************************************************************
+
+
+************************************************************
+Step 12.  So, let's try running gzip with the real workload.
+This is going to take a while - on the 200 MHz Pentium Pro
+used for the sample installation, about 1/2 hour.
+************************************************************
+
+F:\cpu2000>runspec --config=intel_nt_visual_studio ^
+More?  --iterations=1 gzip
+runspec v2.00 - Copyright (C) 1999 Standard Performance Evaluation Corporation
+Loading standard modules..............
+Loading runspec modules.............
+Identifying output formats...asc...html...pdf...ps...raw...
+We will use: 164.gzip
+Compiling Binaries
+  Up to date 164.gzip ref base oct14a default
+Setting Up Run Directories
+  Setting up 164.gzip ref base oct14a default: created
+Running Benchmarks
+  Running 164.gzip ref base oct14a default
+Success: 1x164.gzip
+Producing Reports
+mach: default
+  ext: oct14a
+    size: ref
+      set: int
+        format: raw -> F:/cpu2000/result/CINT2000.003.raw
+        format: ASCII -> F:/cpu2000/result/CINT2000.003.asc
+      set: fp
+runspec finished
+
+************************************************************
+Success with the real workload!  So now let's look in the
+result directory and see what we find:
+************************************************************
+
+F:\cpu2000> cd result
+F:\cpu2000\result>dir
+ Volume in drive F has no label.
+ Volume Serial Number is 64B6-4E51
+
+ Directory of F:\cpu2000\result
+
+12/01/99  11:13a        &lt;DIR&gt;          .
+12/01/99  11:13a        &lt;DIR&gt;          ..
+12/01/99  10:40a                 6,960 CINT2000.002.asc
+12/01/99  10:40a                 4,707 CINT2000.002.raw
+12/01/99  11:13a                 6,800 CINT2000.003.asc
+12/01/99  11:13a                 4,629 CINT2000.003.raw
+12/01/99  10:23a        &lt;DIR&gt;          images
+12/01/99  10:40a                21,825 log.001
+12/01/99  10:40a                 1,842 log.002
+12/01/99  11:13a                 2,513 log.003
+12/01/99  10:42a                     0 log.lock
+              11 File(s)         49,276 bytes
+                            668,266,496 bytes free
+
+************************************************************
+Notice the three log files from our three runspec commands.
+Those runspec commands are easily extracted with "findstr":
+************************************************************
+
+F:\cpu2000\result>findstr \runspec log*
+log.001:F:\cpu2000\bin\runspec -a build -c intel_nt_visual_studio.cfg gzip
+log.002:F:\cpu2000\bin\runspec -i test -n 1 -c intel_nt_visual_studio.cfg gzip
+log.003:F:\cpu2000\bin\runspec -c intel_nt_visual_studio -n 1 gzip
+
+
+************************************************************
+Let's look at our results, in the ".asc" file:
+************************************************************
+
+F:\cpu2000\result>type *3.asc
+
+CINT2000.003.asc
+
+
+##############################################################################
+#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 254.gap base did not have enough runs!                                     #
+# 256.bzip2 base did not have enough runs!                                   #
+# 255.vortex base did not have enough runs!                                  #
+# 175.vpr base did not have enough runs!                                     #
+# 164.gzip base did not have enough runs!                                    #
+# 253.perlbmk base did not have enough runs!                                 #
+# 186.crafty base did not have enough runs!                                  #
+# 176.gcc base did not have enough runs!                                     #
+# 252.eon base did not have enough runs!                                     #
+# 197.parser base did not have enough runs!                                  #
+# 300.twolf base did not have enough runs!                                   #
+# 181.mcf base did not have enough runs!                                     #
+#                                                                            #
+#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #
+##############################################################################
+                            SPEC CINT2000 Summary
+                                    -- --
+                           Wed Dec  1 10:42:02 1999
+
+SPEC License #0     Test date: --            Hardware availability: --
+Tester: --                                  Software availability: --
+
+                                     Estimated                     Estimated
+                   Base      Base      Base      Peak      Peak      Peak
+   Benchmarks    Ref Time  Run Time   Ratio    Ref Time  Run Time   Ratio
+   ------------  --------  --------  --------  --------  --------  --------
+   164.gzip          1400      1843      75.9*                             
+   175.vpr                                   X                             
+   176.gcc                                   X                             
+   181.mcf                                   X                             
+   186.crafty                                X                             
+   197.parser                                X                             
+   252.eon                                   X                             
+   253.perlbmk                               X                             
+   254.gap                                   X                             
+   255.vortex                                X                             
+   256.bzip2                                 X                             
+   300.twolf                                 X                             
+   ========================================================================
+   164.gzip          1400      1843      75.9*                             
+   175.vpr                                   X                             
+   176.gcc                                   X                             
+   181.mcf                                   X                             
+   186.crafty                                X                             
+   197.parser                                X                             
+   252.eon                                   X                             
+   253.perlbmk                               X                             
+   254.gap                                   X                             
+   255.vortex                                X                             
+   256.bzip2                                 X                             
+   300.twolf                                 X                             
+   Est. SPECint_base2000                   --
+   Est. SPECint2000                                                      --
+
+************************************************************
+In the table above, most of the results are blank, because
+we only ran 1 of the 12 integer benchmarks.  
+
+Notice that the values for SPECint_base2000 and SPECint2000 
+are dashes ("--"); these would be filled in if we did a 
+"reportable" run; for information, please see "--reportable" 
+in <a href=runspec.html>runspec.html</a>
+
+There are also lots of dashes for the various portions of 
+the system description, both at the top of the page and in 
+the section that follows.  These dashes indicate that we 
+have not filled in the fields that describe the hardware 
+and software that we are testing.  For information about
+these fields, please see <a href=config.html>config.html</a>
+************************************************************
+
+
+                                   HARDWARE
+                                   --------
+     Hardware Vendor: --
+          Model Name: --
+                 CPU: --
+             CPU MHz: --
+                 FPU: --
+      CPU(s) enabled: --
+    CPU(s) orderable: --
+            Parallel: --
+       Primary Cache: --
+     Secondary Cache: --
+            L3 Cache: --
+         Other Cache: --
+              Memory: --
+      Disk Subsystem: --
+      Other Hardware: --
+
+
+                                   SOFTWARE
+                                   --------
+    Operating System: --
+            Compiler: --
+         File System: --
+        System State: --
+
+
+                                    NOTES
+                                    -----
+    --
+##############################################################################
+#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 254.gap base did not have enough runs!                                     #
+# 256.bzip2 base did not have enough runs!                                   #
+# 255.vortex base did not have enough runs!                                  #
+# 175.vpr base did not have enough runs!                                     #
+# 164.gzip base did not have enough runs!                                    #
+# 253.perlbmk base did not have enough runs!                                 #
+# 186.crafty base did not have enough runs!                                  #
+# 176.gcc base did not have enough runs!                                     #
+# 252.eon base did not have enough runs!                                     #
+# 197.parser base did not have enough runs!                                  #
+# 300.twolf base did not have enough runs!                                   #
+# 181.mcf base did not have enough runs!                                     #
+#                                                                            #
+#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #
+##############################################################################
+-----------------------------------------------------------------------------
+For questions about this result, please contact the tester.
+For other inquiries, please contact webmaster@spec.org.
+Copyright 1999 Standard Performance Evaluation Corporation
+Generated on Wed Dec  1 11:13:25 1999 by SPEC CPU2000 ASCII formatter v2.1
+
+
+************************************************************
+Done.  The suite is installed, and we can run at least one
+benchmark for real.  
+************************************************************
+</pre>
+
+<hr>
+Copyright (C) 1999-2001 Standard Performance Evaluation Corporation
+<br>All Rights Reserved
+
+</body></html>
+

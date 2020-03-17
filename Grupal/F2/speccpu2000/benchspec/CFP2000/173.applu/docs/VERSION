@@ -1,0 +1,27 @@
+Change Log
+
+April 1999
+	Bodo Parady
+		Fixed train output
+		Increased runtime to over 2000s 
+
+March 1999
+	Bodo Parady
+		Increased runtime by 50%, new test, train and ref outputs
+		Added printout to make sure all work was completed
+
+February 1999
+	Bodo Parady
+		Shortened run time by 33%
+
+October 1998
+	Bodo Parady
+		Changed format of 1001 to satisfy more
+		stringent rules of Linux compilers
+
+October 1997
+	Bodo Parady
+		Initial version.  Fixed -O in Makefile
+		Initial size set to  5x65x65x65
+
+

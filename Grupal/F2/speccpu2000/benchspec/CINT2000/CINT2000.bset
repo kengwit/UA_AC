@@ -1,0 +1,20 @@
+$name        = 'int';
+$units       = 'SPECint';	# The '2000' is added later
+$metric      = 'CINT2000';
+$longest_ref = 100;
+@benchmarks = qw(
+    164.gzip
+    175.vpr
+    176.gcc
+    181.mcf
+    186.crafty
+    197.parser
+    252.eon
+    254.gap
+    253.perlbmk
+    255.vortex
+    256.bzip2
+    300.twolf
+);
+     
+1;

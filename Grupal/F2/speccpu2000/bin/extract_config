@@ -1,0 +1,59 @@
+#!/spec/cpu2000/bin/specperl
+#!/spec/cpu2000/bin/specperl -d
+#!/usr/bin/perl
+#
+#  extract_config - a tool for extracting encoded config files from raw
+#                   result files
+#  Copyright (C) 1999-2005 Standard Performance Evaluation Corporation
+#   All Rights Reserved
+#
+#  Author: Cloyce D. Spradling
+#
+# $Id: extract_config 1423 2005-06-15 18:47:00Z cloyce $
+
+use MIME::Base64;
+use IO::File;
+use Compress::Zlib;
+use strict;
+require 'vars.pl';
+
+use vars qw(@config $processed $debug $lastidx);
+
+$processed = 0;
+@config = ();
+$debug = 0;
+$lastidx = -1;
+
+# We'll use Perl's magic <> so that files can be piped in through stdin
+# or given on the command line.
+# There's no way to know what the config file should be called, so they'll
+# just be output on stdout separated by a line of comment characters (if
+# necessary).
+# This will process any number of files.
+
+while (<>) {
+    tr/\015\012//d;
+    next unless /^(spec\.${main::lcsuite}\.)?rawconfig(\d+)(:| =) (.*)$/o;
+    my ($tmpidx, $data) = ($2+0, $4);
+    if ($tmpidx < $lastidx) {
+	# This must be a new config file!
+	$processed++;
+	# First, kick the old one out
+	output_config($processed, join('', @config)) if @config;
+	# Reset state
+	@config = ();
+    }
+    $lastidx = $tmpidx;
+    $config[$lastidx] = $data;
+}
+output_config($processed, join('', @config)) if @config;
+
+sub output_config {
+    my ($processed, $encconfig) = @_;
+
+    if ($processed > 1) {	# Output a separator if necessary
+	print "#\n# --- CUT HERE --- CUT HERE --- CUT HERE --- CUT HERE --- CUT HERE ---\n#\n";
+    }
+    my $compconfig = decode_base64($encconfig);
+    print Compress::Zlib::memGunzip($compconfig);
+}

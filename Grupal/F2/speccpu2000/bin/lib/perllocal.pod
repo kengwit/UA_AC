@@ -1,0 +1,396 @@
+=head2 Thu Sep  1 09:28:08 2005: C<Module> L<IO-stringy|IO-stringy>
+
+=over 4
+
+=item *
+
+C<installed into: c:\specperl\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.108>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Sep  1 09:28:18 2005: C<Module> L<GD|GD>
+
+=over 4
+
+=item *
+
+C<installed into: c:\specperl\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.19>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Sep  1 09:28:28 2005: C<Module> L<Compress::Zlib|Compress::Zlib>
+
+=over 4
+
+=item *
+
+C<installed into: c:\specperl\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.34>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Sep  1 09:28:40 2005: C<Module> L<PDF::API2|PDF::API2>
+
+=over 4
+
+=item *
+
+C<installed into: c:\specperl\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.41>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Sep  1 09:28:45 2005: C<Module> L<URI|URI>
+
+=over 4
+
+=item *
+
+C<installed into: c:\specperl\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.35>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Sep  1 09:28:48 2005: C<Module> L<HTML::Tagset|HTML::Tagset>
+
+=over 4
+
+=item *
+
+C<installed into: c:\specperl\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 3.04>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Sep  1 09:28:55 2005: C<Module> L<HTML::Parser|HTML::Parser>
+
+=over 4
+
+=item *
+
+C<installed into: c:\specperl\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 3.45>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Sep  1 09:29:02 2005: C<Module> L<libwww-perl|libwww-perl>
+
+=over 4
+
+=item *
+
+C<installed into: c:\specperl\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 5.803>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Sep  1 09:29:05 2005: C<Module> L<Font::AFM|Font::AFM>
+
+=over 4
+
+=item *
+
+C<installed into: c:\specperl\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.18>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Sep  1 15:04:08 2005: C<Module> L<IO-stringy|IO-stringy>
+
+=over 4
+
+=item *
+
+C<installed into: c:\specperl\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.108>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Sep  1 15:04:16 2005: C<Module> L<GD|GD>
+
+=over 4
+
+=item *
+
+C<installed into: c:\specperl\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.19>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Sep  1 15:04:23 2005: C<Module> L<Compress::Zlib|Compress::Zlib>
+
+=over 4
+
+=item *
+
+C<installed into: c:\specperl\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.34>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Sep  1 15:04:31 2005: C<Module> L<PDF::API2|PDF::API2>
+
+=over 4
+
+=item *
+
+C<installed into: c:\specperl\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.41>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Sep  1 15:04:35 2005: C<Module> L<URI|URI>
+
+=over 4
+
+=item *
+
+C<installed into: c:\specperl\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.35>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Sep  1 15:04:38 2005: C<Module> L<HTML::Tagset|HTML::Tagset>
+
+=over 4
+
+=item *
+
+C<installed into: c:\specperl\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 3.04>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Sep  1 15:04:43 2005: C<Module> L<HTML::Parser|HTML::Parser>
+
+=over 4
+
+=item *
+
+C<installed into: c:\specperl\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 3.45>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Sep  1 15:04:47 2005: C<Module> L<libwww-perl|libwww-perl>
+
+=over 4
+
+=item *
+
+C<installed into: c:\specperl\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 5.803>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Sep  1 15:04:50 2005: C<Module> L<Font::AFM|Font::AFM>
+
+=over 4
+
+=item *
+
+C<installed into: c:\specperl\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.18>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+

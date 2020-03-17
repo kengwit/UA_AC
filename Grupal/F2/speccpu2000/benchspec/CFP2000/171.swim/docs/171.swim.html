@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>171.swim: SPEC CPU2000 Benchmark Description</TITLE>
+<META GENERATOR="Cloyce+VIM 5.3">
+<META REVISION="$Id: 171.swim.html 1393 2005-06-14 15:55:21Z cloyce $">
+</HEAD>
+
+<BODY>
+<CENTER><H1>171.swim<BR>
+SPEC CPU2000 Benchmark Description File</H1></CENTER>
+
+<H2>Benchmark Name</H2>
+<P>171.swim</P>
+<HR>
+
+<H2>Benchmark Author</H2>
+<P>Paul N. Swarztrauber</P>
+<HR>
+
+<H2>Benchmark Program General Category</H2>
+<P>Meteorology: Shallow Water Modeling</P>
+<HR>
+
+<H2>Benchmark Description</H2>
+
+<P>
+Benchmark weather prediction program for comparing the performance
+of current supercomputers.  The model is based on the paper,
+<I>"The Dynamics of Finite-Difference Models of the Shallow-Water Equations"</I>,
+by Robert Sadourny, J. ATM. SCIENCES, VOL 32, NO 4, APRIL 1975.
+
+
+<P>
+
+Adapted by SPEC for use in the SPEC CPU Suites as an example of
+a compute intensive floating point program that was once relegated
+only to "supercomputers" but can now be done on current computer
+systems.
+
+<P>
+
+<HR>
+
+<H2>Input Description</H2>
+<P>It does a 1335x1335 area array of data and iterates over
+    512 timesteps.</P>
+<HR>
+
+<H2>Output Description</H2>
+<P>It prints the diagonal elements of the velocity field.</P>
+<HR>
+
+<H2>Programming Language</H2>
+<P>Fortran 77</P>
+<HR>
+
+<H2>Known portability issues</H2>
+<P>None.</P>
+<HR>
+
+<H2>Reference</H2>
+<P>
+
+<I>"The Dynamics of Finite-Difference Models of the Shallow-Water Equations"</I>,
+<BR>by Robert Sadourny, J. ATM. SCIENCES, VOL 32, NO 4, APRIL 1975.
+
+<P>and</P>
+
+<P>G.-R. Hoffmann, P. N. Swarztrauber, and R. A. Sweet,
+Aspects of using multiprocessors for meteorological modeling,
+In: Multiprocessing in Meteorological Models, G.-R. Hoffman and
+D.F. Snelling, eds., Springer-Verlag, 1988, pp. 125-196.</P>
+<HR>
+Last updated: 16 August 2000
+</BODY>
+</HTML>

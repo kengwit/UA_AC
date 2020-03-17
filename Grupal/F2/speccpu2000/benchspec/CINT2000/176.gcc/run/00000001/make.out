@@ -1,0 +1,234 @@
+cl -c -Foc-parse.obj  -Dalloca=_alloca            /Ox /GL /Op  c-parse.c
+c-parse.c
+cl -c -Foc-lang.obj  -Dalloca=_alloca            /Ox /GL /Op  c-lang.c
+c-lang.c
+cl -c -Foc-lex.obj  -Dalloca=_alloca            /Ox /GL /Op  c-lex.c
+c-lex.c
+cl -c -Foc-pragma.obj  -Dalloca=_alloca            /Ox /GL /Op  c-pragma.c
+c-pragma.c
+cl -c -Foc-decl.obj  -Dalloca=_alloca            /Ox /GL /Op  c-decl.c
+c-decl.c
+c-decl.c(5668): warning C4113: 'int (__cdecl *)()' es distinto en las listas de par metros de '_CoreCrtNonSecureSearchSortCompareFunction'
+cl -c -Foc-typeck.obj  -Dalloca=_alloca            /Ox /GL /Op  c-typeck.c
+c-typeck.c
+cl -c -Foc-convert.obj  -Dalloca=_alloca            /Ox /GL /Op  c-convert.c
+c-convert.c
+cl -c -Foc-aux-info.obj  -Dalloca=_alloca            /Ox /GL /Op  c-aux-info.c
+c-aux-info.c
+cl -c -Foc-common.obj  -Dalloca=_alloca            /Ox /GL /Op  c-common.c
+c-common.c
+cl -c -Foc-iterate.obj  -Dalloca=_alloca            /Ox /GL /Op  c-iterate.c
+c-iterate.c
+cl -c -Fotoplev.obj  -Dalloca=_alloca            /Ox /GL /Op  toplev.c
+toplev.c
+toplev.c(1856): warning C4113: 'void (__cdecl *)()' es distinto en las listas de par metros de '_crt_signal_t'
+toplev.c(3337): warning C4113: 'void (__cdecl *)()' es distinto en las listas de par metros de '_crt_signal_t'
+cl -c -Foversion.obj  -Dalloca=_alloca            /Ox /GL /Op  version.c
+version.c
+cl -c -Fotree.obj  -Dalloca=_alloca            /Ox /GL /Op  tree.c
+tree.c
+cl -c -Foprint-tree.obj  -Dalloca=_alloca            /Ox /GL /Op  print-tree.c
+print-tree.c
+cl -c -Fostor-layout.obj  -Dalloca=_alloca            /Ox /GL /Op  stor-layout.c
+stor-layout.c
+cl -c -Fofold-const.obj  -Dalloca=_alloca            /Ox /GL /Op  fold-const.c
+fold-const.c
+cl -c -Fofunction.obj  -Dalloca=_alloca            /Ox /GL /Op  function.c
+function.c
+cl -c -Fostmt.obj  -Dalloca=_alloca            /Ox /GL /Op  stmt.c
+stmt.c
+cl -c -Foexpr.obj  -Dalloca=_alloca            /Ox /GL /Op  expr.c
+expr.c
+cl -c -Focalls.obj  -Dalloca=_alloca            /Ox /GL /Op  calls.c
+calls.c
+cl -c -Foexpmed.obj  -Dalloca=_alloca            /Ox /GL /Op  expmed.c
+expmed.c
+cl -c -Foexplow.obj  -Dalloca=_alloca            /Ox /GL /Op  explow.c
+explow.c
+cl -c -Fooptabs.obj  -Dalloca=_alloca            /Ox /GL /Op  optabs.c
+optabs.c
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\ctype.h(224): warning C4090: 'funci¢n': distintos calificadores 'const'
+cl -c -Fovarasm.obj  -Dalloca=_alloca            /Ox /GL /Op  varasm.c
+varasm.c
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\ctype.h(224): warning C4090: 'funci¢n': distintos calificadores 'const'
+cl -c -Fortl.obj  -Dalloca=_alloca            /Ox /GL /Op  rtl.c
+rtl.c
+cl -c -Foprint-rtl.obj  -Dalloca=_alloca            /Ox /GL /Op  print-rtl.c
+print-rtl.c
+cl -c -Fortlanal.obj  -Dalloca=_alloca            /Ox /GL /Op  rtlanal.c
+rtlanal.c
+cl -c -Foemit-rtl.obj  -Dalloca=_alloca            /Ox /GL /Op  emit-rtl.c
+emit-rtl.c
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wstdio.h(167): warning C4028: par metro formal 1 distinto de la declaraci¢n
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdio.h(322): warning C4028: par metro formal 1 distinto de la declaraci¢n
+cl -c -Foreal.obj  -Dalloca=_alloca            /Ox /GL /Op  real.c
+real.c
+cl -c -Fodbxout.obj  -Dalloca=_alloca            /Ox /GL /Op  dbxout.c
+dbxout.c
+cl -c -Fosdbout.obj  -Dalloca=_alloca            /Ox /GL /Op  sdbout.c
+sdbout.c
+cl -c -Fodwarfout.obj  -Dalloca=_alloca            /Ox /GL /Op  dwarfout.c
+dwarfout.c
+cl -c -Foxcoffout.obj  -Dalloca=_alloca            /Ox /GL /Op  xcoffout.c
+xcoffout.c
+cl -c -Fointegrate.obj  -Dalloca=_alloca            /Ox /GL /Op  integrate.c
+integrate.c
+cl -c -Fojump.obj  -Dalloca=_alloca            /Ox /GL /Op  jump.c
+jump.c
+cl -c -Focse.obj  -Dalloca=_alloca            /Ox /GL /Op  cse.c
+cse.c
+cl -c -Foloop.obj  -Dalloca=_alloca            /Ox /GL /Op  loop.c
+loop.c
+cl -c -Founroll.obj  -Dalloca=_alloca            /Ox /GL /Op  unroll.c
+unroll.c
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wstdio.h(167): warning C4028: par metro formal 1 distinto de la declaraci¢n
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdio.h(322): warning C4028: par metro formal 1 distinto de la declaraci¢n
+cl -c -Foflow.obj  -Dalloca=_alloca            /Ox /GL /Op  flow.c
+flow.c
+cl -c -Fostupid.obj  -Dalloca=_alloca            /Ox /GL /Op  stupid.c
+stupid.c
+stupid.c(248): warning C4113: 'int (__cdecl *)()' es distinto en las listas de par metros de '_CoreCrtNonSecureSearchSortCompareFunction'
+cl -c -Focombine.obj  -Dalloca=_alloca            /Ox /GL /Op  combine.c
+combine.c
+cl -c -Foregclass.obj  -Dalloca=_alloca            /Ox /GL /Op  regclass.c
+regclass.c
+cl -c -Folocal-alloc.obj  -Dalloca=_alloca            /Ox /GL /Op  local-alloc.c
+local-alloc.c
+local-alloc.c(1463): warning C4113: 'int (__cdecl *)()' es distinto en las listas de par metros de '_CoreCrtNonSecureSearchSortCompareFunction'
+local-alloc.c(1512): warning C4113: 'int (__cdecl *)()' es distinto en las listas de par metros de '_CoreCrtNonSecureSearchSortCompareFunction'
+cl -c -Foglobal.obj  -Dalloca=_alloca            /Ox /GL /Op  global.c
+global.c
+global.c(546): warning C4113: 'int (__cdecl *)()' es distinto en las listas de par metros de '_CoreCrtNonSecureSearchSortCompareFunction'
+cl -c -Foreload.obj  -Dalloca=_alloca            /Ox /GL /Op  reload.c
+reload.c
+cl -c -Foreload1.obj  -Dalloca=_alloca            /Ox /GL /Op  reload1.c
+reload1.c
+reload1.c(3704): warning C4113: 'int (__cdecl *)()' es distinto en las listas de par metros de '_CoreCrtNonSecureSearchSortCompareFunction'
+reload1.c(3776): warning C4113: 'int (__cdecl *)()' es distinto en las listas de par metros de '_CoreCrtNonSecureSearchSortCompareFunction'
+reload1.c(5050): warning C4113: 'int (__cdecl *)()' es distinto en las listas de par metros de '_CoreCrtNonSecureSearchSortCompareFunction'
+cl -c -Focaller-save.obj  -Dalloca=_alloca            /Ox /GL /Op  caller-save.c
+caller-save.c
+cl -c -Foinsn-peep.obj  -Dalloca=_alloca            /Ox /GL /Op  insn-peep.c
+insn-peep.c
+cl -c -Foreorg.obj  -Dalloca=_alloca            /Ox /GL /Op  reorg.c
+reorg.c
+cl -c -Fosched.obj  -Dalloca=_alloca            /Ox /GL /Op  sched.c
+sched.c
+sched.c(3638): warning C4113: 'int (__cdecl *)()' es distinto en las listas de par metros de '_CoreCrtNonSecureSearchSortCompareFunction'
+sched.c(3733): warning C4113: 'int (__cdecl *)()' es distinto en las listas de par metros de '_CoreCrtNonSecureSearchSortCompareFunction'
+cl -c -Fofinal.obj  -Dalloca=_alloca            /Ox /GL /Op  final.c
+final.c
+cl -c -Forecog.obj  -Dalloca=_alloca            /Ox /GL /Op  recog.c
+recog.c
+cl -c -Foreg-stack.obj  -Dalloca=_alloca            /Ox /GL /Op  reg-stack.c
+reg-stack.c
+cl -c -Foinsn-opinit.obj  -Dalloca=_alloca            /Ox /GL /Op  insn-opinit.c
+insn-opinit.c
+cl -c -Foinsn-recog.obj  -Dalloca=_alloca            /Ox /GL /Op  insn-recog.c
+insn-recog.c
+cl -c -Foinsn-extract.obj  -Dalloca=_alloca            /Ox /GL /Op  insn-extract.c
+insn-extract.c
+cl -c -Foinsn-output.obj  -Dalloca=_alloca            /Ox /GL /Op  insn-output.c
+insn-output.c
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wstdio.h(167): warning C4028: par metro formal 1 distinto de la declaraci¢n
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdio.h(322): warning C4028: par metro formal 1 distinto de la declaraci¢n
+cl -c -Foinsn-emit.obj  -Dalloca=_alloca            /Ox /GL /Op  insn-emit.c
+insn-emit.c
+cl -c -Foinsn-attrtab.obj  -Dalloca=_alloca            /Ox /GL /Op  insn-attrtab.c
+insn-attrtab.c
+cl -c -Fom88k.obj  -Dalloca=_alloca            /Ox /GL /Op  m88k.c
+m88k.c
+cl -c -Fogetpwd.obj  -Dalloca=_alloca            /Ox /GL /Op  getpwd.c
+getpwd.c
+cl -c -Foconvert.obj  -Dalloca=_alloca            /Ox /GL /Op  convert.c
+convert.c
+cl -c -Fobc-emit.obj  -Dalloca=_alloca            /Ox /GL /Op  bc-emit.c
+bc-emit.c
+cl -c -Fobc-optab.obj  -Dalloca=_alloca            /Ox /GL /Op  bc-optab.c
+bc-optab.c
+cl -c -Foobstack.obj  -Dalloca=_alloca            /Ox /GL /Op  obstack.c
+obstack.c
+cl -F10000000       /Ox /GL /Op  c-parse.obj c-lang.obj c-lex.obj c-pragma.obj c-decl.obj c-typeck.obj c-convert.obj c-aux-info.obj c-common.obj c-iterate.obj toplev.obj version.obj tree.obj print-tree.obj stor-layout.obj fold-const.obj function.obj stmt.obj expr.obj calls.obj expmed.obj explow.obj optabs.obj varasm.obj rtl.obj print-rtl.obj rtlanal.obj emit-rtl.obj real.obj dbxout.obj sdbout.obj dwarfout.obj xcoffout.obj integrate.obj jump.obj cse.obj loop.obj unroll.obj flow.obj stupid.obj combine.obj regclass.obj local-alloc.obj global.obj reload.obj reload1.obj caller-save.obj insn-peep.obj reorg.obj sched.obj final.obj recog.obj reg-stack.obj insn-opinit.obj insn-recog.obj insn-extract.obj insn-output.obj insn-emit.obj insn-attrtab.obj m88k.obj getpwd.obj convert.obj bc-emit.obj bc-optab.obj obstack.obj     -Fecc1 -link -stack:10000000
+Microsoft (R) Incremental Linker Version 14.24.28315.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/stack:10000000 
+/ltcg 
+/out:cc1.exe 
+-stack:10000000 
+c-parse.obj 
+c-lang.obj 
+c-lex.obj 
+c-pragma.obj 
+c-decl.obj 
+c-typeck.obj 
+c-convert.obj 
+c-aux-info.obj 
+c-common.obj 
+c-iterate.obj 
+toplev.obj 
+version.obj 
+tree.obj 
+print-tree.obj 
+stor-layout.obj 
+fold-const.obj 
+function.obj 
+stmt.obj 
+expr.obj 
+calls.obj 
+expmed.obj 
+explow.obj 
+optabs.obj 
+varasm.obj 
+rtl.obj 
+print-rtl.obj 
+rtlanal.obj 
+emit-rtl.obj 
+real.obj 
+dbxout.obj 
+sdbout.obj 
+dwarfout.obj 
+xcoffout.obj 
+integrate.obj 
+jump.obj 
+cse.obj 
+loop.obj 
+unroll.obj 
+flow.obj 
+stupid.obj 
+combine.obj 
+regclass.obj 
+local-alloc.obj 
+global.obj 
+reload.obj 
+reload1.obj 
+caller-save.obj 
+insn-peep.obj 
+reorg.obj 
+sched.obj 
+final.obj 
+recog.obj 
+reg-stack.obj 
+insn-opinit.obj 
+insn-recog.obj 
+insn-extract.obj 
+insn-output.obj 
+insn-emit.obj 
+insn-attrtab.obj 
+m88k.obj 
+getpwd.obj 
+convert.obj 
+bc-emit.obj 
+bc-optab.obj 
+obstack.obj 
+Generando código
+C:\speccpu2000\benchspec\CINT2000\176.gcc\run\00000001\insn-attrtab.c(3343) : warning C4715: 'div_unit_blockage': no todas las rutas de acceso de control devuelven un valor
+C:\speccpu2000\benchspec\CINT2000\176.gcc\run\00000001\insn-attrtab.c(3799) : warning C4715: 'fpmul100_unit_blockage': no todas las rutas de acceso de control devuelven un valor
+C:\speccpu2000\benchspec\CINT2000\176.gcc\run\00000001\insn-attrtab.c(4728) : warning C4715: 'alu_unit_blockage': no todas las rutas de acceso de control devuelven un valor
+C:\speccpu2000\benchspec\CINT2000\176.gcc\run\00000001\insn-attrtab.c(4429) : warning C4715: 'mem100_unit_conflict_cost': no todas las rutas de acceso de control devuelven un valor
+C:\speccpu2000\benchspec\CINT2000\176.gcc\run\00000001\insn-attrtab.c(4283) : warning C4715: 'mem100_unit_blockage': no todas las rutas de acceso de control devuelven un valor
+C:\speccpu2000\benchspec\CINT2000\176.gcc\run\00000001\insn-attrtab.c(3983) : warning C4715: 'mem110_unit_blockage': no todas las rutas de acceso de control devuelven un valor
+C:\speccpu2000\benchspec\CINT2000\176.gcc\run\00000001\insn-attrtab.c(3718) : warning C4715: 'fpadd100_unit_blockage': no todas las rutas de acceso de control devuelven un valor
+C:\speccpu2000\benchspec\CINT2000\176.gcc\run\00000001\insn-attrtab.c(3433) : warning C4715: 'fpadd110_unit_blockage': no todas las rutas de acceso de control devuelven un valor
+C:\speccpu2000\benchspec\CINT2000\176.gcc\run\00000001\emit-rtl.c(904) : warning C4715: 'gen_lowpart': no todas las rutas de acceso de control devuelven un valor
+Generación de código finalizada

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>255.vortex: SPEC CPU2000 Benchmark Description</TITLE>
+<META GENERATOR="Cloyce+VIM 5.3">
+<META REVISION="$Id: 255.vortex.html 1393 2005-06-14 15:55:21Z cloyce $">
+</HEAD>
+
+<BODY>
+<CENTER><H1>255.vortex<BR>
+SPEC CPU2000 Benchmark Description File</H1></CENTER>
+
+<H2>Benchmark Name</H2>
+<P>255.vortex</P>
+<HR>
+
+<H2>Benchmark Author</H2>
+<P>Peter R. Homan</P>
+<HR>
+
+<H2>Benchmark Program General Category</H2>
+<P>Database</P>
+<HR>
+
+<H2>Benchmark Description</H2>
+
+  <P>VORTEx is a single-user object-oriented database transaction benchmark
+  which which exercises a system kernel coded in integer C.  The VORTEx
+  benchmark is a derivative of a full OODBMS that has been customized to
+  conform to SPEC CINT2000 (component measurement) guidelines.</P>
+
+  <P>The benchmark 255.vortex is a subset of a full object oriented database
+  program called VORTEx.  (VORTEx stands for "Virtual Object Runtime
+  EXpository.")</P>
+
+  <P>Transactions to and from the database are translated though a schema.  (A
+  schema provides the necessary information to generate the mapping of the
+  internally stored data block to a model viewable in the context of the
+  application.)</P>
+<HR>
+
+<H2>Input Description</H2>
+
+  <P>The schema as provided with the benchmark is pre-configured to manipulate
+  three different databases: mailing list, parts list, and geometric data.</P>
+
+  <P>Both little-endian and big-endian binaries for the schema are provided.</P>
+
+  <P>The benchmark builds and manipulates three separate, but inter-related
+  databases based on the schema.  The size of the database is scalable, and
+  for CINT2000 guidelines has been restricted to about 200 Mbytes.</P>
+
+  <P>VORTEx been modified to not commit transactions to memory in order to
+  remove input-output activity from this CINT2000 (component) benchmark.</P>
+
+  <P>The workload of VORTEx has been modeled after common object-oriented
+  database benchmarks with modifications to vary the mix of transactions.</P>
+
+  <P>The 255.vortex benchmark is run three different times, each time a
+  different mix of database inserts, deletes and lookups is used to
+  simulate different database usage patterns.</P>
+<HR>
+
+<H2>Output Description</H2>
+
+  <P>The benchmark 255.vortex is run using three different workloads
+  (simulating different dataset sizes and access patterns), with each run
+  producing one output file.  Each output file (vortex1.out, vortex2.out,
+  and vortex3.out) is a log of all transactions occurring during the
+  running of the benchmark, these transactions include creating entries in
+  the database, deleting entries, and entry lookups.</P>
+<HR>
+
+<H2>Programming Language</H2>
+<P>C</P>
+<HR>
+
+<H2>Known portability issues</H2>
+<UL>
+<LI>-DSPEC_CPU2000_LP64  If you are running in a 64-bit environment and using
+       a compiler that supports an LP64 programming model (where "long" and
+       pointers are 64-bits in size).
+</UL>
+<HR>
+
+<H2>Reference</H2>
+
+  <P><A HREF="http://www.vortex01.com">http://www.vortex01.com</A></P>
+<HR>
+Last updated: 8 November 1999
+</BODY>
+</HTML>

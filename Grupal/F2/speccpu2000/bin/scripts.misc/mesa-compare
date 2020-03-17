@@ -1,0 +1,92 @@
+#!/usr/bin/perl
+#
+# mesa-compare - output a pixmap of pixel differences in output from 177.mesa
+# No support is provided for this script.
+#
+# Copyright (C) 1999-2005 Standard Performance Evaluation Corporation
+#  All Rights Reserved
+#
+# $Id: mesa-compare 1416 2005-06-15 17:42:28Z cloyce $
+
+
+use Getopt::Std;
+
+getopts("t:c:o");
+
+$tolerance = (defined $opt_t)?$opt_t:7;
+$color     = (defined $opt_c)?$opt_c:"255,255,255";
+$overlay   = defined $opt_o;
+
+@vals = split(/,/,$color);
+if (@vals <= 1) {
+    $val[1] = $val[2] = $val[0];
+}
+$bad_color = sprintf "%3d %3d %3d ", $vals[0],$vals[1],$vals[2];
+if ($vals[0] > 0 || $vals[1] > 0 || $vals[2] > 0) {
+    $good_color = "  0   0   0 ";
+} else {
+    $good_color = "255 255 255 ";
+}
+$|=1;
+$cleol = `tput el`;
+$reference = shift;
+$lasttime = time;
+for (@ARGV) {
+    open(REF,  "<$reference") || die "Can't open file '$reference': $!\n";
+    open(NEW, "<$_")          || die "Can't open file '$_': $!\n";
+    open(OUT, ">$_.out")      || die "Can't open file '$_.out': $!\n";
+
+    $total_lines = `wc -l $_`;
+
+# First four lines are type, comment, size, quanta
+    $max_dif = $errors = $line = 0;
+    for ($i = 0; $i < 4; $i++) {
+	$line++;
+	scalar(<NEW>);
+	print OUT scalar(<REF>);
+    }
+
+    while (!eof(REF) && !eof(NEW)) {
+# Read in a line from each file
+	$line++;
+	@ref = split (" ", <REF>); 
+	@new = split (" ", <NEW>); 
+
+# Lines should be in tuples
+	while (@ref) {
+	    $bad = 0;
+	    @val = ();
+	    for ($i = 0; $i < 3; $i++) {
+		$ref = shift @ref;
+		$new = shift @new;
+		$dif = abs($ref - $new);
+		push (@val, $new);
+		if ($dif > $tolerance) {
+		    $max_dif = $dif if $dif > $max_dif;
+		    $bad = 1;
+		}
+	    }
+	    if ($bad) {
+		$errors++;
+		print OUT $bad_color;
+	    } else {
+		if ($overlay) {
+		    printf OUT "%3d %3d %3d ", $val[0], $val[1], $val[2];
+		} else {
+		    print OUT $good_color;
+		}
+	    }
+	}
+	print OUT "\n";
+	$time = time;
+	if ($time != $lasttime) {
+	    $lasttime=$time;
+	    printf "%6.2f %10d/%10d %10d %3d %s\r", $line/$total_lines*100, $line, $total_lines, $errors, $max_dif, "$_$cleol";
+	}
+    }
+    printf "%6.2f %10d/%10d %10d %3d %s\n", $line/$total_lines*100, $line, $total_lines, $errors, $max_dif, "$_$cleol";
+
+    close(OUT);
+    close(FILE);
+    close(NEW);
+}

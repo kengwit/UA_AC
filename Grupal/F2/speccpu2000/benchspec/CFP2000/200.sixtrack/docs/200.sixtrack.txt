@@ -1,0 +1,53 @@
+Benchmark Name: SIXTRACK
+
+Benchmark Author: Frank Schmidt
+
+Benchmark Program General Category: 
+         High Energy Nuclear Physics Accelerator Design
+
+Benchmark Description:
+         The function of the program is to track a variable number
+         of particles for a variable number of turns round a model
+         of a particle accelerator such as the Large Hadron Collider
+         (LHC) to check the Dynamic Aperture (DA) i.e. the long 
+         term stability of the beam.
+
+Input Description:
+         The input data defines the number of particles (60) to be 
+         tracked, the LHC accelerator components and geometry, the 
+         initial conditions of the accelerator and particles , and 
+         the number of turns to be tracked (variable according to 
+         required workload, test, train or ref).
+
+Output Description:
+         The output starts with a report of the input data 
+         describing the accelerator components and topology. The 
+         initial conditions and tracking parameters follow. Next 
+         come the results of the pre-processing including the closed 
+         orbit and a check on the symplectic condition. The initial 
+         and final co-ordinates of each particle are then reported, 
+         with a possible intermediate report every 50,000 turns.
+
+         A binary file is written, one per particle, reporting the 
+         initial, intermediate, and final co-ordinates.
+          
+Programming Language: Fortran 77
+
+Known portability issues: none
+
+Reference:
+
+ http://wwwslap.cern.ch/lhc/dynap/  
+  A general introduction to Dynamic Aperture and tracking.
+
+ http://wwwslap.cern.ch/~frs/sixtrack.html 
+  SIXTRACK -- Single Particle Tracking Code Documentation, Manuals, 
+             Mathematical Formalism, Tracking Studies SIXTRACK source 
+             code Tracking Examples 
+
+ http://wwwinfo.cern.ch/pdp/pa/nap/Welcome.html 
+  The Numerical Accelerator Project NAP.
+
+ http://wwwslap.cern.ch/lhc/dynap/refer/node1.html 
+  Lists various relevant reports.
+

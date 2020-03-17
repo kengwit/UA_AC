@@ -1,0 +1,105 @@
+
+          Document Title: techsupport.txt
+
+                 Subject: Contacting SPEC for SPEC CPU2000 Technical Support
+
+            Last updated: 29 Oct 2001 jh
+                          (To check for possible updates to this document,
+                          please see http://www.spec.org/cpu2000 )
+
+------------------------------------------------------------------------
+
+
+
+        Contents
+        --------
+
+           Introduction
+           Before contacting SPEC
+           Contact Information
+           Useful information to include when contacting SPEC
+           Limitations on support
+
+
+
+Introduction
+------------
+
+SPEC can provide limited technical support for:
+
+- Installing CPU2000 on a UNIX or Windows NT system.
+- Building the CPU2000 tools.
+- Using the CPU2000 tools to run the benchmarks.
+- Updates for known issues.
+
+
+Before contacting SPEC
+----------------------
+
+Before contacting SPEC for support, it is suggested that you check 
+the web site:
+
+        http://www.spec.org/cpu2000 
+
+for a list of questions that are frequently asked by users of the 
+benchmark suite.
+
+Also, please see the section "Troubleshooting" in 
+
+       $SPEC/docs/config.html (Unix)   or
+       %SPEC%\docs.nt\config.html (NT)
+
+
+Contact Information
+-------------------
+
+SPEC CPU2000 technical support can be reached by sending email to:
+
+     cpu2000support@spec.org
+
+Additional/updated contact information can also be found at SPEC's
+Web Site at: http://www.spec.org
+
+
+Useful information to include when contacting SPEC
+--------------------------------------------------
+
+The following information should be provided to SPEC when requesting 
+help with an issue:
+
+- The revision of the benchmark suite that you're using ('runspec -V' output)
+- The specific nature of the problem.
+- Type of hardware/name of system being used.
+- Name and version of the operating system.
+- Name and version of the compiler.
+- If a compilation issue:
+	- list of flags being used
+	- check if problems exist at lowest level of optimization.
+- Has this issue been tried or seen on other systems?
+
+Additional details related to the problem are also appreciated.
+
+
+
+Limitations on support
+----------------------
+
+Note that while SPEC is able to provide technical assistance with its
+benchmarks, SPEC does not have the ability to provide support
+on other vendor's products. Examples of support that SPEC can not
+provide include:
+
+   - Hardware installation issues.
+   - Hardware problems.
+   - Non-SPEC software installation issues.
+   - Non-SPEC software problems.
+   - Hardware specific tuning.
+
+If known, SPEC will provide a pointer to the appropriate source of
+information.  Otherwise for these and similar issues, it is suggested 
+that the hardware or software vendor be contacted directly.
+
+-----------------------------------------------------------------------------
+Copyright (C) 1999-2000 Standard Performance Evaluation Corporation
+All Rights Reserved
+

@@ -1,0 +1,25 @@
+Copyright (C) 1989-2000
+Standard Performance Evaluation Corporation (SPEC) 
+SPEC CPU2000: Component CPU Integer (CINT2000) and Component CPU Floating  
+Point (CFP2000) Release 2000
+ 
+This media contains benchmarks acquired from several sources who 
+understand and agree with SPEC's goal of creating fair and objective 
+benchmarks to measure computer performance. 
+ 
+The source code and tools are provided to the user or 
+company under the license agreement for the SPEC Benchmark Suite 
+for this media.
+
+
+Regarding the SPEC License
+
+The SPEC license contains the terms and conditions of your agreement 
+with SPEC and must be carefully read before opening the benchmark 
+program and accompanying documentation (collectively identified as the 
+"materials"). The license represents the entire agreement between you 
+and SPEC concerning the materials.  This supercedes any prior proposal, 
+representations or understanding between the parties.  By opening the 
+package containing the materials, you have accepted the terms of the 
+license, including that of properly following the SPEC Run and Reporting 
+Rules.

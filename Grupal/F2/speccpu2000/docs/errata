@@ -1,0 +1,221 @@
+          Document Title: errata.txt
+
+                 Subject: Known Problems in SPEC CPU2000
+
+            Last updated: 16 Sep 2005 09:00 cds
+                          (To check for possible updates to this document,
+                          please see http://www.spec.org/cpu2000/docs ) 
+
+------------------------------------------------------------------------
+
+This document describes known problems in SPEC CPU2000 V1.3,
+and solutions for problems documented in previous versions.
+
+Note: When updating this document, please do not ever re-use problem 
+numbers.
+
+------------------------------------------------------------------------
+OPEN PROBLEM REPORTS
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+  Problem number: 13 
+
+ Problem summary: (next available problem number)
+
+         Details: 
+                  
+      Workaround: 
+------------------------------------------------------------------------
+  Problem number: 12 
+
+ Problem summary: printkids.pl is not properly relocated
+
+         Details: Because of an error in the relocate script,
+                  printkids.pl is not updated with the correct
+                  location of 'specperl'.  When run, it is likely
+                  that an error such as "bad interpreter" or "file
+                  not found" will be generated.
+                  
+      Workaround: Instead of "printkids.pl" run
+                  "specperl $SPEC/bin/printkids.pl"
+------------------------------------------------------------------------
+  Problem number: 11 
+
+ Problem summary: 'runspec --test' on Windows fails the die_exit tests
+
+         Details: A cut-down version of the Perl test suite can be run
+                  by typing:
+
+                    runspec --test
+
+                  Normally, all of these tests should pass.  On Windows
+                  systems, the die_exit tests will fail.
+                  
+      Workaround: Don't worry, be happy.  It doesn't affect the operation
+                  of the tools.
+
+------------------------------------------------------------------------
+  Problem number: 7
+
+ Problem summary: --output_format limitation on Windows
+
+         Details: On Unix systems, a list of formats can be requested
+                  by typing (for example):
+
+                     runspec --output_format=asc,ps
+                     rawformat -o ps,pdf,html
+
+                  On Windows systems, only one format may be selected.
+
+      Workaround: Either select the desired formats in your config
+                  file, run rawformat multiple times (once for each
+                  format), or get all of the outputs by using "-o all".
+
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+CLOSED PROBLEM REPORTS
+------------------------------------------------------------------------
+  Problem number: 8 
+
+ Problem summary: "perfect.in - tree removal aborted"
+
+         Details: On Windows/NT or Windows 2000, when building the
+                  benchmark 253.perlbmk, the following message will
+                  sometimes be seen:
+
+                     Couldn't unlink
+                     [...]CINT2000/253.perlbmk/run/00000001/perfect.in -
+                     tree removal aborted
+
+                  This message comes from the CPU2000 tools (specifically, 
+                  benchmark.pm line 965) and indicates that a file could 
+                  not be removed.  
+                  
+      Workaround: None; the warning may safely be ignored.
+------------------------------------------------------------------------
+  Problem number: 6
+
+ Problem summary: PDFlib warning on NT 
+
+         Details: When pdf output is selected on Windows/NT (or Windows
+                  2000), a warning is printed:
+
+                     PDFlib warning: Symbol font Symbol doesn't use
+                     builtin encoding
+
+                  This message indicates that when the pdf output was
+                  produced, the copyright symbol was not printed. 
+                  Although the symbol is missing, the word "Copyright"
+                  still appears.
+
+      Workaround: Fixed in V1.3; PDFlib is no longer used
+
+------------------------------------------------------------------------
+  Problem number: 10
+
+ Problem summary: The Linux mount command should include -o exec
+
+      Workaround: Fixed in the V1.2 install guide 
+------------------------------------------------------------------------
+  Problem number: 9 
+
+ Problem summary: The installation procedure on Unix is more
+                  quiet than the installation guide claims.
+
+      Workaround: Fixed in the V1.2 install guide
+------------------------------------------------------------------------
+ Problem number: 5
+
+Problem summary: --max_active_compares cannot exceed --users
+
+        Details: If you issue a runspec command with --max_active_compares
+		 set to a value larger than the number of users being
+		 tested, the tools may incorrectly report that a benchmark
+		 got the wrong answer (miscompared).
+
+     Resolution: Fixed for SPEC CPU2000 V1.1
+------------------------------------------------------------------------
+ Problem number: 4
+
+Problem summary: runspec crashes quickly on Alpha/NT, trying to find PDF
+
+        Details: On Alpha/NT, the runspec command crashes soon after
+		 starting up.  The command window shows:
+
+		    Identifying output formats...asc...html...  
+
+		 and then a dialog box is raised that says
+
+                    specperl.exe - Application Error
+                    The instruction at "0x011a8e04" referenced memory 
+		    at "0x00000628".  The memory could not be "read".
+
+     Resolution: This problem is believed fixed for SPEC CPU2000 V1.1;
+                 if it should recur, please apply the workaround below.
+
+     Workaround: Disable PDF and Postscript output by doing:
+     
+		     cd %SPEC%\bin
+		     rename PSPDF.pm hideme_PSPDF.pm 
+     
+                 Runspec will then be able to initialize correctly 
+		 (and other forms of output will work).  
+------------------------------------------------------------------------
+ Problem number: 3
+
+Problem summary: runspec -V does not find specmake etc. on NT
+
+        Details: The command "runspec -V" provides detailed information
+		 about versions of tools in the SPEC CPU2000 suite.  
+		 However, when used on NT, it does not correctly find 
+		 specinvoke, specmake, specgzip, and specperl.
+
+     Workaround: You can find out the versions of these tools by hand.
+		 Try saying:
+		      shrc
+		      specinvoke -v
+		      specmake -v
+		      specgzip -h
+		      specperl -v
+
+     Resolution: Fixed for SPEC CPU2000 V1.1
+-----------------------------------------------------------------------------
+ Problem number: 2
+
+Problem summary: --username does not work as documented
+
+        Details: The CPU2000 suite provides limited support for multiple
+		 users, as described in runspec.txt.  It is also 
+		 documented there that the switch "--username" can
+		 be used to change the value that would otherwise be
+		 defaulted from the current process.
+		     Nevertheless, at this time the value is always
+		 taken from the process.  That is, if a user is logged
+		 in as "michael", but says runspec --username=paula,
+		 the run directories will still be tagged as michael's.
+
+     Resolution: Fixed for V1.1.  Support is still limited (e.g. users
+                 still share certain directories), but the features 
+                 described in runspec.txt now appear to work.
+------------------------------------------------------------------------
+ Problem number: 1
+
+Problem summary: Rate from speed sometimes loses reportable attribute.
+
+        Details: The CPU2000 run rules specify that it is legal to
+		 generate a single-user rate result from a single-user
+		 speed run.  See runrules.txt 4.3.2 and the section
+		 on rawformat in utility.txt.
+		     However, when the instructions in utility.txt
+                 are followed, the output files sometimes do not preserve 
+		 the reportable attribute.  That is, reports say "INVALID
+		 RUN".  The problem has been seen only when attempting to
+		 format base-only runs; no problems are known for 
+		 rawfiles that contain both base and peak metrics.
+
+     Resolution: Fixed for SPEC CPU2000 V1.1
+------------------------------------------------------------------------
+
+

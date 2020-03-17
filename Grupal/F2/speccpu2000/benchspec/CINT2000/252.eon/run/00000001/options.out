@@ -1,0 +1,2 @@
+"COMP: cl -c -Fooptions.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP"
+"LINK: cl       /Ox /GL /GX /GR       -Feoptions"

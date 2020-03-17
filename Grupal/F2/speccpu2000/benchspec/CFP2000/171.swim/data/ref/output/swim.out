@@ -1,0 +1,4009 @@
+  SPEC benchmark 171.swim
+  
+ NUMBER OF POINTS IN THE X DIRECTION    1334
+ NUMBER OF POINTS IN THE Y DIRECTION    1334
+ GRID SPACING IN THE X DIRECTION      25000.
+ GRID SPACING IN THE Y DIRECTION      25000.
+ TIME STEP                               10.
+ TIME FILTER PARAMETER                 0.001
+ NUMBER OF ITERATIONS                    800
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1359E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1359E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1358E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1358E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1358E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1358E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1358E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1358E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1358E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1358E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1358E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1358E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1358E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1358E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1358E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1358E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1358E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1358E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1358E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1358E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+
+
+ Pcheck =   0.8898E+11
+ Ucheck =   0.1357E+06
+ Vcheck =   0.1359E+06
+

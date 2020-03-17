@@ -1,0 +1,9 @@
+running commands in speccmds.cmd 1 times
+runs started at 1584203344, 603000000, Sat Mar 14 17:29:04 2020
+run 1 started at 1584203344, 603000000, Sat Mar 14 17:29:04 2020
+child started: 0, 1584203344, 603000000, pid=7976, '../00000003/gap_base.vc7.x87.exe -l ./ -q -m 192M'
+child finished: 0, 1584203367, 102000000, sec=22, nsec=499000000, pid=7976, rc=0
+run 1 finished at: 1584203367, 102000000, Sat Mar 14 17:29:27 2020
+run 1 elapsed time: 22, 499000000, 22.499000000
+runs finished at 1584203367, 102000000, Sat Mar 14 17:29:27 2020
+runs elapsed time: 22, 499000000, 22.499000000

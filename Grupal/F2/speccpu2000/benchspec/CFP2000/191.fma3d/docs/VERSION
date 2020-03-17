@@ -1,0 +1,67 @@
+Benchmark name: 191.fma3d
+Date of last modification: 01/06/99
+New run required by modification: Yes
+
+Log:
+
+4/99	Bodo Parady
+	Increased runtime to over 2000sec and size to 100MB
+	Used old ref as train input.
+
+3/99	Bodo Parady
+	Increased runtime by 60%
+
+2/99	Bodo Parady
+	Fixed reltol and abstol in object.pm
+	Fixed LTYPE in material_33.f90 to be at end of block 
+
+1/99	Bodo Parady
+	Added Sam Key's changes for portability and 
+	to eliminate loop accesses outside of boudaries.
+
+12/98	Bodo Parady
+	Changed a bunch of things.  Sam went in and made
+	all the reals real*8 with a kind statement.
+	He got rid of array out of bounds refs.
+	There are new input and output files.  
+
+11/98	Bodo Parady
+	Added  the folloing to output.c
+        Total_Mass_Xcm = 0.0
+        Total_Mass_Ycm = 0.0
+        Total_Mass_Zcm = 0.0
+
+11/98	John Henning
+	Changed Stop FMA3D to STOP
+
+10/98	Bodo Parady
+	Changed "body_force.90" to "body_force.f90"
+	Removed the dangling .f90 just before lsold, .f90 just before sort
+
+10/98	Bodo Parady
+	Changed DELTA in input to -4 to up runtimes per John Henning
+
+10/98
+	Bodo Parady
+	Removed all instances of STATE_VARIABLES(1) and changed
+	them to STATE_VARIABLES(*)
+	Comment out fma1.f90: Line 10308 "WRITE (MSG1,'(I8)') NEXTA"
+	Comment out fma2.f90: line 2168
+
+8/98	Bodo Parady
+	Changed FIRST to LOGICAL SAVE and HEADLINE to SAVE
+	Request of Ryan Border
+	Added Reltol per John Henning
+	Changed train output based on testing
+
+7/98	Bodo Parady
+	Changed references to (1) to (*) for call target arrays
+
+5/98    Bodo Parady
+	Added Sam Key's version G.  Changed output files to conform
+	to Sam's suggestion.
+	Eliminated all system time information from output.
+
+
+
+

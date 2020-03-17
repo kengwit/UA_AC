@@ -1,0 +1,11 @@
+November 1997
+	Leslie A. Barnes
+		Initial version.
+
+May 1998
+        Leslie A. Barnes
+                Change input to try and remove problems with constant propagation
+	        Change lapak.f to lapak.f90
+                Change "double precision" to "real*8"
+                Change "double complex" to "complex*16"
+

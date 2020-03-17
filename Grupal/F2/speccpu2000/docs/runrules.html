@@ -1,0 +1,1839 @@
+<html>
+<head>
+<title>SPEC CPU2000 Run and Reporting Rules</title>
+<!-- $Id: runrules.html 1393 2005-06-14 15:55:21Z cloyce $ -->
+</head>
+<body bgcolor=white>
+
+<pre>
+
+
+
+
+</pre>
+<center>
+<h1>SPEC CPU2000 Run and Reporting Rules</h1>
+<h3>SPEC Open Systems Group</h3>
+
+
+<p><b>ABSTRACT</b>
+<br>This document provides guidelines required to build, run,
+and report on the SPEC CPU2000 benchmarks.
+</center>
+<pre>
+
+</pre>
+
+<p><b>Edit history since V1.1: </b>
+<ul>
+<li>15-Mar-2001: Clarify requirement that <a href=#toc_1.4><font color=blue>estimates</font></a> be flagged 
+<li>15-Mar-2001: Explain that <a href=#toc_1.5><font color=blue>submission to SPEC</font></a> is encouraged but not required.
+<li>15-Mar-2001: Expand the discussion of <a href=#toc_2.2.7><font color=blue>safety</font></a> in baseline
+<li>15-Mar-2001: Require that <a href=#toc_4.2.2><font color=blue>MHz</font></a> be a numeric field
+<li>15-Mar-2001: Clarify <a href=#toc_4.2.2><font color=blue>single-CPU</font></a> testing of SMP systems
+<li>15-Mar-2001: Clarify disclosure requirements for <a href=#toc_4.2.2><font color=blue>memory</font></a>
+<li>15-Mar-2001: Clarify requirements for <a href=#toc_4.6><font color=blue>disclosure</font></a> when not submitted to SPEC.
+<li>15-Mar-2001: HTML format
+<li>22-Apr-2001: Minor HTML cleanup; add history
+<li>22-Oct-2001: Add <a href=#toc_4.7><font color=blue>Fair Use</font></a> rule. 
+<li>22-Oct-2001: Clarify that the rule about use of names, <a href=#toc_2.1.1><font color=blue>2.1.1</font></a>, 
+                 includes preprocessor identifiers.
+<li>22-Oct-2001: Move the bulk of the portability rule from <a href=#toc_2.2.6.3><font color=blue>2.2.6.3</font></a>,
+                 where it appeared to apply only to base, to the more general section 2.1, as 
+                 <a href=#toc_2.1.5><font color=blue>2.1.5</font></a>.
+<li>22-Oct-2001: Change title of section <a href=#toc_2.1><font color=blue>2.1</font></a> to better reflect its contents.  
+<li>22-Oct-2001: Make stronger statement about deviations from rules in academic/research usage, in rule 
+                 <a href=#toc_4.5><font color=blue>4.5</font></a>.  
+<li>22-Oct-2001: Minor HTML fixups.
+<li>22-Oct-2001: Proposed version for V1.2 (approved 30-Oct)
+</ul>
+
+<p>(To check for possible updates to this document,
+please see <a href=http://www.spec.org/cpu2000/>http://www.spec.org/cpu2000/</a>  )
+
+<pre>
+</pre>
+<hr>
+<pre>
+</pre>
+
+<table border=0>
+<tr><td colspan=2><h2>Overview</h2>
+Clicking one of the following will take you to the detailed table of contents for that section:</td></tr>
+<tr><td align=right></td><td><a href=#Dtoc_purp><font color=blue>Purpose</font></a></td></tr>
+<tr><td align=right>1.</td><td><a href=#Dtoc_1.><font color=blue>General Philosophy</font></a></td></tr>
+<tr><td align=right>2.</td><td><a href=#Dtoc_2.0><font color=blue>Building SPEC CPU2000</font></a></td></tr>
+<tr><td align=right>3.</td><td><a href=#Dtoc_3.><font color=blue>Running SPEC CPU2000</font></a></td></tr>
+<tr><td align=right>4.</td><td><a href=#Dtoc_4.><font color=blue>Results Disclosure</font></a></td></tr>
+<tr><td align=right>5.</td><td><a href=#Dtoc_5.><font color=blue>Run Rule Exceptions</font></a></td></tr>
+</table>
+
+<pre>
+</pre>
+<hr>
+<pre>
+</pre>
+
+
+<table border=0>
+<tr> <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> </tr>
+<tr> <td colspan=4><h2>Detailed Contents</h2></td></tr>
+
+<tr><a name=Dtoc_purp>
+                         <td colspan=4><a href=#toc_purp  ><font color=blue><big>Purpose                                      </big></font></a></td>
+</a></tr>
+
+<tr> <td>&nbsp;</td></tr>
+<tr><a name=Dtoc_1.>
+                         <td colspan=4><a href=#toc_1.    ><font color=blue><big>1.  General Philosophy                       </big></font></a></td>
+</a></tr>
+<tr> <td></td>           <td colspan=3><a href=#toc_1.1   ><font color=blue>1.1 Objective tests, provided in source code form </font></a></td></tr>
+<tr> <td></td>           <td colspan=3><a href=#toc_1.2   ><font color=blue>1.2 Conventions for optimization                  </font></a></td></tr>
+<tr> <td></td>           <td colspan=3><a href=#toc_1.3   ><font color=blue>1.3 SPEC may adapt the suites                     </font></a></td></tr>
+<tr> <td></td>           <td colspan=3><a href=#toc_1.4   ><font color=blue>1.4 Estimates are allowed                         </font></a></td></tr>
+<tr> <td></td>           <td colspan=3><a href=#toc_1.5   ><font color=blue>1.5 Submission to SPEC is encouraged              </font></a></td></tr>
+
+
+<tr> <td>&nbsp;</td></tr>
+<tr><a name=Dtoc_2.0>
+<tr>                     <td colspan=4><a href=#toc_2.0   ><font color=blue><big>2.0 Building SPEC CPU2000                 </big></font></a></td>
+</a></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.0.1 ><font color=blue>2.0.1 Peak and base builds                     </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.0.2 ><font color=blue>2.0.2 Runspec must be used                     </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.0.3 ><font color=blue>2.0.3 The runspec build environment            </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.0.4 ><font color=blue>2.0.4 Continuous Build requirement             </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.0.5 ><font color=blue>2.0.5 Changes to the runspec build environment </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.0.6 ><font color=blue>2.0.6 Cross-compilation allowed                </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.0.7 ><font color=blue>2.0.7 Individual builds allowed                </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.0.8 ><font color=blue>2.0.8 Tester's assertion of equivalence 
+                                                                                  between build types                      </font></a></td></tr>
+
+<tr> <td></td>           <td colspan=3><a href=#toc_2.1   ><font color=blue>2.1 General Rules for Selecting Compilation
+                                                                                Flags                                      </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.1.1 ><font color=blue>2.1.1 Cannot use names                         </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.1.2 ><font color=blue>2.1.2 Limitations on library substitutions     </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.1.3 ><font color=blue>2.1.3 Feedback directed optimization is allowed</font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.1.4 ><font color=blue>2.1.4 Limitations on size changes              </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.1.5 ><font color=blue>2.1.5 Portability flags                        </font></a></td></tr>
+
+<tr> <td></td>           <td colspan=3><a href=#toc_2.2   ><font color=blue>2.2 Base Optimization Rules                    </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.2.1 ><font color=blue>2.2.1 Safe                                     </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.2.2 ><font color=blue>2.2.2 Same for all                             </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.2.3 ><font color=blue>2.2.3 Feedback directed optimization is 
+                                                                                  allowed in base                          </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.2.4 ><font color=blue>2.2.4 Assertion flags may NOT be used in base  </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.2.5 ><font color=blue>2.2.5 Floating point reordering allowed        </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.2.6 ><font color=blue>2.2.6 Only 4 optimization switches             </font></a></td></tr>
+<tr> <td></td> <td></td> <td></td> <td><a href=#toc_2.2.6.1  ><font color=blue>2.2.6.1 Unit of definition                  </font></a></td></tr>
+<tr> <td></td> <td></td> <td></td> <td><a href=#toc_2.2.6.2  ><font color=blue>2.2.6.2 Delimited lists                     </font></a></td></tr>
+<tr> <td></td> <td></td> <td></td> <td><a href=#toc_2.2.6.3  ><font color=blue>2.2.6.3 Portability flags in base           </font></a></td></tr>
+<tr> <td></td> <td></td> <td></td> <td><a href=#toc_2.2.6.4  ><font color=blue>2.2.6.4 ANSI Compliance                     </font></a></td></tr>
+<tr> <td></td> <td></td> <td></td> <td><a href=#toc_2.2.6.5  ><font color=blue>2.2.6.5 Feedback invocation in Pass 1 
+                                                                                       and Pass 2                          </font></a></td></tr>
+<tr> <td></td> <td></td> <td></td> <td><a href=#toc_2.2.6.6  ><font color=blue>2.2.6.6 Location flags                      </font></a></td></tr>
+<tr> <td></td> <td></td> <td></td> <td><a href=#toc_2.2.6.7  ><font color=blue>2.2.6.7 Warnings, verbosity, output flags   </font></a></td></tr>
+<tr> <td></td> <td></td> <td></td> <td><a href=#toc_2.2.6.8  ><font color=blue>2.2.6.8 Entire compilation system is counted</font></a></td></tr>
+<tr> <td></td> <td></td> <td></td> <td><a href=#toc_2.2.6.9  ><font color=blue>2.2.6.9 Assertion of ANSI compliance        </font></a></td></tr>
+<tr> <td></td> <td></td> <td></td> <td><a href=#toc_2.2.6.10 ><font color=blue>2.2.6.10 Hidden switches                    </font></a></td></tr>
+<tr> <td></td> <td></td> <td></td> <td><a href=#toc_2.2.6.11 ><font color=blue>2.2.6.11 Installation-provided switches     </font></a></td></tr>
+<tr> <td></td> <td></td> <td></td> <td><a href=#toc_2.2.6.12 ><font color=blue>2.2.6.12 Switches to declare 64-bit mode    </font></a></td></tr>
+<tr> <td></td> <td></td> <td></td> <td><a href=#toc_2.2.6.13 ><font color=blue>2.2.6.13 Cross-module optimization          </font></a></td></tr>
+<tr> <td></td> <td></td> <td></td> <td><a href=#toc_2.2.6.14 ><font color=blue>2.2.6.14 Base build environment             </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_2.2.7 ><font color=blue>2.2.7 Safety and Standards Conformance         </font></a></td></tr>
+
+ 
+<tr> <td>&nbsp;</td></tr>
+<tr><a name=Dtoc_3.>
+                         <td colspan=4><a href=#toc_3.    ><font color=blue><big>3.  Running SPEC CPU2000              </big></font></a></td>
+</a></tr>
+<tr> <td></td>           <td colspan=3><a href=#toc_3.1   ><font color=blue>3.1 System Configuration                   </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_3.1.1 ><font color=blue>3.1.1 File Systems                         </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_3.1.2 ><font color=blue>3.1.2 System State                         </font></a></td></tr>
+<tr> <td></td>           <td colspan=3><a href=#toc_3.2   ><font color=blue>3.2 Additional Rules for Running SPECrate  </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_3.2.1 ><font color=blue>3.2.1 Number of copies in peak             </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_3.2.2 ><font color=blue>3.2.2 Number of copies in base             </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_3.2.3 ><font color=blue>3.2.3 Single file system                   </font></a></td></tr>
+<tr> <td></td>           <td colspan=3><a href=#toc_3.3   ><font color=blue>3.3 Continuous Run Requirement             </font></a></td></tr>
+<tr> <td></td>           <td colspan=3><a href=#toc_3.4   ><font color=blue>3.4 Run-time environment                   </font></a></td></tr>
+<tr> <td></td>           <td colspan=3><a href=#toc_3.5   ><font color=blue>3.5 Basepeak                               </font></a></td></tr>
+
+<tr> <td>&nbsp;</td></tr>
+<tr><a name=Dtoc_4.>
+                         <td colspan=4><a href=#toc_4.    ><font color=blue><big>4.  Results Disclosure                </big></font></a></td>
+</a></tr>
+<tr> <td></td>           <td colspan=3><a href=#toc_4.1   ><font color=blue>4.1 Rules regarding availability date and 
+                                                                                systems not yet shipped                </font></a></td></tr>
+<tr> <td></td>           <td colspan=3><a href=#toc_4.2   ><font color=blue>4.2 Configuration Disclosure               </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_4.2.1 ><font color=blue>4.2.1 System Identification                </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_4.2.2 ><font color=blue>4.2.2 Hardware Configuration               </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_4.2.3 ><font color=blue>4.2.3 Software Configuration               </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_4.2.4 ><font color=blue>4.2.4 Tuning Information                   </font></a></td></tr>
+<tr> <td></td>           <td colspan=3><a href=#toc_4.3   ><font color=blue>4.3 Test Results Disclosure                </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_4.3.1 ><font color=blue>4.3.1 Speed Metrics                        </font></a></td></tr>
+<tr> <td></td> <td></td> <td colspan=2><a href=#toc_4.3.2 ><font color=blue>4.3.2 Throughput Metrics                   </font></a></td></tr>
+<tr> <td></td>           <td colspan=3><a href=#toc_4.4   ><font color=blue>4.4 Metric Selection                       </font></a></td></tr>
+<tr> <td></td>           <td colspan=3><a href=#toc_4.5   ><font color=blue>4.5 Research and Academic usage of CPU2000 </font></a></td></tr>
+<tr> <td></td>           <td colspan=3><a href=#toc_4.6   ><font color=blue>4.6 Required Disclosures                   </font></a></td></tr>
+<tr> <td></td>           <td colspan=3><a href=#toc_4.7   ><font color=blue>4.7 Fair Use                               </font></a></td></tr>
+
+<tr> <td>&nbsp;</td></tr>
+<tr><a name=Dtoc_5.>
+                         <td colspan=4><a href=#toc_5.    ><font color=blue><big>5.  Run Rule Exceptions               </big></font></a></td>
+</a></tr>
+</table>
+<pre>
+
+</pre>
+
+<hr>
+<a name=toc_purp><h2>Purpose</h2></a>
+
+<p>This document specifies how the benchmarks in the CPU2000 suites are
+to be run for measuring and publicly reporting performance results, to
+ensure that results generated with the suites are meaningful, 
+comparable to other generated results, and reproducible (with 
+documentation covering factors pertinent to reproducing the results). 
+
+<p>Per the SPEC license agreement, all results publicly disclosed must
+adhere to the SPEC Run and Reporting Rules, or be clearly marked as
+estimates.
+
+<p>The following basics are expected: 
+
+<ul>
+<li>Adherence to the SPEC general run rule philosophy, including:
+
+   <ul>
+   <li>general availability of all components within 3 months of  
+   publication.
+
+   <li>providing a suitable environment for C/C++/Fortran programs.
+   </ul>
+
+<li>Use of the SPEC tools for all published results, including:
+
+   <ul>
+   <li>compilation of the benchmark with the SPEC tools.
+
+   <li>requiring the median of at least three runs of each benchmark
+   to help promote stability and reproducibility.
+
+   <li>requiring that a publishable result be generated with one
+   invocation of the SPEC tools.
+
+   <li>validating the benchmark output with the SPEC-provided 
+   validation output to ensure that the benchmark ran to 
+   completion and generated correct results. 
+   </ul>
+
+<li>Adherence to the criteria for flag selection, including:
+
+   <ul>
+   <li>proper use of feedback directed optimization for both base and 
+   peak measurements.
+
+   <li>the use of only four optimization options (including 
+   preprocessor, compiler and linker flags) for base 
+   measurements.
+   </ul>
+
+<li>Availability of a full disclosure report
+
+<li>Clear distinction between measurements and estimates
+</ul>
+
+<p>Each of these points are discussed in further detail below. 
+
+<p>Suggestions for improving this run methodology should be made to the
+SPEC Open Systems Group (OSG) for consideration in future releases. 
+
+
+
+<hr>
+<a name=toc_1.><h2>1. General Philosophy</h2></a>
+
+<a name=toc_1.1><h3>1.1 Objective tests, provided in source code form</h3></a>
+
+<p>SPEC believes the user community will benefit from an objective series
+of tests which can serve as common reference and be considered as part
+of an evaluation process.  
+
+<p>SPEC CPU2000 provides benchmarks in the form of source code, which are
+compiled according to the rules contained in this document.   It is
+expected that a tester can obtain a copy of the suites, install the
+hardware, compilers, and other software described in another tester's
+result disclosure, and reproduce the claimed performance (within a
+small range to allow for run-to-run variation).
+
+<p>Benchmarks are provided in two suites: an integer suite, known as
+CINT2000, and a floating point suite, known as CFP2000.
+
+<a name=toc_1.2><h3>1.2 Conventions for optimization</h3></a>
+<p>SPEC is aware of the importance of optimizations in producing the best
+system performance.  SPEC is also aware that it is sometimes hard to
+draw an exact line between legitimate optimizations that happen to
+benefit SPEC benchmarks and optimizations that specifically target the
+SPEC benchmarks.  However, with the list below, SPEC wants to increase
+awareness of implementers and end users to issues of unwanted
+benchmark-specific optimizations that would be incompatible with
+SPEC's goal of fair benchmarking. 
+
+<p>To ensure that results are relevant to end-users, SPEC expects that
+the hardware and software implementations used for the running the
+SPEC benchmarks adhere to following conventions: 
+
+<ul>
+<li><p>Hardware and software used to run the CINT2000/CFP2000 benchmarks
+must provide a suitable environment for running typical C, C++, 
+or Fortran programs. </p>
+
+<li><p>Optimizations must generate correct code for a class of programs,
+where the class of programs must be larger than a single SPEC
+benchmark or SPEC benchmark suite.  This also applies to assertion
+flags that may be used for peak compilation measurements (see
+<a href=#toc_2.2.4><font color=blue>section&nbsp;2.2.4</font></a>). </p>
+
+<li><p>Optimizations must improve performance for a class of programs
+where the class of programs must be larger than a single SPEC
+benchmark or SPEC benchmark suite. </p>
+
+<li><p>The vendor encourages the implementation for general use.</p>
+
+<li><p>The implementation is generally available, documented and supported 
+by the providing vendor. </p>
+</ul>
+
+<p>In cases where it appears that the above guidelines have not been
+followed, SPEC may investigate such a claim and request that the
+offending optimization (e.g. a SPEC-benchmark specific pattern
+matching) be backed off and the results resubmitted.  Or, SPEC may
+request that the vendor correct the deficiency (e.g. make the
+optimization more general purpose or correct problems with code
+generation) before submitting results based on the optimization. 
+
+<a name=toc_1.3><h3>1.3 SPEC may adapt the suites</h3></a>
+
+<p>The SPEC Open Systems Group reserves the right to adapt the CINT2000
+and CFP2000 suites as it deems necessary to preserve its goal of fair
+benchmarking (e.g. remove a benchmark, modify benchmark code or
+workload, etc).  If a change is made to a suite, SPEC will notify the
+appropriate parties (i.e. members and licensees).  SPEC may
+redesignate the metrics (e.g. changing the metric from SPECfp2000 to
+SPECfp2000a).  In the case that a benchmark is removed, SPEC reserves
+the right to republish in summary form adapted results for previously
+published systems, converted to the new metric.  In the case of other
+changes, such a republication may necessitate re-testing and may
+require support from the original test sponsor. 
+
+<a name=toc_1.4><h3>1.4 Estimates are allowed</h3></a>
+
+<p>SPEC CPU2000 metrics may be estimated.  All estimates must be clearly
+identified as such.  Licensees are encouraged to give a rationale or
+methodology for any estimates, and to publish actual SPEC CPU2000
+metrics as soon as possible.  SPEC requires that every use of an
+estimated number be flagged, rather than burying an asterisk at the
+bottom of a page.  For example, say something like this:
+
+<pre>      The JumboFast will achieve estimated performance of 
+          Model 1   SPECint2000 50 est.
+                    SPECfp2000  60 est.
+          Model 2   SPECint2000 70 est.
+                    SPECfp2000  80 est.
+</pre>
+
+<a name=toc_1.5><h3>1.5 Submission to SPEC is encouraged </h3></a>
+
+SPEC encourages the submission of results for review by the relevant
+subcommittee and subsequent publication on SPEC's web site 
+(<a href=http://www.spec.org/>http://www.spec.org/</a>).  
+SPEC uses a peer-review process prior to publication,
+in order to improve consistency in the application and interpretation 
+of these run rules.  
+
+<p>Submission to SPEC's review process is not required.  Testers may 
+publish rule-compliant results independently.  No matter where 
+published, all results publicly disclosed must adhere to the 
+SPEC Run and Reporting Rules, or be clearly marked as estimates.  
+(See also rules 
+<a href=#toc_4.5><font color=blue>4.5</font></a> 
+and 
+<a href=#toc_4.6><font color=blue>4.6</font></a>, 
+below.)
+
+
+
+<hr>
+<a name=toc_2.0><h2>2.0 Building SPEC CPU2000</h2></a>
+
+<p>SPEC has adopted a set of rules defining how SPEC CPU2000 benchmark
+suites must be built and run to produce peak and base metrics. 
+
+<a name=toc_2.0.1><h3>2.0.1 Peak and base builds</h3></a>
+
+<p>"Peak" metrics are produced by building each benchmark in the suite
+with a set of optimizations individually tailored for that benchmark. 
+The optimizations selected must adhere to the set of general benchmark
+optimization rules described in 
+<a href=#toc_2.1><font color=blue>section&nbsp;2.1</font></a> 
+below.  This may also be
+referred to as "aggressive compilation".
+
+<p>"Base" metrics are produced by building all the benchmarks in the
+suite with a common set of optimizations.  In addition to the general
+benchmark optimization rules 
+(<a href=#toc_2.1    ><font color=blue>section&nbsp;2.1</font></a>), 
+base optimizations must
+adhere to a stricter set of rules described in 
+<a href=#toc_2.2    ><font color=blue>section&nbsp;2.2</font></a>.   
+These
+additional rules serve to form a "baseline" of recommended performance
+optimizations for a given system. 
+
+<a name=toc_2.0.2><h3>2.0.2 Runspec must be used</h3></a>
+
+<p>With the release of SPEC CPU2000 suites, a set of tools based on GNU
+Make and Perl5 are supplied to build and run the benchmarks.  To
+produce publication-quality results, these SPEC tools must be used. 
+This helps ensure reproducibility of results by requiring that all
+individual benchmarks in the suite are run in the same way and that a
+configuration file that defines the optimizations used is available. 
+
+<p>The primary tool is called <tt>runspec</tt> (<tt>runspec.bat</tt> for Windows NT). It
+is described in the <tt>runspec</tt> documentation in the <tt>docs</tt> subdirectory of the
+SPEC root directory -- in a Bourne shell that would be called
+<tt>${SPEC}/docs/</tt>, or on NT <tt>%SPEC%\docs\</tt> .
+
+<p>SPEC supplies pre-compiled versions of the tools for a variety of
+platforms.  If a new platform is used, please see 
+<tt>${SPEC}/docs/tools_build.txt</tt> for information on how to build the tools
+and how to obtain approval for them. 
+
+<p>For more complex ways of compilation, for example feedback-driven 
+compilation, SPEC has provided hooks in the tools so that such 
+compilation and execution is possible (see the tools documentation 
+for details).  Only if, unexpectedly, such a compilation and 
+execution should not be possible, there is the possibility that the
+test sponsor can ask for a permission to use performance-neutral 
+alternatives (see 
+<a href=#toc_5.    ><font color=blue>section&nbsp;5</font></a>).
+
+<a name=toc_2.0.3><h3>2.0.3 The runspec build environment </h3></a>
+
+<p>When <tt>runspec</tt> is used to build the SPEC CPU2000 benchmarks, it must be
+used in generally available, documented, and supported environments
+(see 
+<a href=#toc_1.    ><font color=blue>section&nbsp;1</font></a>), 
+and any aspects of the environment that contribute to
+performance must be disclosed to SPEC (see 
+<a href=#toc_4.    ><font color=blue>section&nbsp;4</font></a>).  
+
+<p>On occasion, it may be possible to improve run time performance by
+environmental choices at build time.  For example, one might install
+a performance monitor, turn on an operating system feature such as
+bigpages, or set an environment variable that causes the cc driver to
+invoke a faster version of the linker.
+
+<p>It is difficult to draw a precise line between environment settings 
+that are reasonable versus settings that are not.  Some settings are 
+obviously not relevant to performance (such as hostname), and SPEC 
+makes no attempt to regulate such settings.  But for settings that do
+have a performance effect, for the sake of clarity, SPEC has chosen 
+that: 
+
+<ul>
+<li><p>(a) It is acceptable to install whatever software the tester wishes,
+including performance-enhancing software, provided that the 
+software is installed prior to starting the builds, remains
+installed throughout the builds, is documented, supported, 
+generally available, and disclosed to SPEC.</p>
+
+<li><p>(b) It is acceptable to set whatever system configuration parameters 
+the tester wishes, provided that these are applied at boot time, 
+documented, supported, generally available, and disclosed to 
+SPEC. "Dynamic" system parameters (i.e. ones that do not require a
+reboot) must nevertheless be applied at boot time, except as
+provided under 
+<a href=#toc_2.0.5    ><font color=blue>section&nbsp;2.0.5</font></a>.</p>
+
+<li><p>(c) After the boot process is completed, environment settings may be 
+made as follows:
+<ul>
+<li>to specify resource limits, as in the Bourne shell <tt>ulimit</tt> 
+command, and
+
+<li>to select major components of the compilation system, as in: 
+<tt>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;    setenv CC_LOC /net/dist/version73/cc
+<br>&nbsp;&nbsp;&nbsp;&nbsp;    setenv LD_LOC /net/opt/dist/ld-fast</tt>
+</ul>
+
+provided that these settings are documented; supported; generally 
+available; disclosed to SPEC; made PRIOR to starting the build;
+and do not change during the build, except as provided in 
+<a href=#toc_2.0.5    ><font color=blue>section
+2.0.5</font></a>.</p>
+</ul>
+
+<p>Environmental settings that meet 
+<a href=#toc_2.0.3><font color=blue>2.0.3</font></a> 
+requirement (a), (b), or (c) do
+not count against the limit of 4 switches (see 
+<a href=#toc_2.2.6    ><font color=blue>section&nbsp;2.2.6</font></a>) 
+unless
+they violate the rule about hidden switches (
+<a href=#toc_2.2.6.10  ><font color=blue>2.2.6.10</font></a>).
+
+<a name=toc_2.0.4><h3>2.0.4 Continuous Build requirement</h3></a>
+
+<p>As described in 
+<a href=#toc_1.    ><font color=blue>section&nbsp;1</font></a>, 
+it is expected that testers can reproduce
+other testers' results.  In particular, it must be possible for a new
+tester to compile both the base and peak benchmarks for an entire
+suite (i.e. CINT2000 or CFP2000) in one execution of <tt>runspec</tt>, with
+appropriate command line arguments and an appropriate configuration
+file, and obtain executable binaries that are (from a performance
+point of view) equivalent to the binaries used by the original tester.
+
+<p>The simplest and least error-prone way to meet this requirement is for
+the original tester to take production hardware, production software,
+a SPEC config file, and the SPEC tools and actually build the
+benchmarks in a single invocation of <tt>runspec</tt> on the System Under Test
+(SUT).  But SPEC realizes that there is a cost to benchmarking and
+would like to address this, for example through the rules that follow
+regarding cross-compilation and individual builds.  However, in all
+cases, the tester is taken to assert that the compiled executables
+will exhibit the same performance as if they all had been compiled
+with a single invocation of <tt>runspec</tt> (see 
+<a href=#toc_2.0.8  ><font color=blue>2.0.8)</font></a>.
+
+<a name=toc_2.0.5><h3>2.0.5 Changes to the runspec build environment </h3></a>
+
+<p>SPEC CPU2000 base binaries must be built using the environment rules
+of 
+<a href=#toc_2.0.3    ><font color=blue>section&nbsp;2.0.3</font></a>, 
+and may not rely upon any changes to the environment
+during the build.  
+
+<cite>
+<p><b>Note 1:</b> base cross compiles using multiple hosts are allowed 
+(<a href=#toc_2.0.6  ><font color=blue>2.0.6</font></a>), 
+but the performance of the resulting binaries is not allowed to
+depend upon environmental differences among the hosts.  It must be
+possible to build performance-equivalent base binaries with one set
+of switches 
+(<a href=#toc_2.2.2  ><font color=blue>2.2.2</font></a>), 
+in one execution of <tt>runspec</tt> 
+(<a href=#toc_2.0.4  ><font color=blue>2.0.4</font></a>), 
+on one
+host, with one environment 
+(<a href=#toc_2.0.3  ><font color=blue>2.0.3</font></a>).
+</cite>
+
+<p>For a peak build, the environment may be changed, subject to the 
+following constraints:
+<ul>
+<li>The environment change must be accomplished using the 
+SPEC-provided config file hooks (such as <tt>fdo_pre0</tt>).
+
+<li>The environment change must be fully disclosed to SPEC (see
+<a href=#toc_4.    ><font color=blue>section&nbsp;4</font></a>).
+
+<li>The environment change must not be incompatible with a Continuous 
+Build (see 
+<a href=#toc_2.0.4    ><font color=blue>section&nbsp;2.0.4</font></a>).
+
+<li>The environment change must be accomplished using simple shell
+commands (such as <tt>/usr/opt/performance_monitor -start</tt>, or  
+<tt>setenv BIGPAGES YES</tt>).  It is not permitted to invoke a more 
+complex entity (such as a shell script, batch file, <tt>kdbx</tt> script,
+or NT registry adjustment program) unless that entity is
+provided as part of a generally-available software package. For
+example, a script could use <tt>kdbx</tt> to adjust the setting of
+<tt>bigpages</tt> if that script were provided as a part of the OS, but
+the tester could not write his or her own scripts to hack the
+kernel just for SPEC.
+</ul>
+
+<cite>
+<p><b>Note 2</b>: peak cross compiles using multiple hosts are allowed 
+(<a href=#toc_2.0.6  ><font color=blue>2.0.6</font></a>), 
+but the performance of the resulting binaries is not allowed to
+depend upon environmental differences among the hosts.  It must be
+possible to build performance-equivalent peak binaries with one
+config file, in one execution of <tt>runspec</tt> 
+(<a href=#toc_2.0.4  ><font color=blue>2.0.4</font></a>), 
+in the same
+execution of <tt>runspec</tt> that built the base binaries, on one host,
+starting from the environment used for the base build 
+(<a href=#toc_2.0.3  ><font color=blue>2.0.3</font></a>), 
+and
+changing that environment only through config file hooks 
+(<a href=#toc_2.0.5  ><font color=blue>2.0.5</font></a>).
+</cite>
+
+<a name=toc_2.0.6><h3>2.0.6 Cross-compilation allowed </h3></a>
+
+<p>It is permitted to use cross-compilation, that is, a building process
+where the benchmark executables are built on a system (or systems)
+that differ(s) from the SUT.  The <tt>runspec</tt> tool must be used on all
+systems (typically with <tt>-a build</tt> on the host(s) and <tt>-a validate</tt>
+on the SUT).
+
+<p>If all systems belong to the same product family and if the software
+used to build the executables is available on all systems, this does
+not need to be documented.  In the case of a true cross compilation,
+(e.g. if the software used to build the benchmark executables is not
+available on the SUT, or the host system provides performance gains
+via specialized tuning or hardware not on the SUT), the host system(s)
+and software used for the benchmark building process must be
+documented in the Notes section.  See 
+<a href=#toc_4.    ><font color=blue>section&nbsp;4</font></a>.
+
+<p>It is permitted to use more than one host in a cross-compilation. If
+more than one host is used in a cross-compilation, they must be
+sufficiently equivalent so as not to violate rule 
+<a href=#toc_2.0.4  ><font color=blue>2.0.4</font></a>.  
+That is, it
+must be possible to build the entire suite on a single host and obtain
+binaries that are equivalent to the binaries produced using multiple
+hosts.  
+
+<p>The purpose of allowing multiple hosts is so that testers can save 
+time when recompiling many programs.  Multiple hosts may NOT be used 
+in order to gain performance advantages due to environmental 
+differences among the hosts.  In fact, the tester must exercise great 
+care to ensure that any environment differences are performance
+neutral among the hosts, for example by ensuring that each has the
+same version of the operating system, the same performance software,
+the same compilers, and the same libraries.  The tester should
+exercise due diligence to ensure that differences that appear to be
+performance neutral - such as differing MHz or differing memory
+amounts on the build hosts - are in fact truly neutral.
+
+<p>Multiple hosts may NOT be used in order to work around system or
+compiler incompatibilities (e.g. compiling the SPECfp2000 C 
+benchmarks on a different OS version than the SPECfp2000 Fortran 
+benchmarks in order to meet the different compilers' respective OS 
+requirements), since that would violate the Continuous Build rule
+(<a href=#toc_2.0.4  ><font color=blue>2.0.4</font></a>).
+
+<a name=toc_2.0.7><h3>2.0.7 Individual builds allowed</h3></a>
+
+<p>It is permitted to build the benchmarks with multiple invocations of 
+<tt>runspec</tt>, for example during a tuning effort.  But, the executables 
+must be built using a consistent set of software.  If a change to the
+software environment is introduced (for example, installing a new
+version of the C compiler which is expected to improve the 
+performance of one of the floating point benchmarks), then all 
+affected benchmarks must be rebuilt (in this example, all the C 
+benchmarks in the floating point suite). 
+
+<a name=toc_2.0.8><h3>2.0.8 Tester's assertion of equivalence between build types </h3></a>
+
+<p>The previous 4 paragraphs may appear to contradict each other 
+(<a href=#toc_2.0.4  ><font color=blue>2.0.4</font></a> 
+through 
+<a href=#toc_2.0.7  ><font color=blue>2.0.7</font></a>), 
+but the key word in 
+<a href=#toc_2.0.4  ><font color=blue>2.0.4</font></a> 
+is the word "possible".  
+Consider the following sequence of events:
+
+<ul>
+<li>A tester has built a complete set of CPU2000 executable images 
+("binaries") on her usual host system.  
+
+<li>A hot new SUT arrives for a limited period of time.  It has no
+compilers installed.
+
+<li>A SPEC CPU2000 tree is installed on the SUT, along with the 
+binaries and config file generated on the usual host.
+
+<li>It is learned that performance could be improved if the peak
+version of <tt>999.sluggard</tt> were compiled with <tt>-O5</tt> instead 
+of <tt>-O4</tt>.  
+
+<li>On the host system, the tester edits the config file to change to
+<tt>-O5</tt> for <tt>999.sluggard</tt>, and issues the command:
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;runspec -c myconfig -D -a build -T peak sluggard</tt>
+
+<li>The tester copies the new binary and config file to the SUT
+
+<li>A complete run is started by issuing the command:
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;runspec -c myconfig -a validate all</tt>
+
+<li>Performance is as expected, and the results are submitted to SPEC
+(including the config file).
+</ul>
+
+<p>In this example, the tester is taken to be asserting that the above
+sequence of events produces binaries that are, from a performance
+point of view, equivalent to binaries that would have been produced
+in a single invocation of the tools.  If there is some optimization
+that can only be applied to individual benchmark builds and cannot be
+applied in a continuous build, the optimization is not allowed.  
+
+<p>Rule 
+<a href=#toc_2.0.8  ><font color=blue>2.0.8</font></a> 
+is intended to provide some guidance about the kinds of
+practices that are reasonable, but the ultimate responsibility for
+result reproducibility lies with the tester.  If the tester is
+uncertain whether a cross-compile or an individual benchmark build is
+equivalent to a full build on the SUT, then a full build on the SUT
+is required (or, in the case of a true cross-compile which is
+documented as such, then a single <tt>runspec -a build</tt> is required on a
+single host.)  Although full builds add to the cost of benchmarking,
+in some instances a full build in a single <tt>runspec</tt> may be the only
+way to ensure that results will be reproducible.
+
+
+<a name=toc_2.1><h3>2.1 General Rules for Selecting Compilation Flags </h3></a>
+
+<p>The following rules apply to compiler flag selection for SPEC CPU2000
+Peak and Base Metrics.  Additional rules for Base Metrics follow in
+<a href=#toc_2.2    ><font color=blue>section&nbsp;2.2</font></a>. 
+
+<a name=toc_2.1.1><h3>2.1.1  Cannot use names</h3></a>
+
+<p>No source file or variable or subroutine name may be used
+within an optimization flag or compiler option.  
+
+<p>Identifiers used in preprocessor directives to select alternative
+source code are also forbidden, except 
+for a rule-compliant library substitution
+(<a href=#toc_2.1.2><font color=blue>2.1.2</font></a>) or
+an approved portability flag 
+(<a href=#toc_2.1.5><font color=blue>2.1.5</font></a>).
+
+For example, if a benchmark source code uses one of:<pre>
+        #ifdef IDENTIFIER 
+        #ifndef IDENTIFIER 
+        #if defined IDENTIFIER
+        #if !defined IDENTIFIER
+</pre>
+to provide alternative source code under the
+control of a compiler option such as -DIDENTIFIER, such a
+switch may not be used unless it meets the criteria of 2.1.2
+or 2.1.5.
+
+<a name=toc_2.1.2><h3>2.1.2  Limitations on library substitutions</h3></a>
+
+<p>Flags which substitute pre-computed (e.g. library-based)
+routines for routines defined in the benchmark on the basis of
+the routine's name are not allowed.  Exceptions are:
+
+<p>a) the function <tt>alloca</tt>.  It is permitted to use a flag that
+substitutes the system's <tt>builtin_alloca</tt> for any C/C++ 
+benchmark.  The use of such a flag shall furthermore not 
+count as one of the allowed 4 base switches.
+
+<p>b) the level 1, 2 and 3 BLAS functions in the CFP2000 
+benchmarks, and the netlib-interface-compliant FFT 
+functions.  Such substitution shall only be acceptable in a 
+peak run, not in base.
+
+<a name=toc_2.1.3><h3>2.1.3  Feedback directed optimization is allowed.  </h3></a>
+
+<p>Only the training input (which is automatically selected by
+<tt>runspec</tt>) may be used for the run that generates the feedback
+data.  
+
+<p>For peak runs, optimization with multiple feedback runs is 
+also allowed.
+
+<p>The requirement to use only the train data set at compile time
+shall not be taken to forbid the use of run-time dynamic
+optimization tools that would observe the reference execution
+and dynamically modify the in-memory copy of the benchmark. 
+However, such tools would not be allowed to in any way affect
+later executions of the same benchmark (for example, when
+running multiple times in order to determine the median run
+time).   Such tools would also have to be disclosed in the
+submission of a result, and would have to be used for the
+entire suite (see 
+<a href=#toc_3.3    ><font color=blue>section&nbsp;3.3</font></a>).
+
+<a name=toc_2.1.4><h3>2.1.4 Limitations on size changes</h3></a>
+
+<p>Flags that change a data type size to a size different from
+the default size of the compilation system are not allowed. 
+Exceptions are: a) C long can be 32 or greater bits, b)
+pointer sizes can be set different from the default size. 
+
+<a name=toc_2.1.5><h3>2.1.5 Portability Flags </h3></a>
+
+A flag is considered a portability flag if, and only if, one 
+of the following two conditions hold:
+
+<p>(a) The flag is necessary for the successful compilation and
+correct execution of the benchmark regardless of any or all
+compilation flags used.  That is, if it is possible to
+build and run the benchmark without this flag, then this
+flag is not considered a portability flag.
+
+<p>(b) The benchmark is discovered to violate the ANSI standard, 
+and the compilation system needs to be so informed in
+order to avoid incorrect optimizations.  
+
+<p>For example, if a benchmark fails with
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-O4</tt>
+<br>due to a standard violation, but works with either
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-O0</tt>
+<br>or
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-O4 -noansi_alias</tt>
+<br>then it would be permissible to use <tt>-noansi_alias</tt> as a 
+portability flag.  
+
+<p>Proposed portability flags are subject to scrutiny by the SPEC
+CPU Subcommittee.  The initial submissions for CPU2000 will
+include a reviewed set of portability flags on several
+operating systems; later submitters who propose to apply
+additional portability flags should prepare a justification for
+their use.  If the justification is 
+<a href=#toc_2.1.5  ><font color=blue>2.1.5</font></a>(b), 
+please include
+a specific reference to the offending source code module and
+line number, and a specific reference to the relevant sections
+of the appropriate ANSI standard. 
+
+<p>SPEC always prefers to have benchmarks obey the standard, and
+SPEC attempts to fix as many violations as possible before
+release of the suites.  But it is recognized that some
+violations may not be detected until years after a suite is
+released.  In such a case, a portability switch may be the
+practical solution.  Alternatively, the subcommittee may
+approve a source code fix.
+
+<p>For a given portability problem, the same flag(s) must be
+applied to all affected benchmarks. 
+
+<p>If a library is specified as a portability flag, SPEC may
+request that the table of contents of the library be included
+in the disclosure.
+
+
+
+<a name=toc_2.2><h3>2.2 Base Optimization Rules</h3></a>
+
+<p>In addition to the rules listed in 
+<a href=#toc_2.1    ><font color=blue>section&nbsp;2.1</font></a> 
+above, the selection of
+optimizations to be used to produce SPEC CPU2000 Base Metrics includes
+the following: 
+
+<a name=toc_2.2.1><h3>2.2.1  Safe</h3></a>
+
+<p>The optimizations used are expected to be safe, and it
+is expected that system or compiler vendors would endorse the
+general use of these optimizations by customers who seek to achieve
+good application performance. 
+
+<a name=toc_2.2.2><h3>2.2.2  Same for all </h3></a>
+
+<p>The same compiler and same set of optimization flags or options
+is used for all benchmarks of a given language within a
+benchmark suite, except for portability flags (see 
+<a href=#toc_2.1.5  ><font color=blue>2.1.5</font></a> 
+below).  All flags must be applied in the same order for all
+benchmarks.  The <tt>runspec</tt> documentation 
+file covers how to set this up
+with the SPEC tools.
+
+<p>Specifically, benchmarks that are written in Fortran-77 or 
+Fortran-90 may not use a different set of flags or different
+compiler invocation in a base run.  In a peak run, it is
+permissible to use different compiler commands, as well as
+different flags, for each benchmark.
+
+<a name=toc_2.2.3><h3>2.2.3   Feedback directed optimization is allowed in base.  </h3></a>
+
+<p>The allowed steps are:<pre>
+   PASS1:        compile the program
+
+   Training run: run the program with the train data set
+
+   PASS2:        re-compile the program, or invoke a tool that
+                 otherwise adjusts the program, and which uses
+                 the observed profile from the training run.
+</pre>
+
+<p>PASS2 is optional.  For example, it is conceivable that a
+daemon might optimize the image automatically based on the
+training run, without further tester intervention.  Such a
+daemon would have to be noted in the full disclosure to SPEC.
+
+<p>It is acceptable to use the various <tt>fdo_</tt> hooks to clean up
+the results of previous feedback compilations.  The preferred
+hook is <tt>fdo_pre0</tt> -- for example:
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fdo_pre0 = rm /tmp/prof/*Counts*</tt>
+
+<br>Other than such cleanup, no intermediate processing steps may
+be performed between the steps listed above.  If additional
+processing steps are required, the optimization is allowed for
+peak only but not for base.
+
+<p>When a two-pass process is used, the flag(s) that explicitly
+control(s) the generation or the use of feedback information
+can be - and usually will be - different in the two 
+compilation passes.  For the other flags, one of the two 
+conditions must hold:
+
+<ol>
+<li>The same set of flags are used for both invocations of
+the compiler/linker.  For example:<pre>
+    PASS1_CFLAGS= -gen_feedback -fast_library -opt1 -opt2 
+    PASS2_CFLAGS= -use_feedback -fast_library -opt1 -opt2 
+</pre>
+
+<li>The set of flags in the first invocation are a subset
+of the flags used in the second.  For example:<pre>
+    PASS1_CFLAGS= -gen_feedback -fast_library
+    PASS2_CFLAGS= -use_feedback -fast_library -opt1 -opt2 
+</pre>
+</ol>
+
+<a name=toc_2.2.4><h3>2.2.4  Assertion flags may NOT be used in base.  </h3></a>
+
+<p>An assertion flag is one that supplies semantic information 
+that the compilation system did not derive from the source 
+statements of the benchmark.
+
+<p>With an assertion flag, the programmer asserts to the compiler
+that the program has certain nice properties that allow the
+compiler to apply more aggressive optimization techniques (for
+example, that there is no aliasing via C pointers).  The
+problem is that there can be legal programs (possibly strange,
+but still standard-conforming programs) where such a property
+does not hold.  These programs could crash or give incorrect
+results if an assertion flag is used.  This is the reason why
+such flags are sometimes also called "unsafe flags".  Assertion
+flags should never be applied to a production program without
+previous careful checks; therefore they are disallowed for
+base.  
+
+<a name=toc_2.2.5><h3>2.2.5  Floating point reordering allowed</h3></a>
+
+<p>Base results may use flags which affect the numerical accuracy
+or sensitivity by reordering floating-point operations based on
+algebraic identities. 
+
+<a name=toc_2.2.6><h3>2.2.6  Only 4 optimization switches</h3></a>
+
+<p>Base optimization is further restricted by limiting to four (4)
+the maximum number of optimization switches that can be applied
+to create a base result.  An example of this would be:<br>
+
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cc general_opt processor_flag library other_opt</tt>
+
+<br>Where testers might use a flag for a general optimization, one
+to specify the architecture, one to specify an optimal library,
+plus one other optimization flag.
+
+<p>The following rules must be followed for selecting and counting
+optimization flags:
+
+<a name=toc_2.2.6.1><h3>2.2.6.1 Unit of definition</h3></a>
+
+<p>A flag is defined as a unit of definition to the compilation
+system.  For example, each of the following is defined as a
+single flag: <pre>
+    -O2
+    -inline
+    -qarch=ppc
+    -tp p5
+    -Xunroll0
+    -g3
+    -debug
+    -debug:none
+    /preprocessor="/unroll=4"
+    /link /compress_image
+</pre>
+
+<p>In the last example above, "<tt>/link</tt>" merely tells the driver to
+send the flags that follow to the linker.  The <tt>/compress_image</tt>
+actually tells the linker to do something, and so counts as a
+single unit of definition.  Each action requested of the linker
+would count as a flag; for example:<br><tt>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/link /compress_image /static_addressing</tt>
+<br>would be 2 flags.
+
+<a name=toc_2.2.6.2><h3>2.2.6.2 Delimited lists</h3></a>
+
+<p>Some compilers allow delimited lists (usually comma or space
+delimited) behind an initial flag; for purposes of base, each
+optimization item in the list counts as an optimization toward
+the limit of four.  For example:<tt>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-K inline,unroll,strip_mine</tt>
+<br>
+counts as three optimization flags.  
+
+<a name=toc_2.2.6.3><h3>2.2.6.3 Portability flags in base </h3></a>
+
+<p>Portability flags are not counted in the count of four. 
+
+<p>[<b>Note:</b> most of the run rule text formerly contained
+in this section is now contained in section 
+<a href=#toc_2.1.5><font color=blue>2.1.5</font></a>.]
+
+<a name=toc_2.2.6.4><h3>2.2.6.4 ANSI Compliance</h3></a>
+
+<p>If a compiler flag causes a compiler to operate in
+an ANSI/ISO mode, such a flag may be used without being
+counted in the count of four switches, provided that the
+flag is used for all benchmarks of the given language in
+the benchmark suite.
+
+
+<a name=toc_2.2.6.5><h3>2.2.6.5 Feedback invocation in Pass 1 and Pass 2</h3></a>
+
+<p>Switches for feedback directed optimization follow the same
+rules (one unit of definition) and count as one of the four
+optimization flags.  Since two passes are allowed for base, the
+first and second invocations of activating feedback count as
+one flag.  For example:<pre>
+   Pass 1: cc -prof_gather -O9 -go_fast -arch=404
+   Pass 2: cc -prof_use    -O9 -go_fast -arch=404
+</pre>
+<p>This breaks down into [FDO invocation, optimization level,
+extra optimization, and an architecture flag] and counts as an
+acceptable four flags.
+
+<a name=toc_2.2.6.6><h3>2.2.6.6 Location flags</h3></a>
+
+<p>Pointer or location flags (flags that indicate where to find
+data) are not included in the four flag definition.  For
+example:
+<tt><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-L/usr/ucblib
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-prof_dir `pwd`</tt>
+
+<a name=toc_2.2.6.7><h3>2.2.6.7 Warnings, verbosity, output flags</h3></a>
+
+<p>Flags that only suppress warnings (typically <tt>-w</tt>), flags that
+only create object files (typically <tt>-c</tt>), flags that only affect
+the verbosity level of the compiler driver (typically <tt>-v</tt>), and
+flags that only name the output file (typically <tt>-o</tt>) are not
+counted as optimization flags.  
+
+<a name=toc_2.2.6.8><h3>2.2.6.8 Entire compilation system is counted</h3></a>
+
+<p>The four flag limit counts all options for all parts of the
+compilation system, i.e. the entire transformation from SPEC
+supplied source code to completed executable.  The list below
+is a partial set of the types of flags that would be included
+in the flag count:
+
+<ul>
+<li>Linker options are also counted as part of the four
+optimization flags.
+
+<li>Preprocessor directives are counted as part of the four
+optimization flags.
+
+<li>Libraries, when not needed for portability, are counted 
+as part of the four optimization flags.
+</ul>
+
+<a name=toc_2.2.6.9><h3>2.2.6.9 Assertion of ANSI compliance</h3></a>
+
+<p>Rule 
+<a href=#toc_2.2.4  ><font color=blue>2.2.4</font></a> 
+shall not be taken to forbid the use of flags that
+assert that a benchmark complies with one or more aspects of
+the ANSI standard.  For example, suppose that a compiler has an 
+ANSI mode specified by saying <tt>cc&nbsp;-relaxed_ansi,</tt> which provides
+the following extensions to the standard: 
+
+<ul><li>support of common intrinsic functions 
+<li>subroutine argument type checking 
+<li>data alignment checking
+</ul>
+
+<p>It would be permissible in a base run to turn one or more of
+these features off.  If the command: 
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cc -relaxed_ansi -nointrinsic -noarg_check -noalign_check</tt>
+<br>were issued, this would be acceptable in a base run and would
+count as 3 optimization flags (the <tt>-relaxed_ansi</tt> is considered
+to be a dialect selection, not an optimization switch.  See
+<a href=#toc_2.2.6.4  ><font color=blue>2.2.6.4</font></a>).
+
+<a name=toc_2.2.6.10><h3>2.2.6.10 Hidden switches</h3></a>
+
+<p>It is not permissible to use environment variables or login
+scripts to defeat the four switch rule.  For example, if a
+system allows the system manager to put the following into
+<tt>/etc/cshrc.global</tt>
+
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alias cc "cc -fast -O4 -unroll 8"</tt>
+
+<br>then the system manager has just spent 3 of the 4 allowable
+optimization flags, the tester has only 1 left to spend, and
+the full disclosure must document the switches from
+<tt>/etc/cshrc.global</tt>.  Similarly, an environment variable or login
+script may not be used to pass hidden switches to other
+portions of the compilation system, such as pre-processors or
+the linker.
+
+<p>The behavior that is forbidden here is the hiding of strings
+that would normally be typed on a command line by typing them
+somewhere else.  If a compilation system can derive more
+intelligent default settings for switches by its automatic
+examination of its environment, that behavior is allowed.  For
+example, a compiler driver could freely notice that
+<tt>vm_bigpages=1</tt> in the kernel, and change the default to
+<tt>-bigpages=yes</tt> for the <tt>cc</tt> command, provided, of course, that the
+change in defaults is documented (see 
+<a href=#toc_1.><font color=blue>section&nbsp;1</font></a>, 
+Philosophy).
+
+<a name=toc_2.2.6.11><h3>2.2.6.11 Installation-provided switches</h3></a>
+
+<p>A compiler may freely pick up options from a system wide file
+that is written by default at installation time.  For example,
+suppose that the compiler installation script examines the
+environment and creates:      <pre>
+     /etc/fortran_system_defaults
+     debug_options:   -oldstyle_debugging
+     linker_type:     -multi_thread
+     machine_options: -architecture_level 3
+     memory_options:  -bigpages
+</pre>
+
+<p>If a mechanism such as the above operates <b>by default</b> at
+installation time with no installer intervention required
+(other than accepting the defaults) then the flags would NOT be
+counted in the 4 flag limit.  The key points here are that 
+the installer would not deviate from the defaults, and ordinary
+compiler users are not required to be aware of the mechanism.
+
+<a name=toc_2.2.6.12><h3>2.2.6.12 Switches to declare 64-bit mode</h3></a>
+
+None of the SPEC CPU2000 benchmarks require a 64 bit address
+space, since the target memory size is only 256MB. 
+Nevertheless, SPEC would like to encourage the submission of
+results using 64-bit compilers, because they represent an
+important new addition of technology in the industry. 
+Therefore, a flag that puts a compiler into 64-bit mode is NOT
+counted against the 4-flag limit.  
+
+<p>During the development of CPU2000, SPEC has tested the
+benchmarks on 7 different 64-bit platforms and believes that
+most 64-bit portability problems have been addressed.  But it
+is possible, especially in the larger benchmarks, that some
+64-bit source code problems may remain.  If further problems
+are discovered, it would be permissible to specify 64-bit mode
+for baseline with portability exceptions.  The submitter should
+prepare a statement of the problems found in 64-bit mode,
+including modules and source line numbers.
+
+<p>For example, suppose that a tester selects 64-bit mode through
+the compiler switch <tt>-lp64</tt>, and finds that benchmark <tt>999.clumsy</tt>
+has incorrectly assumed that pointers and ints are the same
+size.  It would be acceptable to submit results to SPEC using
+<tt>-lp64</tt> for every benchmark except <tt>999.clumsy</tt>, which would use
+<tt>-lp32.</tt> The presence of <tt>-lp64</tt> would not count against the 4-flag
+limit, nor would the use of <tt>-lp32</tt> on <tt>999.clumsy</tt>.
+
+<a name=toc_2.2.6.13><h3>2.2.6.13 Cross-module optimization</h3></a>
+
+Frequently, performance is improved via optimizations that work
+across source modules, for example <tt>-ifo</tt>, <tt>-xcrossfile</tt>, or
+<tt>-IPA</tt>.  Some compilers may require the simultaneous
+presentation of all source files for inter-file optimization,
+as in:<pre>
+      cc -ifo -o a.out file1.c file2.c 
+</pre>
+
+<p>Other compilers may be able to do cross-module optimization
+even with separate compilation, as in:<pre>
+      cc -ifo -c -o file1.o file1.c
+      cc -ifo -c -o file2.o file2.c
+      cc -ifo -o a.out file1.o file2.o
+</pre>
+
+<p>By default, the SPEC tools operate in the latter mode, but they
+can be switched to the former through the config file option
+<tt>ONESTEP=yes</tt>.
+
+<p>Cross-module optimization is allowed in baseline, and is
+deemed to cost exactly one switch under any of the following
+conditions:
+
+<ul>
+<li>(a) The command line includes a switch, such as <tt>-ifo</tt>
+<li>(b) The config file uses <tt>ONESTEP</tt>
+<li>(c) both a switch and <tt>ONESTEP</tt> are used
+</ul>
+
+<a name=toc_2.2.6.14><h3>2.2.6.14 Base build environment</h3></a>
+
+The system environment must not be manipulated during a build
+of base.  For example, suppose that an environment variable
+called <tt>bigpages</tt> can be set to <tt>yes</tt> or <tt>no</tt>, and the default
+is <tt>no</tt>.  The tester must not change the choice during the
+build of the base binaries.  See 
+<a href=#toc_2.0.5    ><font color=blue>section&nbsp;2.0.5</font></a>.
+
+<a name=toc_2.2.7><h3>2.2.7 Safety and Standards Conformance</h3></a>
+
+The requirements that optimizations are expected to be safe,
+and generate correct code for a class of programs larger than the
+suite itself (sections 
+<a href=#toc_2.2.1><font color=blue>2.2.1</font></a> and 
+<a href=#toc_1.2><font color=blue>1.2</font></a>),
+are normally interpreted 
+as requiring that the system, as used in baseline, implement
+the language correctly.  "The language" is defined by the 
+appropriate ANSI/ISO standard (C89, Fortran-90, C++ 98).
+
+<p>The principle of standards conformance is not automatically 
+applied, because SPEC has historically allowed certain exceptions:
+<ol>
+<li><a href=#toc_2.2.5><font color=blue>Section 2.2.5</font></a> 
+allows reordering of arithmetic operands.
+<li>SPEC has not insisted on conformance to the C standard in the
+setting of <tt>errno</tt>.
+<li>SPEC has not dealt with (and does not intend to deal with) language 
+standard violations that are performance neutral for the CPU2000
+suite.
+<li>When a more recent standard modifies a requirement imposed by
+an earlier standard, SPEC will also accept systems that adhere
+to the more recent ANSI/ISO standard.
+</ol>
+
+<p>Otherwise, a deviation from the standard that is not performance neutral,
+and gives the particular implementation a CPU2000 performance advantage 
+over standard-conforming implementations, is considered an indication 
+that the requirements about "safe" and "correct code" optimizations
+are probably not met.  Such a deviation can be a reason for SPEC to 
+find a result not rule-conforming.
+
+<p>If an optimization causes a SPEC benchmark to fail to validate, and if 
+the relevant portion of this benchmark's code is within the language 
+standard, the failure is taken as additional evidence that an optimization 
+is not safe.
+
+
+
+<hr>
+<a name=toc_3.><h2>3. Running SPEC CPU2000</h2></a>
+
+<a name=toc_3.1><h3>3.1 System Configuration  </h3></a>
+
+<a name=toc_3.1.1><h3>3.1.1   File Systems </h3></a>
+
+SPEC requires the use of a of single file system to contain the
+directory tree for the SPEC CPU2000 suite being run.  SPEC allows any
+type of file system (disk-based, memory-based, NFS, DFS, FAT, NTFS
+etc.) to be used.  The type of file system must be disclosed in
+reported results. 
+
+<a name=toc_3.1.2><h3>3.1.2   System State </h3></a>
+
+The system state (multi-user, single-user, init level N) may be
+selected by the tester.  This state along with any changes in the
+default configuration of daemon processes or system tuning parameters
+must be documented in the notes section of the results disclosure.
+(For Windows NT, system state is normally "Default"; a list of
+services that are shut down should be provided, if any, e.g.
+networking service shut down) 
+
+
+<a name=toc_3.2><h3>3.2 Additional Rules for Running SPECrate </h3></a>
+
+<a name=toc_3.2.1><h3>3.2.1  Number of copies in peak</h3></a>
+
+For SPECint_rate2000 and SPECfp_rate2000 (peak), the tester is
+free to choose the number of concurrent copies for each
+individual benchmark independently of the other benchmarks. 
+
+<p>The median value that is used must, for each benchmark, come
+from at least three runs with the same number of copies. 
+However, this number may be different between benchmarks.
+
+<a name=toc_3.2.2><h3>3.2.2  Number of copies in base</h3></a>
+
+For SPECint_rate_base2000 and SPECfp_rate_base2000, the tester
+must select a single value to use as the number of concurrent
+copies to be applied to all benchmarks in the suite.
+
+<a name=toc_3.2.3><h3>3.2.3  Single file system</h3></a>
+
+The multiple concurrent copies of the benchmark must be
+executed using data from different directories within the same
+file system.  Each copy of the test must have its own working
+directory, which is to contain all the files needed for the
+actual execution of the benchmark, including input files, and
+all output files when created.  The output of each copy of the
+benchmark must be validated to be the correct output. 
+
+<p>Note: In CPU95, the benchmark binary itself was also copied,
+which inhibited sharing of the text section across multiple
+users.  For CPU2000, the benchmark will be placed in the run
+directories only once.  For example, if swim is executed for
+six users, there would be six copies of its data but only
+one copy of the swim executable in the run directories.
+
+<a name=toc_3.3><h3>3.3 Continuous Run Requirement  </h3></a>
+
+All benchmark executions, including the validations steps,
+contributing to a particular result page must occur continuously, that
+is, in one execution of <tt>runspec</tt>.  
+
+<a name=toc_3.4><h3>3.4 Run-time environment</h3></a>
+
+SPEC does not attempt to regulate the run-time environment for the
+benchmarks, other than to require that the environment be:
+<ul>
+<li>(a) set prior to <tt>runspec</tt> and consistent throughout the run,
+<li>(b) fully described in the submission, and
+<li>(c) in compliance with 
+<a href=#toc_1.    ><font color=blue>section&nbsp;1</font></a>, 
+Philosophy.  
+</ul>
+For example, if each of the following: <pre>
+     run level:   single-user 
+     OS tuning:   bigpages=yes, cpu_affinity=hard
+     file system: in memory
+</pre>
+were set prior to the start of <tt>runspec</tt>, unchanged during the run,
+described in the submission, and documented and supported by a vendor
+for general use, then these options could be used in a CPU2000
+submission.
+
+<p>Note: Item (a) is intended to forbid all means by which a tester might
+change the environment.  In particular, it is forbidden to change the
+environment during the run using the config file hooks such as
+<tt>monitor_pre_bench</tt>.  Those hooks are intended for use when studying
+the benchmarks, not for actual submissions.
+
+<a name=toc_3.5><h3>3.5 Basepeak</h3></a>
+
+If a result page will contain both peak and base CFP2000 results, a
+single <tt>runspec</tt> invocation must have been used to run both the peak and
+base executables for each benchmark and their validations.  The tools
+will ensure that the base executables are run first, followed by the
+peak executables.
+
+<p>It is permitted to:
+<ul>
+<li><p>Publish a base-only run as both base and peak.  This is 
+accomplished by setting the config file flag <tt>basepeak=yes</tt> on a
+global basis.  When the SPEC tools determine that <tt>basepeak</tt> is set
+for an entire suite (that is, for all the integer benchmarks or
+for all the floating point benchmarks), the peak runs will be
+skipped and base results will be reported as both base and peak.</p>
+
+<li><p>Force the same result to be used for both base and peak for one 
+or more individual benchmarks.  This is accomplished by setting
+the config file flag <tt>basepeak=yes</tt> for the desired benchmark(s). 
+In this case, the identical executable will be run for both base
+and peak, and a median will be computed for both.  The lesser
+median will then be reported for both base and peak.  The reason
+this feature exists is simply to clarify for the reader that an
+identical executable was used in both runs, and avoid confusion
+that might otherwise arise from run-to-run variation.</p>
+</ul>
+
+<p>Notes: 
+
+<p>1. It is permitted but not required to compile in the same <tt>runspec</tt> 
+invocation as the execution.  See rule 
+<a href=#toc_2.0.6><font color=blue>2.0.6</font></a> 
+regarding cross
+compilation.
+
+<p>2. It is permitted but not required to run both the integer suite 
+and the floating point suite in a single invocation of <tt>runspec</tt>.  
+
+
+
+<hr>
+<a name=toc_4.><h2>4. Results Disclosure</h2></a>
+
+SPEC requires a full disclosure of results and configuration details
+sufficient to reproduce the results.  SPEC also requires that base
+results be submitted whenever peak results are submitted.  If peak
+results are published outside of the SPEC web site 
+(<a href=http://www.spec.org/cpu2000/>http://www.spec.org/cpu2000/</a>)
+in
+a publicly available medium, the tester must supply base results on
+request.  Publication of results under non-disclosure or company
+internal use or company confidential are not "publicly" available. 
+
+<p>A full disclosure of results will typically include:
+<ul>
+<li>The components of the disclosure page, as generated by the SPEC
+tools.  
+
+<li>The tester's configuration file and any supplemental files needed to 
+build the executables used to generate the results.         
+
+<li>A flags definition disclosure.
+</ul>
+
+<p>A full disclosure of results should include sufficient information to
+allow a result to be independently reproduced.  If a tester is aware
+that a configuration choice affects performance, then s/he should
+document it in the full disclosure.
+
+<p>Note: this rule is not meant to imply that the tester must describe
+irrelevant details or provide massively redundant information.  For
+example, if the SuperHero Model 1 comes with a write-through cache,
+and the SuperHero Model 2 comes with a write-back cache, then
+specifying the model number is sufficient, and no additional steps
+need to be taken to document the cache protocol.  But if the Model 3
+is available with both write-through and write-back caches, then a
+full disclosure must specify which cache is used.
+
+<p>For information on how to submit a result to SPEC, contact the SPEC
+office.  Contact information is maintained at the SPEC web site,
+<a href=http://www.spec.org/>http://www.spec.org/</a>.
+
+
+<a name=toc_4.1><h3>4.1 Rules regarding availability date and systems not yet shipped</h3></a>
+
+<p>If a tester submits results for a hardware or software configuration
+that has not yet shipped, the submitting company must:
+<ul>
+<li><p>have firm plans to make all components generally available within 
+3 months of the first public release of the result (either by the 
+tester or by SPEC, whichever is first)</p>
+
+<li><p>specify the availability dates that are planned</p>
+</ul>
+
+<p>"Generally available" means that the product can be ordered by 
+ordinary customers, ships in a reasonable period after orders are 
+submitted, and at least one customer has received it.  (The term
+"reasonable period" is not specified in this paragraph, because it
+varies with the complexity of the system.  But it seems likely that
+a reasonable period for a $500 machine would probably be measured in
+minutes; a reasonable period for a $5,000,000 machine would probably
+be measured in months.)
+
+<p>It is acceptable to test larger configurations than customers are 
+currently ordering, provided that the larger configurations can be
+ordered and the company is prepared to ship them.  For example, if 
+the SuperHero is available in configurations of 1 to 1000 CPUs, but
+the largest order received to date is for 128 CPUs, the tester would
+still be at liberty to test a 1000 CPU configuration and submit the
+result.
+
+<p>A beta release of a compiler (or other software) can be used in a 
+submission, provided that the performance-related features of the
+compiler are committed for inclusion in the final product.  The tester
+should practice due diligence to ensure that the tests do not use an
+uncommitted prototype with no particular shipment plans.  An example
+of due diligence would be a memo from the compiler Project Leader
+which asserts that the tester's version accurately represents the
+planned product, and that the product will ship on date X. 
+
+<p>The general availability date for software is either the committed
+customer shipment date for the final product, or the date of the beta,
+provided that all three of the following conditions are met:
+
+<ol>
+<li><p>The beta is open to all interested parties without restriction.
+For example, a compiler posted to the web for general users to
+download, or a software subscription service for developers, would
+both be acceptable.</p>
+
+<li><p>The beta is generally announced.  A secret test version is not
+acceptable.</p>
+
+<li><p>The final product has a committed date, which is specified in the
+notes section. </p> 
+</ol>
+
+<p>If it is not possible to meet all three of these conditions, then 
+the date of the beta may not be used as the date of general availability.
+In that case, use the date of the final product (which, then, must be 
+within the 3 month window.)
+
+<p>As an example, suppose that in February 2000 a tester uses the generally 
+downloadable GoFast V5.2 beta which shipped in January 2000, but the 
+final product is committed to ship in July, 2000 (i.e. more than 3 months 
+later).  It would be acceptable to say something like this:
+<pre>
+	     sw_avail     = Jan-2000
+	     sw_compiler  = GoFast C/C++ V5.2 (Beta 1)
+	     notes900     = GoFast C/C++ V5.2 (final) will ship July, 2000
+</pre>
+
+<p>SPEC is aware that performance results published for systems that 
+have not yet shipped may sometimes be subject to change, for example
+when a last-minute bugfix reduces the final performance.  If something
+becomes known that reduces performance by more than 1.75% on an
+overall metric (for example, SPECfp_base2000 or SPECfp2000), SPEC
+requests that the result be resubmitted.
+
+
+<a name=toc_4.2><h3>4.2 Configuration Disclosure </h3></a>
+
+The following sections describe the various elements that make up the
+disclosure for the system and test configuration used to produce a
+given test result.  The SPEC tools used for the benchmark allow
+setting this information in the configuration file: 
+
+
+<a name=toc_4.2.1><h3>4.2.1 System Identification</h3></a>
+
+<ul>
+<li> <b>System Manufacturer</b>
+<li> <b>System Model Name</b>
+<li> <b>SPEC license number</b>
+<li> <b>Test Sponsor</b> (Name,Location)
+<li> <b>Test Date</b> (Month,Year)
+<li> <b>Hardware Availability Date</b>
+<li> <b>Software Availability Date</b>
+</ul>
+
+
+<a name=toc_4.2.2><h3>4.2.2 Hardware Configuration</h3></a>
+
+<ul><li> <b>CPU</b> (Processor Name)
+<li><b>CPU MHz:</b> a numeric value expressed in megahertz.  That is,
+do not say "1.0 GHz", say "1000".  The value here is to be
+the speed at which the CPU is run, even if the chip itself
+is sold at a different clock rate.  That is, if you 
+"over-clock" or "under-clock" the part, disclose here the
+actual speed used.
+
+<li> <b>FPU</b>
+<li> <b>Number of CPUs in System.</b>
+Note that if your system has the ability to turn off CPUs, for
+example through a firmware setting, then it is acceptable to
+report "1" here if only 1 CPU is enabled on an SMP system.  The
+tester must exercise due diligence to ensure that the disabled
+CPUs are truly disabled, and not silently giving help to the
+result.
+
+<li> <b>Number of CPUs orderable</b>
+<li> <b>Level 1 Cache</b> (Size and Organization)
+<li> <b>Level 2 Cache</b> (Size and Organization)
+<li> <b>Other Cache</b> (Size and Organization)
+<li> <b>Memory (Size in MB/GB)</b>
+<li> <b>Memory Configuration</b> if there are end-user options that
+affect performance, such as arrangement of memory modules,
+interleaving, and access time.
+<li> <b>Disk</b> (Size (MB/GB), Type (SCSI, Fast SCSI etc.)
+<li> <b>Other Hardware</b> 
+(Additional equipment added to improve performance, special disk 
+controller, NVRAM file system accelerator etc.)
+</ul>
+
+
+<a name=toc_4.2.3><h3>4.2.3 Software Configuration</h3></a>
+
+<ul><li> <b>Operating System</b> (Name and Version)
+<li> <b>System State</b> (e.g. Single User, Multi-user, Init 3, Default) 
+<li> <b>File System Type</b>
+<li> <b>Compilers:</b>
+<ul>
+<li> C Compiler (Name and Version) 
+<li> C++ Compiler (Name and Version) 
+<li> Fortran Compiler(s) (Name and Version) 
+</ul>
+<li> <b>Pre-processors</b> (Name and Version) if used
+<li> Whether the benchmarks are automatically optimized to run 
+in <b>parallel</b> over multiple CPUs
+<li> <b>Other Software</b> 
+(Additional software added to improve performance)
+</ul>
+
+<a name=toc_4.2.4><h3>4.2.4 Tuning Information</h3></a>
+
+<ul>
+<li> Description of <b>System Tuning</b>
+(Includes any special OS parameters set, changes to standard 
+daemons (services for Windows NT))
+<li> <b>Base flags</b> list
+<li> <b>Portability flags</b> used for any benchmark
+<li> <b>Peak flags</b> list for each benchmark
+<li> Any additional notes such as listing any OSG approved alternate
+sources or SPEC tool changes used.
+</ul>
+
+<p>SPEC is aware that sometimes the spelling of compiler switches, or
+even the presence of compiler switches, changes between beta releases
+and final releases.  For example, suppose that during a compiler beta
+the tester specifies:
+<pre>
+     f90 -fast -architecture_level 3 -unroll 16
+</pre>
+
+but the tester knows that in the final release the architecture level
+will be automatically set by <tt>-fast</tt>, and the compiler driver is going
+to change to set the default unroll level to 16.  In that case, it
+would be permissible to mention only <tt>-fast</tt> in the notes section of the
+full disclosure, and the above command line would be considered to
+have used only one optimization switch out of the four allowed in
+base.  The tester is expected to exercise due diligence regarding such
+flag reporting, to ensure that the disclosure correctly records the
+intended final product.  An example of due diligence would be a memo
+from the compiler Project Leader which promises that the final product
+will spell the switches as reported.  SPEC may request that such a
+memo be generated and that a copy be provided to SPEC.
+
+<a name=toc_4.3><h3>4.3 Test Results Disclosure</h3></a>
+
+The actual test results consist of the elapsed times and ratios for
+the individual benchmarks and the overall SPEC metric produced by
+running the benchmarks via the SPEC tools.  The required use of the
+SPEC tools ensures that the results generated are based on benchmarks
+built, run, and validated according to the SPEC run rules.  Below is a
+list of the measurement components for each SPEC CPU2000 suite and
+metric: 
+
+<a name=toc_4.3.1><h3>4.3.1   Speed Metrics</h3></a>
+
+<pre>
+o CINT2000 Speed Metrics: 
+     <b>SPECint_base2000</b>  (Required Base result)
+     <b>SPECint2000</b>       (Optional Peak result)
+
+o CFP2000 Speed Metrics:  
+     <b>SPECfp_base2000</b>   (Required Base result)
+     <b>SPECfp2000</b>        (Optional Peak result)
+</pre>
+
+<p>The elapsed time in seconds for each of the benchmarks in the CINT2000
+or CFP2000 suite is given and the ratio to the reference machine (Sun
+Ultra 10) is calculated.  The SPECint_base2000 and SPECfp_base2000
+metrics are calculated as a Geometric Mean of the individual ratios,
+where each ratio is based on the median execution time from an odd
+number of runs, greater than or equal to 3.  All runs of a specific
+benchmark when using the SPEC tools are required to have validated
+correctly.
+
+<p>The benchmark executables must have been built according to the
+rules described in 
+<a href=#toc_2.0    ><font color=blue>section&nbsp;2</font></a> 
+above.  
+
+<a name=toc_4.3.2><h3>4.3.2   Throughput Metrics</h3></a>
+
+<pre>
+o CINT2000 Throughput Metrics:    
+        <b>SPECint_rate_base2000</b> (Required Base result)
+        <b>SPECint_rate2000</b>      (Optional Peak result)
+
+o CFP2000 Throughput Metrics:     
+        <b>SPECfp_rate_base2000</b>  (Required Base result)
+        <b>SPECfp_rate2000</b>       (Optional Peak result)
+</pre>
+
+<p>The throughput metrics are calculated based on the execution of the
+same base and/or peak benchmark executables as for the speed metrics
+described above.  However, the test sponsor may select the number of
+concurrent copies of each benchmark to be run.  The same number of
+copies must be used for all benchmarks in a base test.  This is not
+true for the peak results where the tester is free to select any
+combination of copies.  The number of copies selected is usually a
+function of the number of CPUs in the system. 
+
+<p>The "rate" calculated for each benchmark is a function of: <tt>
+<br>&nbsp;&nbsp;&nbsp;the number of copies run * 
+<br>&nbsp;&nbsp;&nbsp;reference factor for the benchmark * 
+<br>&nbsp;&nbsp;&nbsp;number of seconds
+in an hour / 
+<br>&nbsp;&nbsp;&nbsp;elapsed time in seconds</tt> 
+<br>which yields a rate in jobs/hour. 
+The rate metrics are calculated as a geometric mean from the
+individual SPECrates using the median result from an odd number of
+runs, greater than or equal to 3 runs.  As with the speed metric, all
+copies of the benchmark during each run are expected to have validated
+correctly.
+
+<p>It is permitted to use the SPEC tools to generate a 1-cpu rate
+disclosure from a 1-cpu speed run.  The reverse is not permitted.
+
+<a name=toc_4.4><h3>4.4  Metric Selection</h3></a>
+
+Submission of peak results are considered optional by SPEC, so the 
+tester may choose to submit only base results.  Since by definition
+base results adhere to all the rules that apply to peak results, the
+tester may choose to refer to these results by either the base or
+peak metric names (e.g. SPECint_base2000 or SPECint2000).
+
+<p>It is permitted to publish base-only results.  Alternatively, the use
+of the flag <tt>basepeak</tt> is permitted, as described in 
+<a href=#toc_3.5    ><font color=blue>section&nbsp;3.5</font></a>.
+
+<a name=toc_4.5><h3>4.5 Research and Academic usage of CPU2000</h3></a>
+
+SPEC encourages use of the CPU2000 suites in academic and research
+environments.  It is understood that experiments in such environments
+may be conducted in a less formal fashion than that demanded of
+hardware vendors submitting to the SPEC web site.  For example, a
+research environment may use early prototype hardware that simply
+cannot be expected to stay up for the length of time required to meet
+the Continuous Run requirement (see 
+<a href=#toc_3.3    ><font color=blue>section&nbsp;3.3</font></a>), 
+or may use research
+compilers that are unsupported and are not generally available (see 
+<a href=#toc_1.    ><font color=blue>section&nbsp;1</font></a>).
+
+<p>Nevertheless, SPEC would like to encourage researchers to obey as many
+of the run rules as practical, even for informal research.  SPEC
+respectfully suggests that following the rules will improve the
+clarity, reproducibility, and comparability of research results.
+
+<p>Where the rules cannot be followed, SPEC requires that the 
+deviations from the rules be clearly disclosed, and that any
+SPEC metrics (such as SPECint2000) be clearly marked as 
+estimated. 
+
+
+<p>It is especially important to clearly distinguish results that do not
+comply with the run rules when the areas of non-compliance are major,
+such as not using the reference workload, or only being able to
+correctly validate a subset of the benchmarks.
+
+<a name=toc_4.6><h3>4.6 Required Disclosures  </h3></a>
+
+If a SPEC CPU2000 licensee publicly discloses a CPU2000 result (for
+example in a press release, academic paper, magazine article, or
+public web site), and does not clearly mark the result as an 
+estimate, any SPEC member may request that the rawfile(s) from the 
+run(s) be sent to SPEC.  Such results must be made available to all
+interested members no later than 10 working days after the request.
+
+<p>Any SPEC member may request that the result and its rawfile be 
+reviewed by the appropriate SPEC subcommittee.  If the tester 
+does not wish to have the result posted on the SPEC web pages, 
+the result will not be posted. 
+
+<p>But when public claims are made about CPU2000 results, whether by
+vendors or by academic researchers, SPEC reserves the right to 
+take actions, for example if it should occur that
+the rawfile is not made available, or shows substantially different
+performance from the tester's claim, or shows obvious violations of
+the run rules.
+
+<a name=toc_4.7><h3>4.7 Fair Use  </h3></a>
+
+Consistency and fairness are guiding principles for SPEC. To help 
+ensure that these principles are sustained, SPEC has adopted 
+guidelines for public use of SPEC CPU2000 benchmark results. 
+
+<p>When any organization or individual makes public claims using SPEC CPU2000 
+benchmark results, SPEC requires that: 
+</p>
+
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0>
+
+<TR>
+<TD valign=top>[<B>1</B>] &nbsp;&nbsp; </td>
+<td valign=top colspan=2> Reference is made to the SPEC trademark. Such 
+    reference may be included in a notes section with other 
+    trademark references (see <A HREF=http://www.spec.org/spec/trademarks.html><B>
+    http://www.spec.org/spec/trademarks.html</B></A> for 
+    all SPEC trademarks and service marks). 
+    <br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign=top>[<B>2</B>] </td>
+<td valign=top colspan=2> The SPEC web site 
+   (<A HREF=http://www.spec.org><B>http://www.spec.org</B></A>) or 
+   a suitable sub-page is noted as the source for more information.
+   <br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign=top>[<B>3</B>] </td>
+<td valign=top colspan=2>If competitive comparisons are made, the 
+    following additional rules apply:
+   <br>&nbsp;</td>
+</tr>
+
+   <tr>
+   <td></td>
+   <td valign=top><B>a.</B> &nbsp;&nbsp;</td>
+   <td valign=top>The results compared must use SPEC metrics.  Performance 
+       comparisons may be based upon any of the following metrics:
+       <ul>
+       <li>The overall results: SPECint_base2000, SPECint2000, 
+                                SPECfp_base2000, SPECfp2000, 
+                                SPECint_base_rate2000, SPECint_rate2000, 
+                                SPECfp_base_rate2000, SPECfp_rate2000 
+       <li>Individual benchmark SPECratios
+       <li>Median run times of the individual benchmarks<br>&nbsp;
+       </ul>
+   </td>
+   </tr>
+
+   <tr>
+   <td></td>
+   <td valign=top><B>b.</B> </td>
+   <td valign=top><p>The basis for comparison must be stated. 
+       Information from result pages may be used to define 
+       a basis for comparing a subset of systems, such as number 
+       of CPUs, operating system version, cache size, memory size, 
+       compiler version, or compiler optimizations used.
+   <br>&nbsp;</td>
+   </tr>
+
+   <tr>
+   <td></td>
+   <td valign=top><B>c.</B> </td>
+   <td valign=top>The source of the competitive data must be stated, and 
+       the licensee (tester) must be identified or be clearly 
+       identifiable from the source. 
+   <br>&nbsp;</td>
+   </tr>
+
+   <tr>
+   <td></td>
+   <td valign=top><B>d.</B> </td>
+   <td valign=top>The date competitive data was retrieved must be stated. 
+   <br>&nbsp;</td>
+   </tr>
+
+   <tr>
+   <td></td>
+   <td valign=top><B>e.</B> </td>
+   <td valign=top>All data used in comparisons must be publicly available 
+       (from SPEC or elsewhere) </td>
+   </tr>
+
+</TABLE>
+
+<P>
+The following paragraph is an example of acceptable language when publicly using SPEC 
+benchmarks for competitive comparisons:
+
+<P>
+
+<B>Example:</B>
+
+<p><cite>SPEC<SUPER><B>&reg;</B></SUPER> and SPEC CPU2000<super>&reg;</B></SUPER> 
+are registered trademarks of the Standard Performance Evaluation Corporation. Competitive 
+benchmark results stated above reflect results published on www.spec.org as of Jan 12, 2001. 
+The comparison presented above is based on the best performing 4-cpu systems currently 
+shipping by Vendor 1, Vendor 2 and Vendor 3. For the latest SPEC CPU2000 benchmark results, 
+visit http://www.spec.org/cpu2000/.</cite></p>
+
+
+
+
+<hr>
+<a name=toc_5.><h2>5.  Run Rule Exceptions</h2></a>
+
+If for some reason, the test sponsor cannot run the benchmarks as
+specified in these rules, the test sponsor can seek SPEC OSG approval
+for performance-neutral alternatives.  No publication may be done
+without such approval.  OSG maintains a Policies and Procedures 
+document that defines the procedures for such exceptions.
+
+<hr>
+
+Copyright (C) 1999-2001 Standard Performance Evaluation Corporation
+All Rights Reserved
+
+
+</body></html>

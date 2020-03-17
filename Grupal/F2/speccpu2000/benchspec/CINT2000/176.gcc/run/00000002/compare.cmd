@@ -1,0 +1,5 @@
+-c C:/speccpu2000/benchspec/CINT2000/176.gcc/run/00000002 -o 166.s.cmp C:/speccpu2000/bin/specdiff.bat -m -l 10 C:/speccpu2000/benchspec/CINT2000/176.gcc/data/ref/output/166.s 166.s
+-c C:/speccpu2000/benchspec/CINT2000/176.gcc/run/00000002 -o 200.s.cmp C:/speccpu2000/bin/specdiff.bat -m -l 10 C:/speccpu2000/benchspec/CINT2000/176.gcc/data/ref/output/200.s 200.s
+-c C:/speccpu2000/benchspec/CINT2000/176.gcc/run/00000002 -o expr.s.cmp C:/speccpu2000/bin/specdiff.bat -m -l 10 C:/speccpu2000/benchspec/CINT2000/176.gcc/data/ref/output/expr.s expr.s
+-c C:/speccpu2000/benchspec/CINT2000/176.gcc/run/00000002 -o integrate.s.cmp C:/speccpu2000/bin/specdiff.bat -m -l 10 C:/speccpu2000/benchspec/CINT2000/176.gcc/data/ref/output/integrate.s integrate.s
+-c C:/speccpu2000/benchspec/CINT2000/176.gcc/run/00000002 -o scilab.s.cmp C:/speccpu2000/bin/specdiff.bat -m -l 10 C:/speccpu2000/benchspec/CINT2000/176.gcc/data/ref/output/scilab.s scilab.s

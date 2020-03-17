@@ -1,0 +1,23 @@
+running commands in compare.cmd 1 times
+runs started at 1584203849, 447000000, Sat Mar 14 17:37:29 2020
+run 1 started at 1584203849, 447000000, Sat Mar 14 17:37:29 2020
+child started: 0, 1584203849, 447000000, pid=9932, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10  -o C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/300.twolf/data/ref/output/ref.out ref.out'
+child finished: 0, 1584203849, 554000000, sec=0, nsec=107000000, pid=9932, rc=0
+child started: 0, 1584203849, 554000000, pid=2288, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10  -o C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/300.twolf/data/ref/output/ref.pin ref.pin'
+child finished: 0, 1584203849, 692000000, sec=0, nsec=138000000, pid=2288, rc=0
+child started: 0, 1584203849, 692000000, pid=2668, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10  -o C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/300.twolf/data/ref/output/ref.pl1 ref.pl1'
+child finished: 0, 1584203849, 805000000, sec=0, nsec=113000000, pid=2668, rc=0
+child started: 0, 1584203849, 805000000, pid=1112, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10  -o C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/300.twolf/data/ref/output/ref.pl2 ref.pl2'
+child finished: 0, 1584203849, 909000000, sec=0, nsec=104000000, pid=1112, rc=0
+child started: 0, 1584203849, 909000000, pid=7036, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10  -o C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/300.twolf/data/ref/output/ref.sav ref.sav'
+child finished: 0, 1584203850, 17000000, sec=0, nsec=108000000, pid=7036, rc=0
+child started: 0, 1584203850, 17000000, pid=6956, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10  -o C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/300.twolf/data/ref/output/ref.stdout ref.stdout'
+child finished: 0, 1584203850, 120000000, sec=0, nsec=103000000, pid=6956, rc=0
+child started: 0, 1584203850, 121000000, pid=6440, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10  -o C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/300.twolf/data/ref/output/ref.sv2 ref.sv2'
+child finished: 0, 1584203850, 238000000, sec=0, nsec=117000000, pid=6440, rc=0
+child started: 0, 1584203850, 238000000, pid=8752, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10  -o C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/300.twolf/data/ref/output/ref.twf ref.twf'
+child finished: 0, 1584203850, 397000000, sec=0, nsec=159000000, pid=8752, rc=0
+run 1 finished at: 1584203850, 397000000, Sat Mar 14 17:37:30 2020
+run 1 elapsed time: 0, 950000000, 0.950000000
+runs finished at 1584203850, 397000000, Sat Mar 14 17:37:30 2020
+runs elapsed time: 0, 950000000, 0.950000000

@@ -1,0 +1,229 @@
+
+          Document Title: execution_without_SPEC_tools.txt
+
+                 Subject: How to use the SPEC CPU2000 benchmarks 
+                          while making minimal use of SPEC's tool set.
+
+            Last updated: 29-Oct-2001 jh
+                          (To check for possible updates to this document,
+                          please see http://www.spec.org/cpu2000/docs/ ) 
+
+------------------------------------------------------------------------
+
+
+This document is for the user who:
+
+  - wants to work directly with benchmark source code and compile 
+    by hand (rather than through the SPEC supplied tools)
+
+  - wants to run the benchmarks directly from the command line
+    (rather than via the SPEC supplied tools)
+
+  - does not care to submit a result to SPEC - or at least doesn't want 
+    to yet - and so doesn't want the features that the tools provide to 
+    do formal, submittable runs.   
+
+
+If the above describes you, here is a suggested path which should lead 
+quickly to your desired state.
+
+
+(1) Please read just one page from 
+       www.spec.org/cpu2000/docs/runrules.html 
+    namely these two sections:
+
+       4.5 Research and Academic usage of CPU2000
+       4.6 Required Disclosures
+
+    These sections acknowledge that the suite may be used in ways 
+    other than the formal environment enforced by the SPEC tools; 
+    but they warn that if you plan to publish your results, you 
+    should be able to state HOW your usage of the suite differs 
+    from the standard usage.  
+
+    So even if you skip over the tools and the run-rules today, 
+    you should plan a time to come back and learn them later.
+
+
+(2) Get through a successful installation, and verify that you can
+    at least build and run one benchmark under the tools.  Yes, we
+    are about to teach you how to bypass the tools most of the time
+    -- but the bypass still makes some minimal use of them.  So you
+    need a working toolset.  If you can't make it through
+
+       $SPEC/docs/install_guide_unix.html 
+                 or
+       %SPEC%\docs\install_guide_nt.html
+
+    please send email to cpu2000support@spec.org and we'll try to 
+    help you.
+
+
+(3) Pick a benchmark that will be your starting point.
+
+    There are 26 benchmarks in the CPU2000 suite; pick one that you'd
+    like to start with.  If you're having trouble deciding, please see
+    the descriptions at http://www.spec.org/cpu2000 .  If you're still
+    not sure, start with 171.swim (Fortran) or 181.mcf (C).  These are 
+    two of the shortest benchmarks for lines of code, and therefore 
+    relatively easy to understand, and they are also interesting 
+    benchmarks for their effects on memory systems.
+
+
+(4) Pick a config file for an environment that resembles your 
+    environment.  You'll find a variety of config files on the kit 
+    (in $SPEC/config/ [Unix-like systems] or %SPEC%\config\ [NT]) 
+    or at http://www.spec.org (with the submitted CPU2000 results).   
+    Don't worry if the config file you pick doesn't exactly match 
+    your environment; you're just looking for a starting point.
+
+
+(5) Obtain a working copy of the sources for your benchmark.
+
+    Now that you know what benchmark you're starting from, and what
+    config file, you're ready to get your own copy of the sources.
+
+    For example, let's suppose that you want to work with 171.swim, 
+    and your environment is at least partially similar to the 
+    environment described in the comments for 
+
+         $SPEC/config/alpha-linux-gem.cfg   
+
+    [Other Unix-like systems should behave similarly to the example 
+    in this section; for an NT'ish example, see the next section.]
+
+    For the Linux example, you would enter the following commands:
+
+       % sh         (or invoke some other Bourne-compatible shell)
+       $ cd xxx     (wherever you installed the SPEC CPU2000 tree)
+       $ . ./shrc   (that's dot-space-dot-slash-shrc)
+       $ runspec --action=build --tune=base --config=alpha-linux-gem swim 
+
+    IT IS LIKELY THAT THE ABOVE COMMAND WILL APPEAR TO FAIL, unless your
+    environment is very similar to the environment assumed by the config
+    file.  IGNORE THE ERROR MESSAGES, because all you really want to 
+    do is to create a directory with a working copy of the sources.  
+    This has been done, and you can get there using the following 
+    commands:
+
+       $ cd $SPEC/be*/CF*/*swim/run
+       $ grep build list
+             ...This will print a string for each subdirectory, including
+             ...the one where the build was just attempted.  If this is
+             ...your first time here, it will be directory 00000001
+       $ cd 00000001
+
+
+(6) Observe how the tools attempted to build the benchmark, by
+    using specmake with the dry run ("-n") switch.  You can now
+    work in this directory, including making source code changes
+    and trying other build commands, without affecting the
+    original sources.  Here is an NT example; the commands
+    on Unix would be highly similar, with the exception that the
+    slashes go the other direction, and you would use "grep" 
+    instead of "findstr":
+
+      C:\cpu2000>shrc
+
+      C:\cpu2000>echo off
+      Setting environment for using Visual Fortran tools
+
+      PATH=^
+      C:\cpu2000\bin;^
+      C:\Program Files\Microsoft Visual Studio\Common\Msdev98\BIN;^
+      C:\Program Files\Microsoft Visual Studio\DF98\BIN;^
+      C:\Program Files\Microsoft Visual Studio\VC98\BIN;^
+      C:\Program Files\Microsoft Visual Studio\Common\Tools;^
+      C:\Program Files\Microsoft Visual Studio\Common\Tools\WINNT;^
+      C:\WINNT\system32;^
+      C:\WINNT
+
+      C:\cpu2000>runspec --action=build --config=intel_nt_visual_studio ^
+      More? --tune=base swim
+      runspec v2.00 - Copyright (C) 1999 Standard Performance Evaluation Corp
+      Loading standard modules..............
+      Loading runspec modules.............
+      Identifying output formats...asc...config...html...pdf...ps...raw...
+      We will use: 171.swim
+      Compiling Binaries
+        Building 171.swim ref base dec15a default
+      Build Complete
+
+      C:\cpu2000>cd be*\CF*\*swim\run
+
+      C:\cpu2000\benchspec\CFP2000\171.swim\run>findstr build list
+      00000001 dir=C:/cpu2000/benchspec/CFP2000/171.swim/run/00000001 
+      ext=dec15a lock=0 type=build username=Administrator
+
+      C:\cpu2000\benchspec\CFP2000\171.swim\run>cd *01
+
+      C:\cpu2000\benchspec\CFP2000\171.swim\run\00000001>specmake -n
+      f90 -Bd             -fast -optimize:5 -traceback    swim.f     -Feswim
+
+
+(7) Once you have succeeded in building an executable image, place it
+    in the directory where the tools expect to find it, with the
+    extension specified in your config file.  For example, if you
+    are working with 171.swim and your config file has the line 
+
+       ext=dec15a
+
+    you would copy your executable to 
+
+      $SPEC/benchspec/CFP2000/171.swim/exe/swim_base.dec15a [Unix]
+    or
+      %SPEC%\benchspec\CFP2000\171.swim\exe\swim_base.dec15a [NT]
+
+    Edit your config file and add the line:
+
+       check_md5=0
+
+
+(8) Obtain a run directory for the test (minimal) dataset, and observe
+    how the tools run the benchmark by using specinvoke with the dry 
+    run ("-n") switch.  For example:
+
+      C:\cpu2000\benchspec\CFP2000\171.swim\run>runspec --action=run ^
+      More? --config=intel_nt_visual_studio --tune=base --size=test ^
+      More? --iterations=1 swim
+      runspec v2.00 - Copyright (C) 1999 Standard Performance Evaluation Corp
+      Loading standard modules..............
+      Loading runspec modules.............
+      Identifying output formats...asc...config...html...pdf...ps...raw...
+      We will use: 171.swim
+      Compiling Binaries
+        Up to date 171.swim test base dec15a default
+      Setting Up Run Directories
+        Setting up 171.swim test base dec15a default: existing
+      Running Benchmarks
+        Running 171.swim test base dec15a default
+      Error: 1x171.swim
+      Run Complete
+      C:\cpu2000\benchspec\CFP2000\171.swim\run>findstr test list
+      00000002 dir=C:/cpu2000/benchspec/CFP2000/171.swim/run/00000002 
+      ext=dec15a lock=0 mach=default size=test tune=base type=run 
+      username=Administrator
+
+      C:\cpu2000\benchspec\CFP2000\171.swim\run>cd *02
+
+      C:\cpu2000\benchspec\CFP2000\171.swim\run\00000002>specinvoke -n
+      ../00000002/swim_base.dec15a < swim.in > swim.out 2> swim.err
+
+    As you can see above, swim is invoked in a simple, straightforward
+    way.  Other benchmarks have more complex invocations.  
+
+
+(9) Repeat the previous step to create directories for the other
+    available workloads: 
+       --size=train and 
+       --size=ref
+
+
+(10) Important: if you are at all interested in saving your work,
+    move the run/nnnnnnnn directories to some safer location.  
+    That way, your work areas will not be deleted by the first user
+    who comes along and says "runspec --action=clean".
+
+-----------------------------------------------------------------------------
+Copyright (C) 1999-2000 Standard Performance Evaluation Corporation
+All Rights Reserved

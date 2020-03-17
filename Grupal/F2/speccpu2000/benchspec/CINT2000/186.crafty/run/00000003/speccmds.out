@@ -1,0 +1,9 @@
+running commands in speccmds.cmd 1 times
+runs started at 1584203017, 906000000, Sat Mar 14 17:23:37 2020
+run 1 started at 1584203017, 906000000, Sat Mar 14 17:23:37 2020
+child started: 0, 1584203017, 906000000, pid=11616, '../00000003/crafty_base.vc7.x87.exe'
+child finished: 0, 1584203042, 614000000, sec=24, nsec=708000000, pid=11616, rc=0
+run 1 finished at: 1584203042, 614000000, Sat Mar 14 17:24:02 2020
+run 1 elapsed time: 24, 708000000, 24.708000000
+runs finished at 1584203042, 614000000, Sat Mar 14 17:24:02 2020
+runs elapsed time: 24, 708000000, 24.708000000

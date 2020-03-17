@@ -1,0 +1,340 @@
+History of versions, modifications for CFP2000 benchmark candidate 168.wupwise
+==============================================================================
+
+Project leader: 
+	Reinhold Weicker, Fujitsu Siemens Computers, Paderborn / Germany
+	reinhold.weicker@fujitsu-simens.com
+
+
+Last Update: August 2, 2000
+
+Start: March 6 , 1997
+
+
+WUPWISE - how it is presently (Original version, from Wuppertal University)
+=============================
+
+uses INPUT.DAT as input-file, must exist in the same directory where the
+program is executed, example is in data/INPUT.DAT
+
+output is written to standard out (example of the output is in
+result/OUTPUT.DAT)
+
+to scale the amount of run time, change kappa in INPUT.DAT and parameters
+N1-N4 in wupwise.f
+
+to get the executable "wupwise" (under src) call under src "make wupwise"
+
+Karin Wulf
+
+
+Work during SPEC OSG benchathon, March 10-14, 1997 (Reinhold Weicker)
+=====================================================================
+
+Created SPEC-style directory structure for the benchmark
+
+Renamed the input file "wupwise.in" and the output file "wupwise.out"
+
+First run on Sun computer, simple optimzation (-O)
+
+Had to relax the accuracy requirement from 0.001 (1/10 %) to 0.006 (6/10 %);
+otherwise difference in output for "TRUE EPSILON":
+On the Sun system, with preliminary "ref" input (kappa = 0.23, 45 iterations),
+the Sun-computed value was
+ TRUE EPSILON :     9.27122E-07
+the SNI-computed value was
+ TRUE EPSILON :   9.321270227E-07
+So the difference is about 5/10 %.
+We (Bodo and I) did a test with the additionl flag "-fsimple=0", it did not
+change the result, i.e. the comparison mismatch. The value for "TRUE
+EPSILON" appeared to be the same with and without this flag.
+
+Experiments with varying values for input value kappa:
+     kappa     iterations
+
+     0.23     45
+     0.20     16
+     0.15      8
+     0.10      5
+     0.05      3
+
+These values have been determined on Siemens Nixdorf and Sun systems, they
+appear to be machine-independent.
+
+At the end of the first day of experiments with this benchmark, I selected
+temporarily (for now) the following values:
+
+     kappa     iterations
+
+ref     0.23     45
+train     0.15      8
+test     0.05      3
+
+Directories for all three inputs and outputs have been established.
+The output against which results are compared comes
+- in the case of the "ref" workload, from a Siemens Nixdorf MIPS-based system
+- in the case of the "test" workload, from a Sun SPARC-based system
+- in the case of the "train" workload, from a Sun SPARC-based system
+
+As of 3/13/97, the benchmark compiles and executes successfully on
+Siemens Nixdorf, Sun, and HP systems.
+
+More experiments with varying values for input value kappa:
+     kappa     iterations
+     0.24      90
+     0.245     173
+
+May 6, 1997
+===========
+
+After a telephone conversation with Bjoern Medeke, he has sent a
+new version of wupwise, with the following changes:
+- Only BLAS-1 functions are used, no longer BLAS-3. For matrices that
+  are as small as in this program, a performance-conscious programmer
+  would not use BLAS-3 anyway.
+- The array dimensions (N1, ..., N4) have been doubled. This should increase
+  execution time (which was too short) by a factor of 16.
+
+I modify the source program in directory 168.wupwise accordingly.
+
+Compilation test: A few changes must be made to the new version for
+the SNI F77 compiler which insists on strict Fortran77 standard adherence
+(INTRINSIC statements in  scnrm2.f, slarn.f: EXP, REAL not admitted).
+
+Size of the .bss section (uninitialized data) is now 47 MB if compiled with -O,
+which is consistent with a back-of-the-envelope computation for the array
+sizes.
+
+May 20/21, 1997
+===============
+
+Made some experiments with different values of KAPPA, As of now,
+we use KAPPA = 1.0E-1 for "test", 1.5E-1 for "train", and 2.4E-1 for "ref",
+which leads to 4, 8, and 87 iterations, respectively.
+Generated new "expected output" files for all three versions.
+
+May 26, 1997
+============
+
+Detailed discussion about the benchmark in Paderborn/Germany, with
+- Andreas Frommer, Bjoern Medeke from Wuppertal University
+- Wilfried Stehling, Reinhold Weicker from Siemens Nixdorf
+
+June 9, 1997
+============
+
+New version (actually, three versions) sent from Bjoern Medeke.
+Changes:
+- Change of the termination criterion. The benchmark now terminates
+  after a given number oif iterations NITER.
+  The parameter TOL which was previously used as a termination
+  criterion has been removed.
+  By this change, it is guaranteed that all platforms execute the same
+  number of iterations.
+- The multiplication subroutine SU3MUL has been programmed without
+  usage of BLAS routines (CAXPY or CGEMM, respectively).
+- The input file wupwise.in has been changed slightly. It now
+  contains the seed value necessary for the LAPCK random number
+  generator.
+- The variable RD in wupwise.f has been initialized as a random vector.
+
+The three alternative versions contain the program in three forms
+
+(1) SU3MUL uses CAXPY (BLAS-1 function)
+(2) SU3MUL uses CGEMM (BLAS-3 function)
+(3) SU3MUL uses no BLAS function
+
+The intention is that the SPEC OSG members can test and compare
+all three versions.
+
+This directory contains version (2).
+
+
+Benchathon, Nov. 10-14 1997
+===========================
+
+Changed the relative tolerance allowed for the output values to 5 %.
+Some SPEC member companies had told me that their values deviated
+that much from the values supplied in the "expected output" files.
+This needs to be discussed with the authors: Are possible these values
+(generated on an SNI system, MIPD-based) incorrect, or is such a large
+numerical variation inherent to the algorithm?
+
+
+February 1998
+============
+
+Changed the way the program's output is written: Instead of writing
+to one file only (default name, generated by the SPEC tools:
+wupwiseblas3.out), the program now writes one value, that of TRUEPS
+("true epsilon" after the last iteration), to a different file, te.out.
+TRUEPS is the variable for which the different systems had quite different
+values (differences of 5 % or more), unavoidably because the value comes
+close to the smallest number representable in single-precision format
+(around 1.0E-06). We cannot go to double precision since the Fortran 77
+standard does not support double precision complex data.
+The intention of this change is that a later version of the SPEC tools
+will support different relative tolerance values ($rel_tol) for
+different output files. Then we can be more lenient for TRUEPS but
+maintain a rigorous check, say with $rel_tol = 0.001, for the other values.
+For now, I set the relative tolerance $rel_tol in file
+     198.wupwiseblas3/Spec/wupwiseblas3.pm
+even higher (0.07 = 7 %).
+
+Also, changed the number of iterations (NITER) for the "test" input to 1,
+in order to make the "test" version finish faster.
+
+June 1998, Benchathon
+=====================
+
+In the months March-May, we had agreed on using the "BLAS3" version
+of wupwise (which was the original version). Fixed an error in the
+naming of output files which came from the time when we tried three versions.
+
+When the tools allow different rel_tol values for different files,
+we should set
+	rel_tol for wupwise.out: 0.01 (1 %)
+	rel_tol for te.out:      0.10 (10 %)
+
+October 22, 1998
+================
+
+At the September meeting of SPEC OSG in Pavia, Bjoern Medeke
+explained in more detail the ideas behind the program.
+In particular, he explained that the output value TRUE_EPSILON
+might get into the neighbourhood of the smallest numner representable
+in 32-bit FP format (the "machine delta"), and therefore inherently
+cause validation problems.
+Following his advice, we set the value KAPPA for the "train" input
+to 2.0E-1. The low value of 1.5E01 had caused TRUE_EPSILON  to be
+very small (0.14970323E-06), and had caused validation problems
+on one vendor's system. 
+The expected output for "train" has been adjusted accordingly.
+
+
+November 12, 1998
+=================
+
+Changed object.pm file to give te.out 7% tolerance and wupwise.out 4%.
+
+
+January 1999
+============
+
+After discussions at the OSG CPU meeting, Ken Sarno (SGI) changed
+the FP data types to double precision (REAL*8, COMPLEX*16).
+The reasons are
+- 64-bit FP precision is more common today;
+- the "machine delta" mentioned above is much smaller, and therefore farther 
+  away from the computed values, with 64-bit FP precision.
+
+February 12, 1999
+=================
+
+Following this change and a test run at Siemens, the expected output
+files were replaced by files with results computed in double precision.
+The relative tolerances were set to 1 % (file wupwise.out) and 3 %
+(file te.out), respectively.
+
+February 16-18, 1999 (Reinhold Weicker, Siemens)
+====================
+
+Bjoern Medeke (Univ. of Wuppertal) has looked over the code and refined it:
+Replacement of the BLAS functions by the "official" versions
+for double precision real and complex data type.
+The expected output directories (168.wupwise/data/*/output/*)
+now contain output files generated on his system (SPARC-based).
+Test run at the (MIPS-based) system at Siemens, the results agree.
+
+February 22/23
+==============
+
+During the test runs of CPU2000.057, a compilation problem was discovered
+on Alpha Linux, with the GNU compiler:
+
+Error: dcabs1.f, line 4: EQUIVALENCE of default numeric with non-default
+intrinsic type
+
+Errors in declarations, no further processing for DCABS1
+[f95 error termination]
+dcabs1.f:
+
+     double precision function dcabs1(z)
+      complex*16 z,zz
+      double precision t(2)
+      equivalence (zz,t(1))
+      zz = z
+      dcabs1 = dabs(t(1)) + dabs(t(2))
+      return
+      end
+
+We had inherited the "double precision" declarations from the BLAS
+library but replaced "double complex" (which is not Fortran77, and
+which the Siemens compiler does not understand) by "complex*16".
+To fix this problem, I now change all remaining data declarations 
+"double precision" to "real*8". Compilation and run on a Siemens
+system succeed.
+
+Also, I changed the validation tolerances (values "reltol" in
+168.wupwise/Spec/object.pm) to 0.5 % for wupwise.out and to 1 % for te.out.
+On the Siemens (MIPS-based) system, the program still validates against the
+expected output values generated on a SPARC-based system.
+
+Also, I changed the SEED values for the random number generator in
+the input file wupwise.in for the cases "test" and "train" and made
+them different from those used in the "ref" input. The intention
+is to avoid any replication of data between "ref" and "train".
+The expected output files for "test" and "train" were changed accordingly.
+
+March 25, 1999 (Reinhold Weicker, Siemens)
+==============
+
+After a general discussion about minimum execution times in the CPU
+subcommittee, it was decided that the target execution time for the
+SPEC reference machine should be 1200 seconds.
+Correspondingly, I change the number NITER in the input file wupwise.in 
+from 75 to 125, for increased execution time ("ref" workload). For the
+"train" workload, NITER is increased from 10 to 15.
+
+At the same time, since we now compute everything in double precision,
+I cut the "reltol" values (maximal relative deviation of the
+computed from the expected result) in half: It is now 0.5 % for
+file te.out, 0.1 % for wupwise.out.
+
+April 8, 1999 (Reinhold Weicker, Siemens)
+=============
+
+After a discussion with Bjoern Medeke (Univ. of Wuppertal), I decide
+to use a different way of increasing execution time: Make the grid larger,
+instead of increasing the iteration count.
+
+I modify the program source code (wupwise.f) by incrementing the grid size as
+following:
+        N1 = 16, N2=N3=N4 = 20 (Product: 128 000, was 16**4 = 65 632)
+This increases the bss part of wupwise.o, according to the linker map,
+        from 5a000f0 (decimal: 94372080) to afc80f0 (decimal: 184320240)
+"vmstat" shows an overall increase in memory use from 102 MB to 191 MB.
+Since this almost doubles execution time, I take the value of NITER
+back from 125 to its previous value 75 (ref). For "train", I take the
+NITER value back to 10.
+
+September 24, 1999 (Reinhold Weicker, Siemens)
+==================
+
+The CPU subcommittee discussed the use of the type DOUBLE PRECISION:
+The Fortran 77 ANSI/ISO standard as well as the Fortran 90 ISO standard
+know, for FP variables, only the types REAL and DOUBLE Precision.
+The types REAL*4 and REAL*8 are common language extensions recognized
+by all compilers that SPEC members used in their tests.
+Following long-standing practice, SPEC prefers REAL*4 and REAL*8
+to REAL and DOUBLE PRECISION even though they are, strictly speaking,
+not standard-conformant: Occasionally, 64-bit systems have implemented
+REAL with 64 bit and DOUBLE PRECISION with 128 bit words, and the benchmark's
+load on the system would be different from the "normal" case where
+REAL is 32 bit and DOUBLE PRECISION is 64 bit.
+
+Therefore, I replaced the remaining occurrences of DOUBLE PRECISION
+by REAL*8 (files /dcabs1.f, dlaran.f, dlarnd.f, dznrm2.f).
+
+Wrote description file 168.wupwise.descr and sent it to the
+program author for comments.

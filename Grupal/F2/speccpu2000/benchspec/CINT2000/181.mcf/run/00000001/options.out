@@ -1,0 +1,2 @@
+"COMP: cl -c -Fooptions.obj       -DWANT_STDC_PROTO       /Ox /GL /Op "
+"LINK: cl       /Ox /GL /Op       -Feoptions"

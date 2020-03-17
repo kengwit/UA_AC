@@ -1,0 +1,22 @@
+$name        = 'fp';
+$units       = 'SPECfp';	# The '2000' is added later
+$metric      = 'CFP2000';
+$longest_ref = 100;
+@benchmarks = qw(
+    168.wupwise
+    171.swim
+    172.mgrid
+    173.applu
+    177.mesa
+    178.galgel
+    179.art
+    183.equake
+    187.facerec
+    188.ammp
+    189.lucas
+    191.fma3d
+    200.sixtrack
+    301.apsi
+);
+     
+1;

@@ -1,0 +1,101 @@
+SPEC CPU2000 Benchmark Description File
+
+Benchmark Name: Eon
+
+Benchmark Author: Peter Shirley, Ken Chiu, Kurt Zimmerman, and Steve Marschner
+
+Benchmark Program General Category: Computer Visualization
+
+Benchmark Description:
+
+  Eon is a probabilistic ray tracer based on Kajiya's 1986 ACM SIGGRAPH 
+  conference paper.  It sends a number of 3D lines (rays) into a 3D 
+  polygonal model.  Intersections between the lines and the polygons
+  are computed, and new lines are generated to compute light incident
+  at these intersection points.   The final result of the computation
+  is an image as seen by camera.  The computational demands of the program
+  are much like a traditional deterministic ray tracer as described in 
+  basic computer graphics texts, but it has less memory coherence because
+  many of the random rays generated in the same part of the code traverse
+  very different parts of 3D space.
+
+Input Description:
+
+  252.eon renders a 150x150 pixel image of a chair sitting in front of 
+  a corner in a room.  The input files define the objects in the space
+  being rendered by specifying their positions, sizes, reflectivity,
+  and luminance.  252.eon is run three times, each time rendering the
+  same scene using a different rendering algorithm.  The rendering
+  algorithms used are Kajiya, Cook, and Rushmeier.
+
+Output Description:
+
+  Three of the output files contain the ppm formatted images corresponding
+  to the three algorithms specified in the inputsets.  These files
+  can be viewed using xv or your favorite image viewer:
+
+  chair.cook.ppm
+  chair.kajiya.ppm
+  chair.rushmeier.ppm
+
+  The other three output files contain the greyscale values for each pixel.
+  These values are printed out as floating-point values.  These files
+  are created solely for verification of results for the SPEC CPU2000
+  benchmarks and are not normally created by the Eon application when
+  used for non-benchmarking purposes:
+
+  pixels_out.cook
+  pixels_out.kajiya
+  pixels_out.rushmeier
+
+Programming Language: C++
+
+Known portability issues:
+
+  -DSPEC_CPU2000_LP64  If you are running in a 64-bit environment and using a
+    compiler that supports an LP64 programming model (where "long" and
+    pointers are 64-bits in size).
+
+  -DFMAX_IS_DOUBLE     If your compiler won't automatically cast return
+    values to the explicitly declared size for a function, you may need this
+    flag.  The HP compiler is the only one (so far) that requires this.
+
+  -DNEED_EXPLICIT_SPECIALIZATION   If your compiler requires explicit
+    specialization for templatized functions you may need to use this flag.
+
+
+References: 
+
+  K. Zimmerman and P. Shirley, 
+  A Two-Pass Realistic Image Synthesis Method for Complex Scenes.
+  Eurographics Rendering Workshop, 1995, pp. 284-295.
+
+  G. Spencer, P. Shirley, K. Zimmerman, and D. Greenberg,
+  Physically-Based Glare Effects for Digital Images. 
+  SIGGRAPH '95, pp. 325-334.
+  
+  P. Shirley, C. Wang, K. and Zimmerman, Monte Carlo Techniques for Direct
+  Lighting Calculations.  ACM Transactions on Graphics, 1996, pp. 1-36.
+  
+  K. Chiu, K. Zimmerman and P. Shirley, The Light Volume: an Aid for
+  Rendering Complex Scenes. Eurographics Rendering Workshop, 1996, pp. 1-10.
+  
+  J. Ferwerda, S. Pattanaik, P. Shirley, and D. Greenberg, An Adaptation
+  Model for Realistic Image Synthesis. SIGGRAPH '96, pp. 249-258.
+  
+  S. Marschner and D. Greenberg. Inverse Lighting for Photography.
+  IS&T/SID Fifth Color Imaging Conference,
+  pages 262-265, November 1997
+  
+  P. Shirley, H. Hu, B. Smits, E. Lafortune,
+  A Practitioners' Assessment of Light Reflection Models.
+  Pacific Graphics 97, pp. 40-49.
+  
+  J. Ferwerda, S. Pattanaik, P. Shirley, and D. Greenberg, A Model of
+  Visual Masking for Computer Graphics. SIGGRAPH 97, pp. 91-100.
+  
+  S. Premoze, W. Thompson, P. Shirley, Geospecific Rendering of Alpine Terrain.
+  Eurographics Rendering Workshop, 1999.
+  
+  A. J. Preetham, P. Shirley, B Smits.
+  A Practical Analytic Model for Daylight, SIGGRAPH 99, pp.

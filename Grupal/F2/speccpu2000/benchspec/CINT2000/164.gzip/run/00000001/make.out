@@ -1,0 +1,52 @@
+cl -c -Fobits.obj              /Ox /GL /Op  bits.c
+bits.c
+cl -c -Fodeflate.obj              /Ox /GL /Op  deflate.c
+deflate.c
+cl -c -Fogzip.obj              /Ox /GL /Op  gzip.c
+gzip.c
+cl -c -Fogetopt.obj              /Ox /GL /Op  getopt.c
+getopt.c
+cl -c -Foinflate.obj              /Ox /GL /Op  inflate.c
+inflate.c
+cl -c -Folzw.obj              /Ox /GL /Op  lzw.c
+lzw.c
+cl -c -Fospec.obj              /Ox /GL /Op  spec.c
+spec.c
+spec.c(166): warning C4477: 'printf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'unsigned char *'
+spec.c(229): warning C4477: 'printf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'unsigned char *'
+cl -c -Fotrees.obj              /Ox /GL /Op  trees.c
+trees.c
+cl -c -Founlzh.obj              /Ox /GL /Op  unlzh.c
+unlzh.c
+cl -c -Founlzw.obj              /Ox /GL /Op  unlzw.c
+unlzw.c
+cl -c -Founpack.obj              /Ox /GL /Op  unpack.c
+unpack.c
+cl -c -Founzip.obj              /Ox /GL /Op  unzip.c
+unzip.c
+cl -c -Foutil.obj              /Ox /GL /Op  util.c
+util.c
+cl -c -Fozip.obj              /Ox /GL /Op  zip.c
+zip.c
+cl       /Ox /GL /Op  bits.obj deflate.obj gzip.obj getopt.obj inflate.obj lzw.obj spec.obj trees.obj unlzh.obj unlzw.obj unpack.obj unzip.obj util.obj zip.obj     -Fegzip
+Microsoft (R) Incremental Linker Version 14.24.28315.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/ltcg 
+/out:gzip.exe 
+bits.obj 
+deflate.obj 
+gzip.obj 
+getopt.obj 
+inflate.obj 
+lzw.obj 
+spec.obj 
+trees.obj 
+unlzh.obj 
+unlzw.obj 
+unpack.obj 
+unzip.obj 
+util.obj 
+zip.obj 
+Generando código
+Generación de código finalizada

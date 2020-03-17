@@ -1,0 +1,56 @@
+#!/usr/local/bin/perl
+# faceencode: convert a P5 PGM file to facerec data
+# Author: Christopher Chan-nui, 2/99
+#
+# Revised: j.henning, 4/9/99, to discard line(s) from
+# XV like this:
+#    # CREATOR: XV Version 3.10a  Rev: 12/29/94
+# and forget file n before doing file n+1.
+
+
+for $file (@ARGV) {
+    $out = $file;
+    $out =~ s/\.[^.]*$//;
+    $out .= ".asc";
+    open (FILE,   "<$file") || die "Can't open input file '$file': $!\n";
+    open (OUTPUT, ">$out")  || die "Can't open output file '$out': $!\n";
+    binmode OUTPUT;
+
+    chomp($type = <FILE>);
+    die "$file: This program requires a P5 PGM File\n" if ($type ne 'P5');
+
+    $line = <FILE>;
+    while ($line =~ /# CREATOR: XV/) {
+        $line = <FILE>;
+        }
+    ($width, $height) = split(' ', $line);
+
+    chomp($colors = <FILE>);
+
+    $len = $width * $height;
+    $rc = read(FILE, $data, $len);
+    die "$file: Only read $rc of $len bytes!\n" if ($rc != $len);
+
+    $offset = 0;
+    $linelen = $width;
+    $line = '';
+    while ($offset < length $data) {
+	$line .= sprintf ("%02X", 255 - ord(substr($data, $offset, 1)));
+	if (++$offset % $linelen == 0) {
+	    unshift (@output, $line);
+	    $line = '';
+	}
+    }
+
+    unshift (@output, $line) if $line ne '';
+    for (@output) {
+	$offset = 0;
+	while ($offset < length $_) {
+	    print OUTPUT substr($_, $offset, 128), "\n";
+	    $offset += 128;
+	}
+    }
+    close(OUTPUT);
+    close(FILE);
+    undef @output;
+}

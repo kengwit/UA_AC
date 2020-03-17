@@ -1,0 +1,179 @@
+#!/bin/bash
+#
+# cleanuptree - clean up working directory in preparation for a kit
+# No support is provided for this script.
+#
+# Copyright (C) 1999-2005 Standard Performance Evaluation Corporation
+#  All Rights Reserved
+#
+# $Id: cleanuptree 1569 2005-08-19 19:48:17Z cloyce $
+#
+
+if [ -z "$SPEC" ]; then
+    echo "SPEC variable is not set!";
+    exit 1;
+fi
+
+# Settings to tweak
+suite=CPU2000
+treeowner=cloyce
+treegroup=cpudevel
+
+# Don't tweak these
+lcsuite=`echo $suite | tr /A-Z/ /a-z/`
+novc='( ( -name CVS -o -name .svn ) -prune ) -o'
+
+# Figure out if xargs knows -r or not
+t=`echo foo | xargs -r echo 2>&1`
+if [ "x$t" = "xfoo" ]; then
+  XARGSR=-r
+else
+  XARGSR=
+fi
+
+echo Removing installation stuff...
+
+# Remove tools installations
+  
+(cd $SPEC; . ./shrc; relocate --undo) # Remove the relocation information
+# These are almost certainly present:
+for i in bzip2 gzip invoke invoke_pm make md5sum perl tar perldoc; do
+    rm -f $SPEC/bin/spec$i
+done
+if [ -f $SPEC/SUMS.tools ]; then
+    (cd $SPEC; grep /bin SUMS.tools | awk '{print $4}' | xargs $XARGSR rm -f)
+fi
+rm -f $SPEC/bin/packagename
+rm -f $SPEC/SUMS.tools
+rm -rf $SPEC/bin/lib
+
+# Make sure that we have version files for all benchmarks
+echo Checking for benchmark version files, exe and run directories...
+for i in $SPEC/benchspec/*/*; do
+  if [ -d $i ]; then
+    if [ ! -f $i/version -a `basename $i` != "CVS" -a `basename $i` != ".svn" ]; then
+      echo No version file in $i
+      exit 1
+    fi
+    for j in run exe; do 
+      if [ -d $i/$j ]; then
+        echo Removing $i/$j
+        rm -rf $i/$j
+      fi
+    done
+  fi
+done
+
+# Make sure that there are no CRLFs in the sources
+echo Looking for the evil CRLF in source files
+CRLFfound=0
+for i in $SPEC/benchspec/*/*/src; do
+  find $i $novc \( -type f \! -name '*.tar' -print \) | \
+    xargs perl -MFile::Basename -ne 'if (m/\015/o) { print "CRLF found in $ARGV\n"; $found = 1; } END { exit $found; }'
+  if [ $? -ne 0 ]; then
+    echo CRLF sources in $(basename $(dirname $i))
+    CRLFfound=1
+  fi
+done
+if [ $CRLFfound -ne 0 ]; then
+  exit 1
+fi
+
+# Remove tools build leftovers
+(cd $SPEC/tools/src; SKIPALL=1 DOCLEAN=1 CLEANONLY=1 ./buildtools)
+rm -rf $SPEC/tools/output
+
+# Clean out the results directory
+find $SPEC/result $novc \( -type f -print \) | egrep -v '(basebar|peakbar|invalid)\.gif$' | xargs $XARGSR rm -f
+
+# Make sure rawformat exists and is current, because we can't just symlink it
+echo Fixing up rawformat and configpp
+rm -f $SPEC/bin/rawformat $SPEC/bin/configpp
+cp $SPEC/bin/runspec $SPEC/bin/rawformat
+chmod 755 $SPEC/bin/rawformat
+
+# Check for long file names
+echo Checking for long file names
+find . $novc -print | perl -ne 'next if m{/(?:\.svn|CVS)/?}o; chomp; s/^\.\///o; $l=length($_); if ($l > 99) { print "$l: $_\n"; $long++; } END { if ($long) { print "$long long files found\n"; exit 1; } }'
+
+# Textualize whatever docs there are
+echo Text conversion for docs
+for i in $SPEC/docs/*; do
+  # Skip this for config and text files
+  if ! echo $i | egrep '\.(cfg|txt)$' >/dev/null 2>&1; then
+    # Strip the extension
+    txtfile=`echo $i | sed 's/\.[^.]*$//'`
+    # If the file doesn't exist without an extension, the file's name
+    # is the full name _with_ extension
+    if [ ! -f $txtfile -a $i != ${txtfile}.html ]; then
+      txtfile=$i
+    fi
+    if [ -f ${txtfile}.html -a $i != $txtfile ]; then
+      echo ...`basename $i` '(HTML)'
+      cat > $txtfile  <<EONOTE
+    ---------------------------------------------------
+    NOTE: the following text file was automatically
+    generated from a document that is best read in
+    HTML format.  To read it in the preferred format,
+    point your web browser at any of these 3 locations:
+
+    (1) http://www.spec.org/$lcsuite/docs
+
+    (2) The docs directory of your SPEC $suite CD -
+        for example:
+            /cdrom/docs/ (Unix)
+            E:\docs\  (NT)
+
+    (3) The docs directory on the system where you
+        have installed SPEC $suite - for example
+
+           /usr/mydir/$lcsuite/docs/           (Unix)
+           C:\My Directory\$lcsuite\docs\   (NT)
+    ---------------------------------------------------
+
+EONOTE
+      links -dump $i >> $txtfile
+    elif [ ! -f ${txtfile}.html ]; then
+      echo ...`basename $i` '(text)'
+      # Just do the textification
+    fi
+    perl -ne 'tr/\012\015//d; print "$_\r\n";' $txtfile > ${txtfile}.txt
+  fi
+done
+
+# And some scattered files
+for i in $SPEC/LICENSE $SPEC/README $SPEC/original.src/{GPL.v?,Artistic,zlib*copyright,README,bzip2*license,expat*license}
+do
+   if [ -f $i ]; then
+       rm -f $i.txt
+       perl -ne 'tr/\012\015//d; print "$_\r\n";' $i > $i.txt
+   fi
+done
+
+echo Nuking bad files
+find $SPEC $novc \( -name 'core' -o -name 'Makefile.spec' -o -name '.*.swp' -o -name '*~' -o -name '.*svn*tmp' -o -name 'svn*.tmp' -o -name '*.flc' -o -name '*.cfg.20*' -o -name .DS_Store \) -print | xargs $XARGSR rm -f
+
+echo Compressing build logs
+for i in `find $SPEC/tools/src/buildtools.log -name '*.buildlog.txt' -print`; do
+  cat $i | bzip2 -9 > ${i}.bz2
+done
+
+# Generate the manifest
+if [ "x$1" != "xno_manifest" ]; then
+    echo Making the MANIFEST file
+    $SPEC/bin/scripts.misc/genmanifest.sh
+fi
+
+echo Setting permissions
+chown -R $treeowner $SPEC >/dev/null 2>&1 || :  # Okay if it fails
+chgrp -R $treegroup $SPEC >/dev/null 2>&1 || :  # Okay if it fails
+chmod -R ug+rw,o+r,o-w $SPEC            # Not okay if it fails
+find $SPEC -type d -print | xargs chmod a+x
+
+echo Checking for uncomitted changes
+$SPEC/bin/scripts.misc/checkupdates
+
+echo
+echo Done.  Do not forget to clean up the config directory if necessary.
+echo
+

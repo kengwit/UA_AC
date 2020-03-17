@@ -1,0 +1,40 @@
+SPEC CPU2000 Benchmark Description File
+
+Benchmark Name: 171.swim
+
+Benchmark Author: Paul N. Swarztrauber
+
+Benchmark Program General Category: Meteorology: Shallow Water Modeling
+
+Benchmark Description:
+
+  Benchmark weather prediction program for comparing the performance
+  of current supercomputers.  The model is based on the paper,
+  "The Dynamics of Finite-Difference Models of the Shallow-Water Equations",
+  by Robert Sadourny, J. ATM. SCIENCES, VOL 32, NO 4, APRIL 1975.
+
+  Adapted by SPEC for use in the SPEC CPU Suites as an example of
+  a compute intensive floating point program that was once relegated
+  only to "supercomputers" but can now be done on current computer
+  systems.
+
+Input Description: It does a 1335x1335 area array of data and iterates over
+		   512 timesteps.
+
+Output Description: It prints the diagonal elements of the velocity field.
+
+Programming Language: Fortran 77
+
+Known portability issues: None.
+
+Reference:
+
+"The Dynamics of Finite-Difference Models of the Shallow-Water Equations",
+  by Robert Sadourny, J. ATM. SCIENCES, VOL 32, NO 4, APRIL 1975.
+
+and
+
+G.-R. Hoffmann, P. N. Swarztrauber, and R. A. Sweet,
+  Aspects of using multiprocessors for meteorological modeling,
+  In: Multiprocessing in Meteorological Models, G.-R. Hoffman and
+  D.F. Snelling, eds., Springer-Verlag, 1988, pp. 125-196.

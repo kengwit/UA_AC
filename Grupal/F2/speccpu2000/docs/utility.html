@@ -1,0 +1,725 @@
+<html>
+<head>
+<title>SPEC CPU2000 Utility Programs</title>
+</head>
+<body bgcolor=white>
+<pre>
+
+</pre>
+
+<h1>SPEC CPU2000 Utility Programs </h1>
+
+<h4>Last updated: 29-Oct-2001 jh</h4>
+(To check for possible updates to this document,
+please see <a href=http://www.spec.org/cpu2000/docs/>http://www.spec.org/cpu2000/docs/</a>  
+
+<pre>
+</pre>
+<hr>
+
+<h2>Contents</h2>
+<ul>
+      <li><a href=#intro>         <font color=blue> Introduction         </font></a>
+      <li><a href=#extract_config><font color=blue> extract_config       </font></a>
+      <li><a href=#extract_raw>   <font color=blue> extract_raw          </font></a>
+      <li><a href=#go>            <font color=blue> go (Unix only)       </font></a>
+      <li><a href=#printkids>     <font color=blue> printkids.pl         </font></a>
+      <li><a href=#relocate>      <font color=blue> relocate (Unix only) </font></a>
+      <li><a href=#rawformat>     <font color=blue> rawformat            </font></a>
+      <ol>
+         <li> What do you do when <a href=#mkt><font color=blue>Marketing decides to change</font></a> the name? 
+         <li> About <a href=#cont><font color=blue>continuation fields</font></a> in rawfiles
+         <li> How do you <a href=#gen><font color=blue>generate a 1-cpu rate result</font></a> from a 1-cpu speed result?
+      </ol>
+      <li><a href=#specdiff>      <font color=blue> specdiff             </font></a>
+      <li><a href=#specinvoke>    <font color=blue> specinvoke           </font></a>
+      <li><a href=#specmake>      <font color=blue> specmake             </font></a>
+</ul>
+<hr>
+
+<a name=intro><h2>Introduction</h2></a>
+
+   This document describes various useful utilities that ship with 
+   SPEC CPU2000.  It is assumed that you have already read 
+   <a href=runspec.html>runspec.html</a> and <a href=config.html>config.html</a>.</p>
+
+
+<hr width=80%>
+<center><table width=75%><tr><td>
+<i>Note: links to SPEC CPU2000 documents on this web page
+assume that you are reading the page from a directory that
+also contains the other SPEC CPU2000 documents.  If by
+some chance you are reading this web page from a location
+where the links do not work, try accessing the referenced
+documents at one of the following locations:</i>
+<ul>
+<li><a href=http://www.spec.org/cpu2000/docs/>
+     www.spec.org/cpu2000/docs/</a>
+<li><i>The </i><tt><big><b>$SPEC/docs/    </b></big></tt><i> directory on a Unix system where SPEC CPU2000 has been installed.
+<li>   The </i><tt><big><b>%spec%\docs.nt\</b></big></tt><i> directory on a Windows/NT system where SPEC CPU2000 has been installed.
+<li>   The </i><tt><big><b>docs/          </b></big></tt><i> or
+           </i><tt><big><b>docs.nt\       </b></big></tt><i> directory on your SPEC CPU2000 distribution cdrom.</i>
+</ul>
+</td></tr></table>
+<hr width=75%>
+</center>
+</p></li>
+
+
+
+<pre>
+</pre>
+<hr>
+
+<a name=extract_config><h2>extract_config</h2></a>
+
+If you have a rawfile, you can extract the config file that was used
+with it.  To do so, use the <kbd>extract_config</kbd> utility.  
+
+<p>For example, starting with a freshly-installed
+SPEC CPU2000 directory tree:
+<pre>
+    % <b>runspec --config=Tru64_Unix --size=test --iterations=1 \
+      --tuning=peak --output_format=ps swim > /dev/null</b>
+    % <b>cd result</b>
+    % <b>ls</b>
+    CFP2000.001.ps   CFP2000.001.raw  log.001          log.lock  </pre>
+
+Note that we have just the single result.  Let's make a temporary
+directory and copy the rawfile there:
+<pre>
+    % <b>mkdir tmp</b>
+    % <b>cd tmp</b>
+    % <b>cp ../CFP2000.001.raw .</b>
+    % <b>ls</b>
+    CFP2000.001.raw  </pre>
+
+Now, attempt to extract the config file:
+<pre>
+    % <b>extract_config CFP2000.001.raw > tmp.cfg  </b></pre>
+
+Does the extracted file match the original?
+<pre>
+    % <b>diff ../../config/Tru64_Unix.cfg ./tmp.cfg</b>
+    0a1,3
+    > # Invocation command line:
+    > # /cpu2000/kit96/bin/runspec --config=Tru64_Unix --size=test
+    --iterations=1 --tuning=peak --output_format=ps swim
+    >
+    ############################################################################
+    96,102d98
+    <
+    < __MD5__
+    < 171.swim=peak=oct6a=default:
+    < # Last updated Wed Dec 15 10:05:06 1999
+    < optmd5=764e8d466d967f5dacae93415dbfbe71
+    < exemd5=d7cccb73a236bbe7a548385ee4eff137
+    <
+    %  </pre>
+
+Yes.  The only differences are:
+<ul>
+  <li> The copy in the rawfile adds a comment to tell you how the config 
+    file was invoked.
+  <li> The original copy (in $SPEC/config) has the MD5 information for swim.
+    (The config file is tucked away into the rawfile prior to any 
+    additions that are needed for MD5.)  
+</ul>
+
+<p><i><big>NT Notes</big></i>: on NT systems, you can invoke extract_config as:
+<pre>
+    <b>specperl %spec%\bin\extract_config rawfile  </b> </pre>
+
+<pre>
+</pre>
+<hr>
+
+<a name=extract_raw><h2>extract_raw</h2></a>
+
+If you have a pdf, html, or ps output file, you can extract the rawfile
+that was used to generate it.  To do so, use <kbd>extract_raw</kbd>.
+
+<p>For example:
+<pre>
+    % <b>ls</b>
+    CFP2000.001.ps   CFP2000.001.raw  log.001          log.lock
+    % <b>mkdir tmp</b>
+    % <b>cd tmp</b>
+    % <b>cp ../*ps .</b>
+    % <b>ls</b>
+    CFP2000.001.ps  </pre>
+
+Note that at this point we have just the postscript output in the
+current directory.  Now, attempt to extract the raw file:
+<pre>
+    % <b>extract_raw *ps</b>
+    % <b>ls</b>
+    CFP2000.001.ps   CFP2000.001.raw  </pre>
+
+Does the extracted file match the original?
+<pre>
+    % <b>diff ../CFP2000.001.raw ./CFP2000.001.raw</b>
+    %  </pre>
+
+Yes.
+
+<p><big><i>NT Notes:</i></big> on NT systems, you can invoke extract_raw as:
+<pre>
+    <b>specperl %spec%\bin\extract_raw file-to-extract-from  </b> </pre>
+
+Note that the file you extract from can be pdf, ps, or html, just
+as on Unix systems, with one important exception: if you are using
+a browser that attempts to add value to the html when you save it,
+that browser may break the embedded rawfile.  For example, with 
+Internet Explorer Version 5.00.3103.1000, if you are viewing a 
+SPEC CPU2000 html file and you select File -> Save As, the default 
+for "Save as type" is shown as 
+<pre>
+     "Web Page, complete (*.htm,*.html)"  </pre>
+
+Do not accept that default if you want to be able to retrieve the
+rawfile later on.  If you take the default, your saved file will 
+be incomplete.
+
+To save the web page INCLUDING the embedded rawfile, you must change
+"Save as type" to
+<pre>
+     "Web Page, HTML only (*.htm,*.html)"  </pre>
+
+<pre>
+</pre>
+<hr>
+
+<a name=go><h2>go (Unix only)</h2></a>
+
+When you source the shrc, as described in 
+<a href=runspec.html>runspec.html</a>, the
+'go' shell alias is created.  Note: if you leave the shell where you
+sourced shrc, for example by spawning csh, the alias is no longer 
+available!  So if you want to use this alias, use a Bourne-compatible
+shell.
+
+<p>For those of you who will have it, here are the various things it 
+understands, as well as the places they'll take you. 
+They're awfully handy.</p>
+
+<center><table width=80% cellspacing=0 cellpadding=0>
+<tr><td><b>If you say</td> <td><b>You'll end up in </td></tr>
+<tr><td>go             </td><td>$SPEC            </td></tr>
+<tr><td>go top         </td><td>$SPEC            </td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>go bin         </td><td>$SPEC/bin  (where the tools live)            </td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>go config      </td><td>$SPEC/config            </td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>go result      </td><td>$SPEC/result            </td></tr>
+<tr><td>go results     </td><td>$SPEC/result            </td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>go doc         </td><td>$SPEC/docs            </td></tr>
+<tr><td>go docs        </td><td>$SPEC/docs            </td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>go int         </td><td>$SPEC/benchspec/CINT2000            </td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>go fp          </td><td>$SPEC/benchspec/CFP2000            </td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>go src foo     </td><td>foo's src directory, if it can be found.  For example:            </td></tr>
+<tr><td>go src 197     </td><td>$SPEC/benchspec/CINT2000/197.parser/src            </td></tr>
+<tr><td>go src eon     </td><td>$SPEC/benchspec/CINT2000/252.eon/src            </td></tr>
+<tr><td>go src nada    </td><td>.  (There's no benchmark named *nada*)            </td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>go work foo    </td><td> foo's run directory, if it can be found.  For example:            </td></tr>
+<tr><td>go work 197    </td><td> $SPEC/benchspec/CINT2000/197.parser/run            </td></tr>
+<tr><td>go work eon    </td><td> $SPEC/benchspec/CINT2000/252.eon/run            </td></tr>
+<tr><td>go work nada   </td><td> .  (There's no benchmark named *nada*)            </td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>go data foo    </td><td> foo's data directory, if it can be found.  For example:            </td></tr>
+<tr><td>go data 197    </td><td> $SPEC/benchspec/CINT2000/197.parser/data            </td></tr>
+<tr><td>go data eon    </td><td> $SPEC/benchspec/CINT2000/252.eon/data            </td></tr>
+<tr><td>go data nada   </td><td> .  (There's no benchmark named *nada*)            </td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>go foo         </td><td> foo's top level directory, if it can be found.  For example:            </td></tr>
+<tr><td>go 197         </td><td> $SPEC/benchspec/CINT2000/197.parser            </td></tr>
+<tr><td>go eon         </td><td> $SPEC/benchspec/CINT2000/252.eon            </td></tr>
+<tr><td>go nada        </td><td> .  (There's no benchmark named *nada*)            </td></tr>
+</table></center>
+
+
+<pre>
+</pre>
+<hr>
+
+<a name=printkids><h2>printkids.pl</h2></a>
+
+Some benchmark executables are invoked multiple times.  If you'd like to
+know how much time was spent on each invocation, it may not be easy to
+tell.  You could examine "<tt>speccmds.out</tt>", but that file is not easy to 
+interpret:
+<pre>
+    $ <b>go work gcc</b>
+    $ <b>cat list | fold -s</b>
+    00000001 dir=/cpu2000/kit92/benchspec/CINT2000/176.gcc/run/00000001
+    ext=nov11c_ns lock=0 mach=default size=ref tune=base type=run
+    username=john
+    __END__
+    $ <b>cd *01</b>
+    $
+    $ <b>cat speccmds.out | fold -s</b>
+    running commands in speccmds.cmd 1 times
+    runs started at 943371319, 399184000, Tue Nov 23 10:35:19 1999
+    run 1 started at 943371319, 399184000, Tue Nov 23 10:35:19 1999
+    child started: 0, 943371319, 400160000, 11128,
+    '../00000001/cc1_base.nov11c_ns
+    166.i -o 166.s'
+    child finished: 0, 943371519, 814960000, 200, 414800000, 11128, 0
+    child started: 0, 943371519, 815936000, 11135,
+    '../00000001/cc1_base.nov11c_ns
+    200.i -o 200.s'
+    child finished: 0, 943371854, 339648000, 334, 523712000, 11135, 0
+    child started: 0, 943371854, 339648000, 11154,
+    '../00000001/cc1_base.nov11c_ns
+    expr.i -o expr.s'
+    child finished: 0, 943371892, 803248000, 38, 463600000, 11154, 0
+    child started: 0, 943371892, 803248000, 11126,
+    '../00000001/cc1_base.nov11c_ns
+    integrate.i -o integrate.s'
+    child finished: 0, 943371939, 571936000, 46, 768688000, 11126, 0
+    child started: 0, 943371939, 571936000, 11146,
+    '../00000001/cc1_base.nov11c_ns
+    scilab.i -o scilab.s'
+    child finished: 0, 943372136, 993568000, 197, 421632000, 11146, 0
+    run 1 finished at: 943372136, 993568000, Tue Nov 23 10:48:56 1999
+    run 1 elapsed time: 817, 594384000, 817.594384000
+    runs finished at 943372136, 993568000, Tue Nov 23 10:48:56 1999
+    runs elapsed time: 817, 594384000, 817.594384000  </pre>
+
+Fortunately, SPEC has provided a tool to interpret the above for you:
+<pre>
+    $ <b>printkids.pl</b>
+      Seconds  Command
+       200.41 cc1_base.nov11c_ns 166.i -o 166.s
+       334.52 cc1_base.nov11c_ns 200.i -o 200.s
+        38.46 cc1_base.nov11c_ns expr.i -o expr.s
+        46.77 cc1_base.nov11c_ns integrate.i -o integrate.s
+       197.42 cc1_base.nov11c_ns scilab.i -o scilab.s
+    =========
+       817.59 Total by adding children
+       817.59 Total according to speccmds.out
+    $  </pre>
+
+<pre>
+</pre>
+<hr>
+
+<a name=relocate><h2>relocate (Unix only)</h2></a>
+
+If you rearrange mount points or rename your SPEC root directory, you 
+will probably find confusing problems like the one in the example
+that follows.  We used to have a working SPEC tree under <tt>/cpu2000/kit96</tt>,
+but we're going to change that:
+<pre>
+    $ <b>cd /cpu2000</b>
+    $ <b>mv kit96 larry</b>
+    $ <b>cd larry</b>
+    $ <b>. ./shrc</b>
+    $ <b>runspec -h</b>
+    ksh: runspec: cannot execute  </pre>
+
+The problem is that the first line of runspec points to a path that
+no longer exists:
+<pre>
+    $ <b>head -1 bin/runspec</b>
+    #!/cpu2000/kit96/bin/specperl
+    $  </pre>
+
+Fortunately, SPEC has provided a tool to relocate the tools in the
+new tree:
+<pre>
+    $ <b>bin/relocate</b>
+    Top of SPEC tree is '/cpu2000/larry'
+    $ <b>runspec -h | head -3</b>
+    runspec v2.00 - Copyright (C) 1999 Standard Performance Evaluation 
+    Corporation
+    Usage: bin/runspec [options]  </pre>
+
+LIMITATIONS: there are some limitations to this tool.  Most notably,
+it uses perl, so if the tree has been re-arranged in such a way that
+perl has an identity crisis and can't find itself, you'll be in 
+trouble.  Make sure that you have sourced shrc, as in the next 
+example; if it still fails, you may need to reinstall the CPU2000 kit.
+<pre> 
+    $ <b>mv larry carol</b>
+    $ <b>cd carol</b>
+    $ <b>bin/relocate</b>
+    Top of SPEC tree is '/cpu2000/carol'
+    1062:/cpu2000/carol/bin/specperl: /sbin/loader: Fatal Error: cannot map
+    libperl.so
+    $ <b>. ./shrc</b>
+    $ <b>bin/relocate</b>
+    Top of SPEC tree is '/cpu2000/carol'
+    $ <b>runspec -h | head -2</b>
+    runspec v2.00 - Copyright (C) 1999 Standard Performance Evaluation
+    Corporation
+    Usage: bin/runspec [options]
+    $  </pre>
+
+<pre>
+</pre>
+<hr>
+
+<a name=rawformat><h2>rawformat </h2></a>
+
+"rawformat" is simply another name for 
+<pre>
+   runspec --rawformat  </pre>
+
+so please see <a href=runspec.html>runspec.html</a> for basic 
+information on using this command.
+But a couple of additional points are worth mentioning:
+
+<ol>
+<a name=mkt><li>What do you do when Marketing decides to change the name from
+       "SuperHero 4"
+   to
+       "SuperHero IV" 
+   just before you submit the results to SPEC?</a></p>
+
+   <p>SPEC does allow you to edit the rawfile to make corrections.  
+   Just make sure that you only edit the fields located before
+   the "fence":
+<pre>
+     # =============== do not edit below this point ===================  </pre>
+
+   WARNING: Make a backup copy of the rawfile first!  
+
+   <p>For example:
+<pre>
+        <b>copy  CFP2000.001.raw  new.raw</b>
+        (edit new.raw to make your changes)
+        <b>rawformat -o ps new.raw</b>
+        runspec v2.00 - Copyright (C) 1999 Standard Performance Evaluation
+        Corporation
+        Loading standard modules..............
+        Loading runspec modules.............
+        Identifying output formats...asc...config...html...pdf...ps...raw...
+        Formatting new.raw
+                format: PostScript -> new.ps  </pre>
+
+<a name=cont><li> About continuation fields in rawfiles</a>
+   
+   <p>Notice when editting fields that have more than one line that you
+   need to construct the numbers with correct syntax.  The syntax in
+   the rawfile is a bit more picky than in config files (compare the
+   following vs. the <a href=config.html#continue>config.html section on "Field scoping and
+   continuation"</a>.  You cannot say something like this:</p>
+
+   <pre>
+   WRONG:
+     spec.cpu2000.sw_compiler: Intel C Compiler 4.5 for Windows 2000
+     spec.cpu2000.sw_compiler1: Visual C++ 6.0 C (for libraries) </pre>
+
+   because the tools are not prepared at this point for a mixture of
+   numbered and un-numbered fields.  If you need to have continued
+   fields, say instead:
+   
+   <pre>
+   RIGHT:
+     spec.cpu2000.sw_compiler0: Intel C Compiler 4.5 for Windows 2000
+     spec.cpu2000.sw_compiler1: Visual C++ 6.0 C (for libraries) </pre>
+
+<a name=gen><li> How do you generate a 1-cpu rate result from a 1-cpu speed result?</a>
+
+   <p>To generate a 1-cpu rate result from a speed run, copy the original
+   rawfile to another location, and use rawformat to both generate the
+   new rawfile and whatever other reports you want.  For example:
+<pre>
+    $ <b>grep SPECf CFP2000.015.asc</b>
+       SPECfp_base2000                        176
+       SPECfp2000                                               --
+    $ <b>cp CFP2000.015.raw convertme</b>
+    $ <b>rawformat --output_format asc,raw,ps --rate convertme</b>
+    runspec v2.00 - Copyright (C) 1999 Standard Performance Evaluation Corporation
+    Loading standard modules..............
+    Loading runspec modules.............
+    Identifying output formats...asc...config...html...pdf...ps...raw...
+    Formatting convertme
+            format: ASCII -> convertme.asc
+            format: raw -> convertme.raw
+            format: PostScript -> convertme.ps
+    $ <b>grep SPECf convertme.asc</b>
+       SPECfp_rate_base2000             2.05
+       SPECfp_rate2000                                    --  </pre>
+    
+<p><big><i>NT Notes:</i></big> on NT systems, you may find
+that <kbd>--output_format</kbd> will only accept one argument at a time.
+So, first create the rawfile, by using <kbd>--output_format raw</kbd>, then use
+the new rawfile to create the other reports.</li>
+</ol>
+
+<pre>
+</pre>
+<hr>
+
+<a name=specdiff><h2>specdiff</h2></a>
+
+In order to decide whether your system got the correct answer for a
+benchmark, runspec writes a file called "compare.cmd" in the run
+directory, and then calls specinvoke, which calls specdiff.  (The
+specinvoke utility is described 
+<a href=#specinvoke><font color=blue>later</font></a> in this document.)
+
+<p>Suppose that your results are flagged as incorrect, but you'd like 
+to have more detail.  You could ask for more than 10 lines of
+detail by changing the config file's default for 
+<a href=config.html#toc_difflines>difflines</a> from 10 to 
+something else, and re-running the experiment.
+But, you might save a lot of time and avoid the re-run of
+the experiment, by calling specdiff directly, with a different
+number of lines for its switch <kbd>-l</kbd>.
+
+<p>For example, 
+a file chock-full of wrong answers for ammp has been created by
+hand.  First, let's see how specdiff would normally be run (line 
+wraps added for readability):
+<pre>
+    $ <b>specinvoke -c 1 -f compare.cmd -n</b>
+    /cpu2000/kit96/bin/specdiff -m -l 10  -a 0.0001  -r 0.003
+    /cpu2000/kit96/benchspec/CFP2000/188.ammp/data/test/output/ammp.out 
+    ammp.out > ammp.out.cmp  </pre>
+
+The above says that normally we test for correct answers by comparing
+data/test/output/ammp.out to ammp.out in the current directory.
+Normally, 10 lines of detail are printed.  Let's change that to 15
+lines, and compare versus our intentionally wrong file instead:
+<pre>
+    $ <b>/cpu2000/kit96/bin/specdiff -m -l 15 -a 0.0001  -r 0.003 \
+    /cpu2000/kit96/benchspec/CFP2000/188.ammp/data/test/output/ammp.out \
+    ammp.wrong_output</b>
+    0002:   setf mxdq 0.75;
+            setf mxdq 01.75;
+                          ^
+    0003:    setf mmbox 10.;
+             setf mmbox 101.;
+                           ^
+    0006:   setf bbox 35.;
+            setf bbox 351.;
+                         ^
+    0009:   0.000000 unknown potential type
+            01.000000 unknown potential type
+                    ^
+    0010:   1181.693079 bond energy
+            11811.693079 bond energy
+                       ^
+    0011:   2056.767980 angle energy
+            20561.767980 angle energy
+                       ^
+    0012:   61.501074 hybrid energy
+            611.501074 hybrid energy
+                     ^
+    0013:   533.960821 torsion energy
+            5331.960821 torsion energy
+                      ^
+    0014:   -15410.005122 non-bonded energy
+            -154101.005122 non-bonded energy
+                         ^
+    0015:   -11576.082168 total potential energy
+            -115761.082168 total potential energy
+                         ^
+    0016:   8584.512662 total kinetic energy
+            85841.512662 total kinetic energy
+                       ^
+    0017:   -2991.569506 total energy
+            -29911.569506 total energy
+                        ^
+    0018:   20160.594829 total action
+            201601.594829 total action
+                        ^
+    0020:   tpac numstp .00001 temp;
+            tpac numstp 1.00001 temp;
+                              ^
+    0022:   0.000000 unknown potential type
+            01.000000 unknown potential type
+                    ^
+    0023:   1184.181101 bond energy
+            11841.181101 bond energy
+                       ^
+    $  </pre>
+
+Here are the switches supported by specdiff:
+<pre>
+    $ <b>specdiff -h</b>
+    Usage: /cpu2000/kit96/bin/specdiff [-l #] [-q] file1 [file2]
+       -l     # of lines of differences to print
+       -q     don't print lines just set return code
+       -a     absolute tolerance (for floating point compares)
+       -r     relative tolerance (for floating point compares)
+       -t     set calctol
+       -s     set skiptol
+       -o     allow off-by-one errors
+       -O     *don't* allow off-by-one errors
+       -m     write file2.mis with miscompares
+       -c     collapse whitespace (doesn't do what you think it does)
+       -C     *don't* collapse whitespace
+       -d     Compare against file(s) in data directory
+      --os    Set the operating system type (you don't need to do this)
+       -v     Set the level of noisiness for the output
+       -h     Print this message
+    $  </pre>
+
+<pre>
+</pre>
+<hr>
+
+<a name=specinvoke><h2>specinvoke</h2></a>
+
+In order to run a benchmark, runspec writes a series of commands 
+in the run directory, in the file "speccmds.cmd".  These commands
+are then interpreted by specinvoke.
+
+When something goes wrong, it is often useful to try the commands by
+hand.  Ask specinvoke what it did, by using the "-n" switch:
+<pre>
+    $ <b>go work swim</b>
+    $ <b>cd 00000002</b>
+    $ <b>ls</b>
+    SWIM7            compare.out      swim.err         swim_peak.oct6a
+    SWIM7.cmp        speccmds.cmd     swim.in
+    compare.cmd      speccmds.err     swim.out
+    compare.err      speccmds.out     swim.out.cmp
+    $ <b>specinvoke -n</b>
+    ../00000002/swim_peak.oct6a < swim.in > swim.out 2> swim.err
+    $  </pre>
+
+In the above example, we see how swim is invoked.  If you wanted
+to enter your own variations on the above command by hand, you 
+could do so.
+
+Here are the switches supported by specinvoke:
+<pre>
+    $ <b>specinvoke -h</b>
+    Usage: specinvoke [options] [instructionfile]
+           -i #      iterations
+           -c #      concurrent processes (overrides -u in command file)
+           -E        return non-zero exit code if child does
+           -s shell  shell to invoke
+           -f file   instruction file
+           -o file   output file
+           -e file   error file
+           -d dir    change to dir first
+           -n[n]     print a 'dry_run' of commands
+           -A        return 0 error code
+	   -r        don't do command I/O redirection ($command already has it)
+           -h        this message  </pre>
+
+
+<pre>
+</pre>
+<hr>
+
+<a name=specmake><h2>specmake</h2></a>
+
+To build a benchmark, runspec uses specmake, which is simply gnu make
+under a unique name to avoid possible conflicts with other versions of 
+make on your system.
+
+If a benchmark build fails, the most massively useful thing you can do
+is to ask specmake what it did, by using the "<kbd>-n</kbd>" switch for dry run.
+
+For example, let's create a config file that is unlikely to work:
+<pre>
+    $ <b>cat >tmp.cfg</b>
+    ext = silly
+    FC  = f66
+    $  </pre>
+
+and try it out:
+<pre>
+    $ <b>runspec --config=tmp --tuning=base --action=build swim</b>
+    runspec v2.00 - Copyright (C) 1999 Standard Performance Evaluation
+    Corporation
+    Loading standard modules..............
+    Loading runspec modules.............
+    Identifying output formats...asc...config...html...pdf...ps...raw...
+    We will use: 171.swim
+    Compiling Binaries
+      Building 171.swim ref base silly default
+    Error with make 'specmake  build > make.out 2> make.err': check file
+    '/cpu2000/kit96/benchspec/CFP2000/171.swim/run/00000004/make.err'
+      Error with make!
+    *** Error building 171.swim
+    If you wish to ignore this error, please use '-I' or ignore errors.
+    $  </pre>
+
+Sure enough, it failed.  Let's find the appropriate run directory 
+where our silly build was attempted:
+<pre>
+    $ <b>go run swim</b>
+    $ <b>grep build list | grep silly | cut -b 1-9</b>
+    00000004
+    $ <b>cd 00000004  </b> </pre>
+
+And ask specmake just exactly what it generated:
+<pre>
+    $ <b>specmake -n</b>
+    f66 -c -o swim.o                swim.f
+    f66         swim.o     -o swim  </pre>
+
+OK, let's enter the command by hand:
+<pre>
+    $ <b>f66 -c -o swim.o                swim.f</b>
+    ksh: f66:  not found
+    $  </pre>
+
+
+A great convenience of the CPU2000 suite is the fact that you can now 
+proceed to play with all the files in this run directory, to prototype 
+different changes and try out ideas, without fear that you will break 
+anything.  As long as you confine your edits to (in this example) 
+<tt>$SPEC/benchspec/CFP2000/171.swim/run/00000004/</tt>, you are in a private 
+sandbox and will not harm the original sources.
+
+<p>Here are the switches supported by specmake:
+<pre>
+$ <b>specmake -h</b>
+Usage: specmake [options] [target] ...
+Options:
+  -b, -m                      Ignored for compatibility.
+  -C DIRECTORY, --directory=DIRECTORY
+                              Change to DIRECTORY before doing anything.
+  -d, --debug                 Print lots of debugging information.
+  -e, --environment-overrides
+                              Environment variables override makefiles.
+  -f FILE, --file=FILE, --makefile=FILE
+                              Read FILE as a makefile.
+  -h, --help                  Print this message and exit.
+  -i, --ignore-errors         Ignore errors from commands.
+  -I DIRECTORY, --include-dir=DIRECTORY
+                              Search DIRECTORY for included makefiles.
+  -j [N], --jobs[=N]          Allow N jobs at once; infinite jobs with no arg.
+  -k, --keep-going            Keep going when some targets can't be made.
+  -l [N], --load-average[=N], --max-load[=N]
+                              Don't start multiple jobs unless load is below N.
+  -n, --just-print, --dry-run, --recon
+                              Don't actually run any commands; just print them.
+  -o FILE, --old-file=FILE, --assume-old=FILE
+                              Consider FILE to be very old and don't remake it.
+  -p, --print-data-base       Print make's internal database.
+  -q, --question              Run no commands; exit status says if up to date.
+  -r, --no-builtin-rules      Disable the built-in implicit rules.
+  -s, --silent, --quiet       Don't echo commands.
+  -S, --no-keep-going, --stop
+                              Turns off -k.
+  -t, --touch                 Touch targets instead of remaking them.
+  -v, --version               Print the version number of make and exit.
+  -w, --print-directory       Print the current directory.
+  --no-print-directory        Turn off -w, even if it was turned on implicitly.
+  -W FILE, --what-if=FILE, --new-file=FILE, --assume-new=FILE
+                              Consider FILE to be infinitely new.
+  --warn-undefined-variables  Warn when an undefined variable is referenced.  </pre>
+
+<pre>
+</pre>
+<hr>
+Copyright (C) 1999-2000 Standard Performance Evaluation Corporation
+<br>All Rights Reserved
+</body>
+</html>

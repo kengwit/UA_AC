@@ -1,0 +1,600 @@
+cl -c -Fobitvec.obj              /Ox /GL /Op  bitvec.c
+bitvec.c
+cl -c -Fobmt.obj              /Ox /GL /Op  bmt.c
+bmt.c
+cl -c -Fobmt0.obj              /Ox /GL /Op  bmt0.c
+bmt0.c
+cl -c -Fobmt01.obj              /Ox /GL /Op  bmt01.c
+bmt01.c
+bmt01.c(1457): warning C4477: 'sprintf' : la cadena de formato '%u' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'char *'
+bmt01.c(1472): warning C4477: 'sprintf' : la cadena de formato '%d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'longtype *'
+bmt01.c(1472): warning C4477: 'sprintf' : la cadena de formato '%d' requiere un argumento de tipo 'int', pero el argumento vari dico 2 tiene el tipo 'longtype *'
+cl -c -Fobmt10.obj              /Ox /GL /Op  bmt10.c
+bmt10.c
+cl -c -Fobmtlib.obj              /Ox /GL /Op  bmtlib.c
+bmtlib.c
+bmtlib.c(279): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'PartLib *'
+cl -c -Fobmtobj.obj              /Ox /GL /Op  bmtobj.c
+bmtobj.c
+bmtobj.c(889): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'Part2 *'
+cl -c -Focore01.obj              /Ox /GL /Op  core01.c
+core01.c
+core01.c(443): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'addrtype'
+core01.c(443): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype'
+core01.c(562): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype'
+core01.c(589): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype'
+core01.c(645): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype'
+core01.c(713): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype'
+core01.c(743): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'char *'
+core01.c(756): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'char *'
+cl -c -Fodba.obj              /Ox /GL /Op  dba.c
+dba.c
+dba.c(204): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'time_t'
+dba.c(204): note: considere el uso de ' %llx' en la cadena de formato
+dba.c(204): note: considere el uso de ' %I64x' en la cadena de formato
+dba.c(549): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype'
+cl -c -Fodbm0.obj              /Ox /GL /Op  dbm0.c
+dbm0.c
+cl -c -Fodbm1.obj              /Ox /GL /Op  dbm1.c
+dbm1.c
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\basetsd.h(420): warning C4142: 'SIZE_T': nueva definici¢n de tipo sin efecto
+C:\speccpu2000\benchspec\CINT2000\255.vortex\run\00000001\defines.h(176): note: vea la declaraci¢n de 'SIZE_T'
+dbm1.c(203): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'dbheader *'
+cl -c -Fodbm2.obj              /Ox /GL /Op  dbm2.c
+dbm2.c
+cl -c -Fodomain.obj              /Ox /GL /Op  domain.c
+domain.c
+cl -c -Fodraw07.obj              /Ox /GL /Op  draw07.c
+draw07.c
+draw07.c(192): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'TestObj *'
+draw07.c(195): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+draw07.c(195): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype *'
+draw07.c(195): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+draw07.c(199): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+draw07.c(199): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'tokentype *'
+draw07.c(204): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'char *'
+draw07.c(209): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'char (*)[32]'
+draw07.c(214): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'unsigned char **'
+draw07.c(214): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'unsigned char *'
+draw07.c(219): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'char ***'
+draw07.c(219): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'char **'
+draw07.c(224): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'short *'
+draw07.c(229): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'unsigned short *'
+draw07.c(234): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'int *'
+draw07.c(239): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'unsigned int *'
+draw07.c(244): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'lt64 *'
+draw07.c(249): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'longtype *'
+draw07.c(254): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'float *'
+draw07.c(259): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'double *'
+draw07.c(264): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'tokentype *'
+draw07.c(270): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'handletype *'
+draw07.c(275): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'short **'
+draw07.c(275): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'short *'
+draw07.c(280): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'short ***'
+draw07.c(280): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'short **'
+draw07.c(285): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype **'
+draw07.c(285): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype *'
+draw07.c(290): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'colortype *'
+draw07.c(295): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'XyPoint *'
+draw07.c(300): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'shorttype *'
+draw07.c(305): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'shorttype *'
+draw07.c(310): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'Connection *'
+draw07.c(310): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'Connection'
+draw07.c(315): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'Connection *'
+draw07.c(315): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'Connection'
+draw07.c(320): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'Connection *'
+draw07.c(320): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'Connection'
+draw07.c(325): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+draw07.c(325): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'Point **'
+draw07.c(325): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'Point **'
+draw07.c(330): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+draw07.c(330): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'XyPoint **'
+draw07.c(330): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'XyPoint **'
+draw07.c(335): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+draw07.c(335): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'boolean *'
+draw07.c(340): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'bytetype **'
+draw07.c(340): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'bytetype *'
+draw07.c(345): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'varyingtype *'
+draw07.c(345): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'varyingtype'
+draw07.c(350): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'Varray_short *'
+draw07.c(350): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'Varray_short'
+draw07.c(355): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+draw07.c(355): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'RefPoint *'
+draw07.c(355): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'RefPoint *'
+draw07.c(360): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'Point *'
+draw07.c(388): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'TestObj *'
+cl -c -Fodraw7.obj              /Ox /GL /Op  draw7.c
+draw7.c
+draw7.c(438): warning C4477: 'sprintf' : la cadena de formato '%6x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'TestObj *'
+draw7.c(482): warning C4477: 'sprintf' : la cadena de formato '%6x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'TestObj *'
+cl -c -Fodrawlib.obj              /Ox /GL /Op  drawlib.c
+drawlib.c
+cl -c -Fodrawobj.obj              /Ox /GL /Op  drawobj.c
+drawobj.c
+cl -c -Foemplib.obj              /Ox /GL /Op  emplib.c
+emplib.c
+cl -c -Foempobj.obj              /Ox /GL /Op  empobj.c
+empobj.c
+cl -c -Foenv0.obj              /Ox /GL /Op  env0.c
+env0.c
+env0.c(164): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'objtype *'
+env0.c(213): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'dbheader *'
+env0.c(238): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'dbheader *'
+cl -c -Foenv01.obj              /Ox /GL /Op  env01.c
+env01.c
+cl -c -Foenv1.obj              /Ox /GL /Op  env1.c
+env1.c
+env1.c(1042): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'tokentype *'
+env1.c(1860): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'objdesctype *'
+cl -c -Fofm.obj              /Ox /GL /Op  fm.c
+fm.c
+cl -c -Fogdbm.obj              /Ox /GL /Op  gdbm.c
+gdbm.c
+cl -c -Fogrp0.obj              /Ox /GL /Op  grp0.c
+grp0.c
+cl -c -Fogrp1.obj              /Ox /GL /Op  grp1.c
+grp1.c
+cl -c -Fogrp2.obj              /Ox /GL /Op  grp2.c
+grp2.c
+cl -c -Fohm.obj              /Ox /GL /Op  hm.c
+hm.c
+cl -c -Foiam.obj              /Ox /GL /Op  iam.c
+iam.c
+iam.c(241): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+iam.c(241): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'addrtype *'
+iam.c(253): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+iam.c(253): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'addrtype'
+iam.c(268): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+iam.c(412): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+iam.c(412): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'addrtype'
+iam.c(424): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+iam.c(424): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'addrtype'
+iam.c(829): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+iam.c(1055): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'addrtype'
+iam.c(1110): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+iam.c(1138): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'addrtype'
+iam.c(1182): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'addrtype'
+iam.c(1301): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype'
+iam.c(1301): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+iam.c(1486): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype'
+iam.c(1486): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+iam.c(1550): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype'
+iam.c(1550): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+iam.c(1683): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype'
+iam.c(1683): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+iam.c(1837): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype'
+iam.c(1837): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+iam.c(1962): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype'
+iam.c(1962): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+iam.c(2078): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype'
+iam.c(2078): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+iam.c(2152): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+iam.c(2160): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+iam.c(2191): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'addrtype'
+iam.c(2221): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'addrtype'
+iam.c(2238): warning C4477: 'sprintf' : la cadena de formato '%4u' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'indextype *'
+cl -c -Foifm.obj              /Ox /GL /Op  ifm.c
+ifm.c
+ifm.c(64): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'addrtype'
+ifm.c(96): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+ifm.c(123): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype *'
+ifm.c(244): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+ifm.c(244): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'addrtype *'
+ifm.c(255): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+ifm.c(255): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'addrtype'
+ifm.c(269): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+cl -c -Foim.obj              /Ox /GL /Op  im.c
+im.c
+im.c(174): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'addrtype'
+im.c(537): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'addrtype'
+cl -c -Fokm.obj              /Ox /GL /Op  km.c
+km.c
+km.c(652): warning C4477: 'sprintf' : la cadena de formato '%u' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'bytetype *'
+cl -c -Folist01.obj              /Ox /GL /Op  list01.c
+list01.c
+cl -c -Fomem00.obj              /Ox /GL /Op  mem00.c
+mem00.c
+mem00.c(1102): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype'
+cl -c -Fomem01.obj              /Ox /GL /Op  mem01.c
+mem01.c
+mem01.c(396): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype'
+mem01.c(396): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'addrtype'
+cl -c -Fomem10.obj              /Ox /GL /Op  mem10.c
+mem10.c
+cl -c -Fooa0.obj              /Ox /GL /Op  oa0.c
+oa0.c
+cl -c -Fooa1.obj              /Ox /GL /Op  oa1.c
+oa1.c
+oa1.c(764): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'addrtype'
+oa1.c(772): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'addrtype'
+oa1.c(815): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'addrtype'
+oa1.c(856): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'addrtype'
+oa1.c(1003): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'char *'
+oa1.c(1037): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 5 tiene el tipo 'addrtype'
+oa1.c(1223): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 5 tiene el tipo 'addrtype'
+oa1.c(1277): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'addrtype'
+oa1.c(1413): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'addrtype'
+oa1.c(1413): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 6 tiene el tipo 'addrtype'
+oa1.c(1548): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'addrtype'
+oa1.c(1777): warning C4477: 'sprintf' : la cadena de formato '%21s' requiere un argumento de tipo 'char *', pero el argumento vari dico 1 tiene el tipo 'addrtype'
+oa1.c(1900): warning C4477: 'sprintf' : la cadena de formato '%d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'int *'
+cl -c -Fooadmp.obj              /Ox /GL /Op  oadmp.c
+oadmp.c
+cl -c -Foobj01.obj              /Ox /GL /Op  obj01.c
+obj01.c
+obj01.c(190): warning C4477: 'sprintf' : la cadena de formato '%6x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'addrtype'
+cl -c -Foodbm.obj              /Ox /GL /Op  odbm.c
+odbm.c
+cl -c -Foogrp.obj              /Ox /GL /Op  ogrp.c
+ogrp.c
+cl -c -Foom.obj              /Ox /GL /Op  om.c
+om.c
+cl -c -Fopoint.obj              /Ox /GL /Op  point.c
+point.c
+point.c(268): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'CartesianPoint *'
+point.c(270): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+point.c(270): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype *'
+point.c(270): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+point.c(275): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+point.c(275): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'tokentype *'
+point.c(280): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+point.c(280): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'shorttype *'
+point.c(286): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+point.c(286): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'shorttype *'
+point.c(496): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'PolarPoint *'
+point.c(498): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+point.c(498): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype *'
+point.c(498): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+point.c(503): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+point.c(503): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'tokentype *'
+point.c(511): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+point.c(511): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'doubletype *'
+point.c(511): warning C4477: 'sprintf' : la cadena de formato '%2u' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'doubletype'
+point.c(516): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+point.c(516): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'doubletype *'
+point.c(516): warning C4477: 'sprintf' : la cadena de formato '%2u' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'doubletype'
+cl -c -Foprimal.obj              /Ox /GL /Op  primal.c
+primal.c
+cl -c -Fopstub.obj              /Ox /GL /Op  pstub.c
+pstub.c
+pstub.c(55): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype'
+cl -c -Foquery.obj              /Ox /GL /Op  query.c
+query.c
+query.c(731): warning C4477: 'sprintf' : la cadena de formato '%6x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'dbmsquery *'
+query.c(760): warning C4477: 'sprintf' : la cadena de formato '%6x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'dbmsquery *'
+query.c(794): warning C4477: 'sprintf' : la cadena de formato '%6x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'dbmsquery *'
+query.c(1168): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+query.c(1237): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+cl -c -Forect.obj              /Ox /GL /Op  rect.c
+rect.c
+rect.c(164): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'Point *'
+rect.c(164): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'Point *'
+rect.c(210): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'Point *'
+rect.c(210): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'Point *'
+rect.c(370): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'Rectangle *'
+rect.c(400): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'Rectangle *'
+rect.c(403): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rect.c(403): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype *'
+rect.c(403): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+rect.c(407): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rect.c(407): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'tokentype *'
+rect.c(412): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rect.c(412): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'numtype *'
+rect.c(416): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rect.c(416): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'memberhandle *'
+rect.c(425): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rect.c(425): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'Point **'
+rect.c(425): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'Point *'
+rect.c(430): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rect.c(430): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'Point **'
+rect.c(430): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'Point *'
+rect.c(435): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rect.c(435): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'memberhandle *'
+rect.c(448): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'Rectangle *'
+cl -c -Forects.obj              /Ox /GL /Op  rects.c
+rects.c
+rects.c(133): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'XyPoint *'
+rects.c(133): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'XyPoint *'
+rects.c(217): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'XyRect *'
+rects.c(241): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'XyRect *'
+rects.c(262): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'XyRect *'
+rects.c(265): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(265): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype *'
+rects.c(265): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+rects.c(269): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(269): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'tokentype *'
+rects.c(274): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(274): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'numtype *'
+rects.c(278): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(278): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'memberhandle *'
+rects.c(284): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(284): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'shorttype *'
+rects.c(289): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(289): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'shorttype *'
+rects.c(294): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(294): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'shorttype *'
+rects.c(299): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(299): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'shorttype *'
+rects.c(438): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'XyPoint *'
+rects.c(438): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 5 tiene el tipo 'XyPoint *'
+rects.c(529): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'NamedXyRect *'
+rects.c(553): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'NamedXyRect *'
+rects.c(574): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'NamedXyRect *'
+rects.c(577): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(577): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype *'
+rects.c(577): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+rects.c(581): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(581): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'tokentype *'
+rects.c(586): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(586): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'numtype *'
+rects.c(590): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(590): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'memberhandle *'
+rects.c(595): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(595): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'nametype (*)'
+rects.c(600): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(600): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'memberhandle *'
+rects.c(609): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(609): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'shorttype *'
+rects.c(614): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(614): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'shorttype *'
+rects.c(619): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(619): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'shorttype *'
+rects.c(624): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(624): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'shorttype *'
+rects.c(629): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(629): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'char **'
+rects.c(739): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'XyPoint *'
+rects.c(739): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'XyPoint *'
+rects.c(842): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'ArrayRect *'
+rects.c(866): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'ArrayRect *'
+rects.c(887): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'ArrayRect *'
+rects.c(890): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(890): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype *'
+rects.c(890): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+rects.c(894): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(894): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'tokentype *'
+rects.c(899): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(899): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'numtype *'
+rects.c(903): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(903): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'memberhandle *'
+rects.c(912): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(912): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'shorttype **'
+rects.c(918): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(918): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'shorttype **'
+rects.c(1022): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'XyPoint *'
+rects.c(1022): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'XyPoint *'
+rects.c(1127): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'DblPtrRect *'
+rects.c(1151): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'DblPtrRect *'
+rects.c(1172): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'DblPtrRect *'
+rects.c(1175): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(1175): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype *'
+rects.c(1175): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+rects.c(1179): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(1179): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'tokentype *'
+rects.c(1184): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(1184): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'numtype *'
+rects.c(1188): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(1188): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'memberhandle *'
+rects.c(1197): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(1197): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'short **'
+rects.c(1204): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(1204): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'short **'
+rects.c(1318): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'XyPoint *'
+rects.c(1318): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'XyPoint *'
+rects.c(1418): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'VarrayRect *'
+rects.c(1442): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'VarrayRect *'
+rects.c(1463): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'VarrayRect *'
+rects.c(1466): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(1466): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype *'
+rects.c(1466): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+rects.c(1470): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(1470): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'tokentype *'
+rects.c(1475): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(1475): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'numtype *'
+rects.c(1479): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(1479): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'memberhandle *'
+rects.c(1488): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(1488): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'short **'
+rects.c(1495): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(1495): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'short **'
+rects.c(1607): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'XyPoint *'
+rects.c(1607): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'XyPoint *'
+rects.c(1706): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'IntChunkRect *'
+rects.c(1730): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'IntChunkRect *'
+rects.c(1751): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'IntChunkRect *'
+rects.c(1754): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(1754): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype *'
+rects.c(1754): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+rects.c(1758): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(1758): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'tokentype *'
+rects.c(1763): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(1763): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'numtype *'
+rects.c(1767): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(1767): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'memberhandle *'
+rects.c(1776): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(1776): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'int **'
+rects.c(1783): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(1783): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'int **'
+rects.c(1893): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'XyPoint *'
+rects.c(1893): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'XyPoint *'
+rects.c(1995): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'VchunkRect *'
+rects.c(2019): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'VchunkRect *'
+rects.c(2041): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'VchunkRect *'
+rects.c(2044): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(2044): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype *'
+rects.c(2044): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+rects.c(2048): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(2048): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'tokentype *'
+rects.c(2053): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(2053): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'numtype *'
+rects.c(2057): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(2057): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'memberhandle *'
+rects.c(2066): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(2066): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'vchunktoken *'
+rects.c(2215): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'Point *'
+rects.c(2215): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 4 tiene el tipo 'Point *'
+rects.c(2392): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'RefRect *'
+rects.c(2421): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'RefRect *'
+rects.c(2442): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'RefRect *'
+rects.c(2445): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(2445): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'addrtype *'
+rects.c(2445): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+rects.c(2449): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(2449): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'tokentype *'
+rects.c(2454): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(2454): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'numtype *'
+rects.c(2458): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(2458): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'memberhandle *'
+rects.c(2467): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(2467): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'RefPoint *'
+rects.c(2467): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'RefPoint *'
+rects.c(2471): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'Point *'
+rects.c(2478): warning C4477: 'sprintf' : la cadena de formato '%3d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+rects.c(2478): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'RefPoint *'
+rects.c(2478): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'RefPoint *'
+rects.c(2482): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'Point *'
+cl -c -Fosa.obj              /Ox /GL /Op  sa.c
+sa.c
+sa.c(278): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'lsetheaddesc *'
+sa.c(465): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'lsetnodedesc *'
+sa.c(671): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'setdesctype *'
+sa.c(671): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'attrnum *'
+sa.c(730): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'lsetheaddesc *'
+sa.c(783): warning C4473: "sprintf": no se pasaron suficientes argumentos para la cadena de formato
+sa.c(783): note: los marcadores de posici¢n y sus par metros esperan 4 argumentos vari dicos, pero se proporcionaron 2
+sa.c(783): note: el argumento vari dico 3 que falta es requerido por la cadena de formato '%4u'
+sa.c(876): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'lsetnodedesc *'
+sa.c(882): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'lsetheaddesc *'
+cl -c -Foshell.obj              /Ox /GL /Op  shell.c
+shell.c
+cl -c -Fosm.obj              /Ox /GL /Op  sm.c
+sm.c
+sm.c(369): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'lsetheaddesc *'
+cl -c -Fotestobj.obj              /Ox /GL /Op  testobj.c
+testobj.c
+testobj.c(183): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'TestObj *'
+testobj.c(437): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'Point *'
+testobj.c(437): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'CartesianPoint *'
+testobj.c(514): warning C4477: 'sprintf' : la cadena de formato '%6x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'TestObj *'
+cl -c -Fotm.obj              /Ox /GL /Op  tm.c
+tm.c
+tm.c(103): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'dbheader *'
+cl -c -Fotrans00.obj              /Ox /GL /Op  trans00.c
+trans00.c
+cl -c -Fotrans01.obj              /Ox /GL /Op  trans01.c
+trans01.c
+cl -c -Fotrans10.obj              /Ox /GL /Op  trans10.c
+trans10.c
+cl -c -Fotrans20.obj              /Ox /GL /Op  trans20.c
+trans20.c
+cl -c -Fotree0.obj              /Ox /GL /Op  tree0.c
+tree0.c
+tree0.c(65): warning C4477: 'sprintf' : la cadena de formato '%6x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+cl -c -Fotree00.obj              /Ox /GL /Op  tree00.c
+tree00.c
+tree00.c(73): warning C4477: 'sprintf' : la cadena de formato '%6x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+tree00.c(293): warning C4477: 'sprintf' : la cadena de formato '%6x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'addrtype'
+tree00.c(373): warning C4477: 'sprintf' : la cadena de formato '%3u' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'numtype *'
+tree00.c(1563): warning C4477: 'sprintf' : la cadena de formato '%-16s' requiere un argumento de tipo 'char *', pero el argumento vari dico 1 tiene el tipo 'addrtype'
+tree00.c(1563): warning C4477: 'sprintf' : la cadena de formato '%-16s' requiere un argumento de tipo 'char *', pero el argumento vari dico 2 tiene el tipo 'addrtype'
+cl -c -Fotree01.obj              /Ox /GL /Op  tree01.c
+tree01.c
+tree01.c(358): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'setdesctype *'
+tree01.c(358): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'attrnum *'
+tree01.c(412): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 3 tiene el tipo 'ltreesethead *'
+cl -c -Fout.obj              /Ox /GL /Op  ut.c
+ut.c
+ut.c(72): warning C4477: 'sprintf' : la cadena de formato '%17s' requiere un argumento de tipo 'char *', pero el argumento vari dico 1 tiene el tipo 'ft'
+ut.c(87): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'char *'
+ut.c(100): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'addrtype'
+ut.c(142): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'char *'
+ut.c(149): warning C4477: 'sprintf' : la cadena de formato '%21s' requiere un argumento de tipo 'char *', pero el argumento vari dico 1 tiene el tipo 'ft'
+ut.c(183): warning C4477: 'fprintf' : la cadena de formato '%-24s' requiere un argumento de tipo 'char *', pero el argumento vari dico 1 tiene el tipo 'ft'
+ut.c(338): warning C4477: 'sprintf' : la cadena de formato '%8x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 2 tiene el tipo 'char *'
+ut.c(418): warning C4477: 'sprintf' : la cadena de formato '%d' requiere un argumento de tipo 'int', pero el argumento vari dico 1 tiene el tipo 'char *'
+ut.c(486): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'addrtype *'
+ut.c(540): warning C4477: 'sprintf' : la cadena de formato '%x' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'addrtype *'
+ut.c(544): warning C4477: 'sprintf' : la cadena de formato '%8o' requiere un argumento de tipo 'unsigned int', pero el argumento vari dico 1 tiene el tipo 'addrtype *'
+ut.c(551): warning C4477: 'sprintf' : la cadena de formato '%s' requiere un argumento de tipo 'char *', pero el argumento vari dico 1 tiene el tipo 'int'
+cl -c -Fovchunk.obj              /Ox /GL /Op  vchunk.c
+vchunk.c
+cl -c -Fovdbm.obj              /Ox /GL /Op  vdbm.c
+vdbm.c
+cl -c -Fovoa.obj              /Ox /GL /Op  voa.c
+voa.c
+cl -c -Fovom.obj              /Ox /GL /Op  vom.c
+vom.c
+cl       /Ox /GL /Op  bitvec.obj bmt.obj bmt0.obj bmt01.obj bmt10.obj bmtlib.obj bmtobj.obj core01.obj dba.obj dbm0.obj dbm1.obj dbm2.obj domain.obj draw07.obj draw7.obj drawlib.obj drawobj.obj emplib.obj empobj.obj env0.obj env01.obj env1.obj fm.obj gdbm.obj grp0.obj grp1.obj grp2.obj hm.obj iam.obj ifm.obj im.obj km.obj list01.obj mem00.obj mem01.obj mem10.obj oa0.obj oa1.obj oadmp.obj obj01.obj odbm.obj ogrp.obj om.obj point.obj primal.obj pstub.obj query.obj rect.obj rects.obj sa.obj shell.obj sm.obj testobj.obj tm.obj trans00.obj trans01.obj trans10.obj trans20.obj tree0.obj tree00.obj tree01.obj ut.obj vchunk.obj vdbm.obj voa.obj vom.obj     -Fevortex
+Microsoft (R) Incremental Linker Version 14.24.28315.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/ltcg 
+/out:vortex.exe 
+bitvec.obj 
+bmt.obj 
+bmt0.obj 
+bmt01.obj 
+bmt10.obj 
+bmtlib.obj 
+bmtobj.obj 
+core01.obj 
+dba.obj 
+dbm0.obj 
+dbm1.obj 
+dbm2.obj 
+domain.obj 
+draw07.obj 
+draw7.obj 
+drawlib.obj 
+drawobj.obj 
+emplib.obj 
+empobj.obj 
+env0.obj 
+env01.obj 
+env1.obj 
+fm.obj 
+gdbm.obj 
+grp0.obj 
+grp1.obj 
+grp2.obj 
+hm.obj 
+iam.obj 
+ifm.obj 
+im.obj 
+km.obj 
+list01.obj 
+mem00.obj 
+mem01.obj 
+mem10.obj 
+oa0.obj 
+oa1.obj 
+oadmp.obj 
+obj01.obj 
+odbm.obj 
+ogrp.obj 
+om.obj 
+point.obj 
+primal.obj 
+pstub.obj 
+query.obj 
+rect.obj 
+rects.obj 
+sa.obj 
+shell.obj 
+sm.obj 
+testobj.obj 
+tm.obj 
+trans00.obj 
+trans01.obj 
+trans10.obj 
+trans20.obj 
+tree0.obj 
+tree00.obj 
+tree01.obj 
+ut.obj 
+vchunk.obj 
+vdbm.obj 
+voa.obj 
+vom.obj 
+Generando código
+Generación de código finalizada

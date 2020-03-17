@@ -1,0 +1,421 @@
+cl -c -FoggCoverageSolidTexture.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggCoverageSolidTexture.cc
+ggCoverageSolidTexture.cc
+cl -c -FoggPathDielectricMaterial.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggPathDielectricMaterial.cc
+ggPathDielectricMaterial.cc
+cl -c -FoggBox2.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggBox2.cc
+ggBox2.cc
+cl -c -FoggBox3.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggBox3.cc
+ggBox3.cc
+cl -c -FoggRasterSurfaceTexture.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggRasterSurfaceTexture.cc
+ggRasterSurfaceTexture.cc
+cl -c -FoggJitterSample1.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggJitterSample1.cc
+ggJitterSample1.cc
+cl -c -FoggNRooksSample2.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggNRooksSample2.cc
+ggNRooksSample2.cc
+cl -c -FoggJitterSample2.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggJitterSample2.cc
+ggJitterSample2.cc
+cl -c -FoggRGBFPixel.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggRGBFPixel.cc
+ggRGBFPixel.cc
+cl -c -FoggRotatingPinholeCamera.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggRotatingPinholeCamera.cc
+ggRotatingPinholeCamera.cc
+cl -c -FoggRandomSample2.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggRandomSample2.cc
+ggRandomSample2.cc
+cl -c -FoggRandomSample3.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggRandomSample3.cc
+ggRandomSample3.cc
+cl -c -FoggSolidNoise2.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggSolidNoise2.cc
+ggSolidNoise2.cc
+cl -c -FoggSolidNoise3.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggSolidNoise3.cc
+ggSolidNoise3.cc
+cl -c -FoggSolidTexture.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggSolidTexture.cc
+ggSolidTexture.cc
+cl -c -FoggOakSolidTexture.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggOakSolidTexture.cc
+ggOakSolidTexture.cc
+cl -c -FoggSpecularMaterial.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggSpecularMaterial.cc
+ggSpecularMaterial.cc
+cl -c -FoggNA.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggNA.cc
+ggNA.cc
+cl -c -FoggMaterial.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggMaterial.cc
+ggMaterial.cc
+cl -c -FoggDiffuseMaterial.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggDiffuseMaterial.cc
+ggDiffuseMaterial.cc
+cl -c -FoggDielectricMaterial.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggDielectricMaterial.cc
+ggDielectricMaterial.cc
+cl -c -FoggConductorMaterial.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggConductorMaterial.cc
+ggConductorMaterial.cc
+cl -c -FoggEdgeDiscrepancy.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggEdgeDiscrepancy.cc
+ggEdgeDiscrepancy.cc
+cl -c -FoggPolishedMaterial.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggPolishedMaterial.cc
+ggPolishedMaterial.cc
+cl -c -FoggFrameInterpolation.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggFrameInterpolation.cc
+ggFrameInterpolation.cc
+cl -c -FoggQuaternion.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggQuaternion.cc
+ggQuaternion.cc
+cl -c -FoggSpline.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggSpline.cc
+ggSpline.cc
+cl -c -FoggONB2.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggONB2.cc
+ggONB2.cc
+cl -c -FoggONB3.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggONB3.cc
+ggONB3.cc
+cl -c -FoggFrame2.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggFrame2.cc
+ggFrame2.cc
+cl -c -FoggFrame3.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggFrame3.cc
+ggFrame3.cc
+cl -c -FoggHMatrix3.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggHMatrix3.cc
+ggHMatrix3.cc
+cl -c -FoggSphere.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggSphere.cc
+ggSphere.cc
+cl -c -FoggRGBE.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggRGBE.cc
+ggRGBE.cc
+cl -c -FoggGamma.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggGamma.cc
+ggGamma.cc
+cl -c -FoggBRDF.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggBRDF.cc
+ggBRDF.cc
+cl -c -FoggDiffuseBRDF.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggDiffuseBRDF.cc
+ggDiffuseBRDF.cc
+cl -c -FoggPhongBRDF.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggPhongBRDF.cc
+ggPhongBRDF.cc
+cl -c -FoggPolishedBRDF.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggPolishedBRDF.cc
+ggPolishedBRDF.cc
+cl -c -FoggCamera.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggCamera.cc
+ggCamera.cc
+cl -c -FoggPinholeCamera.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggPinholeCamera.cc
+ggPinholeCamera.cc
+cl -c -FoggThinLensCamera.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggThinLensCamera.cc
+ggThinLensCamera.cc
+cl -c -FoggErr.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggErr.cc
+ggErr.cc
+cl -c -FoggPixelFilter.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggPixelFilter.cc
+ggPixelFilter.cc
+cl -c -FoggTrianglePixelFilter.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggTrianglePixelFilter.cc
+ggTrianglePixelFilter.cc
+cl -c -FoggBoxPixelFilter.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggBoxPixelFilter.cc
+ggBoxPixelFilter.cc
+cl -c -FoggFormat.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggFormat.cc
+ggFormat.cc
+cl -c -FoggGeometry.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggGeometry.cc
+ggGeometry.cc
+cl -c -FoggHAffineMatrix3.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggHAffineMatrix3.cc
+ggHAffineMatrix3.cc
+cl -c -FoggHShearMatrix3.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggHShearMatrix3.cc
+ggHShearMatrix3.cc
+cl -c -FoggHBoxMatrix3.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggHBoxMatrix3.cc
+ggHBoxMatrix3.cc
+cl -c -FoggHPerspectiveMatrix3.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggHPerspectiveMatrix3.cc
+ggHPerspectiveMatrix3.cc
+cl -c -FoggHTranslationMatrix3.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggHTranslationMatrix3.cc
+ggHTranslationMatrix3.cc
+cl -c -FoggHRigidBodyMatrix3.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggHRigidBodyMatrix3.cc
+ggHRigidBodyMatrix3.cc
+cl -c -FoggHRotationMatrix3.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggHRotationMatrix3.cc
+ggHRotationMatrix3.cc
+cl -c -FoggHScaleMatrix3.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggHScaleMatrix3.cc
+ggHScaleMatrix3.cc
+cl -c -FoggHPoint3.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggHPoint3.cc
+ggHPoint3.cc
+cl -c -FoggPoint2.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggPoint2.cc
+ggPoint2.cc
+cl -c -FoggPoint3.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggPoint3.cc
+ggPoint3.cc
+cl -c -FoggOptics.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggOptics.cc
+ggOptics.cc
+cl -c -FoggPlane.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggPlane.cc
+ggPlane.cc
+cl -c -FoggPolygon.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggPolygon.cc
+ggPolygon.cc
+cl -c -FoggGrayPixel_x.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggGrayPixel_x.cc
+ggGrayPixel_x.cc
+cl -c -FoggRGBPixel_x.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggRGBPixel_x.cc
+ggRGBPixel_x.cc
+cl -c -FoggRay2.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggRay2.cc
+ggRay2.cc
+cl -c -FoggRay3.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggRay3.cc
+ggRay3.cc
+cl -c -FoggBoardFloorSolidTexture.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggBoardFloorSolidTexture.cc
+ggBoardFloorSolidTexture.cc
+cl -c -FoggVector2.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggVector2.cc
+ggVector2.cc
+cl -c -FoggVector3.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggVector3.cc
+ggVector3.cc
+cl -c -FoggString.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggString.cc
+ggString.cc
+ggString.cc(46): warning C4291: 'void *ggString::StringRep::operator new(size_t,unsigned long)': no se ha encontrado un operador delete que coincida; no se liberar  memoria si la inicializaci¢n produce una excepci¢n
+.\ggString.h(90): note: vea la declaraci¢n de 'ggString::StringRep::operator new'
+ggString.cc(50): warning C4291: 'void *ggString::StringRep::operator new(size_t,unsigned long)': no se ha encontrado un operador delete que coincida; no se liberar  memoria si la inicializaci¢n produce una excepci¢n
+.\ggString.h(90): note: vea la declaraci¢n de 'ggString::StringRep::operator new'
+ggString.cc(67): warning C4291: 'void *ggString::StringRep::operator new(size_t,unsigned long)': no se ha encontrado un operador delete que coincida; no se liberar  memoria si la inicializaci¢n produce una excepci¢n
+.\ggString.h(90): note: vea la declaraci¢n de 'ggString::StringRep::operator new'
+ggString.cc(81): warning C4291: 'void *ggString::StringRep::operator new(size_t,unsigned long)': no se ha encontrado un operador delete que coincida; no se liberar  memoria si la inicializaci¢n produce una excepci¢n
+.\ggString.h(90): note: vea la declaraci¢n de 'ggString::StringRep::operator new'
+cl -c -FoggFineSpectrum.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggFineSpectrum.cc
+ggFineSpectrum.cc
+cl -c -FoggSpectrum.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP ggSpectrum.cc
+ggSpectrum.cc
+cl -c -Foeon.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP eon.cc
+eon.cc
+cl -c -FoeonImageCalculator.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP eonImageCalculator.cc
+eonImageCalculator.cc
+cl -c -FomrObjectRecord.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrObjectRecord.cc
+mrObjectRecord.cc
+cl -c -FomrCoarsePixelRenderer.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrCoarsePixelRenderer.cc
+mrCoarsePixelRenderer.cc
+cl -c -FomrIndirectPixelRenderer.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrIndirectPixelRenderer.cc
+mrIndirectPixelRenderer.cc
+cl -c -FomrRushmeierPixelRenderer.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrRushmeierPixelRenderer.cc
+mrRushmeierPixelRenderer.cc
+cl -c -FomrBruteForcePixelRenderer.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrBruteForcePixelRenderer.cc
+mrBruteForcePixelRenderer.cc
+cl -c -FomrKajiyaPixelRenderer.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrKajiyaPixelRenderer.cc
+mrKajiyaPixelRenderer.cc
+cl -c -FomrCookPixelRenderer.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrCookPixelRenderer.cc
+mrCookPixelRenderer.cc
+cl -c -FomrGrid.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrGrid.cc
+mrGrid.cc
+cl -c -FomrScene.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrScene.cc
+mrScene.cc
+mrScene.cc(370): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(378): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(386): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(394): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(402): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(424): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(431): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(438): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(444): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(450): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(456): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(463): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(471): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(485): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(520): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(545): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(547): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(557): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(563): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(569): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(574): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(580): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+mrScene.cc(591): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+cl -c -FomrCamera.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrCamera.cc
+mrCamera.cc
+mrCamera.cc(104): warning C4834: se descarta el valor devuelto de la funci¢n con el atributo "nodiscard"
+cl -c -FomrTriangle.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrTriangle.cc
+mrTriangle.cc
+cl -c -FomrFastTriangle.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrFastTriangle.cc
+mrFastTriangle.cc
+cl -c -FomrPolygon.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrPolygon.cc
+mrPolygon.cc
+cl -c -FomrXYDisk.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrXYDisk.cc
+mrXYDisk.cc
+cl -c -FomrXZDisk.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrXZDisk.cc
+mrXZDisk.cc
+cl -c -FomrYZDisk.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrYZDisk.cc
+mrYZDisk.cc
+cl -c -FomrPhongAreaXYRectangleLuminaire.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrPhongAreaXYRectangleLuminaire.cc
+mrPhongAreaXYRectangleLuminaire.cc
+cl -c -FomrPhongAreaXZRectangleLuminaire.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrPhongAreaXZRectangleLuminaire.cc
+mrPhongAreaXZRectangleLuminaire.cc
+cl -c -FomrPhongAreaYZRectangleLuminaire.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrPhongAreaYZRectangleLuminaire.cc
+mrPhongAreaYZRectangleLuminaire.cc
+cl -c -FomrEmitter.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrEmitter.cc
+mrEmitter.cc
+cl -c -FomrImposter.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrImposter.cc
+mrImposter.cc
+cl -c -FomrLinkedObjects.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrLinkedObjects.cc
+mrLinkedObjects.cc
+cl -c -FomrBox.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrBox.cc
+mrBox.cc
+cl -c -FomrXCylinder.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrXCylinder.cc
+mrXCylinder.cc
+cl -c -FomrYCylinder.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrYCylinder.cc
+mrYCylinder.cc
+cl -c -FomrZCylinder.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrZCylinder.cc
+mrZCylinder.cc
+cl -c -FomrDiffuseAreaZCylinderLuminaire.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrDiffuseAreaZCylinderLuminaire.cc
+mrDiffuseAreaZCylinderLuminaire.cc
+cl -c -FomrDiffuseCosineZCylinderLuminaire.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrDiffuseCosineZCylinderLuminaire.cc
+mrDiffuseCosineZCylinderLuminaire.cc
+cl -c -FomrDiffuseVisibleAreaZCylinderLuminaire.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrDiffuseVisibleAreaZCylinderLuminaire.cc
+mrDiffuseVisibleAreaZCylinderLuminaire.cc
+cl -c -FomrXEllipticalCylinder.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrXEllipticalCylinder.cc
+mrXEllipticalCylinder.cc
+cl -c -FomrYEllipticalCylinder.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrYEllipticalCylinder.cc
+mrYEllipticalCylinder.cc
+cl -c -FomrZEllipticalCylinder.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrZEllipticalCylinder.cc
+mrZEllipticalCylinder.cc
+cl -c -FomrSpotAreaXYDiskLuminaire.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrSpotAreaXYDiskLuminaire.cc
+mrSpotAreaXYDiskLuminaire.cc
+cl -c -FomrDiffuseAreaXYRectangleLuminaire.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrDiffuseAreaXYRectangleLuminaire.cc
+mrDiffuseAreaXYRectangleLuminaire.cc
+cl -c -FomrDiffuseAreaXZRectangleLuminaire.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrDiffuseAreaXZRectangleLuminaire.cc
+mrDiffuseAreaXZRectangleLuminaire.cc
+cl -c -FomrDiffuseAreaYZRectangleLuminaire.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrDiffuseAreaYZRectangleLuminaire.cc
+mrDiffuseAreaYZRectangleLuminaire.cc
+cl -c -FomrSurfaceList.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrSurfaceList.cc
+mrSurfaceList.cc
+cl -c -FomrDiffuseAreaTriangleLuminaire.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrDiffuseAreaTriangleLuminaire.cc
+mrDiffuseAreaTriangleLuminaire.cc
+cl -c -FomrDiffuseAreaSphereLuminaire.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrDiffuseAreaSphereLuminaire.cc
+mrDiffuseAreaSphereLuminaire.cc
+cl -c -FomrDiffuseCosineSphereLuminaire.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrDiffuseCosineSphereLuminaire.cc
+mrDiffuseCosineSphereLuminaire.cc
+cl -c -FomrDiffuseSolidAngleSphereLuminaire.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrDiffuseSolidAngleSphereLuminaire.cc
+mrDiffuseSolidAngleSphereLuminaire.cc
+cl -c -FomrShellLuminaire.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrShellLuminaire.cc
+mrShellLuminaire.cc
+cl -c -FomrInstance.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrInstance.cc
+mrInstance.cc
+cl -c -FomrMaterial.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrMaterial.cc
+mrMaterial.cc
+cl -c -FomrPhongAreaTriangleLuminaire.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrPhongAreaTriangleLuminaire.cc
+mrPhongAreaTriangleLuminaire.cc
+cl -c -FomrSolidTexture.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrSolidTexture.cc
+mrSolidTexture.cc
+cl -c -FomrSphere.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrSphere.cc
+mrSphere.cc
+cl -c -FomrSurface.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrSurface.cc
+mrSurface.cc
+cl -c -FomrSurfaceTexture.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrSurfaceTexture.cc
+mrSurfaceTexture.cc
+cl -c -FomrXYRectangle.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrXYRectangle.cc
+mrXYRectangle.cc
+cl -c -FomrXZRectangle.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrXZRectangle.cc
+mrXZRectangle.cc
+cl -c -FomrYZRectangle.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP mrYZRectangle.cc
+mrYZRectangle.cc
+cl -c -Fomyrand.obj    -DHAS_ERRLIST   -I. -DNDEBUG       /Ox /GL /GX /GR -TP myrand.cc
+myrand.cc
+cl       /Ox /GL /GX /GR  ggCoverageSolidTexture.obj ggPathDielectricMaterial.obj ggBox2.obj ggBox3.obj ggRasterSurfaceTexture.obj ggJitterSample1.obj ggNRooksSample2.obj ggJitterSample2.obj ggRGBFPixel.obj ggRotatingPinholeCamera.obj ggRandomSample2.obj ggRandomSample3.obj ggSolidNoise2.obj ggSolidNoise3.obj ggSolidTexture.obj ggOakSolidTexture.obj ggSpecularMaterial.obj ggNA.obj ggMaterial.obj ggDiffuseMaterial.obj ggDielectricMaterial.obj ggConductorMaterial.obj ggEdgeDiscrepancy.obj ggPolishedMaterial.obj ggFrameInterpolation.obj ggQuaternion.obj ggSpline.obj ggONB2.obj ggONB3.obj ggFrame2.obj ggFrame3.obj ggHMatrix3.obj ggSphere.obj ggRGBE.obj ggGamma.obj ggBRDF.obj ggDiffuseBRDF.obj ggPhongBRDF.obj ggPolishedBRDF.obj ggCamera.obj ggPinholeCamera.obj ggThinLensCamera.obj ggErr.obj ggPixelFilter.obj ggTrianglePixelFilter.obj ggBoxPixelFilter.obj ggFormat.obj ggGeometry.obj ggHAffineMatrix3.obj ggHShearMatrix3.obj ggHBoxMatrix3.obj ggHPerspectiveMatrix3.obj ggHTranslationMatrix3.obj ggHRigidBodyMatrix3.obj ggHRotationMatrix3.obj ggHScaleMatrix3.obj ggHPoint3.obj ggPoint2.obj ggPoint3.obj ggOptics.obj ggPlane.obj ggPolygon.obj ggGrayPixel_x.obj ggRGBPixel_x.obj ggRay2.obj ggRay3.obj ggBoardFloorSolidTexture.obj ggVector2.obj ggVector3.obj ggString.obj ggFineSpectrum.obj ggSpectrum.obj eon.obj eonImageCalculator.obj mrObjectRecord.obj mrCoarsePixelRenderer.obj mrIndirectPixelRenderer.obj mrRushmeierPixelRenderer.obj mrBruteForcePixelRenderer.obj mrKajiyaPixelRenderer.obj mrCookPixelRenderer.obj mrGrid.obj mrScene.obj mrCamera.obj mrTriangle.obj mrFastTriangle.obj mrPolygon.obj mrXYDisk.obj mrXZDisk.obj mrYZDisk.obj mrPhongAreaXYRectangleLuminaire.obj mrPhongAreaXZRectangleLuminaire.obj mrPhongAreaYZRectangleLuminaire.obj mrEmitter.obj mrImposter.obj mrLinkedObjects.obj mrBox.obj mrXCylinder.obj mrYCylinder.obj mrZCylinder.obj mrDiffuseAreaZCylinderLuminaire.obj mrDiffuseCosineZCylinderLuminaire.obj mrDiffuseVisibleAreaZCylinderLuminaire.obj mrXEllipticalCylinder.obj mrYEllipticalCylinder.obj mrZEllipticalCylinder.obj mrSpotAreaXYDiskLuminaire.obj mrDiffuseAreaXYRectangleLuminaire.obj mrDiffuseAreaXZRectangleLuminaire.obj mrDiffuseAreaYZRectangleLuminaire.obj mrSurfaceList.obj mrDiffuseAreaTriangleLuminaire.obj mrDiffuseAreaSphereLuminaire.obj mrDiffuseCosineSphereLuminaire.obj mrDiffuseSolidAngleSphereLuminaire.obj mrShellLuminaire.obj mrInstance.obj mrMaterial.obj mrPhongAreaTriangleLuminaire.obj mrSolidTexture.obj mrSphere.obj mrSurface.obj mrSurfaceTexture.obj mrXYRectangle.obj mrXZRectangle.obj mrYZRectangle.obj myrand.obj     -Feeon
+Microsoft (R) Incremental Linker Version 14.24.28315.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/ltcg 
+/out:eon.exe 
+ggCoverageSolidTexture.obj 
+ggPathDielectricMaterial.obj 
+ggBox2.obj 
+ggBox3.obj 
+ggRasterSurfaceTexture.obj 
+ggJitterSample1.obj 
+ggNRooksSample2.obj 
+ggJitterSample2.obj 
+ggRGBFPixel.obj 
+ggRotatingPinholeCamera.obj 
+ggRandomSample2.obj 
+ggRandomSample3.obj 
+ggSolidNoise2.obj 
+ggSolidNoise3.obj 
+ggSolidTexture.obj 
+ggOakSolidTexture.obj 
+ggSpecularMaterial.obj 
+ggNA.obj 
+ggMaterial.obj 
+ggDiffuseMaterial.obj 
+ggDielectricMaterial.obj 
+ggConductorMaterial.obj 
+ggEdgeDiscrepancy.obj 
+ggPolishedMaterial.obj 
+ggFrameInterpolation.obj 
+ggQuaternion.obj 
+ggSpline.obj 
+ggONB2.obj 
+ggONB3.obj 
+ggFrame2.obj 
+ggFrame3.obj 
+ggHMatrix3.obj 
+ggSphere.obj 
+ggRGBE.obj 
+ggGamma.obj 
+ggBRDF.obj 
+ggDiffuseBRDF.obj 
+ggPhongBRDF.obj 
+ggPolishedBRDF.obj 
+ggCamera.obj 
+ggPinholeCamera.obj 
+ggThinLensCamera.obj 
+ggErr.obj 
+ggPixelFilter.obj 
+ggTrianglePixelFilter.obj 
+ggBoxPixelFilter.obj 
+ggFormat.obj 
+ggGeometry.obj 
+ggHAffineMatrix3.obj 
+ggHShearMatrix3.obj 
+ggHBoxMatrix3.obj 
+ggHPerspectiveMatrix3.obj 
+ggHTranslationMatrix3.obj 
+ggHRigidBodyMatrix3.obj 
+ggHRotationMatrix3.obj 
+ggHScaleMatrix3.obj 
+ggHPoint3.obj 
+ggPoint2.obj 
+ggPoint3.obj 
+ggOptics.obj 
+ggPlane.obj 
+ggPolygon.obj 
+ggGrayPixel_x.obj 
+ggRGBPixel_x.obj 
+ggRay2.obj 
+ggRay3.obj 
+ggBoardFloorSolidTexture.obj 
+ggVector2.obj 
+ggVector3.obj 
+ggString.obj 
+ggFineSpectrum.obj 
+ggSpectrum.obj 
+eon.obj 
+eonImageCalculator.obj 
+mrObjectRecord.obj 
+mrCoarsePixelRenderer.obj 
+mrIndirectPixelRenderer.obj 
+mrRushmeierPixelRenderer.obj 
+mrBruteForcePixelRenderer.obj 
+mrKajiyaPixelRenderer.obj 
+mrCookPixelRenderer.obj 
+mrGrid.obj 
+mrScene.obj 
+mrCamera.obj 
+mrTriangle.obj 
+mrFastTriangle.obj 
+mrPolygon.obj 
+mrXYDisk.obj 
+mrXZDisk.obj 
+mrYZDisk.obj 
+mrPhongAreaXYRectangleLuminaire.obj 
+mrPhongAreaXZRectangleLuminaire.obj 
+mrPhongAreaYZRectangleLuminaire.obj 
+mrEmitter.obj 
+mrImposter.obj 
+mrLinkedObjects.obj 
+mrBox.obj 
+mrXCylinder.obj 
+mrYCylinder.obj 
+mrZCylinder.obj 
+mrDiffuseAreaZCylinderLuminaire.obj 
+mrDiffuseCosineZCylinderLuminaire.obj 
+mrDiffuseVisibleAreaZCylinderLuminaire.obj 
+mrXEllipticalCylinder.obj 
+mrYEllipticalCylinder.obj 
+mrZEllipticalCylinder.obj 
+mrSpotAreaXYDiskLuminaire.obj 
+mrDiffuseAreaXYRectangleLuminaire.obj 
+mrDiffuseAreaXZRectangleLuminaire.obj 
+mrDiffuseAreaYZRectangleLuminaire.obj 
+mrSurfaceList.obj 
+mrDiffuseAreaTriangleLuminaire.obj 
+mrDiffuseAreaSphereLuminaire.obj 
+mrDiffuseCosineSphereLuminaire.obj 
+mrDiffuseSolidAngleSphereLuminaire.obj 
+mrShellLuminaire.obj 
+mrInstance.obj 
+mrMaterial.obj 
+mrPhongAreaTriangleLuminaire.obj 
+mrSolidTexture.obj 
+mrSphere.obj 
+mrSurface.obj 
+mrSurfaceTexture.obj 
+mrXYRectangle.obj 
+mrXZRectangle.obj 
+mrYZRectangle.obj 
+myrand.obj 
+Generando código
+Generación de código finalizada

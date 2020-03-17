@@ -1,0 +1,17 @@
+running commands in speccmds.cmd 1 times
+runs started at 1583843486, 19000000, Tue Mar 10 13:31:26 2020
+run 1 started at 1583843486, 20000000, Tue Mar 10 13:31:26 2020
+child started: 0, 1583843486, 20000000, pid=6960, '../00000002/gzip_base.vc7.x87.exe input.source 60'
+child finished: 0, 1583843499, 582000000, sec=13, nsec=562000000, pid=6960, rc=0
+child started: 0, 1583843499, 582000000, pid=1340, '../00000002/gzip_base.vc7.x87.exe input.log 60'
+child finished: 0, 1583843505, 831000000, sec=6, nsec=249000000, pid=1340, rc=0
+child started: 0, 1583843505, 831000000, pid=8428, '../00000002/gzip_base.vc7.x87.exe input.graphic 60'
+child finished: 0, 1583843519, 347000000, sec=13, nsec=516000000, pid=8428, rc=0
+child started: 0, 1583843519, 347000000, pid=5064, '../00000002/gzip_base.vc7.x87.exe input.random 60'
+child finished: 0, 1583843529, 768000000, sec=10, nsec=421000000, pid=5064, rc=0
+child started: 0, 1583843529, 768000000, pid=2800, '../00000002/gzip_base.vc7.x87.exe input.program 60'
+child finished: 0, 1583843554, 619000000, sec=24, nsec=851000000, pid=2800, rc=0
+run 1 finished at: 1583843554, 619000000, Tue Mar 10 13:32:34 2020
+run 1 elapsed time: 68, 599000000, 68.599000000
+runs finished at 1583843554, 619000000, Tue Mar 10 13:32:34 2020
+runs elapsed time: 68, 600000000, 68.600000000

@@ -1,0 +1,119 @@
+cl -c -Fosearchr.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  searchr.c
+searchr.c
+cl -c -Fosearch.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  search.c
+search.c
+cl -c -Forepeat.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  repeat.c
+repeat.c
+cl -c -Fonext.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  next.c
+next.c
+cl -c -Fonextr.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  nextr.c
+nextr.c
+cl -c -Fohistory.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  history.c
+history.c
+cl -c -Fonexte.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  nexte.c
+nexte.c
+cl -c -Foquiesce.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  quiesce.c
+quiesce.c
+cl -c -Foevaluate.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  evaluate.c
+evaluate.c
+cl -c -Fomovgen.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  movgen.c
+movgen.c
+cl -c -Fomake.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  make.c
+make.c
+cl -c -Founmake.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  unmake.c
+unmake.c
+cl -c -Folookup.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  lookup.c
+lookup.c
+cl -c -Fostore.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  store.c
+store.c
+cl -c -Foattacks.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  attacks.c
+attacks.c
+cl -c -Foswap.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  swap.c
+swap.c
+cl -c -Foboolean.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  boolean.c
+boolean.c
+cl -c -Fodraw.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  draw.c
+draw.c
+cl -c -Foutility.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  utility.c
+utility.c
+cl -c -Fovalid.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  valid.c
+valid.c
+cl -c -Fodrawn.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  drawn.c
+drawn.c
+cl -c -Foedit.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  edit.c
+edit.c
+cl -c -Foenprise.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  enprise.c
+enprise.c
+cl -c -Foinit.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  init.c
+init.c
+cl -c -Foinput.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  input.c
+input.c
+cl -c -Fointerupt.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  interupt.c
+interupt.c
+cl -c -Foiterate.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  iterate.c
+iterate.c
+cl -c -Fomain.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  main.c
+main.c
+cl -c -Fooption.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  option.c
+option.c
+cl -c -Fooutput.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  output.c
+output.c
+cl -c -Fophase.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  phase.c
+phase.c
+cl -c -Foponder.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  ponder.c
+ponder.c
+cl -c -Fopreeval.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  preeval.c
+preeval.c
+cl -c -Foroot.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  root.c
+root.c
+cl -c -Fosetboard.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  setboard.c
+setboard.c
+cl -c -Fotime.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  time.c
+time.c
+cl -c -Fovalidate.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op  validate.c
+validate.c
+cl       /Ox /GL /Op  searchr.obj search.obj repeat.obj next.obj nextr.obj history.obj nexte.obj quiesce.obj evaluate.obj movgen.obj make.obj unmake.obj lookup.obj store.obj attacks.obj swap.obj boolean.obj draw.obj utility.obj valid.obj drawn.obj edit.obj enprise.obj init.obj input.obj interupt.obj iterate.obj main.obj option.obj output.obj phase.obj ponder.obj preeval.obj root.obj setboard.obj time.obj validate.obj     -Fecrafty
+Microsoft (R) Incremental Linker Version 14.24.28315.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/ltcg 
+/out:crafty.exe 
+searchr.obj 
+search.obj 
+repeat.obj 
+next.obj 
+nextr.obj 
+history.obj 
+nexte.obj 
+quiesce.obj 
+evaluate.obj 
+movgen.obj 
+make.obj 
+unmake.obj 
+lookup.obj 
+store.obj 
+attacks.obj 
+swap.obj 
+boolean.obj 
+draw.obj 
+utility.obj 
+valid.obj 
+drawn.obj 
+edit.obj 
+enprise.obj 
+init.obj 
+input.obj 
+interupt.obj 
+iterate.obj 
+main.obj 
+option.obj 
+output.obj 
+phase.obj 
+ponder.obj 
+preeval.obj 
+root.obj 
+setboard.obj 
+time.obj 
+validate.obj 
+Generando código
+Generación de código finalizada

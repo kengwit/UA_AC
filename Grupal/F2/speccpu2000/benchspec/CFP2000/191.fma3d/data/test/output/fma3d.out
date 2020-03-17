@@ -1,0 +1,33 @@
+
+
+            _/_/_/_/_/_/  _/_/          _/_/       _/_/_/                   _/_/_/_/      _/_/_/_/_/_/ 
+           _/_/_/_/_/_/  _/_/_/      _/_/_/    _/_/_/_/_/_/             _/_/_/_/_/_/_/   _/_/_/_/_/_/-/
+          _/_/          _/_/_/_/  _/_/_/_/   _/_/      _/_/            _/_/       _/_/  _/_/       _/_/
+         _/_/          _/_/ _/_/_/_/ _/_/  _/_/        _/_/                      _/_/  _/_/        _/_/
+        _/_/_/_/_/    _/_/  _/_/_/  _/_/  _/_/        _/_/  _/_/_/_/        _/_/_/_/  _/_/        _/_/ 
+       _/_/_/_/_/    _/_/   _/_/   _/_/  _/_/_/_/_/_/_/_/  _/_/_/_/        _/_/_/_/  _/_/        _/_/  
+      _/_/          _/_/          _/_/  _/_/_/_/_/_/_/_/                      _/_/  _/_/        _/_/   
+     _/_/          _/_/          _/_/  _/_/        _/_/           _/_/       _/_/  _/_/       _/_/     
+    _/_/          _/_/          _/_/  _/_/        _/_/           _/_/_/_/_/_/_/   _/_/_/_/_/_/_/       
+   _/_/          _/_/          _/_/  _/_/        _/_/              _/_/_/_/      _/_/_/_/_/_/          
+
+     Version: SPEC CPU
+     Released: 
+
+
+ *** INFORMATION *** SUMMARY OF ELEMENT CRITICAL TIME STEPS:
+
+     SPRING BC's With The Smallest Critical Time Steps:
+
+ SPRING BC ID:       1     BC      Critical Time Step:    1.4142E-01
+1 FMA-3D  SPEC CPU              Concentrated Mass With A Spring Boundary Condition                                      Page No:   1
+
+    Time T = 0.00000E+00   Time Step =       0
+0   NP    X-DISPLACE   Y-DISPLACE   Z-DISPLACE   X-VELOCITY   Y-VELOCITY   Z-VELOCITY  X-ACCELERATE Y-ACCELERATE Z-ACCELERATE     NP
+   100    0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00  -1.0000E+00   0.0000E+00   0.0000E+00   0.0000E+00    100
+1 FMA-3D  SPEC CPU              Concentrated Mass With A Spring Boundary Condition                                      Page No:   2
+
+    Time T = 1.00409E+00   Time Step =      71
+0   NP    X-DISPLACE   Y-DISPLACE   Z-DISPLACE   X-VELOCITY   Y-VELOCITY   Z-VELOCITY  X-ACCELERATE Y-ACCELERATE Z-ACCELERATE     NP
+   100    0.0000E+00   0.0000E+00   6.6476E-02   0.0000E+00   0.0000E+00   7.1780E-02   0.0000E+00   0.0000E+00  -1.0692E+01    100
+  FMA-3D> Normal Termination.

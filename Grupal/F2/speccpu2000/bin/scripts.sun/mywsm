@@ -1,0 +1,28 @@
+#!/bin/ksh
+
+action=$1
+shift
+
+DATADIR=wsm_data
+
+if [[ $action = "clean" ]]; then
+  if [ -d $DATADIR ]
+    then  
+      rm -rf $DATADIR/*
+  else
+    mkdir -p $DATADIR
+  fi
+  
+elif [[ $action = "collect" ]]; then
+    /net/suntools/export/tools/sparc/bin/wsm -a $DATADIR/wsm.out -t 10 -c $*
+
+elif [[ $action = "store" ]]; then
+    DIR=$1
+    mkdir -p $DIR
+    mv $DATADIR/* $DIR
+    cd `dirname $DIR`
+    ln -sf `basename $DIR` current
+else
+    echo $0 [clean] [collect <command>] [store <dir>]
+fi
+exit 0

@@ -1,0 +1,2 @@
+"COMP: cl -c -Fooptions.obj  -DSYS_HAS_MALLOC_PROTO -DSYS_HAS_CALLOC_PROTO            /Ox /GL /Op "
+"LINK: cl       /Ox /GL /Op       -Feoptions"

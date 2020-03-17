@@ -1,0 +1,13 @@
+running commands in compare.cmd 1 times
+runs started at 1584203637, 654000000, Sat Mar 14 17:33:57 2020
+run 1 started at 1584203637, 655000000, Sat Mar 14 17:33:57 2020
+child started: 0, 1584203637, 655000000, pid=10980, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10 C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/256.bzip2/data/ref/output/input.graphic.out input.graphic.out'
+child finished: 0, 1584203637, 747000000, sec=0, nsec=92000000, pid=10980, rc=0
+child started: 0, 1584203637, 747000000, pid=4996, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10 C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/256.bzip2/data/ref/output/input.program.out input.program.out'
+child finished: 0, 1584203637, 839000000, sec=0, nsec=92000000, pid=4996, rc=0
+child started: 0, 1584203637, 839000000, pid=14364, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10 C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/256.bzip2/data/ref/output/input.source.out input.source.out'
+child finished: 0, 1584203637, 932000000, sec=0, nsec=93000000, pid=14364, rc=0
+run 1 finished at: 1584203637, 932000000, Sat Mar 14 17:33:57 2020
+run 1 elapsed time: 0, 277000000, 0.277000000
+runs finished at 1584203637, 932000000, Sat Mar 14 17:33:57 2020
+runs elapsed time: 0, 278000000, 0.278000000

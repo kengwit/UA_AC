@@ -1,0 +1,135 @@
+
+<html>
+<head>
+<title>SPEC CPU2000: Changes in V1.2</title>
+<!-- $Id: changes_in_V1.2.html 1546 2005-08-18 03:50:24Z cloyce $ -->
+</head>
+<body bgcolor=white>
+
+<pre>
+
+
+
+</pre>
+<center>
+<h1>SPEC CPU2000: Changes in V1.2</h1>
+<h4> Last updated: 30-Oct-2001 jh</h4>
+
+(To check for possible updates to this document, 
+please 
+see <a href=http://www.spec.org/cpu2000/docs/>http://www.spec.org/cpu2000/docs/</a>  ) 
+</center>
+<pre>
+
+</pre>
+
+<h2>New systems supported</h2>
+With this release of SPEC CPU2000, new support is added for:
+<ul>
+<li>MacOS X
+<li>Intel Itanium, using HP-UX 
+<li>Intel Itanium, using Windows Advanced Server.  Notice that:
+    <ul>
+    <li>Support for Windows Advanced Server required source 
+        code changes for several benchmarks.   These changes
+        are selected by setting the compiler option
+          <tt><nobr>-DSPEC_CPU2000_P64</nobr></tt>
+    <li>When installing the CPU2000 kit under Windows Advanced 
+        Server, you should set the CPU variable to "i386", as 
+        is pointed out in the updated 
+        <a href=install_guide_nt.html>install_guide_nt.html</a>.
+    </ul>
+</ul>
+
+<hr width=80%>
+<center><table width=75%><tr><td>
+<i>Note: links to SPEC CPU2000 documents on this web page
+assume that you are reading the page from a directory that
+also contains the other SPEC CPU2000 documents.  If by 
+some chance you are reading this web page from a location 
+where the links do not work, try accessing the referenced
+documents at one of the following locations:</i>
+<ul>
+<li><a href=http://www.spec.org/cpu2000/docs/>
+     www.spec.org/cpu2000/docs/</a>
+<li><i>The </i><tt><big><b>$SPEC/docs/    </b></big></tt><i> directory on a Unix system where SPEC CPU2000 has been installed.
+<li>   The </i><tt><big><b>%spec%\docs.nt\</b></big></tt><i> directory on a Windows/NT system where SPEC CPU2000 has been installed.
+<li>   The </i><tt><big><b>docs/          </b></big></tt><i> or 
+           </i><tt><big><b>docs.nt\       </b></big></tt><i> directory on your SPEC CPU2000 distribution cdrom.</i>
+</ul>
+</td></tr></table>
+<hr width=80%>
+</center>
+
+<h2>Documentation Updates</h2>
+Many of the documents have been moved to HTML format, in hopes 
+that this will make them both easier to read and easier to navigate through.
+The HTML-format documents include:
+<ul>
+<li><a href=runrules.html>runrules.html</a>, which specify the rules 
+    for producing a valid SPEC CPU2000 result.
+<li><a href=runspec.html>runspec.html</a>, the document that describes 
+    the primary tool in the CPU2000 suite.
+<li><a href=config.html>config.html</a>, which describes how to write 
+    a config file.  Config files are used by runspec.
+<li><a href=system_requirements.html>system_requirements.html</a>, which
+    states the hardware and software prerequisites for SPEC CPU2000
+<li><a href=install_guide_nt.html>install_guide_nt.html</a> and
+<a href=install_guide_unix.html>install_guide_unix.html</a>, which specify installation procedures
+<li><a href=utility.html>utility.html</a>, which points out various
+    useful utilities for advanced users
+</ul>
+
+<h2>Run rule updates</h2>
+Several run rules have been newly adopted or clarified, including a rule 
+on <a href=runrules.html#toc_4.7>Fair Use</a>.  For additional details, see 
+the Edit History at the top of <a href=runrules.html>runrules.html</a>.
+
+
+<h2>Tools updates</h2>
+
+<p>The tools make several attempts to record additional information 
+to log files and build directories, for example logging elapsed compile
+time even if the compile fails, logging the build type
+(base or peak), and logging the use of src.alt directories.</p>
+</ul>
+
+<h2>Changes to benchmarks</h2>
+
+In addition to the Windows Advanced Server changes mentioned
+above, the following benchmark changes were made in V1.2:
+<ul>
+<li>186.crafty: Fixed a dangling comment delimiter
+<li>252.eon: Improved standards compliance by fixing a source error
+<li>253.perlbmk: added defines for Linux/S390 (32- and 64- bit); remove
+    certain #undefs in spec_config.h, to allow portability defines;
+    add some defines for glibc 2.2+ in spec_config.h and pp_sys.c.
+</ul>
+
+<h2>Tools new features</h2>
+
+<p>Two new styles of line continuation are now supported in config 
+files: line can be continued with either a single backslash (\) or 
+with a double backslash (\\).
+<ul>
+<li>When a single backslash is used, the field is recorded with an
+    embedded new line.  
+<li>When a double backslash is used, the field is recorded with no
+    new line, but with the second line appended to the first.
+</ul>
+The following example illustrates both features:<pre>
+    OPTIMIZE = -verbose -feedback=compile_time \\
+               -optimize_level=aggressive 
+    notes100 = \\
+       Crafty is compiled with both the compile-time  \
+       feedback option and the aggressive optmization \
+       option.
+</pre>
+The above example creates a single line for OPTIMIZE, with all
+three switches (-verbose, -feedback, -optimize_level).  Also in the
+example, notes100 is defined as three lines of text.  
+
+
+
+</body>
+</html>

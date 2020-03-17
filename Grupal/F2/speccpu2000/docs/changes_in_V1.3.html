@@ -1,0 +1,178 @@
+
+<html>
+<head>
+<title>SPEC CPU2000: Changes in V1.3</title>
+<!-- $Id: changes_in_V1.3.html 1561 2005-08-18 18:35:09Z cloyce $ -->
+</head>
+<body bgcolor=white>
+
+<pre>
+
+
+
+</pre>
+<center>
+<h1>SPEC CPU2000: Changes in V1.3</h1>
+<h4> Last updated: 18-Aug-2005 cds</h4>
+
+(To check for possible updates to this document, 
+please 
+see <a href=http://www.spec.org/cpu2000/docs/>http://www.spec.org/cpu2000/docs/</a>  ) 
+</center>
+<pre>
+
+</pre>
+
+<p>SPEC CPU2000 V1.3 is intended to be the final release of SPEC CPU2000.
+It responds to problems that have arisen in the nearly 4 years since the
+previous release, improves compatibility, and improves stability.</p>
+
+<p>Changes include:</p>
+<ul>
+ <li>Updates to 9 benchmarks, primarily due to portability issues on
+     new platforms 
+ <li>Additional toolsets to support newer platforms
+ <li>Refreshes for the sources of the tools, and fixes for the buildtools
+     procedures, to make it easier to build tools in the future if and where
+     needed
+</ul>
+
+<hr>
+
+<h2>New systems supported</h2>
+With this release of SPEC CPU2000, new support is added for:
+<ul>
+<li>MacOS X on Intel hardware
+<li>GLIBC 2.2+-based 64-bit x86-64 systems
+<li>RedHat AS3+ and SuSE 9+ Linux on Itanium-based systems
+</ul>
+
+<h2>Systems no longer supported</h2>
+With this release of SPEC CPU2000, support is removed for:
+<ul>
+<li>Reliant UNIX on MIPS-based systems
+<li>Linux on SPARC-based systems
+<li>Linux on Alpha-based systems
+<li>Windows on Alpha-based systems
+</ul>
+
+<hr width=80%>
+<center><table width=75%><tr><td>
+<i>Note: links to SPEC CPU2000 documents on this web page
+assume that you are reading the page from a directory that
+also contains the other SPEC CPU2000 documents.  If by 
+some chance you are reading this web page from a location 
+where the links do not work, try accessing the referenced
+documents at one of the following locations:</i>
+<ul>
+<li><a href=http://www.spec.org/cpu2000/docs/>
+     www.spec.org/cpu2000/docs/</a>
+<li><i>The </i><tt><big><b>$SPEC/docs/ </b></big></tt><i> directory on a Unix system where SPEC CPU2000 has been installed.
+<li>   The </i><tt><big><b>%spec%\docs\</b></big></tt><i> directory on a Windows system where SPEC CPU2000 has been installed.
+<li>   The </i><tt><big><b>docs/       </b></big></tt><i> or 
+           </i><tt><big><b>docs\       </b></big></tt><i> directory on your SPEC CPU2000 distribution CD-ROM.</i>
+</ul>
+</td></tr></table>
+<hr width=80%>
+</center>
+
+<h2>Documentation Updates</h2>
+
+All of the documents with ".txt" extensions now have CRLF line-endings for
+the convenience of Windows users.  Other documentation updates include:
+<ul>
+<li><a href=tools_build>tools_build</a> (and <a href=tools_build.txt>tools_build.txt</a>),
+    which have been updated to reflect changes due to the tools source update.
+<li><a href=install_guide_unix.html>install_guide_unix.html</a> which has been
+    updated to reflect a small change in the installation scripts
+<li><a href=../Revisions>Revisions</a>, which contains a detailed list of all changes
+    made to v1.3.
+</ul>
+
+<h2>Tools source updates</h2>
+
+<p>The tools sources have been updated to make building the tools on
+new systems easier.  The build system has also been updated to catch
+errors during the tools build process that would have previously gone
+unreported.</p>
+
+<h2>Tools updates</h2>
+
+<p>The <tt>monitor_wrapper</tt> facility has been modified to not execute during
+training runs for builds using feedback-directed optimization.</p>
+
+<h2>Changes to benchmarks</h2>
+
+The following benchmark changes were made in V1.3:
+<ul>
+<li>176.gcc: A potentially problematic uninitialized variable error has been
+             fixed.  Additionally, several problems relating to building
+             176.gcc with newer versions of GCC have been fixed:
+    <ul>
+    <li>The value for <tt>OBSTACK_INTERFACE_VERSION</tt> has been changed
+        to -1 in order to allow 176.gcc to build on 64-bit systems with GCC.
+    <li>Uses of the cast as lvalue extension have been removed in order to
+        allow compilation using GCC 3.5.0 and later.
+    <li>A prototype for <tt>exact_log2_wide</tt> was added to correct a type
+        mismatch which was causing sign-extension problems on 64-bit MacOS X
+        systems.
+    <li>A workaround for a bug in varargs support in the Windows 64 PSDK for
+        x86-64 was added.
+    <li>Added portability defines for 64-bit Solaris/x64
+        (<tt>SOLARIS_X64</tt>) and other systems which need to have
+        <tt>alloca.h</tt> included (<tt>SPEC_CPU2000_NEED_ALLOCA_H</tt>).
+    </ul>
+<li>186.crafty:
+    <ul>
+    <li>Eliminated common global symbols; this allows GCC to build it even in
+        the presence of the <tt>-fno-common</tt> switch.
+    <li>Added portability defines for Solaris/x86 (<tt>SOLARIS_X86</tt>) and
+        Solaris/x64 (<tt>SOLARIS_X64</tt>)
+    </ul>
+<li>187.facerec: In fft2d.f90, don't check the shape of FTemp until after we
+                 first ensure that it exists.
+<li>188.ammp: Added a function prototype and added an explicit return type
+              to a function declaration to quiet a couple of warnings.
+<li>191.fma3d: Changed the name of one output file so that it can be
+               automatically deleted.  This works around a race condition seen
+               on Windows which could cause multi-copy rate runs to fail.
+<li>252.eon: Several changes were made to enhance standards compliance:
+  <ul>
+  <li>The <tt>cerrno</tt> header file is now included unless
+      <tt>SPEC_CPU2000_NO_ERRNO_MACRO</tt> is defined.  This is necessary for
+      environments which do not export <tt>errno</tt> by default.
+  <li>The local version of <tt>fmax()</tt> has been renamed to avoid conflict
+      with library functions of the same name.
+  <li>Wrappers for <tt>iostream.h</tt> and <tt>fstream.h</tt> have been
+      provided for systems that no longer support "legacy" headers in C++.
+  </ul>
+<li>253.perlbmk:
+  <ul>
+  <li>Added defines for MacOS X on PowerPC and Intel-based systems.
+  <li><tt>SPEC_CPU2000_GLIBC22</tt> settings are now the default on Linux.
+      They can be turned off by definining <tt>SPEC_CPU2000_NO_HAS_FGETPOS</tt>
+      and <tt>SPEC_CPU2000_NO_HAS_FSETPOS</tt>.
+  <li>Some platform-specific sources are usually selected automatically;
+      Windows users wishing to get the non-Windows sources can set the
+      environment variable <tt>SPEC_NOT_REALLY_WINDOWS</tt> to achieve this
+      end.
+  </ul>
+<li>255.vortex: Added code to set two closed file pointers to NULL in order
+                to avoid attempting to use them for output.  Also fixed a
+                comment bug which claimed that a <tt>long</tt> on P64 systems
+                was 8 bytes.
+<li>300.twolf: 
+    <ul>
+    <li>Some calls to <tt>free()</tt> were being passed two parameters; this
+        has been fixed.
+    <li>Eliminated common global symbols; this allows GCC to build it even in
+        the presence of the <tt>-fno-common</tt> switch.
+    </ul>
+</ul>
+
+<h2>Configuration Files Updated</h2>
+
+All of the configuration files were updated.
+
+</body>
+</html>

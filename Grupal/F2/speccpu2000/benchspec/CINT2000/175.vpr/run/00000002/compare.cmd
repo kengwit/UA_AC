@@ -1,0 +1,4 @@
+-c C:/speccpu2000/benchspec/CINT2000/175.vpr/run/00000002 -o costs.out.cmp C:/speccpu2000/bin/specdiff.bat -m -l 10  -r 0.05 C:/speccpu2000/benchspec/CINT2000/175.vpr/data/ref/output/costs.out costs.out
+-c C:/speccpu2000/benchspec/CINT2000/175.vpr/run/00000002 -o place_log.out.cmp C:/speccpu2000/bin/specdiff.bat -m -l 10  -r 0.015 C:/speccpu2000/benchspec/CINT2000/175.vpr/data/ref/output/place_log.out place_log.out
+-c C:/speccpu2000/benchspec/CINT2000/175.vpr/run/00000002 -o route.out.cmp C:/speccpu2000/bin/specdiff.bat -m -l 10  -r 0.015 C:/speccpu2000/benchspec/CINT2000/175.vpr/data/ref/output/route.out route.out
+-c C:/speccpu2000/benchspec/CINT2000/175.vpr/run/00000002 -o route_log.out.cmp C:/speccpu2000/bin/specdiff.bat -m -l 10  -r 0.015 C:/speccpu2000/benchspec/CINT2000/175.vpr/data/ref/output/route_log.out route_log.out

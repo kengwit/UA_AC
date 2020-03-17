@@ -1,0 +1,1 @@
+-c C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/197.parser/run/00000003 -o ref.out.cmp C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10 C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/197.parser/data/ref/output/ref.out ref.out

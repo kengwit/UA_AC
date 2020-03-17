@@ -1,0 +1,41 @@
+cl -c -Fomcf.obj       -DWANT_STDC_PROTO       /Ox /GL /Op  mcf.c
+mcf.c
+cl -c -Fomcfutil.obj       -DWANT_STDC_PROTO       /Ox /GL /Op  mcfutil.c
+mcfutil.c
+cl -c -Foreadmin.obj       -DWANT_STDC_PROTO       /Ox /GL /Op  readmin.c
+readmin.c
+cl -c -Foimplicit.obj       -DWANT_STDC_PROTO       /Ox /GL /Op  implicit.c
+implicit.c
+cl -c -Fopstart.obj       -DWANT_STDC_PROTO       /Ox /GL /Op  pstart.c
+pstart.c
+cl -c -Fooutput.obj       -DWANT_STDC_PROTO       /Ox /GL /Op  output.c
+output.c
+cl -c -Fotreeup.obj       -DWANT_STDC_PROTO       /Ox /GL /Op  treeup.c
+treeup.c
+cl -c -Fopbla.obj       -DWANT_STDC_PROTO       /Ox /GL /Op  pbla.c
+pbla.c
+cl -c -Fopflowup.obj       -DWANT_STDC_PROTO       /Ox /GL /Op  pflowup.c
+pflowup.c
+cl -c -Fopsimplex.obj       -DWANT_STDC_PROTO       /Ox /GL /Op  psimplex.c
+psimplex.c
+cl -c -Fopbeampp.obj       -DWANT_STDC_PROTO       /Ox /GL /Op  pbeampp.c
+pbeampp.c
+cl       /Ox /GL /Op  mcf.obj mcfutil.obj readmin.obj implicit.obj pstart.obj output.obj treeup.obj pbla.obj pflowup.obj psimplex.obj pbeampp.obj     -Femcf
+Microsoft (R) Incremental Linker Version 14.24.28315.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/ltcg 
+/out:mcf.exe 
+mcf.obj 
+mcfutil.obj 
+readmin.obj 
+implicit.obj 
+pstart.obj 
+output.obj 
+treeup.obj 
+pbla.obj 
+pflowup.obj 
+psimplex.obj 
+pbeampp.obj 
+Generando código
+Generación de código finalizada

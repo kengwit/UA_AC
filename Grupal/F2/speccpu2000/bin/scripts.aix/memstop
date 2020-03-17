@@ -1,0 +1,11 @@
+#!/bin/ksh
+
+output=/tmp/membackground.pid
+
+if [[ $# -gt 0 ]]; then
+    output=$1
+    shift
+fi
+
+kill `cat $output`
+rm $output

@@ -1,0 +1,2 @@
+-u C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/181.mcf/run/00000003
+-o inp.out -e inp.err ../00000003/mcf_base.vc7.x87.exe inp.in

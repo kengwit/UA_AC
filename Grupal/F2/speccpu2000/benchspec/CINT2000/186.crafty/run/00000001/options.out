@@ -1,0 +1,2 @@
+"COMP: cl -c -Fooptions.obj  -DNT_i386     -DSPEC_CPU2000       /Ox /GL /Op "
+"LINK: cl       /Ox /GL /Op       -Feoptions"

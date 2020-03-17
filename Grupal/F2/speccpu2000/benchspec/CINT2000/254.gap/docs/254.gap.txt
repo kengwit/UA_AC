@@ -1,0 +1,66 @@
+SPEC CPU2000 Benchmark Description File
+
+Benchmark Name: 254.gap
+
+Benchmark Author: Martin Schoenert
+
+Benchmark Program General Category: Group theory, interpreter
+
+Benchmark Description:
+
+It implements a language and library designed mostly for computing in
+groups (GAP is an acronym for Groups, Algorithms and Programming).
+
+Input Description:
+
+It has multiple parts, one part of it is the standard gap
+speed-benchmark, excercising mostly the combinatorial functions and big
+number library, then some test functions for the finite field,
+permutation group and subgroup lattice computations, a program comparing
+two different methods of finding normalizers in solvable groups and
+finally a test excercising the collector for so-called ag-groups, this is
+a piece where the bulk of the computation is not done by the interpreter.
+
+Output Description:
+
+The output consitsts of the results of these tests.
+
+Programming Language: ANSI C
+
+Known portability issues:
+
+  The program has, in module system.c, several function prototype
+  definitions for common Unix system calls. In case that these functions
+  have already function prototypes defined by the compilation system,
+  the program-supplied prototypes need to be deactivated to avoid
+  multiple function definitions. This is done by supplying one or more of
+  the following -D arguments as compilation switches for the compiler
+  invocation command line:
+
+  -DSYS_HAS_SIGNAL_PROTO
+  -DSYS_HAS_TIME_PROTO
+  -DSYS_HAS_SIGNAL_PROTO
+  -DSYS_HAS_ANSI
+  -DSYS_HAS_MALLOC_PROTO
+  -DSYS_HAS_CALLOC_PROTO
+  -DSYS_HAS_READ_PROTO
+  -DHAS_STDIO_PROTO
+  -DSYS_HAS_IOCTL_PROTO
+  -DSYS_HAS_STRING_PROTO
+  -DSYS_HAS_MEMSET_PROTO
+  -DSYS_HAS_MISC_PROTO
+   ...
+ In addition, compilation switches of the form:
+  -DSYS_IS_xxx
+ control conditional compilaton for specific operating system dependent parts.
+ The standard SPEC flag:
+  -DSPEC_CPU2000_LP64
+ deals with 64-bit integers and pointers.
+
+ Please consult previous submissions and vendor config files if there are
+ questions with portability.
+
+
+Reference:
+
+  http://www.math.rwth-aachen.de/~GAP

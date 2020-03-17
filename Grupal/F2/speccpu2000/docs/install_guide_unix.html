@@ -1,0 +1,562 @@
+<html>
+<head>
+<title>SPEC CPU2000 Installation Guide for Unix</title>
+</head>
+<body bgcolor=white>
+<pre>
+
+
+</pre>
+
+<h1>Installing SPEC CPU2000 Under Unix</h1>
+<h4>Last updated: 30 Oct 2001 jh</h4>
+(To check for possible updates to this document,
+please see <a href=http://www.spec.org/cpu2000/docs/>http://www.spec.org/cpu2000/docs/</a> )
+
+<pre>
+</pre>
+<hr>
+
+
+<h2>Contents</h2>
+
+<ul>
+  <li> <a href=#steps><font color=blue>Installation Steps</font></a>
+  <li> <a href=#example><font color=blue>Example Installation</font></a>
+</ul> 
+
+
+
+<a name=steps><h2>Installation Steps</h2></a>
+
+
+The SPEC CPU2000 suite has been tested under both Unix and NT systems.  
+Your CD can be installed under either type of operating system.
+
+The installation procedure for Unix is as follows:
+
+<ol>
+
+
+<li><p> Review the hardware and software requirements, in
+     <a href=system_requirements.html>system_requirements.html</a></p>
+
+<hr width=80%>
+<center><table width=75%><tr><td>
+<i>Note: links to SPEC CPU2000 documents on this web page
+assume that you are reading the page from a directory that
+also contains the other SPEC CPU2000 documents.  If by
+some chance you are reading this web page from a location
+where the links do not work, try accessing the referenced
+documents at one of the following locations:</i>
+<ul>
+<li><a href=http://www.spec.org/cpu2000/docs/>
+     www.spec.org/cpu2000/docs/</a>
+<li><i>The </i><tt><big><b>$SPEC/docs/    </b></big></tt><i> directory on a Unix system where SPEC CPU2000 has been installed.
+<li>   The </i><tt><big><b>%spec%\docs.nt\</b></big></tt><i> directory on a Windows/NT system where SPEC CPU2000 has been installed.
+<li>   The </i><tt><big><b>docs/          </b></big></tt><i> or
+           </i><tt><big><b>docs.nt\       </b></big></tt><i> directory on your SPEC CPU2000 distribution cdrom.</i>
+</ul>
+</td></tr></table>
+<hr width=75%>
+</center>
+</p></li>
+
+
+<li><p> Create a directory on the destination disk.  You should
+   make sure that you have a disk that has at least 1GB free.
+   (For more information on disk usage, see 
+   <a href=system_requirements.html>system_requirements.html</a>.)</p></li>
+
+<li><p> Mount the CD.  If your operating system supports the Rock Ridge
+   Interchange Protocol extensions to ISO 9660, be sure to select
+   them, unless they are the default.  For example:</p>
+
+<center><table border=0 width=80%>
+<tr><td valign=top><b>AIX:</b></td>
+     <td><kbd>        <b>mount -v cdrfs -r /dev/cd0 /cdrom</b>
+     </kbd></td></tr>
+<tr><td valign=top><b>HP-UX:</b></td>
+     <td><kbd>         <b>pfs_mountd &
+                   <br>pfsd &
+                   <br>pfs_mount -v /dev/rdsk/c1t2d0 /cdrom</b> </kbd>
+
+                     <br>(Obtain the device name via <kbd>ioscan -funCdisk</kbd>.
+                      See the manpages for pfs, pfsd, pfs_mount,
+                      pfs_mountd, and pfs_umount.  You will need
+                      the latter in order to eject the CD.)
+     </kbd></td></tr>
+<tr><td valign=top><b>Linux:</b></td>
+     <td><kbd>        <b>mount -t iso9660 -o ro,exec /dev/cdrom /mnt/cdrom</b>
+     </kbd></td></tr>
+<tr><td valign=top><b>Solaris:</b></td>
+     <td>             If Volume Management is running, you should find
+                   that the CD is automatically mounted, as 
+                       <tt>/cdrom/label_of_volume/  </tt>
+                   If not, you should be able to mount it with 
+                   a command similar to this:
+
+             <br><kbd> <b>mount -F hsfs -o ro /dev/dsk/c0t6d0s0 /cdrom</b>
+     </kbd></td></tr>
+<tr><td valign=top><b>Tru64 Unix:&nbsp;&nbsp;&nbsp;</b></td>
+     <td><kbd>                 <b>mount -t cdfs -o rrip /dev/rz20c /cdrom</b>
+     </kbd></td></tr>
+</table></center></P>
+
+   Note that you may need root privileges to mount the CD.</p></li>
+
+<li><p> Set your current working directory to the directory where the 
+   CD is mounted.</p></li>
+
+<li><p> Type 
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;<kbd><b>./install.sh</b></kbd>
+
+   <br>When prompted, enter the destination directory.  Note that for
+   a destination directory, you will have to use syntax acceptable
+   to sh (so you might need to say <kbd>$HOME</kbd> instead of <kbd>~</kbd>).
+
+   <p>The installation procedure will attempt to determine your
+   current architecture.  If a possible match is found, you 
+   will see a message such as this one:
+   <pre>
+      These appear to be valid architectures: </pre>
+
+   <p>If only one match is found, you will be asked simply whether or not
+   to use it.  If more than one match is found, you must supply the name
+   of the architecture to use.  Note that you MUST type the name exactly
+   as it appears (or use your mouse cut and paste).
+
+   <p>If the installation procedure is unable to determine your
+   system architecture, you will see a message such as this one:
+   <pre>
+       We do not appear to have vendor supplied binaries for your
+       architecture.  </pre>
+
+   If you see that message, please stop here, and examine the
+   file <a href=tools_build.txt>tools_build.txt</a></p>
+
+<li><p> Thousands of files will quietly be installed on your destination 
+   disk.  (If you would prefer to see them all named, as was done in
+   CPU2000 V1.0, you can set <kbd>VERBOSE=1</kbd> in your environment 
+   before installing the kit.) At the end, you should see a message such 
+   as this one:
+   <pre>
+      Everything looks ok, source the shrc file and have at it!</pre>
+
+   At this point, you will have consumed about 450MB of disk space
+   on the destination drive.  </p></li>
+
+<li><p> Change your current working directory to the destination
+   disk, and:<p> 
+
+   <center><table width=70%><tr><td align=center><b>
+      <big>START A BOURNE-COMPATIBLE SHELL</big> 
+      <br>             (if you are not already in one)             
+      <p>That is, you need to use a command interpreter that    
+      supports the syntax used by shrc, which tries to be    
+      highly portable by avoiding proprietary or uncommon
+      shell features.  Many shells -- such as ash, bash, 
+      ksh, and zsh -- provide some degree of compatibility
+      with the Bourne shell.   The C shell (csh) definitely
+      is NOT compatible with Bourne shell syntax.  If you 
+      are in doubt, or if you see unexpected error messages 
+      from shrc, you can usually start a Bourne shell by 
+      typing '<kbd>sh</kbd>'.
+   </b></td></tr></table></center>
+
+   <p>Then, source the file shrc.  If you prefer some other shell, 
+   you can probably spawn it after sourcing shrc; when you do so,
+   please be sure that your new shell does not clear the path 
+   variables set up by shrc!
+
+   <p>For example:
+   <pre>
+       % <b>cd /usr/john/cpu2000</b>
+       % <b>sh</b>
+       $ <b>. ./shrc</b>             <- that's dot-space-dot-slash-shrc
+       $ <b>csh</b>
+       %
+   </pre>
+
+   The effect of the above commands is to set up environment variables
+   and paths for SPEC.  Remember, you must be in a Bourne-compatible 
+   shell when you source shrc.</p></li>
+
+<li><p> Test that you can build the first benchmark using the config file 
+   supplied for your system.  For example:
+   <pre>
+       % <b>runspec --config=Tru64_Unix --action=build --tune=base gzip</b> </pre>
+
+   The above command assumes that you can tell what config file (in
+   the directory <tt>$SPEC/config</tt>) is appropriate for you simply from 
+   the filename.  For a quick introduction to config files, see 
+   <a href=runspec.html#about_config>"About Config Files" in runspec.html</a>
+
+   The "<kbd>--tune=base</kbd>" above indicates that we want to use only the
+   simple tuning, if more than one kind of tuning is supplied in 
+   the config file.</p></li>
+
+<li><p> Test that you can run the first benchmark, using the minimal 
+   input set - the "test" workload.  For example:
+   <pre>
+       % <b>runspec --config=Tru64_Unix --size=test \
+       --noreportable --iterations=1 gzip</b></pre>
+   
+   The "\" above indicates that the command is continued on the next
+   line.  The "<kbd>--noreportable</kbd>" ensures that the tools will allow us
+   to run just a single benchmark instead of the whole suite, and
+   "<kbd>--iterations=1</kbd>" says just run the benchmark once.</p></li>
+
+<li><p> Test that you can run the first benchmark using the real input
+    set - the "reference" workload.  For example:
+    <pre>
+       % <b>runspec --config=Tru64_Unix --size=ref \
+       --noreportable --iterations=1 gzip</b></pre>
+
+    Check the results in $SPEC/result.</p></li>
+
+<li><p> Have a look at <a href=runspec.html>runspec.html</a> to learn how 
+    to do a full run of the suite.</p></li>
+
+</ol>
+
+<a name=example><h2>Example Installation </h2></a>
+
+
+Here is a complete Unix installation, with comments in asterisks.
+This example follows the steps listed above.  We assume that 
+Steps 1 and 2 are already complete (from the list above).
+
+<pre>
+************************************************************
+Step 3: Mount the CD.
+************************************************************
+
+% su
+Password:
+# mount -t cdfs -o rrip /dev/rz20c /cdrom
+# exit
+
+************************************************************
+Step 4: Set the current working directory to the CD:
+************************************************************
+
+% cd /cdrom
+
+************************************************************
+Step 5: Invoke install.sh.  When prompted, we enter the 
+destination directory, and the desired architecture:
+************************************************************
+
+% install.sh
+Top of SPEC tree is '/cdrom'
+Enter the directory you wish to install to (i.e. /usr/cpu2000)
+/cpu2000
+These appear to be valid architectures:
+
+Tru64_UNIX-alpha
+Digital-Unix-alpha
+
+Enter the architecture you are using:
+Tru64_UNIX-alpha
+./
+result/
+result/images/
+result/images/basebar.gif
+result/images/invalid.gif
+result/images/peakbar.gif
+.
+.   ******************************************************
+.   The SPEC tools create many files on your destination
+.   disk, listing the name of each one.  (Over 7000 lines 
+.   deleted here, in the interest of brevity.)
+.   ******************************************************
+.
+bin/lib/site_perl/5.005/Font/Metrics/CourierBold.pm
+bin/lib/site_perl/5.005/Font/Metrics/CourierOblique.pm
+bin/lib/site_perl/5.005/Font/Metrics/CourierBoldOblique.pm
+bin/lib/site_perl/5.005/Font/Metrics/TimesRoman.pm
+Top of SPEC tree is '/cpu2000'
+Everything looks ok, source the shrc file and have at it!
+%
+
+************************************************************
+Step 7: Now, we set the current working directory to the 
+DESTINATION device, start a Bourne-compatible shell, and 
+source the shrc.  After that, it is ok to spawn some 
+other shell.  
+************************************************************
+
+% cd /cpu2000
+% sh
+$ . ./shrc  
+  *** that's dot-space-dot-slash-shrc ****
+
+$ csh
+
+************************************************************
+Step 8: Use runspec to do a test build:
+************************************************************
+
+% runspec --config=Tru64_Unix --action=build --tune=base gzip
+runspec v2.00 - Copyright (C) 1999 Standard Performance Evaluation Corporation
+Loading standard modules..............
+Loading runspec modules.............
+Identifying output formats...asc...html...pdf...ps...raw...
+We will use: 164.gzip
+Compiling Binaries
+  Building 164.gzip ref base none default
+Training 164.gzip
+Build Complete
+
+************************************************************
+Just above, various compile and link commands may or may
+not be echoed to your screen, depending on the settings in
+your config file.  For the sake of brevity, they are
+omitted in this example.  At this point, we've accomplished 
+a lot.  The SPEC tree is installed, and we have verified 
+that a benchmark can be compiled using the C compiler.  
+************************************************************
+
+************************************************************
+Step 9: Now try running the first benchmark, using the 
+minimal test workload.  The test workload runs in a tiny 
+amount of time and does a minimal verification that the 
+benchmark executable can at least start up:
+************************************************************
+
+% runspec --config=Tru64_Unix --size=test \
+          --noreportable --iterations=1 gzip
+runspec v2.00 - Copyright (C) 1999 Standard Performance Evaluation Corporation
+Loading standard modules..............
+Loading runspec modules.............
+Identifying output formats...asc...html...pdf...ps...raw...
+We will use: 164.gzip
+Compiling Binaries
+  Up to date 164.gzip test base none default
+Setting Up Run Directories
+  Setting up 164.gzip test base none default: created
+Running Benchmarks
+  Running 164.gzip test base none default
+Success: 1x164.gzip
+Producing Reports
+mach: default
+  ext: none
+    size: test
+      set: int
+        format: raw -> /cpu2000/result/CINT2000.002.raw
+        format: pdf -> /cpu2000/result/CINT2000.002.pdf
+        format: PostScript -> /cpu2000/result/CINT2000.002.ps
+        format: HTML -> /cpu2000/result/CINT2000.002.html, images/scale.005.gif
+        format: ASCII -> /cpu2000/result/CINT2000.002.asc
+      set: fp
+runspec finished
+
+************************************************************
+Notice 15 lines up the notation "Success: 1x164.gzip".  That
+is what we want to see.  
+************************************************************
+
+
+************************************************************
+Step 10: let's try running gzip with the real workload.  
+This will take a while - about 8 minutes on the 667 MHz
+Alpha used for the sample installation.
+************************************************************
+
+% runspec --config=Tru64_Unix --size=ref \
+          --noreportable --iterations=1 gzip
+runspec v2.00 - Copyright (C) 1999 Standard Performance Evaluation Corporation
+Loading standard modules..............
+Loading runspec modules.............
+Identifying output formats...asc...html...pdf...ps...raw...
+We will use: 164.gzip
+Compiling Binaries
+  Up to date 164.gzip ref base none default
+Setting Up Run Directories
+  Setting up 164.gzip ref base none default: created
+Running Benchmarks
+  Running 164.gzip ref base none default
+Success: 1x164.gzip
+Producing Reports
+mach: default
+  ext: none
+    size: ref
+      set: int
+        format: raw -> /cpu2000/result/CINT2000.003.raw
+        format: pdf -> /cpu2000/result/CINT2000.003.pdf
+        format: PostScript -> /cpu2000/result/CINT2000.003.ps
+        format: HTML -> /cpu2000/result/CINT2000.003.html, images/scale.350.gif
+        format: ASCII -> /cpu2000/result/CINT2000.003.asc
+      set: fp
+runspec finished
+
+************************************************************
+Success with the real workload!  So now let's look in the
+result directory and see what we find:
+************************************************************
+
+% cd result
+% ls
+CINT2000.002.asc   CINT2000.002.raw   CINT2000.003.ps    log.002
+CINT2000.002.html  CINT2000.003.asc   CINT2000.003.raw   log.003
+CINT2000.002.pdf   CINT2000.003.html  images             log.lock
+CINT2000.002.ps    CINT2000.003.pdf   log.001
+
+************************************************************
+Notice the three log files from our three runspec commands.
+Those runspec commands are easily extracted with "grep":
+************************************************************
+
+% grep /runspec log*
+log.001:/cpu2000/bin/runspec -c Tru64_Unix -a build -T base gzip
+log.002:/cpu2000/bin/runspec -c Tru64_Unix -i test -n 1 gzip
+log.003:/cpu2000/bin/runspec -c Tru64_Unix -i ref -n 1 gzip
+
+************************************************************
+So let's look at our results, in the ".asc" file:
+************************************************************
+
+% cat *3.asc
+##############################################################################
+#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 254.gap base did not have enough runs!                                     #
+# 256.bzip2 base did not have enough runs!                                   #
+# 255.vortex base did not have enough runs!                                  #
+# 175.vpr base did not have enough runs!                                     #
+# 164.gzip base did not have enough runs!                                    #
+# 253.perlbmk base did not have enough runs!                                 #
+# 186.crafty base did not have enough runs!                                  #
+# 176.gcc base did not have enough runs!                                     #
+# 252.eon base did not have enough runs!                                     #
+# 197.parser base did not have enough runs!                                  #
+# 300.twolf base did not have enough runs!                                   #
+# 181.mcf base did not have enough runs!                                     #
+#                                                                            #
+#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #
+##############################################################################
+                            SPEC CINT2000 Summary
+                                    -- --
+                           Wed Dec  1 12:08:47 1999
+
+SPEC License #0     Test date: --            Hardware availability: --
+Tester: --                                  Software availability: --
+
+                                     Estimated                     Estimated
+                   Base      Base      Base      Peak      Peak      Peak
+   Benchmarks    Ref Time  Run Time   Ratio    Ref Time  Run Time   Ratio
+   ------------  --------  --------  --------  --------  --------  --------
+   164.gzip          1400       437       321*                             
+   175.vpr                                   X                             
+   176.gcc                                   X                             
+   181.mcf                                   X                             
+   186.crafty                                X                             
+   197.parser                                X                             
+   252.eon                                   X                             
+   253.perlbmk                               X                             
+   254.gap                                   X                             
+   255.vortex                                X                             
+   256.bzip2                                 X                             
+   300.twolf                                 X                             
+   ========================================================================
+   164.gzip          1400       437       321*                             
+   175.vpr                                   X                             
+   176.gcc                                   X                             
+   181.mcf                                   X                             
+   186.crafty                                X                             
+   197.parser                                X                             
+   252.eon                                   X                             
+   253.perlbmk                               X                             
+   254.gap                                   X                             
+   255.vortex                                X                             
+   256.bzip2                                 X                             
+   300.twolf                                 X                             
+   Est. SPECint_base2000                   --
+   Est. SPECint2000                                                      --
+
+************************************************************
+In the table above, most of the results are blank, because
+we only ran 1 of the 12 integer benchmarks.  
+
+Notice that the values for SPECint_base2000 and SPECint2000 
+are dashes ("--"); these would be filled in if we did a 
+"reportable" run, as described in <a href=runspec.html>runspec.html</a>
+
+There are also lots of dashes for the various portions of 
+the system description, both at the top of the page and in 
+the section that follows.  These dashes indicate that we 
+have not filled in the fields that describe the hardware 
+and software that we are testing.  For information on how
+to fill in these fields, please see: <a href=config.html>config.html</a>
+************************************************************
+
+
+                                   HARDWARE
+                                   --------
+     Hardware Vendor: --
+          Model Name: --
+                 CPU: --
+             CPU MHz: --
+                 FPU: --
+      CPU(s) enabled: --
+    CPU(s) orderable: --
+            Parallel: --
+       Primary Cache: --
+     Secondary Cache: --
+            L3 Cache: --
+         Other Cache: --
+              Memory: --
+      Disk Subsystem: --
+      Other Hardware: --
+
+
+                                   SOFTWARE
+                                   --------
+    Operating System: --
+            Compiler: --
+         File System: --
+        System State: --
+
+
+                                    NOTES
+                                    -----
+    --
+##############################################################################
+#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 254.gap base did not have enough runs!                                     #
+# 256.bzip2 base did not have enough runs!                                   #
+# 255.vortex base did not have enough runs!                                  #
+# 175.vpr base did not have enough runs!                                     #
+# 164.gzip base did not have enough runs!                                    #
+# 253.perlbmk base did not have enough runs!                                 #
+# 186.crafty base did not have enough runs!                                  #
+# 176.gcc base did not have enough runs!                                     #
+# 252.eon base did not have enough runs!                                     #
+# 197.parser base did not have enough runs!                                  #
+# 300.twolf base did not have enough runs!                                   #
+# 181.mcf base did not have enough runs!                                     #
+#                                                                            #
+#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #
+##############################################################################
+-----------------------------------------------------------------------------
+For questions about this result, please contact the tester.
+For other inquiries, please contact webmaster@spec.org.
+Copyright 1999 Standard Performance Evaluation Corporation
+Generated on Wed Dec  1 12:16:24 1999 by SPEC CPU2000 ASCII formatter v2.1
+% 
+
+
+************************************************************
+Done.  The suite is installed, and we can run at least one
+benchmark for real.  
+************************************************************
+</pre>
+
+<hr>
+Copyright (C) 1999-2001 Standard Performance Evaluation Corporation
+<br>All Rights Reserved
+

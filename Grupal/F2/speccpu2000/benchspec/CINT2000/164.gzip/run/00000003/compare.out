@@ -1,0 +1,17 @@
+running commands in compare.cmd 1 times
+runs started at 1584202674, 848000000, Sat Mar 14 17:17:54 2020
+run 1 started at 1584202674, 848000000, Sat Mar 14 17:17:54 2020
+child started: 0, 1584202674, 848000000, pid=5048, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10 C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/164.gzip/data/ref/output/input.graphic.out input.graphic.out'
+child finished: 0, 1584202674, 948000000, sec=0, nsec=100000000, pid=5048, rc=0
+child started: 0, 1584202674, 948000000, pid=2072, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10 C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/164.gzip/data/ref/output/input.log.out input.log.out'
+child finished: 0, 1584202675, 40000000, sec=0, nsec=92000000, pid=2072, rc=0
+child started: 0, 1584202675, 40000000, pid=11432, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10 C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/164.gzip/data/ref/output/input.program.out input.program.out'
+child finished: 0, 1584202675, 135000000, sec=0, nsec=95000000, pid=11432, rc=0
+child started: 0, 1584202675, 135000000, pid=7376, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10 C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/164.gzip/data/ref/output/input.random.out input.random.out'
+child finished: 0, 1584202675, 228000000, sec=0, nsec=93000000, pid=7376, rc=0
+child started: 0, 1584202675, 228000000, pid=9228, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10 C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/164.gzip/data/ref/output/input.source.out input.source.out'
+child finished: 0, 1584202675, 321000000, sec=0, nsec=93000000, pid=9228, rc=0
+run 1 finished at: 1584202675, 321000000, Sat Mar 14 17:17:55 2020
+run 1 elapsed time: 0, 473000000, 0.473000000
+runs finished at 1584202675, 321000000, Sat Mar 14 17:17:55 2020
+runs elapsed time: 0, 473000000, 0.473000000

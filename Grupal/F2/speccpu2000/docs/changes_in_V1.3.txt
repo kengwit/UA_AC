@@ -1,0 +1,161 @@
+    ---------------------------------------------------
+    NOTE: the following text file was automatically
+    generated from a document that is best read in
+    HTML format.  To read it in the preferred format,
+    point your web browser at any of these 3 locations:
+
+    (1) http://www.spec.org/cpu2000/docs
+
+    (2) The docs directory of your SPEC CPU2000 CD -
+        for example:
+            /cdrom/docs/ (Unix)
+            E:\docs\  (NT)
+
+    (3) The docs directory on the system where you
+        have installed SPEC CPU2000 - for example
+
+           /usr/mydir/cpu2000/docs/           (Unix)
+           C:\My Directory$lcsuite\docs\   (NT)
+    ---------------------------------------------------
+
+
+
+
+
+                         SPEC CPU2000: Changes in V1.3
+
+    Last updated: 18-Aug-2005 cds
+
+          (To check for possible updates to this document, please see
+                      http://www.spec.org/cpu2000/docs/ )
+
+
+
+   SPEC CPU2000 V1.3 is intended to be the final release of SPEC CPU2000. It
+   responds to problems that have arisen in the nearly 4 years since the
+   previous release, improves compatibility, and improves stability.
+
+   Changes include:
+
+     * Updates to 9 benchmarks, primarily due to portability issues on new
+       platforms
+     * Additional toolsets to support newer platforms
+     * Refreshes for the sources of the tools, and fixes for the buildtools
+       procedures, to make it easier to build tools in the future if and
+       where needed
+
+     ----------------------------------------------------------------------
+
+New systems supported
+
+   With this release of SPEC CPU2000, new support is added for:
+     * MacOS X on Intel hardware
+     * GLIBC 2.2+-based 64-bit x86-64 systems
+     * RedHat AS3+ and SuSE 9+ Linux on Itanium-based systems
+
+Systems no longer supported
+
+   With this release of SPEC CPU2000, support is removed for:
+     * Reliant UNIX on MIPS-based systems
+     * Linux on SPARC-based systems
+     * Linux on Alpha-based systems
+     * Windows on Alpha-based systems
+
+          -----------------------------------------------------------
+
+          Note: links to SPEC CPU2000 documents on this web page       
+          assume that you are reading the page from a directory that   
+          also contains the other SPEC CPU2000 documents. If by some   
+          chance you are reading this web page from a location where   
+          the links do not work, try accessing the referenced          
+          documents at one of the following locations:                 
+            * www.spec.org/cpu2000/docs/                               
+            * The $SPEC/docs/ directory on a Unix system where SPEC    
+              CPU2000 has been installed.                              
+            * The %spec%\docs\ directory on a Windows system where     
+              SPEC CPU2000 has been installed.                         
+            * The docs/ or docs\ directory on your SPEC CPU2000        
+              distribution CD-ROM.                                     
+
+          -----------------------------------------------------------
+
+Documentation Updates
+
+   All of the documents with ".txt" extensions now have CRLF line-endings for
+   the convenience of Windows users. Other documentation updates include:
+     * tools_build (and tools_build.txt), which have been updated to reflect
+       changes due to the tools source update.
+     * install_guide_unix.html which has been updated to reflect a small
+       change in the installation scripts
+     * Revisions, which contains a detailed list of all changes made to v1.3.
+
+Tools source updates
+
+   The tools sources have been updated to make building the tools on new
+   systems easier. The build system has also been updated to catch errors
+   during the tools build process that would have previously gone unreported.
+
+Tools updates
+
+   The monitor_wrapper facility has been modified to not execute during
+   training runs for builds using feedback-directed optimization.
+
+Changes to benchmarks
+
+   The following benchmark changes were made in V1.3:
+     * 176.gcc: A potentially problematic uninitialized variable error has
+       been fixed. Additionally, several problems relating to building
+       176.gcc with newer versions of GCC have been fixed:
+          * The value for OBSTACK_INTERFACE_VERSION has been changed to -1 in
+            order to allow 176.gcc to build on 64-bit systems with GCC.
+          * Uses of the cast as lvalue extension have been removed in order
+            to allow compilation using GCC 3.5.0 and later.
+          * A prototype for exact_log2_wide was added to correct a type
+            mismatch which was causing sign-extension problems on 64-bit
+            MacOS X systems.
+          * A workaround for a bug in varargs support in the Windows 64 PSDK
+            for x86-64 was added.
+          * Added portability defines for 64-bit Solaris/x64 (SOLARIS_X64)
+            and other systems which need to have alloca.h included
+            (SPEC_CPU2000_NEED_ALLOCA_H).
+     * 186.crafty:
+          * Eliminated common global symbols; this allows GCC to build it
+            even in the presence of the -fno-common switch.
+          * Added portability defines for Solaris/x86 (SOLARIS_X86) and
+            Solaris/x64 (SOLARIS_X64)
+     * 187.facerec: In fft2d.f90, don't check the shape of FTemp until after
+       we first ensure that it exists.
+     * 188.ammp: Added a function prototype and added an explicit return type
+       to a function declaration to quiet a couple of warnings.
+     * 191.fma3d: Changed the name of one output file so that it can be
+       automatically deleted. This works around a race condition seen on
+       Windows which could cause multi-copy rate runs to fail.
+     * 252.eon: Several changes were made to enhance standards compliance:
+          * The cerrno header file is now included unless
+            SPEC_CPU2000_NO_ERRNO_MACRO is defined. This is necessary for
+            environments which do not export errno by default.
+          * The local version of fmax() has been renamed to avoid conflict
+            with library functions of the same name.
+          * Wrappers for iostream.h and fstream.h have been provided for
+            systems that no longer support "legacy" headers in C++.
+     * 253.perlbmk:
+          * Added defines for MacOS X on PowerPC and Intel-based systems.
+          * SPEC_CPU2000_GLIBC22 settings are now the default on Linux. They
+            can be turned off by definining SPEC_CPU2000_NO_HAS_FGETPOS and
+            SPEC_CPU2000_NO_HAS_FSETPOS.
+          * Some platform-specific sources are usually selected
+            automatically; Windows users wishing to get the non-Windows
+            sources can set the environment variable SPEC_NOT_REALLY_WINDOWS
+            to achieve this end.
+     * 255.vortex: Added code to set two closed file pointers to NULL in
+       order to avoid attempting to use them for output. Also fixed a comment
+       bug which claimed that a long on P64 systems was 8 bytes.
+     * 300.twolf:
+          * Some calls to free() were being passed two parameters; this has
+            been fixed.
+          * Eliminated common global symbols; this allows GCC to build it
+            even in the presence of the -fno-common switch.
+
+Configuration Files Updated
+
+   All of the configuration files were updated.

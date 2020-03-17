@@ -1,0 +1,366 @@
+cl -c -Foacceptt.obj       -DSPEC_CPU2000       /Ox /GL /Op  acceptt.c
+acceptt.c
+cl -c -Foaddimp.obj       -DSPEC_CPU2000       /Ox /GL /Op  addimp.c
+addimp.c
+addimp.c(158): warning C4033: 'addimp' debe devolver un valor
+cl -c -Foalignfeed.obj       -DSPEC_CPU2000       /Ox /GL /Op  alignfeed.c
+alignfeed.c
+alignfeed.c(140): warning C4033: 'align_init' debe devolver un valor
+cl -c -Fobuildimp.obj       -DSPEC_CPU2000       /Ox /GL /Op  buildimp.c
+buildimp.c
+buildimp.c(69): warning C4033: 'buildimp' debe devolver un valor
+buildimp.c(113): warning C4033: 'build_feed_imp' debe devolver un valor
+cl -c -Fochangrid.obj       -DSPEC_CPU2000       /Ox /GL /Op  changrid.c
+changrid.c
+cl -c -Foclean.obj       -DSPEC_CPU2000       /Ox /GL /Op  clean.c
+clean.c
+cl -c -Foclosepins.obj       -DSPEC_CPU2000       /Ox /GL /Op  closepins.c
+closepins.c
+closepins.c(423): warning C4033: 'closepins' debe devolver un valor
+cl -c -Foconfig1.obj       -DSPEC_CPU2000       /Ox /GL /Op  config1.c
+config1.c
+config1.c(620): warning C4033: 'config1' debe devolver un valor
+cl -c -Foconfigure.obj       -DSPEC_CPU2000       /Ox /GL /Op  configure.c
+configure.c
+configure.c(630): warning C4033: 'configure' debe devolver un valor
+cl -c -Foconfiguref.obj       -DSPEC_CPU2000       /Ox /GL /Op  configuref.c
+configuref.c
+configuref.c(19): warning C4033: 'configuref' debe devolver un valor
+configuref.c(55): warning C4033: 'configuref' debe devolver un valor
+cl -c -Focontrolf.obj       -DSPEC_CPU2000       /Ox /GL /Op  controlf.c
+controlf.c
+cl -c -Focountf.obj       -DSPEC_CPU2000       /Ox /GL /Op  countf.c
+countf.c
+countf.c(229): warning C4033: 'prep_feed_count_1' debe devolver un valor
+countf.c(270): warning C4033: 'prep_feed_count' debe devolver un valor
+countf.c(333): warning C4033: 'insert_row' debe devolver un valor
+cl -c -Fodate.obj       -DSPEC_CPU2000       /Ox /GL /Op  date.c
+date.c
+cl -c -Fodebug.obj       -DSPEC_CPU2000       /Ox /GL /Op  debug.c
+debug.c
+cl -c -Fodimbox.obj       -DSPEC_CPU2000       /Ox /GL /Op  dimbox.c
+dimbox.c
+dimbox.c(102): warning C4033: 'new_dbox' debe devolver un valor
+dimbox.c(167): warning C4033: 'new_dbox_a' debe devolver un valor
+dimbox.c(195): warning C4033: 'term_newpos' debe devolver un valor
+dimbox.c(238): warning C4033: 'term_newpos_a' debe devolver un valor
+dimbox.c(281): warning C4033: 'term_newpos_b' debe devolver un valor
+dimbox.c(299): warning C4033: 'dbox_pos' debe devolver un valor
+dimbox.c(330): warning C4033: 'dbox_pos_2' debe devolver un valor
+dimbox.c(409): warning C4033: 'initialize_rows' debe devolver un valor
+dimbox.c(493): warning C4033: 'check_row_values' debe devolver un valor
+dimbox.c(511): warning C4033: 'vert_statistics' debe devolver un valor
+cl -c -Fofinalwire.obj       -DSPEC_CPU2000       /Ox /GL /Op  finalwire.c
+finalwire.c
+cl -c -Fofindcost.obj       -DSPEC_CPU2000       /Ox /GL /Op  findcost.c
+findcost.c
+cl -c -Fofindcostf.obj       -DSPEC_CPU2000       /Ox /GL /Op  findcostf.c
+findcostf.c
+findcostf.c(242): warning C4033: 'installf' debe devolver un valor
+cl -c -Fofindest.obj       -DSPEC_CPU2000       /Ox /GL /Op  findest.c
+findest.c
+findest.c(76): warning C4033: 'assignro' debe devolver un valor
+findest.c(142): warning C4033: 'reassign' debe devolver un valor
+cl -c -Fofindfeeds.obj       -DSPEC_CPU2000       /Ox /GL /Op  findfeeds.c
+findfeeds.c
+findfeeds.c(612): warning C4033: 'del_pin' debe devolver un valor
+findfeeds.c(667): warning C4033: 'fixwolf' debe devolver un valor
+findfeeds.c(764): warning C4033: 'addfeed' debe devolver un valor
+findfeeds.c(869): warning C4033: 'prepglob' debe devolver un valor
+cl -c -Fofindrchk.obj       -DSPEC_CPU2000       /Ox /GL /Op  findrchk.c
+findrchk.c
+findrchk.c(138): warning C4033: 'findrchk' debe devolver un valor
+cl -c -Fofindrcost.obj       -DSPEC_CPU2000       /Ox /GL /Op  findrcost.c
+findrcost.c
+cl -c -Fofindunlap.obj       -DSPEC_CPU2000       /Ox /GL /Op  findunlap.c
+findunlap.c
+findunlap.c(148): warning C4033: 'findunlap' debe devolver un valor
+cl -c -Foglobe.obj       -DSPEC_CPU2000       /Ox /GL /Op  globe.c
+globe.c
+globe.c(716): warning C4033: 'globe' debe devolver un valor
+globe.c(801): warning C4033: 'addEdge' debe devolver un valor
+globe.c(890): warning C4033: 'searchG' debe devolver un valor
+cl -c -Foglobedbg.obj       -DSPEC_CPU2000       /Ox /GL /Op  globedbg.c
+globedbg.c
+globedbg.c(467): warning C4033: 'globedbg' debe devolver un valor
+cl -c -Foglobroute.obj       -DSPEC_CPU2000       /Ox /GL /Op  globroute.c
+globroute.c
+globroute.c(249): warning C4033: 'globroute' debe devolver un valor
+cl -c -Fogparser.obj       -DSPEC_CPU2000       /Ox /GL /Op  gparser.c
+gparser.c
+gparser.c(103): warning C4477: 'fscanf' : la cadena de formato '%d' requiere un argumento de tipo 'int *', pero el argumento vari dico 1 tiene el tipo 'char *'
+gparser.c(103): note: considere el uso de ' %hhd' en la cadena de formato
+gparser.c(179): warning C4033: 'gparser' debe devolver un valor
+cl -c -Fogrdcell.obj       -DSPEC_CPU2000       /Ox /GL /Op  grdcell.c
+grdcell.c
+grdcell.c(432): warning C4033: 'grdcell' debe devolver un valor
+grdcell.c(493): warning C4033: 'add_pin' debe devolver un valor
+cl -c -Fohash.obj       -DSPEC_CPU2000       /Ox /GL /Op  hash.c
+hash.c
+hash.c(11): warning C4033: 'maketabl' debe devolver un valor
+hash.c(32): warning C4033: 'delHtab' debe devolver un valor
+cl -c -Foimplfeeds.obj       -DSPEC_CPU2000       /Ox /GL /Op  implfeeds.c
+implfeeds.c
+implfeeds.c(121): warning C4033: 'impfix' debe devolver un valor
+implfeeds.c(148): warning C4033: 'impclobr' debe devolver un valor
+cl -c -Fomain.obj       -DSPEC_CPU2000       /Ox /GL /Op  main.c
+main.c
+cl -c -Fomergplist.obj       -DSPEC_CPU2000       /Ox /GL /Op  mergplist.c
+mergplist.c
+mergplist.c(81): warning C4033: 'mergplist' debe devolver un valor
+mergplist.c(99): warning C4033: 'initialize_pins' debe devolver un valor
+mergplist.c(149): warning C4033: 'assign_group_values' debe devolver un valor
+mergplist.c(176): warning C4033: 'merge_pins' debe devolver un valor
+mergplist.c(210): warning C4033: 'merge' debe devolver un valor
+cl -c -Fomove.obj       -DSPEC_CPU2000       /Ox /GL /Op  move.c
+move.c
+move.c(16): warning C4033: 'point' debe devolver un valor
+move.c(27): warning C4033: 'point' debe devolver un valor
+move.c(55): warning C4033: 'rect' debe devolver un valor
+move.c(76): warning C4033: 'move' debe devolver un valor
+move.c(82): warning C4033: 'move' debe devolver un valor
+move.c(88): warning C4033: 'move' debe devolver un valor
+move.c(94): warning C4033: 'move' debe devolver un valor
+move.c(101): warning C4033: 'move' debe devolver un valor
+move.c(108): warning C4033: 'move' debe devolver un valor
+move.c(114): warning C4033: 'move' debe devolver un valor
+move.c(120): warning C4033: 'move' debe devolver un valor
+cl -c -Fomt.obj       -DSPEC_CPU2000       /Ox /GL /Op  mt.c
+mt.c
+mt.c(119): warning C4033: 'MTRotate' debe devolver un valor
+cl -c -Fookmalloc.obj       -DSPEC_CPU2000       /Ox /GL /Op  okmalloc.c
+okmalloc.c
+okmalloc.c(67): warning C4033: 'safe_free' debe devolver un valor
+okmalloc.c(76): warning C4033: 'safe_cfree' debe devolver un valor
+cl -c -Fooutcm.obj       -DSPEC_CPU2000       /Ox /GL /Op  outcm.c
+outcm.c
+outcm.c(57): warning C4033: 'outcm' debe devolver un valor
+cl -c -Fooutpins.obj       -DSPEC_CPU2000       /Ox /GL /Op  outpins.c
+outpins.c
+outpins.c(304): warning C4033: 'outpins' debe devolver un valor
+cl -c -Fooutput.obj       -DSPEC_CPU2000       /Ox /GL /Op  output.c
+output.c
+output.c(103): warning C4033: 'output' debe devolver un valor
+cl -c -Foparser.obj       -DSPEC_CPU2000       /Ox /GL /Op  parser.c
+parser.c
+parser.c(500): warning C4033: 'parser' debe devolver un valor
+cl -c -Fopurcost.obj       -DSPEC_CPU2000       /Ox /GL /Op  purcost.c
+purcost.c
+cl -c -Foqsorte.obj       -DSPEC_CPU2000       /Ox /GL /Op  qsorte.c
+qsorte.c
+qsorte.c(21): warning C4033: 'qsorte' debe devolver un valor
+cl -c -Foqsortg.obj       -DSPEC_CPU2000       /Ox /GL /Op  qsortg.c
+qsortg.c
+qsortg.c(44): warning C4033: 'qsortg' debe devolver un valor
+cl -c -Foqsortgdx.obj       -DSPEC_CPU2000       /Ox /GL /Op  qsortgdx.c
+qsortgdx.c
+qsortgdx.c(23): warning C4033: 'qsortgdx' debe devolver un valor
+cl -c -Foqsortx.obj       -DSPEC_CPU2000       /Ox /GL /Op  qsortx.c
+qsortx.c
+qsortx.c(21): warning C4033: 'qsortx' debe devolver un valor
+cl -c -Forand.obj       -DSPEC_CPU2000       /Ox /GL /Op  rand.c
+rand.c
+cl -c -Foreadblck.obj       -DSPEC_CPU2000       /Ox /GL /Op  readblck.c
+readblck.c
+readblck.c(52): warning C4477: 'fscanf' : la cadena de formato '%f' requiere un argumento de tipo 'float *', pero el argumento vari dico 1 tiene el tipo 'double *'
+readblck.c(52): note: considere el uso de ' %lf' en la cadena de formato
+readblck.c(112): warning C4477: 'fscanf' : la cadena de formato '%f' requiere un argumento de tipo 'float *', pero el argumento vari dico 1 tiene el tipo 'double *'
+readblck.c(112): note: considere el uso de ' %lf' en la cadena de formato
+readblck.c(116): warning C4033: 'readblck' debe devolver un valor
+cl -c -Foreadcell.obj       -DSPEC_CPU2000       /Ox /GL /Op  readcell.c
+readcell.c
+readcell.c(391): warning C4033: 'readcell' debe devolver un valor
+cl -c -Foreadnets.obj       -DSPEC_CPU2000       /Ox /GL /Op  readnets.c
+readnets.c
+readnets.c(112): warning C4033: 'readnets' debe devolver un valor
+cl -c -Foreadpar.obj       -DSPEC_CPU2000       /Ox /GL /Op  readpar.c
+readpar.c
+readpar.c(268): warning C4033: 'readParFile' debe devolver un valor
+cl -c -Foreadseg.obj       -DSPEC_CPU2000       /Ox /GL /Op  readseg.c
+readseg.c
+readseg.c(227): warning C4033: 'readseg' debe devolver un valor
+cl -c -Fosavewolf.obj       -DSPEC_CPU2000       /Ox /GL /Op  savewolf.c
+savewolf.c
+savewolf.c(31): warning C4033: 'savewolf' debe devolver un valor
+savewolf.c(92): warning C4033: 'savewolf' debe devolver un valor
+savewolf.c(139): warning C4033: 'TW_oldin' debe devolver un valor
+savewolf.c(177): warning C4033: 'fixfdpos' debe devolver un valor
+cl -c -Fosortpin.obj       -DSPEC_CPU2000       /Ox /GL /Op  sortpin.c
+sortpin.c
+cl -c -Fostats.obj       -DSPEC_CPU2000       /Ox /GL /Op  stats.c
+stats.c
+cl -c -Fouc0.obj       -DSPEC_CPU2000       /Ox /GL /Op  uc0.c
+uc0.c
+uc0.c(29): warning C4033: 'uc0' debe devolver un valor
+cl -c -Foucg0.obj       -DSPEC_CPU2000       /Ox /GL /Op  ucg0.c
+ucg0.c
+cl -c -Foucgxp.obj       -DSPEC_CPU2000       /Ox /GL /Op  ucgxp.c
+ucgxp.c
+cl -c -Fouclosepns.obj       -DSPEC_CPU2000       /Ox /GL /Op  uclosepns.c
+uclosepns.c
+uclosepns.c(598): warning C4033: 'uclosepns' debe devolver un valor
+cl -c -Foucxx1.obj       -DSPEC_CPU2000       /Ox /GL /Op  ucxx1.c
+ucxx1.c
+cl -c -Foucxx2.obj       -DSPEC_CPU2000       /Ox /GL /Op  ucxx2.c
+ucxx2.c
+ucxx2.c(246): warning C4033: 'find_new_pos' debe devolver un valor
+ucxx2.c(262): warning C4033: 'add_cell' debe devolver un valor
+cl -c -Foucxxo1.obj       -DSPEC_CPU2000       /Ox /GL /Op  ucxxo1.c
+ucxxo1.c
+cl -c -Foucxxo2.obj       -DSPEC_CPU2000       /Ox /GL /Op  ucxxo2.c
+ucxxo2.c
+cl -c -Foucxxp.obj       -DSPEC_CPU2000       /Ox /GL /Op  ucxxp.c
+ucxxp.c
+cl -c -Fouglobe.obj       -DSPEC_CPU2000       /Ox /GL /Op  uglobe.c
+uglobe.c
+uglobe.c(637): warning C4033: 'uglobe' debe devolver un valor
+cl -c -Fouglobrout.obj       -DSPEC_CPU2000       /Ox /GL /Op  uglobrout.c
+uglobrout.c
+uglobrout.c(100): warning C4033: 'uglobrout' debe devolver un valor
+cl -c -Fougpair.obj       -DSPEC_CPU2000       /Ox /GL /Op  ugpair.c
+ugpair.c
+ugpair.c(366): warning C4033: 'ugpair' debe devolver un valor
+cl -c -Fouloop.obj       -DSPEC_CPU2000       /Ox /GL /Op  uloop.c
+uloop.c
+uloop.c(422): warning C4033: 'uloop' debe devolver un valor
+uloop.c(510): warning C4033: 'rowcon' debe devolver un valor
+cl -c -Fouloop2.obj       -DSPEC_CPU2000       /Ox /GL /Op  uloop2.c
+uloop2.c
+uloop2.c(224): warning C4033: 'uloop2' debe devolver un valor
+cl -c -Founetseg.obj       -DSPEC_CPU2000       /Ox /GL /Op  unetseg.c
+unetseg.c
+unetseg.c(640): warning C4033: 'unetseg' debe devolver un valor
+cl -c -Founlap.obj       -DSPEC_CPU2000       /Ox /GL /Op  unlap.c
+unlap.c
+unlap.c(169): warning C4033: 'unlap' debe devolver un valor
+cl -c -Foupair.obj       -DSPEC_CPU2000       /Ox /GL /Op  upair.c
+upair.c
+upair.c(165): warning C4033: 'upair' debe devolver un valor
+cl -c -Fourcost.obj       -DSPEC_CPU2000       /Ox /GL /Op  urcost.c
+urcost.c
+cl -c -Foutemp.obj       -DSPEC_CPU2000       /Ox /GL /Op  utemp.c
+utemp.c
+utemp.c(286): warning C4033: 'utemp' debe devolver un valor
+utemp.c(331): warning C4033: 'add_dummy_feeds' debe devolver un valor
+cl -c -Foutils.obj       -DSPEC_CPU2000       /Ox /GL /Op  utils.c
+utils.c
+cl -c -Foxcompact.obj       -DSPEC_CPU2000       /Ox /GL /Op  xcompact.c
+xcompact.c
+xcompact.c(172): warning C4033: 'xcompact' debe devolver un valor
+xcompact.c(198): warning C4033: 'findblks' debe devolver un valor
+cl -c -Foxpickint.obj       -DSPEC_CPU2000       /Ox /GL /Op  xpickint.c
+xpickint.c
+cl       /Ox /GL /Op  acceptt.obj addimp.obj alignfeed.obj buildimp.obj changrid.obj clean.obj closepins.obj config1.obj configure.obj configuref.obj controlf.obj countf.obj date.obj debug.obj dimbox.obj finalwire.obj findcost.obj findcostf.obj findest.obj findfeeds.obj findrchk.obj findrcost.obj findunlap.obj globe.obj globedbg.obj globroute.obj gparser.obj grdcell.obj hash.obj implfeeds.obj main.obj mergplist.obj move.obj mt.obj okmalloc.obj outcm.obj outpins.obj output.obj parser.obj purcost.obj qsorte.obj qsortg.obj qsortgdx.obj qsortx.obj rand.obj readblck.obj readcell.obj readnets.obj readpar.obj readseg.obj savewolf.obj sortpin.obj stats.obj uc0.obj ucg0.obj ucgxp.obj uclosepns.obj ucxx1.obj ucxx2.obj ucxxo1.obj ucxxo2.obj ucxxp.obj uglobe.obj uglobrout.obj ugpair.obj uloop.obj uloop2.obj unetseg.obj unlap.obj upair.obj urcost.obj utemp.obj utils.obj xcompact.obj xpickint.obj     -Fetwolf
+Microsoft (R) Incremental Linker Version 14.24.28315.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/ltcg 
+/out:twolf.exe 
+acceptt.obj 
+addimp.obj 
+alignfeed.obj 
+buildimp.obj 
+changrid.obj 
+clean.obj 
+closepins.obj 
+config1.obj 
+configure.obj 
+configuref.obj 
+controlf.obj 
+countf.obj 
+date.obj 
+debug.obj 
+dimbox.obj 
+finalwire.obj 
+findcost.obj 
+findcostf.obj 
+findest.obj 
+findfeeds.obj 
+findrchk.obj 
+findrcost.obj 
+findunlap.obj 
+globe.obj 
+globedbg.obj 
+globroute.obj 
+gparser.obj 
+grdcell.obj 
+hash.obj 
+implfeeds.obj 
+main.obj 
+mergplist.obj 
+move.obj 
+mt.obj 
+okmalloc.obj 
+outcm.obj 
+outpins.obj 
+output.obj 
+parser.obj 
+purcost.obj 
+qsorte.obj 
+qsortg.obj 
+qsortgdx.obj 
+qsortx.obj 
+rand.obj 
+readblck.obj 
+readcell.obj 
+readnets.obj 
+readpar.obj 
+readseg.obj 
+savewolf.obj 
+sortpin.obj 
+stats.obj 
+uc0.obj 
+ucg0.obj 
+ucgxp.obj 
+uclosepns.obj 
+ucxx1.obj 
+ucxx2.obj 
+ucxxo1.obj 
+ucxxo2.obj 
+ucxxp.obj 
+uglobe.obj 
+uglobrout.obj 
+ugpair.obj 
+uloop.obj 
+uloop2.obj 
+unetseg.obj 
+unlap.obj 
+upair.obj 
+urcost.obj 
+utemp.obj 
+utils.obj 
+xcompact.obj 
+xpickint.obj 
+Generando código
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\xcompact.c(199) : warning C4716: 'findblks': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\ucxx2.c(247) : warning C4716: 'find_new_pos': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\sortpin.c(56) : warning C4716: 'shellsort': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\okmalloc.c(99) : warning C4716: 'cleanupHandler': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\mergplist.c(211) : warning C4716: 'merge': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\mergplist.c(150) : warning C4716: 'assign_group_values': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\mergplist.c(100) : warning C4716: 'initialize_pins': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\globe.c(802) : warning C4716: 'addEdge': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\findfeeds.c(870) : warning C4716: 'prepglob': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\findcostf.c(243) : warning C4716: 'installf': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\countf.c(334) : warning C4716: 'insert_row': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\countf.c(271) : warning C4716: 'prep_feed_count': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\qsortgdx.c(139) : warning C4716: 'qstgdx': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\qsortg.c(160) : warning C4716: 'qstg': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\qsorte.c(137) : warning C4716: 'qste': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\qsortx.c(181) : warning C4716: 'qst': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\findfeeds.c(613) : warning C4716: 'del_pin': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\findrcost.c(270) : warning C4716: 'reset_track': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\findrchk.c(221) : warning C4716: 'reset_ntrack': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\ucgxp.c(392) : warning C4716: 'sub_reset2': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\ucg0.c(281) : warning C4716: 'sub_reset1': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\ucxx2.c(263) : warning C4716: 'add_cell': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\grdcell.c(494) : warning C4716: 'add_pin': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\findrcost.c(223) : warning C4716: 'set_cedgebin': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\countf.c(230) : warning C4716: 'prep_feed_count_1': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\globe.c(891) : warning C4716: 'searchG': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\uloop.c(511) : warning C4716: 'rowcon': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\mergplist.c(177) : warning C4716: 'merge_pins': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\utemp.c(332) : warning C4716: 'add_dummy_feeds': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\findrchk.c(175) : warning C4716: 'debug': debe devolver un valor
+C:\speccpu2000\benchspec\CINT2000\300.twolf\run\00000001\findfeeds.c(765) : warning C4716: 'addfeed': debe devolver un valor
+Generación de código finalizada

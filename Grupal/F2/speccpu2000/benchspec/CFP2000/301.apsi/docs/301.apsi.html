@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>301.apsi: SPEC CPU2000 Benchmark Description</TITLE>
+<META GENERATOR="Cloyce+VIM 5.3">
+<META REVISION="$Id: 301.apsi.html 1393 2005-06-14 15:55:21Z cloyce $">
+</HEAD>
+
+<BODY>
+<CENTER><H1>301.apsi<BR>
+SPEC CPU2000 Benchmark Description File</H1></CENTER>
+
+<H2>Benchmark Name</H2>
+<P>301.apsi</P>
+<HR>
+
+<H2>Benchmark Author</H2>
+<P>Zaphiris D. Christidis, IBM Yorktown Heights</P>
+<HR>
+
+<H2>Benchmark Program General Category</H2>
+<P>Weather Prediction</P>
+<HR>
+
+<H2>Benchmark Description</H2>
+
+<P>Program to solve for the mesoscale and synoptic variations of potential
+temperature, U AND V wind components, and the mesoscale vertical velocity W
+pressure and distribution of pollutants C having sources Q.  The synoptic scale
+components are in quassi-steady state balance, while the mesoscale pressure and
+velocity W are found diagnostically.</P>
+
+<P>The solution of the complete system is performed by using the splitting-up
+method.  In specific the horizontal advection is carried out by an explicit
+leapfrog scheme, the horizontal diffusion is performed by the method of the
+eigenvalues, or equvalently by vertical multiplying the fourier coefficients by
+appropriate exponentials.  The vertical diffusion is treated with a
+semi-implicit pade-crank-nickolson, as well as the vertical advection.  The
+pressure derivative terms are treated with the so-called pressure averaging
+technique.  Finally other terms will be dubbed in the advection part
+(coriolis).  The model calculates prognostically the the potential temperature,
+U,V wind components and concentrations of pollutants C (POTT,UX,VY,C).  The
+pressure and the vertical velocity will be calculated diagnostically (PRES,WZ).
+The diffusivities are also calculated diagnostically using information on
+UX,VY, POTT.</P>
+<HR>
+
+<H2>Input Description</H2>
+<P>It reads a 112x112x112 area array of data and iterates over
+    70 timesteps.</P>
+<HR>
+ 
+<H2>Output Description</H2>
+<P>It prints the diagonal elements of the velocity field.</P>
+<HR>
+
+<H2>Programming Language</H2>
+<P>FORTRAN 77</P>
+<HR>
+
+<H2>Known portability issues</H2>
+<P>None</P>
+<HR>
+
+<H2>References</H2>
+<P>None</P>
+<HR>
+
+<P>Last Updated: 16 August 2000</P>
+</BODY>
+</HTML>

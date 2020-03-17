@@ -1,0 +1,58 @@
+Version file started by Bodo Parady
+
+December 1997
+Original version from CPU2000
+Modified by Bodo Parady
+
+
+Log
+	10/99	88
+		Changed RADBG to make CH a 2d array instead of a 3d array
+		to re-enable appropriate parallelization optimizations
+		blocked the change to statement functions
+
+	9/99	84
+		Testing out a new tolerance since we are going
+		to F90 constant standards
+
+	9/99	84
+		Changed more constants to double precision to
+		eliminate F90 forcing constants to single
+		precision.
+
+	9/99	84
+		Added  PARAMETER (F = 0.0001D0) to PADEC for undefined
+			variable at line 2578
+
+	9/99	84
+		Changed DOUBLE PRECISION to REAL*8
+		Changed a number of constants to be double precision
+
+	9/99	84
+		Added skiptol=1 to accomodate miscompares
+
+	9/99	84
+		Bodo Parady
+		APO11 missing any output.  Solution involves changing
+		output format and and input file.
+
+	11/98	51
+		Bodo Parady
+		Added xdimag source for f90 portability
+
+	11/98	Benchathon
+		Bodo Parady
+		Changed ABSTOL=0.0000001
+
+	10/98	Bodo Parady
+	Changed DIMAG to AIMAG
+
+Changes
+	Cutting extraneous commented calls
+	Upping the size of the working array to
+		200MB
+	Fixing an error in a calling sequence.
+	Changed the input set to allow 3d.  Input
+		was 2d for cpu2000
+
+

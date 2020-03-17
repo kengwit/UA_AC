@@ -1,0 +1,59 @@
+cl -c -Foanalyze-linkage.obj       -DSPEC_CPU2000       /Ox /GL /Op  analyze-linkage.c
+analyze-linkage.c
+cl -c -Foand.obj       -DSPEC_CPU2000       /Ox /GL /Op  and.c
+and.c
+cl -c -Fobuild-disjuncts.obj       -DSPEC_CPU2000       /Ox /GL /Op  build-disjuncts.c
+build-disjuncts.c
+cl -c -Foextract-links.obj       -DSPEC_CPU2000       /Ox /GL /Op  extract-links.c
+extract-links.c
+cl -c -Fofast-match.obj       -DSPEC_CPU2000       /Ox /GL /Op  fast-match.c
+fast-match.c
+cl -c -Foidiom.obj       -DSPEC_CPU2000       /Ox /GL /Op  idiom.c
+idiom.c
+cl -c -Fomain.obj       -DSPEC_CPU2000       /Ox /GL /Op  main.c
+main.c
+cl -c -Fomassage.obj       -DSPEC_CPU2000       /Ox /GL /Op  massage.c
+massage.c
+cl -c -Foparse.obj       -DSPEC_CPU2000       /Ox /GL /Op  parse.c
+parse.c
+cl -c -Fopost-process.obj       -DSPEC_CPU2000       /Ox /GL /Op  post-process.c
+post-process.c
+cl -c -Foprint.obj       -DSPEC_CPU2000       /Ox /GL /Op  print.c
+print.c
+cl -c -Foprune.obj       -DSPEC_CPU2000       /Ox /GL /Op  prune.c
+prune.c
+cl -c -Foread-dict.obj       -DSPEC_CPU2000       /Ox /GL /Op  read-dict.c
+read-dict.c
+cl -c -Foutilities.obj       -DSPEC_CPU2000       /Ox /GL /Op  utilities.c
+utilities.c
+cl -c -Foxalloc.obj       -DSPEC_CPU2000       /Ox /GL /Op  xalloc.c
+xalloc.c
+cl -c -Foword-file.obj       -DSPEC_CPU2000       /Ox /GL /Op  word-file.c
+word-file.c
+cl -c -Fostrncasecmp.obj       -DSPEC_CPU2000       /Ox /GL /Op  strncasecmp.c
+strncasecmp.c
+cl       /Ox /GL /Op  analyze-linkage.obj and.obj build-disjuncts.obj extract-links.obj fast-match.obj idiom.obj main.obj massage.obj parse.obj post-process.obj print.obj prune.obj read-dict.obj utilities.obj xalloc.obj word-file.obj strncasecmp.obj     -Feparser
+Microsoft (R) Incremental Linker Version 14.24.28315.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/ltcg 
+/out:parser.exe 
+analyze-linkage.obj 
+and.obj 
+build-disjuncts.obj 
+extract-links.obj 
+fast-match.obj 
+idiom.obj 
+main.obj 
+massage.obj 
+parse.obj 
+post-process.obj 
+print.obj 
+prune.obj 
+read-dict.obj 
+utilities.obj 
+xalloc.obj 
+word-file.obj 
+strncasecmp.obj 
+Generando código
+Generación de código finalizada

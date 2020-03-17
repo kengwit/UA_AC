@@ -1,0 +1,4 @@
+00000001 dir=C:/speccpu2000/benchspec/CINT2000/181.mcf/run/00000001 ext=vc7.x87.exe lock=0 tune=base type=build username=EPS
+00000002 dir=C:/speccpu2000/benchspec/CINT2000/181.mcf/run/00000002 ext=vc7.x87.exe lock=1 mach=default size=ref tune=base type=run username=EPS
+00000003 dir=C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/181.mcf/run/00000003 ext=vc7.x87.exe lock=0 mach=default size=ref tune=base type=run username=Anubis
+__END__

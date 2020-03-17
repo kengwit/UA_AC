@@ -1,0 +1,43 @@
+Partial history of versions, modifications for CINT2000 benchmark 253.perlbmk
+
+Last Update: 1 Apr 1999
+
+Start: 25 Feb 1999
+
+1 Apr 1999
+==========
+Updated to CPU2000.  No, it's not an April Fool.
+
+26 Feb 1999
+===========
+(Kit 63 changes)
+Removed the dup.t test from the test workload, since it would want to use
+cat(1) on NT.  The features it tests for are not used in any of the
+workloads (and the features do actually work, but we don't want to have any
+external program dependencies).
+
+Also removed external program dependencies from other tests.  Test
+functionality wasn't affected.
+
+(Kit 62 changes)
+Added rand.t to the test workload to catch errors caused by incorrect
+configuration (byteorder, etc) more quickly than running the ref input.
+
+Converted random number stuff from int to SPEC_INT32_T.  This shifts the
+burden of what to do about machines with 64-bit ints to the people who
+have them, and not me.
+
+Reorganized spec_config.h a little, so that the most commonly tweaked
+options are at the top.
+
+25 Feb 1999
+===========
+
+(Kit 61 changes)
+Coverted the last instances of localtime in the Perl part of the reference
+workload to gmtime.  Tested with TZ set to CDT (UTC-5), WET (UTC+2),
+WFT (UTC+1).  This is why ref failed for Siemens and nobody else.
+
+Fixed up spec_config.h for Alpha Linux (missing SPEC_CPU2000_LP64 definition)
+and SCO UW2.
+

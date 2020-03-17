@@ -1,0 +1,215 @@
+This is a description of code GalGel submitted to SPEC CPU2000 Benchmark
+Search Program
+
+__________________________________________________________________________
+
+1. Description of the problem
+
+This problem is a particular case of the GAMM (German Association for
+Mathematics and Mechanics) benchmark devoted to numerical analysis of
+oscillatory instability of convection in low-Prandtl-number fluids [1].
+This benchmark became rather popular between CFD (Computational Fluid
+Dynamics) people.
+
+The physical problem is the following.  There is a rectangular box filled
+by a liquid whose Prandtl number is Pr=0.015.  The aspect ratio of the
+cavity length/height is 4.  The left and right vertical walls are
+maintained at at higher and lower temperatures respectively.  This causes
+a convective motion in the liquid.  When the temperature difference is
+relatively small the convective flow is steady.  The flow looses its
+stability and become oscillatory when the temperature difference exceeds
+a certain value.
+
+The buoyancy force, which causes the convective flow, is characterized by
+a parameter called Grashof number.  Besides all, the Grashof number (Gr)
+is proportional to the characteristic temperature difference (difference
+of the temperatures at the vertical walls in this case).
+
+The task of the GAMM benchmark is to calculate the critical value of the
+Grashof number which corresponds to a bifurcation from steady to
+oscillatory state of the flow.  Together with the critical Gr it is
+necessary to calculate the critical frequency (the frequency of the
+resulting oscillations when Gr is equal to its critical value).
+
+The critical values (critical Grashof number and critical frequency)
+depend on all parameters of the problem and the boundary conditions.  The
+GAMM benchmark considers fixed values of the Prandtl number and the
+aspect raio (0.015 and 4 respectively), and offer to vary the boundary
+conditions.  In this code we choose the following set of the boundary
+conditions:  vertical walls are no-slip and isothermal; horizontal walls
+are perfectly thermally insulated; lower horizontal wall is no-slip, and
+the upper one is stress-free.  These boundary conditions correspond to
+Ra-Fa ( Rigid/adiabatic - Free/adiabatic ) case defined in [1].
+
+
+2. Description of numerical method
+
+The numerical method used here is not very common for CFD.  This is the
+spectral Galerkin method with the basis functions defined globally in the
+whole region of the flow.  Detail description of the method may be found
+in [2].  There are two main advantages of this method.  First is the
+absence of the problem for pressure.  The global Galerkin method allows
+one to use the mathematical fact of orthogonality of the gradient of any
+scalar function (including pressure) to the subspace of divergent-free
+functions satisfying no-throughflow boundary conditions at the boundaries
+(velocity of the considered flow belongs to this subspace).  The second
+advantage is relatively low number of unknown scalars (number of degrees
+of freedom) which are necessary to obtain the accurate enough solution.
+Some test calculations illustrating this fact may be found in [2,3].
+
+The main disadvantage of the global Galerkin method is huge computer
+memory required to keep all coefficients of the resulting dynamic system.
+To avoid this some coefficients are recalculated each time when a
+calculation of r.h.s.  of the dynamic system is necessary.  Keeping a
+part of the coefficients, and recalculating of another part lead to a
+rapid increase of the required computer memory and CPU time when the
+number of the Galerkin basis functions is increased.  In the case of
+benchmarking this apparent disadvantage gives a desirable possibility to
+vary computer memory and CPU time from very small to very large (see
+Table below).
+
+A relatively small amount of degrees of freedom gives us a possibility to
+study linear stability of steady solutions.  The analysis of linear
+stability requires solution of an eigenvalue problem, which is usually
+impossible for an arbitrary CFD code.  It becomes possible with the use
+of the global Galerkin method, and it was successfully done for
+convective flows described here [2,5] and for swirling flow in a closed
+cylindrical container [3,4].  Usual way to study onset of instability in
+CFD is straight-forward integration in time of the full system of
+equations.  As a rule, this is much more CPU-time consuming and meets a
+lot of numerical difficulties.
+
+After linear stability analysis is completed and the bifurcation point is
+calculated, we make one more step forward and calculate an asymptotic
+approximation of the supercritical flow.  For the problem considered
+here, the instability sets in due to supercritical Hopf bifurcation.  We
+use the asymptotic approach described in [6].  The details on its
+numerical application may be found in [3].
+
+
+3. Description of the numerical process.
+
+The numerical process is divided in 3 stages.
+
+3.1. The first stage
+
+The first stage is necessary to calculate a steady flow at an initial
+value of the Grashof number, from which the linear stability analysis
+will start.  The initial Grashof number should be close to the critical
+value such that iterations of the second step could converge, and
+converge rather quickly.  Usually, the initial value should be chosen on
+the basis of some physical considerations.  Here it is chosen to be
+Gr(initial)=1.E5. 
+
+Steady states are calculated using Newton iterations. This also 
+requires some initial guess which should be rather close to a
+solution. To do this we calculate steady states sequentially for
+Gr=1.E1, 1.E2, 1.E3, 1.E4, and 1.E5 such that the steady state at the
+former value of Gr is used as a guess for the next value. Zero
+initial guess is used for Gr=1.E1.  
+
+3.2. The second stage
+
+The second stage is devoted to the linear stability analysis of steady
+state.  For each steady state we consider the linearized eigenvalue
+problem and calculate the eigenvalue with the largest real part (dominant
+eigenvalue).  Negative real parts of all the eigenvalues mean that the
+flow is stable.  If there is one eigenvalue with a positive real part,
+the flow is unstable.
+
+The goal is to find the critical value of the Grashof number for which 
+we have an eigenvalue whose real part is zero. To reach this goal we 
+calculate dominant eigenvalues for the initial Grashof number and the
+Grashof number slightly above it. Then we approach the critical value 
+of the Grashof number using the secant method. 
+
+In the end of this stage we obtain the critical Grashof number.  The
+non-zero imaginary part of the dominant eigenvalue (whose real part is
+zero) is the critical circular frequency of oscillations.  Zero imaginary
+part indicates steady bifurcation (bifurcation from one steady state to
+another one). 
+
+Calculation of the critical Grashof number and the critical frequency 
+means that the task of the GAMM benchmark is completed.
+
+
+3.3. The third stage
+
+At the third stage we calculate an asymptotic approximation of the
+oscillatory state of the flow. Without going into details (see [3,6]), 
+we should mention that the first term of this asymptotic expansion
+is defined by two scalar numbers which are called here "Mu" and "Tau".
+
+Stability of the asymptotic oscillatory state is defined by the 
+non-zero Floquet exponent, which is also calculated. Negative
+Floquet exponent means stability, and the positive means instability.
+
+After all three stages of calculations are completed, the code
+reports the following five numbers:
+
+	- critical Grashof number
+	- critical circular frequency
+	- parameter Mu
+	- parameter Tau
+	- Floquet exponent
+
+
+4. How to run the code.
+
+All modules are written in the standard Fortran-90 . The only
+exception is module 'lapak.f' which contains public domain LAPACK
+routines written in Fortran-77. However, this module also can be 
+compiled by a Fortran-90 compiler. It should not cause any problems.
+
+All global data is defined in 'modules.f'. This module must be
+compiled first. This is the only restriction. All other modules may
+be compiled afterwards in any order. 
+
+After compilation is completed all modules must be linked together.  
+The main routine is in the module 'GalGel.f'.  A simplest example of
+compilation and linking may be found in file 'GalGel.lnk'.
+
+Number of basis functions in horizontal and vertical directions
+is the only data to be supplied. This data is defined by two 
+integer numbers in the file 'Conv.dat'. The input of these to integers
+is done using format I5. 
+
+To simplify the process, all other data is included into the code
+and should not be changed.
+
+
+References
+
+1. Roux B. (ed.) Numerical simulation of oscillatory convection
+   in low-Pr fluids:  A GAMM workshop.  Notes on Numerical Fluid
+   Mechanics, Vieweg, Braunschweig, vol.27, 1990 .
+2. Gelfgat A.Yu. and Tanasawa I. Numerical analysis of oscillatory 
+   instability of buoyancy convection with the Galerkin spectral method.
+   Numerical Heat Transfer, Part A, vol. 25, pp.627-648, 1994.
+3. Gelfgat A.Yu., Bar-Yoseph P.Z. and Solan A. Stability of confined 
+   swirling flow with and without vortex breakdown. Journal of Fluid
+   Mechanics, vol.311, pp.1-36, 1996.
+4. Gelfgat A.Yu., Bar-Yoseph P.Z. and Solan A. Steady states and 
+   oscillatory instability of swirling flow in a cylinder with 
+   rotating top and bottom. Physics of Fluids, vol.8, pp.2614-2625, 1997.
+5. Gelfgat A.Yu., Bar-Yoseph P.Z. and Yarin A. On oscillatory instability
+   of convective flows at low Prandtl number. Transactions of ASME,
+   Journal of Fluids Engineering, December volume of 1997 (to appear).
+6. Hassard B.D., Kazarinoff N.D., Wan Y.-H. Theory and Applications of 
+   Hopf bifurcation. Mathematical Society Lecture Notes Series, vo.41.
+   London, 1981.
+    
+
+________________________________________________________________________
+
+Runs on Workstation DEC 3000 (CPU time in seconds)
+
+Number of basis               CPU time with               CPU time with
+functions Nx by Nz            DXML library                LAPACK public 
+                                                          domain codes
+
+     10 x 4                       12                           12
+     12 x 6                       76                           80
+     16 x 6                      167                          178
+     20 x 8                      666                          709
+     30 x 10                    4569                         4857

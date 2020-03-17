@@ -1,0 +1,71 @@
+SPEC CPU2000 Benchmark Description File
+
+Benchmark Name:         176.gcc
+
+Benchmark Author:       Richard Stallman and a large cast of helpers.
+                        For a full list, see
+                        http://www.fsf.org/software/gcc/thanks.html
+
+Benchmark Program General Category: C Language optimizing compiler
+
+Benchmark Description: 176.gcc is based on gcc Version 2.7.2.2. It generates
+                        code for a Motorola 88100 processor. The benchmark runs
+                        as a compiler with many of its optimization flags
+                        enabled. 176.gcc has had its inlining heuristics 
+                        altered slightly, so as to inline more code than would
+                        be typical on a Unix system in 1997. It is expected that
+                        this effect will be more typical of compiler usage
+                        in 2002. This was done so that 176.gcc would 
+                        spend more time analyzing it's source code inputs,
+                        and use more memory. Without this effect, 176.gcc would
+                        have done less analysis, and needed more input 
+                        workloads to achieve the run times required for
+                        SPECint2000.
+
+Input Description:      There are 5 input workloads in 176.gcc (compared with
+                        57 in the 126.gcc of SPECint95). All these files are
+                        preprocessed C code (.i files); integrate.i and expr.i
+                        come from the source files of gcc itself. 166.i is
+                        made by concatenating the Fortran source files of a 
+                        SPECint2000 candidate benchmark, then using the f2c
+                        translator to produce C code, and then pre-processing.
+                        200.i comes via the same method from a previous 
+                        version of the SPECfp2000 benchmark 200.sixtrack,
+                        and scilab.i comes via the same method from a version
+                        of the Scilab program.
+
+Output Description:     All output files are 88100 assembly code files.
+
+Programming Language:   The code is in C.
+
+Known portability issues: 1     The code needs to be aware of the endianness of 
+                                the host it runs on. 176.gcc will default to 
+                                little endian. To run correctly on a big-
+                                endian machine, the flag HOST_WORDS_BIG_ENDIAN
+                                must be defined when the benchmark is compiled
+                                (eg -DHOST_WORDS_BIG_ENDIAN).
+                          2     Some of the optimizations 176.gcc performs 
+                                require constant propagation of floating point
+                                constants. These form an insignificant amount
+                                of computation time, yet may depend on IEEE
+                                floating point format to produce a correct
+                                result.
+                          3     176.gcc is not an ANSI C program. It uses
+                                Gnu extensions.
+                          4     176.gcc has been changed slightly by SPEC to
+                                build properly with newer versions of GCC.  If
+                                you're using an old gcc (~2.6 or older) to
+                                build 176.gcc, you should define the
+                                __OLDANDBUGGY__GNUC__ flag.
+                          5     176.gcc is inherently a 32-bit program. It has
+                                been successfully ported by SPEC to many 64-bit
+                                UNIX implementations. However use of high
+                                optimization levels with a 64 bit system in
+                                conjunction with inlining of procedures from
+                                different source files may reveal issues with
+                                64-bit cleanliness with 176.gcc.
+
+Reference:              See the GCC home page at 
+                        http://www.fsf.org/software/gcc/gcc.html
+
+

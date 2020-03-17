@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>187.facerec: SPEC CPU2000 Benchmark Description</TITLE>
+<META GENERATOR="Cloyce+VIM 5.3">
+<META REVISION="$Id: 187.facerec.html,v 1.1 1999/10/12 18:12:28 cloyce Exp $">
+</HEAD>
+
+<BODY>
+<CENTER><H1>187.facerec<BR>
+SPEC CPU2000 Benchmark Description File</H1></CENTER>
+
+<H2>Benchmark Name</H2>
+<P>187.facerec</P>
+<HR>
+
+<H2>Benchmark Author</H2>
+<P>Jan C. Vorbr&uuml;ggen (jvorbrueggen@mediasec.de)</P>
+<HR>
+
+<H2>Benchmark Program General Category</H2>
+<P>Image Processing</P>
+<HR>
+
+<H2>Benchmark Description</H2>
+
+<P>This is an implementation of the face recognition system described in
+<A HREF="ftp://ftp.neuroinformatik.ruhr-uni-bochum.de/pub/manuscripts/articles/LadEtAl1993.ps.gz">M. Lades et al. (1993), IEEE Trans. Comp. 42(3):300-311.</A></P>
+
+<P>In this application, an object - here, faces photographed frontally - are 
+represented as
+<A HREF="http://www.neuroinformatik.ruhr-uni-bochum.de/ini/VDM/research/computerVision/representation/graphs/contents.html">labeled graphs</A>.
+In the simplest 
+case, used here, the graph is a regular grid. To each vertex of the grid graph
+a set of features are attached; they are computed from the <A HREF="http://www.neuroinformatik.ruhr-uni-bochum.de/ini/VDM/research/computerVision/imageProcessing/wavelets/gabor/contents.html">Gabor wavelet transform</A>
+of the image and represent it in the surroundings of a vertex. An edge of 
+the graph is labeled with the vector connecting its two vertices and represents
+the topographical relationship of those vertices.</P>
+
+<P>An object represented in this way can now be compared to a new image in a process called
+<A HREF="http://www.neuroinformatik.ruhr-uni-bochum.de/ini/VDM/research/computerVision/graphMatching/basicConcepts/examples/example2.html">elastic graph matching</A>.
+This is done by first determining the Gabor wavelet
+transform for the new image. Then, for a given correspondance between
+the graph's vertices and a set of image points, a function taking into
+account both the similarity of the feature vectors at every vertex and
+its corresponding image point, and the distortion of the graph generated
+by the set of image points, measured as the change in the edge labels,
+can be computed. This
+<A HREF="http://www.neuroinformatik.ruhr-uni-bochum.de/ini/VDM/research/computerVision/imageProcessing/setsOfFeatures/gabor/similarityFcts.html">graph similarity function</A>
+is then the objective function of an optimization
+process that varies the set of corresponding points in the
+image. This optimization process is implemented in two steps:
+The <EM>global move</EM> step keeps the graph rigid and moves it
+systematically over all of the image, resulting in a placement
+that has the highest similarity to the graph. This step can be
+considered as finding the object (face) in the image.  The <EM>local
+move</EM> step then takes this placement as the starting position,
+and visits every vertex in random order. At each vertex, the
+similarity function is evaluated on a small subgrid surrounding
+the current position. (This is a small change from the algorithm
+<A HREF="ftp://ftp.neuroinformatik.ruhr-uni-bochum.de/pub/manuscripts/articles/LadEtAl1993.ps.gz">as originally published</A>,
+where the trial moves at each node were
+random as well.) If the similarity function's value is improved at one
+of those positions, the change is made permanent; such a move is called
+a <EM>hop</EM>. One round visiting each vertex position is called a
+<EM>sweep</EM>. The local move step terminates when a sweep is completed
+without a hop having been performed.</P>
+
+<P>The benchmark consists of the following main phases:
+<UL>
+<LI><EM>Face Learning:</EM> The system has no prior knowledge of the class
+of object it is supposed to recognize. It "learns" this by extracting
+a <EM>canonic graph</EM> from one so-called <EM>canonic image</EM>;
+that image and the position at which the graph is to be extracted are
+specified by the user.
+
+<LI><EM>Graph Generation:</EM> For each of the images in the album gallery
+(see <EM>Input Description</EM>, below), the Gabor wavelet transform
+is computed, and the global move step is performed using the canonic
+graph. The resultant graph is extracted from the transform and stored.
+
+<LI><EM>Recognition:</EM> For each of the images in the probe gallery
+(see <EM>Input Description</EM>, below), the Gabor wavelet transform
+is computed, and the global move step is performed using the canonic
+graph. Then, a local move step is performed using each of the stored
+graphs.  The resultant vector of similarity values is searched for the
+maximal value; the associated graph (and image) indicate the person
+recognized.
+</UL>
+</P>
+
+<P>The parts that take the most computational time have the following 
+characteristics:
+<UL>
+<LI><EM>Gabor Wavelet Transform:</EM> The transform is performed by
+computing the forward fast Fourier transform (FFT) of the image,
+multiplying it with a number (here, 40) of kernels, computing the backward
+FFT for each of the results, and inserting the absolute value for each
+pixel into a two-dimensional array of feature vectors. This last step
+is similar to performing a transpose of a large matrix, and stresses a
+processor's memory subsystem. Finally, each feature vector is normalized.
+Run time is proportional to the sum of the number of entries in the
+album and probe galleries.
+
+<LI><EM>Global Move:</EM> This takes only a smallish part of the total
+run time. It is dominated by the computation of the feature similarity
+function, which basically is the scalar product of the two feature
+vectors (one from the graph, one from the image transform). Again, run
+time is proportional to the sum of the number of entries in the album
+and probe galleries.
+
+<LI><EM>Local Move:</EM> The local move step is dominated by the
+computation of the similarity function. In addition to the feature
+similarity function described above, now also the distortion of the
+grid introduced by the hops has to be taken into account. This is done
+incrementally, i.e., the contribution of the vertex currently being
+considered to the distortion is computed for both its old and its new
+position, which entails handling the nine different positions a vertex
+can be in the graph. The run time of this phase is proportional to the
+product of the number of entries in the album and probe galleries.
+</UL>
+The program allocates its memory on reading the run parameters (see below),
+and makes use of it while generating the graphs. During each recognition
+step, practically all of the code is exercised.</P>
+
+<HR>
+
+<H2>Input Description</H2>
+
+<P>The program first reads a set of text files that contain the parameter
+settings governing the current run. It then reads a number of grey-level
+images (256 by 256 pixels in size) of as many different persons' faces,
+which constitute the <EM>album gallery</EM> to perform comparisons
+on, and computes the labeled graphs representing these faces. It then
+reads another set of images, the <EM>probe gallery</EM>, of the same
+persons as are represented in the album gallery, but which differ in
+head pose, hair style, addition or removal of glasses, and so on. For
+each of these, it computes the Gabor wavelet transform, localizes the
+face using the global move step, and performs the local move step for
+each graph from the album gallery. This sequence of events is similar
+to what would be required when a set of persons, of which a reference
+image each is given, are searched for in a larger database, e.g., one
+extracted from a set of TV clips. This form of an image database search
+is one typical use of the original application.</P>
+
+<P>For the test data set, the album and probe gallery each contain two
+images. One of these images is the same as the canonic image mentioned
+above; the result of this comparison is known a priori and is used as
+a consistency check for the implementation.</P>
+
+<P>For the training data set, the album gallery contains 13&nbsp;images and
+the probe gallery contains 26&nbsp;images (two per person in the album
+gallery).</P>
+
+<P>For the reference data set, the album gallery contains 42&nbsp;images
+and the probe gallery contains 84&nbsp;images (one to three per person
+in the album gallery); these are all distinct from the images in the
+training data set.</P>
+
+<HR>
+
+<H2>Output Description</H2>
+
+<P>On startup, the program first prints all parameters governing the run
+to standard output. It then prints a line for each entry in the album
+gallery with the name of the image file, the position of the labeled
+graph as determined by the global move step, and its similarity with the
+canonic graph. For each of the entries in the probe gallery, the same
+information is output; this is followed by a line giving the name of the
+best match from the album gallery and the similarity computed with the
+corresponding graph. Finally, after all comparisons have been performed, a
+summary is printed reporting the total number of comparisons, the number
+of correct and incorrect comparisons, and the total number of hops and
+of sweeps performed.</P>
+
+<P>During the comparison process, for each entry in the probe gallery the
+number of hops and of sweeps, seperately for the best matching entry
+and for all entries in the album gallery accumulated, is reported to a
+secondary output file named <TT>hops.dat</TT>. This file must satisfy
+somewhat less stringent requirements for comparison to the reference
+output than the primary report to standard output described above.</P>
+
+<P>Of the 84&nbsp;entries in the probe gallery of the reference data set,
+80&nbsp;entries (95%) result in the correct entry from the album gallery
+being the best match.</P>
+
+<HR>
+
+<H2>Programming Language</H2>
+<P>FORTRAN 90</P>
+<HR>
+
+<H2>Known portability issues</H2>
+<P>None</P>
+<HR>
+
+<H2>Reference</H2>
+
+<A HREF="ftp://ftp.neuroinformatik.ruhr-uni-bochum.de/pub/manuscripts/articles/LadEtAl1993.ps.gz">M. Lades et al. (1993), <EM>Distortion Invariant Object Recognition in the 
+Dynamic Link Architecture</EM>, IEEE Trans. Comp. 42(3):300-311.</A><BR>
+An extensive
+<A HREF="http://www.neuroinformatik.ruhr-uni-bochum.de/ini/VDM/research/computerVision/contents.html">set of pages</A>
+with many figures that illustrate the components of the system described above.</A>
+
+<HR>
+
+<P>Last Updated: 1 November 2001</P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,15 @@
+running commands in compare.cmd 1 times
+runs started at 1583843717, 841000000, Tue Mar 10 13:35:17 2020
+run 1 started at 1583843717, 841000000, Tue Mar 10 13:35:17 2020
+child started: 0, 1583843717, 841000000, pid=7444, 'C:/speccpu2000/bin/specdiff.bat -m -l 10  -r 0.05 C:/speccpu2000/benchspec/CINT2000/175.vpr/data/ref/output/costs.out costs.out'
+child finished: 0, 1583843718, 22000000, sec=0, nsec=181000000, pid=7444, rc=0
+child started: 0, 1583843718, 22000000, pid=324, 'C:/speccpu2000/bin/specdiff.bat -m -l 10  -r 0.015 C:/speccpu2000/benchspec/CINT2000/175.vpr/data/ref/output/place_log.out place_log.out'
+child finished: 0, 1583843718, 207000000, sec=0, nsec=185000000, pid=324, rc=0
+child started: 0, 1583843718, 207000000, pid=1396, 'C:/speccpu2000/bin/specdiff.bat -m -l 10  -r 0.015 C:/speccpu2000/benchspec/CINT2000/175.vpr/data/ref/output/route.out route.out'
+child finished: 0, 1583843719, 997000000, sec=1, nsec=790000000, pid=1396, rc=0
+child started: 0, 1583843719, 997000000, pid=5940, 'C:/speccpu2000/bin/specdiff.bat -m -l 10  -r 0.015 C:/speccpu2000/benchspec/CINT2000/175.vpr/data/ref/output/route_log.out route_log.out'
+child finished: 0, 1583843720, 171000000, sec=0, nsec=174000000, pid=5940, rc=0
+run 1 finished at: 1583843720, 171000000, Tue Mar 10 13:35:20 2020
+run 1 elapsed time: 2, 330000000, 2.330000000
+runs finished at 1583843720, 171000000, Tue Mar 10 13:35:20 2020
+runs elapsed time: 2, 330000000, 2.330000000

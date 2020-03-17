@@ -1,0 +1,13 @@
+running commands in compare.cmd 1 times
+runs started at 1584203299, 589000000, Sat Mar 14 17:28:19 2020
+run 1 started at 1584203299, 589000000, Sat Mar 14 17:28:19 2020
+child started: 0, 1584203299, 589000000, pid=7436, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10  -a 0.005 C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/252.eon/data/ref/output/pixels_out.cook pixels_out.cook'
+child finished: 0, 1584203299, 697000000, sec=0, nsec=108000000, pid=7436, rc=0
+child started: 0, 1584203299, 697000000, pid=9408, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10  -a 0.005 C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/252.eon/data/ref/output/pixels_out.kajiya pixels_out.kajiya'
+child finished: 0, 1584203299, 803000000, sec=0, nsec=106000000, pid=9408, rc=0
+child started: 0, 1584203299, 803000000, pid=6544, 'C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/bin/specdiff.bat -m -l 10  -a 0.005 C:/Users/Anubis/Desktop/UA/UAADCProjects/Grupal/F2/speccpu2000/benchspec/CINT2000/252.eon/data/ref/output/pixels_out.rushmeier pixels_out.rushmeier'
+child finished: 0, 1584203299, 912000000, sec=0, nsec=109000000, pid=6544, rc=0
+run 1 finished at: 1584203299, 912000000, Sat Mar 14 17:28:19 2020
+run 1 elapsed time: 0, 323000000, 0.323000000
+runs finished at 1584203299, 912000000, Sat Mar 14 17:28:19 2020
+runs elapsed time: 0, 323000000, 0.323000000

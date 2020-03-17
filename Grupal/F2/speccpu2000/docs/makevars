@@ -1,0 +1,182 @@
+
+Document Title: makevars.txt
+
+       Subject: SPEC CPU2000 build process: variables used by 'make'
+
+  Last updated: 16 Dec 1999 4:00pm jh
+                (To check for possible updates to this document,
+                please see http://www.spec.org/osg/cpu2000 ) 
+
+------------------------------------------------------------------------
+
+...................................................................................................................................
+                                       NOTE: This document is 132 columns wide.  
+...................................................................................................................................
+
+This document is intended for advanced users of the SPEC CPU2000 suite who want to understand more about how the benchmarks 
+are built.  Most users will not need this document.  But if you are one of the select few who would like to understand the
+build process in detail, you should read the file:
+
+       $SPEC/benchspec/Makefile.defaults
+
+and as you read it, you can refer to this document to help you interpret it.
+
+The settings used during the build process are taken from four sources: a per-run Makefile.spec, the benchmark's
+Makefile (<benchmark>/src/Makefile), the benchmark's settings (<benchmark>/Spec/object.pm), and Makefile.defaults.  The order
+of precedence is fairly simple.  The list in order of highest to lowest priority is object.pm, Makefile, Makefile.spec, and
+Makefile.defaults.  That is, if a setting for a particular variable exists in object.pm, it cannot be overridden.  If a setting
+is specified in the benchmark's Makefile but not in object.pm, that setting takes effect and cannot be overridden.  Variables
+not specified in object.pm or the benchmark's Makefile can be set by the user (in Makefile.spec).  If a setting is needed,
+and does not appear in any of the aforementioned three places, a reasonable default is provided by Makefile.defaults.
+
+This is all well and good, but you may not have heard of Makefile.spec, and there's no mention in the above list of the config
+file.  The explanation is simple: Makefile.spec is created on a per-run basis from the settings in the config file.
+
+In practice, very few variables that affect the build are set in object.pm; it's more a repository of information about how to
+run and what settings to use when doing verification.  There are also very few variables set in the benchmark's Makefile.  So
+while the user's desired settings for a build may seem to be very low priority, there is in fact a large degree of freedom.
+
+The following table attempts to take all the tokens in Makefile.defaults, classify them into one or more categories, and give
+a very brief explanation.
+
+Tokens from Makefile.defaults are classified into these categories:
+
+    config   = If you wish, you are free to set this in your config file.
+    bsm      = The benchmark sets it in benchmark/src/Makefile.  Do not attempt to touch.
+    broken   = A withdrawn feature, which has proven to have problems.  Do not touch.
+    tools    = Something computed by SPEC tools.  Really do not touch.
+
+Type    Item                 Meaning
+-----   -------------------  --------------------------------------------------------------------------------------------------
+bsm     BENCHLANG            Language, one of C, CXX, F, F77
+tools   BENCHLANGC           Name of compiler and linker
+tools   BENCHLANGFLAGS       Partial flags to pass to the compiler
+tools   BENCHLANGLD          Name of linker (will override BENCHLANGC)
+tools   BENCHLANGLDFLAGS     Partial flags to pass to the linker
+tools   BENCHMARK            The formal benchmark name, e.g. 188.ammp
+bsm     BENCH_CFLAGS                    
+bsm     BENCH_CXXFLAGS                  
+bsm     BENCH_F77FLAGS       a benchmark could set all 3 of fbench_flags, cbench_flags, and bench_flags
+bsm     BENCH_FFLAGS                    
+bsm     BENCH_FLAGS                     
+config  CC                   How to invoke your C compiler
+config  CFLAGS               Flags to pass to your C compiler
+config  CLD                  Name of linker to use for C programs.  It is assumed that the compiler knows how to call the linker.
+config  CLDOPT               Special LDOPT for linking C programs.  Defaults to LDOPT.
+config  COBJOPT              Special OBJOPT for C.   Defaults to same as OBJOPT.
+config  COPTIMIZE            Optimization flags to be passed to compiler for all C programs 
+config  CP                   How to copy a file. Defaults to "cp" on Unix, "copy" on NT.
+config  CPORTABILITY         Portability options only for C compiler
+config  CXX                  How to invoke your C++ compiler
+tools   CXXC                 Same as CXX.  A minor coding trick uses this to help figure out how to invoke linker.
+config  CXXFLAGS             Flags to pass to the C++ compiler.
+config  CXXLD                Name of linker to use for C++ programs.  It is assumed that the compiler knows how to call the linker.
+config  CXXLDOPT             Special LDOPT for linking C++ programs.  Defaults to LDOPT.
+config  CXXOBJOPT            Special OBJOPT for C++.   Defaults to same as OBJOPT.
+config  CXXOPTIMIZE          Optimization flags to be passed to compiler for all C++ programs
+config  CXXPORTABILITY       Portability options only for C++ compiler
+config  ECHO                 "How to spell ""echo"" command"
+bsm     EXEBASE              Name of the base benchmark executable (without extension or tuning information)
+bsm     EXEBASE_TUNE.EXT     Full name of the benchmark executable
+config  EXT                  Desired extension for the object files
+config  EXTRA_CFLAGS         Additional flags to pass to your C compiler
+config  EXTRA_CXXFLAGS       Additional flags to pass to your C++ compiler
+config  EXTRA_F77FLAGS       Additional flags to pass to your f77 compiler
+config  EXTRA_FFLAGS         Additional flags to pass to your f90 compiler
+config  EXTRA_LDFLAGS        Additional flags to pass to your linker
+config  EXTRA_LIBS           Extra libraries to appear at the end of the link command
+config  EXTRA_OPTIMIZE       Additional flags to pass to all compilers
+config  EXTRA_RMFILES        ??? Additional files to be deleted before a build
+config  EXTRA_SOURCES        Sources to add. Must be explained to SPEC!
+config  F77                  How to invoke your Fortran-77 compiler
+config  F77C                 Same as F77.  A minor coding trick uses this to help figure out how to invoke linker.
+config  F77FLAGS             Flags to pass to the F77 compiler.
+config  F77LD                Name of linker to use for F77 programs.  It is assumed that the compiler knows how to call the linker.
+config  F77LDOPT             Special LDOPT for linking f77 programs.  Defaults to LDOPT.
+config  F77OBJOPT            Special OBJOPT for f77.   Defaults to same as OBJOPT.
+config  F77OPTIMIZE          Optimization flags to be passed to compiler for all f77 programs
+config  F77PORTABILITY       Portability options only for f77 compiler
+config  FC                   How to invoke your Fortran-90 compiler
+tools   FDO                  gets set to FDO=PASS1, FDO=PSS7, etc
+tools   FDO_BENCHLANGFLAGS   Flags to pass to the compiler to do the current FDO pass
+tools   FDO_CFLAGS           " "        
+tools   FDO_COPTIMIZE        " "        
+tools   FDO_CXXFLAGS         " "        
+tools   FDO_CXXOPTIMIZE      " "        
+tools   FDO_F77FLAGS         " "        
+tools   FDO_F77OPTIMIZE      " "        
+tools   FDO_FFLAGS           " "        
+tools   FDO_FLAGS            " "        
+tools   FDO_FOPTIMIZE        " "        
+tools   FDO_LDBENCHLANGFLAGS Flags to pass to the linker to do the current FDO pass
+tools   FDO_LDCFLAGS         " "
+tools   FDO_LDCXXFLAGS       " "
+tools   FDO_LDF77FLAGS       " "
+tools   FDO_LDFFLAGS         " "
+tools   FDO_LDFLAGS          " "
+tools   FDO_OPTIMIZE         " "
+config  FFLAGS               Flags to pass to the F90 compiler
+tools   FINAL_CFLAGS         Full list of flags passed to C compiler
+tools   FINAL_CXXFLAGS       Full list of flags passed to C++ compiler
+tools   FINAL_F77FLAGS       Full list of flags passed to F77 compiler
+tools   FINAL_FFLAGS         Full list of flags passed to F90 compiler
+tools   FINAL_SOURCES        Full list of source files to be used for compilation
+config  FLAGS                Flags that will be passed to *every* compiler
+config  FLD                  Name of linker to use for F90 programs.  It is assumed that the compiler knows how to call the linker.
+config  FLDOPT               Special LDOPT for linking Fortran-90 programs.  Defaults to LDOPT.
+config  FOBJOPT              Special OBJOPT for f90.   Defaults to same as OBJOPT.
+config  FOPTIMIZE            Optimization flags to be passed to all f90 programs (in base, f77 too)
+tools   FPBASE               Force f90 for .f
+config  FPORTABILITY         Portability options only for Fortran-90
+tools   LANGFLAGS            Not used.
+tools   LD                   The name of your linker.  Do not set this directly; set the language specific value (CLD, F77LD, etc)
+tools   LDCOMPFLAGS          Flags passed to the linker
+config  LDFLAGS              Flags to pass to the linker
+tools   LDLANGFLAGS          More flags passed to the linker
+config  LDOPT                How to spell -o <target of linker> on your system.  Defaults to -o on Unix, -Fe on NT.
+config  LDOPTFLAGS           Optimization flags to pass to the linker
+config  LIBS                 Libraries to link into the final executable
+config  MATHLIBOPT           Set of math libraries (if any) to link into the final executable
+tools   MATH_LIBS            Set of math libraries (if any) to link into the final executable (just $MATHLIBOPT again)
+bsm     NAME                 The benchmark name, e.g. ammp
+bsm     NEED_MATH            Flag telling whether or not the benchmark needs to be linked with the math libraries
+broken  NEED_VPATH_INCLUDE                      
+broken  NOINC                   
+bsm     NUMBER               The benchmark number, e.g. 188
+config  OBJ                  The file name extension for object files on your system.  Defaults to '.o' on Unix and '.obj' on NT
+config  OBJOPT               How to spell "-c -o" on your system.  Defaults to -c -o on Unix, -c -Fo on NT
+tools   OBJS                 List of object files needed to link the final executable
+config  ONESTEP              Whether or not to compile source files separately or all at once.  Optimization flag.
+config  OPTIMIZE             Optimization flags.  Typically used only for a single benchmark.
+tools   OS                   Name of OS being used.  Supplied automatically
+config  OS_CFLAGS            List of OS-specific flags for the C compiler (if any)
+config  OS_CXXFLAGS          List of OS-specific flags for the C++ compiler (if any)           
+config  OS_F77FLAGS          List of OS-specific flags for the F77 compiler (if any)           
+config  OS_FFLAGS            List of OS-specific flags for the F90 compiler (if any)           
+config  OS_FLAGS             List of OS-specific flags for the all compilers (if any)                   
+config  OS_LIBS              List of OS-specific libs to link with
+tools   PATHSEP              String to use to separate path components.  ('/' on Unix and '\' on NT.)
+config  PORTABILITY          Portability options that you would like applied to both compile and LD steps    
+config  RMRF                 The name of a program (with arguments, if necessary) that can be used to delete a directory tree.   
+config  RM_SOURCES           Sources to exclude.  Must explained to SPEC!    
+bsm     SOURCES              What the benchmark/src/Makefile expects will normally be used   
+config  SOURCE_PREFIX_C      If your C compiler needs a switch to appear just before each source file, say so here. 
+config  SOURCE_PREFIX_CXX    If your C++ compiler needs a switch to appear just before each source file, say so here. 
+config  SOURCE_PREFIX_F      If your f90 compiler needs a switch to appear just before each source file, say so here. 
+config  SOURCE_PREFIX_F77    If your f77 compiler needs a switch to appear just before each source file, say so here. 
+config  SPECSHELL            How to invoke the bourne-like shell on your system.  Defaults to "/bin/sh".
+config  TUNE                 Which benchmarks shall we run?  base, peak, or all? 
+broken  VPATH_CFLAGS         Partly debugged feature.  Do not use.
+broken  VPATH_CINCLUDE       Partly debugged feature.  Do not use.
+broken  VPATH_CXXFLAGS       Partly debugged feature.  Do not use.
+broken  VPATH_CXXINCLUDE     Partly debugged feature.  Do not use.
+broken  VPATH_F77FLAGS       Partly debugged feature.  Do not use.
+broken  VPATH_F77INCLUDE     Partly debugged feature.  Do not use.
+broken  VPATH_FFLAGS         Partly debugged feature.  Do not use.
+broken  VPATH_FINCLUDE       Partly debugged feature.  Do not use.
+broken  VPATH_INCLUDE        Partly debugged feature.  Do not use.
+
+-----------------------------------------------------------------------------
+Copyright (C) 1999-2000 Standard Performance Evaluation Corporation
+All Rights Reserved
+

@@ -1,0 +1,148 @@
+cl -c -Fomain.obj       -DSPEC_CPU2000       /Ox /GL /Op  main.c
+main.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Foutil.obj       -DSPEC_CPU2000       /Ox /GL /Op  util.c
+util.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Foread_netlist.obj       -DSPEC_CPU2000       /Ox /GL /Op  read_netlist.c
+read_netlist.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Foread_arch.obj       -DSPEC_CPU2000       /Ox /GL /Op  read_arch.c
+read_arch.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Foplace.obj       -DSPEC_CPU2000       /Ox /GL /Op  place.c
+place.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Foroute.obj       -DSPEC_CPU2000       /Ox /GL /Op  route.c
+route.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Fodraw.obj       -DSPEC_CPU2000       /Ox /GL /Op  draw.c
+draw.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Fographics.obj       -DSPEC_CPU2000       /Ox /GL /Op  graphics.c
+graphics.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Fostats.obj       -DSPEC_CPU2000       /Ox /GL /Op  stats.c
+stats.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Fosegment_stats.obj       -DSPEC_CPU2000       /Ox /GL /Op  segment_stats.c
+segment_stats.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Forr_graph.obj       -DSPEC_CPU2000       /Ox /GL /Op  rr_graph.c
+rr_graph.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Forr_graph2.obj       -DSPEC_CPU2000       /Ox /GL /Op  rr_graph2.c
+rr_graph2.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Forr_graph_sbox.obj       -DSPEC_CPU2000       /Ox /GL /Op  rr_graph_sbox.c
+rr_graph_sbox.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Forr_graph_util.obj       -DSPEC_CPU2000       /Ox /GL /Op  rr_graph_util.c
+rr_graph_util.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Forr_graph_timing_params.obj       -DSPEC_CPU2000       /Ox /GL /Op  rr_graph_timing_params.c
+rr_graph_timing_params.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Forr_graph_area.obj       -DSPEC_CPU2000       /Ox /GL /Op  rr_graph_area.c
+rr_graph_area.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Focheck_rr_graph.obj       -DSPEC_CPU2000       /Ox /GL /Op  check_rr_graph.c
+check_rr_graph.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Focheck_route.obj       -DSPEC_CPU2000       /Ox /GL /Op  check_route.c
+check_route.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Fohash.obj       -DSPEC_CPU2000       /Ox /GL /Op  hash.c
+hash.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl -c -Foread_place.obj       -DSPEC_CPU2000       /Ox /GL /Op  read_place.c
+read_place.c
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(25): warning C4005: 'max': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1289): note: vea la definici¢n anterior de 'max'
+C:\speccpu2000\benchspec\CINT2000\175.vpr\run\00000001\util.h(26): warning C4005: 'min': redefinici¢n de macro
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdlib.h(1290): note: vea la definici¢n anterior de 'min'
+cl       /Ox /GL /Op  main.obj util.obj read_netlist.obj read_arch.obj place.obj route.obj draw.obj graphics.obj stats.obj segment_stats.obj rr_graph.obj rr_graph2.obj rr_graph_sbox.obj rr_graph_util.obj rr_graph_timing_params.obj rr_graph_area.obj check_rr_graph.obj check_route.obj hash.obj read_place.obj     -Fevpr
+Microsoft (R) Incremental Linker Version 14.24.28315.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/ltcg 
+/out:vpr.exe 
+main.obj 
+util.obj 
+read_netlist.obj 
+read_arch.obj 
+place.obj 
+route.obj 
+draw.obj 
+graphics.obj 
+stats.obj 
+segment_stats.obj 
+rr_graph.obj 
+rr_graph2.obj 
+rr_graph_sbox.obj 
+rr_graph_util.obj 
+rr_graph_timing_params.obj 
+rr_graph_area.obj 
+check_rr_graph.obj 
+check_route.obj 
+hash.obj 
+read_place.obj 
+Generando código
+Generación de código finalizada

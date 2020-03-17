@@ -1,0 +1,23 @@
+ Enter run type (test, train, ref):
+ 
+ This run uses the following parameter settings:
+ ===============================================
+ Image parameters: 256 256 1
+ Trafo parameters: 1.5707964 1.4142135 6.2831855 5 8 T
+ Match parameters:  4 T 100  8 1.5E-03 1.0E-06
+ Graph parameters:  9 12 17 17 55 44 "pk2.asc"
+ Album gallery contains   2 images from "".
+ Probe gallery contains   2 images from "".
+ 
+ Generating graphs for album entries
+     jh1: generated graph at  58 37, similarity = 0.80185
+     pk2: generated graph at  55 44, similarity = 1.00000
+ 
+ Performing comparison with probe entries
+  1      jh2:    global move determines position  56  35,  similarity = 0.83487
+  1      jh2: best match      jh1 sim. = 0.90562
+  2      pk2:    global move determines position  55  44,  similarity = 1.00000
+  2      pk2: best match      pk2 sim. = 1.00000
+ 
+Performed   2 comparisons, of which   2 were correct and   0 were incorrect.
+A total of     200 hops and    16 sweeps were performed.

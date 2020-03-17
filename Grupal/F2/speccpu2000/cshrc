@@ -1,0 +1,87 @@
+#!/bin/csh 
+
+#
+#  cshrc - set up 'go' aliases for CSH users
+#  Copyright (C) 2004-2005 Standard Performance Evaluation Corporation
+#
+#  Author:  Bob Larson
+#
+# $Id: cshrc 2846 2005-06-09 19:29:07Z cloyce $
+#
+
+if ( $?GOGO == 0 || $?SPEC == 0 ) goto setup
+if ( $GOGO == GO$SPEC  ) goto program1
+
+setup:
+#top of tree is SPEC
+if ( $?SPEC == 0 ) then
+     echo set '$'SPEC first
+     set ret = n
+     if ( -d benchspec ) then
+             echo -n  set SPEC to cwd'?   (y/n) '
+             set ret = $<
+             endif
+     if  (  $ret == y  ) setenv SPEC $cwd
+     endif
+if ( $?SPEC == 0 ) exit
+setenv  LANGVAR C
+setenv  LC_ALL C
+setenv  LC_LANG C
+setenv  PATH $SPEC/bin:$PATH
+setenv  SPECPERLLIB $SPEC/bin:$SPEC/bin/lib
+setenv  _ /bin/csh
+setenv GOGO GO$SPEC
+
+program1:
+#   basic aliases, enables ugly syntax
+#      "go164", "go164.gzip", "gogzip"  are all the same command:
+#             cd $SPEC/benchspec/CINT2000/164.gzip
+#      "go164 run" will cd to the run subdirectory of 164.gzip
+#      "go" will execute this script and later will also "cd $SPEC"
+#      "gotop" =  cd $SPEC 
+#      "goresult" = cd $SPEC/result
+#    
+#      The syntax of these is ugly, but we clean it up below
+#
+
+if ( $#argv != 0 ) goto program2
+set list = ( \
+        `cat $SPEC/benchspec/[CM]*/[A-Z]*.bset  |grep '^[	 ]'`   \
+                     )
+foreach i  ( $list )
+   set number = `echo $i|sed 's/\..*//' `
+   set char = `echo $i|sed 's/.*\.//' `
+   alias go$i 'cd $SPEC/benchspec/[CM]*/'$i
+   alias go$number 'cd $SPEC/benchspec/[CM]*/'$i
+   alias go$char 'cd $SPEC/benchspec/[CM]*/'$i
+   end
+alias gotop 'cd $SPEC'          
+alias godocs 'cd $SPEC/docs'
+alias gobenchspec 'cd $SPEC/benchspec'
+alias gobin 'cd $SPEC/bin'
+alias goconfig 'cd $SPEC/config'
+alias goresult 'cd $SPEC/result'
+alias gotools 'cd $SPEC/tools'
+
+alias go '$SPEC/cshrc \!*; source $SPEC/.go'
+chmod +x $SPEC/cshrc
+
+echo gotop >! $SPEC/.go
+
+exit
+
+program2:
+#
+#   pretty sytax:  
+#
+#      "go 164", "go 164.gzip", "go gzip"  are all the same command:
+#             cd $SPEC/benchspec/CINT2000/164.gzip
+#      "go 164 run" will cd to the run subdirectory of 164.gzip
+#      "go" will execute the program1 script
+#
+echo "go$1" >! $SPEC/.go
+if ( $#argv > 1 ) echo cd $2 >> $SPEC/.go
+if ( $#argv > 2 ) echo cd $3 >> $SPEC/.go
+if ( $#argv > 3 ) echo cd $4  >> $SPEC/.go
+exit
+

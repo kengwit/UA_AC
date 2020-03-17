@@ -1,0 +1,160 @@
+
+
+
+
+          *********************************************************
+          *********************************************************
+          *** PROGRAM TO  SOLVE FOR THE  MESOSCALE AND SYNOPTIC ***
+          *** VARIATIONS OF POTENTIAL TEMPERATURE, U AND V WIND ***
+          *** COMPONENTS, AND THE MESOSCALE VERTICAL VELOCITY W ***
+          *** PRESSURE AND DISTRIBUTION OF POLLUTANTS C  HAVING ***
+          *** SOURCES  Q. THE SYNOPTIC  SCALE COMPONENTS ARE IN ***
+          *** QUASSI-STEADY STATE BALANCE,  WHILE THE MESOSCALE ***
+          *** PRESSURE AND VELOCITY  W ARE FOUND DIAGNOSTICALLY ***
+          *********************************************************
+          *********************************************************
+
+
+
+
+ ********   LAND SURFACE FORCING  FUNCTION ********* 
+
+ T(X,Y,T)= 11.0{EXP -((T-14.0)/ 4.9)**2 - 0.1}
+
+ ********   TIME UNITS ARE IN HOURS        *********
+
+
+
+
+  1 AREA   SOURCES       WERE CHOSEN 
+
+ #  1 **   0.1000E+01 ** LOCATED AT IX= 16 JY=  1 KZ=  2
+
+ SIGMA   0.20E+02 SPREAD IN POINTS AROUND CENTER    1   1   1
+
+ UNNORMALIZED SOURCE   0.9470E+00 AT GRID POINTS I,J,K   15   1   1
+ UNNORMALIZED SOURCE   0.9499E+00 AT GRID POINTS I,J,K   16   1   1
+ UNNORMALIZED SOURCE   0.9470E+00 AT GRID POINTS I,J,K   17   1   1
+ UNNORMALIZED SOURCE   0.9969E+00 AT GRID POINTS I,J,K   15   1   2
+ UNNORMALIZED SOURCE   0.1000E+01 AT GRID POINTS I,J,K   16   1   2
+ UNNORMALIZED SOURCE   0.9969E+00 AT GRID POINTS I,J,K   17   1   2
+ UNNORMALIZED SOURCE   0.9470E+00 AT GRID POINTS I,J,K   15   1   3
+ UNNORMALIZED SOURCE   0.9499E+00 AT GRID POINTS I,J,K   16   1   3
+ UNNORMALIZED SOURCE   0.9470E+00 AT GRID POINTS I,J,K   17   1   3
+ ACTUAL SOURCE VALUE   0.1091E+00 AT GRID POINTS I,J,K   15   1   1
+ ACTUAL SOURCE VALUE   0.1094E+00 AT GRID POINTS I,J,K   16   1   1
+ ACTUAL SOURCE VALUE   0.1091E+00 AT GRID POINTS I,J,K   17   1   1
+ ACTUAL SOURCE VALUE   0.1148E+00 AT GRID POINTS I,J,K   15   1   2
+ ACTUAL SOURCE VALUE   0.1152E+00 AT GRID POINTS I,J,K   16   1   2
+ ACTUAL SOURCE VALUE   0.1148E+00 AT GRID POINTS I,J,K   17   1   2
+ ACTUAL SOURCE VALUE   0.1091E+00 AT GRID POINTS I,J,K   15   1   3
+ ACTUAL SOURCE VALUE   0.1094E+00 AT GRID POINTS I,J,K   16   1   3
+ ACTUAL SOURCE VALUE   0.1091E+00 AT GRID POINTS I,J,K   17   1   3
+
+
+
+ ***********************  MEAN PROFILES ***********************
+
+ CONVERGENCE AFTER     34 ITERATIONS.    NORM=   0.0000E+00
+ EQUIVALENT TIME FOR THE MEAN PROFILES  IS    2040.00 SEC. 
+ Z0=  0.0200   ZMIX= 224.85   U*=  0.05270   L(4)=      337.11
+
+
+   K    HEIGHT (M)       UG(Z)     VG(Z)      TM(Z)       KM(Z)       UM(Z)       VM(Z)  
+
+   1       0.00          6.88      0.00      290.10        0.10        0.00        0.00
+   2      13.62          6.88      0.00      290.13        0.26        0.56        1.18
+   3      28.79          6.88      0.00      290.18        0.40        0.96        1.67
+   4      45.68          6.89      0.00      290.25        0.50        1.32        1.96
+   5      64.49          6.89      0.00      290.33        0.56        1.71        2.16
+   6      85.43          6.89      0.00      290.42        0.57        2.13        2.33
+   7     108.76          6.89      0.00      290.53        0.52        2.61        2.48
+   8     134.72          6.90      0.00      290.66        0.42        3.15        2.61
+   9     163.64          6.90      0.00      290.81        0.29        3.73        2.69
+  10     195.84          6.90      0.00      290.97        0.17        4.33        2.72
+  11     231.69          6.91      0.00      291.16        0.11        4.91        2.67
+  12     271.62          6.91      0.00      291.36        0.10        5.46        2.56
+  13     316.08          6.92      0.00      291.58        0.10        5.97        2.38
+  14     365.58          6.92      0.00      291.83        0.10        6.44        2.14
+  15     420.70          6.93      0.00      292.10        0.10        6.84        1.85
+  16     482.08          6.94      0.00      292.41        0.10        7.16        1.51
+  17     550.43          6.95      0.00      292.75        0.10        7.38        1.15
+  18     626.54          6.96      0.00      293.13        0.10        7.50        0.80
+  19     711.29          6.97      0.00      293.56        0.10        7.53        0.48
+  20     805.66          6.98      0.00      294.03        0.10        7.49        0.22
+  21     910.74          6.99      0.00      294.55        0.10        7.39        0.03
+  22    1027.75          7.00      0.00      295.14        0.10        7.27       -0.08
+  23    1158.04          7.02      0.00      295.79        0.10        7.16       -0.12
+  24    1303.12          7.04      0.00      296.52        0.10        7.08       -0.11
+  25    1464.68          7.06      0.00      297.32        0.10        7.05       -0.07
+  26    1644.57          7.08      0.00      298.22        0.10        7.05       -0.03
+  27    1844.89          7.10      0.00      299.22        0.10        7.08       -0.01
+  28    2067.94          7.13      0.00      300.34        0.10        7.12        0.00
+  29    2316.32          7.16      0.00      301.58        0.10        7.15        0.00
+  30    2592.89          7.19      0.00      302.96        0.10        7.19        0.00
+  31    2900.86          7.23      0.00      304.50        0.10        7.23        0.00
+  32    3243.79          7.27      0.00      306.22        0.10        7.27        0.00
+
+ **************************************************************
+
+
+ ****************  X - FILTER  ***************** 
+
+ 0000000000000000000000000000000011223457800000000000000000000000
+ 0000000000000000000000087543221100000000000000000000000000000000
+
+
+
+            ****   TOPOGRAPHY  MAX =       1.00 MIN =      -1.00  METERS   ****
+
+
+ LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLWWWWWWWWWWWWLLLLLLLLLLLL
+ LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+
+
+
+   X AXIS IS DIVIDED INTO  128  SUBINTERVALS
+   Y AXIS IS DIVIDED INTO    1  SUBINTERVALS
+   Z AXIS IS DIVIDED INTO   32  SUBINTERVALS
+         720  TIME STEPS WERE REQUESTED 
+
+
+  BATCH MODE = NO       SPECTRAL FILTER       STRECHED Z, Z=F(H)  
+
+   Z=120.0*(EXP(H/ 0.3)-1),  UPWIND A= 0.5
+
+
+    FOLLOWING NUMBERS ARE IN USER WORLD UNITS
+
+
+   X  DOMAIN  (      0.0,1016000.0),    DX=  8000.00
+   Y  DOMAIN  (      0.0,      0.0),    DY=  5000.00
+   Z  DOMAIN  (      0.0,    422.3),    DZ=    13.62
+   T  DOMAIN  (      0.0,  86280.0),    DT=   120.00
+
+   CENTRAL LATITUDE  40.00 DEG,    GRAPH STEP 720
+
+
+  DIFFUSIVITIES   (KX,KY,KZ) = (   7000.00   1000.00      0.10)
+
+ ** TIME SCHEMES USED **  LEAP  FROG 2ND IN X,Y  CRANK-NICKOLSON IN Z
+
+ T(   0)=    0.  C= 0.100E+01  E= 0.000E+00  T= 0.000E+00  P= 0.000E+00  U= 0.000E+00  V= 0.000E+00  W= 0.000E+00
+ T( 100)=12000.  C= 0.909E+04  E= 0.183E+03  T=-0.291E+03  P=-0.231E+00  U= 0.548E+02  V= 0.694E+02  W=-0.214E-03
+ T( 200)=24000.  C= 0.139E+05  E= 0.140E+03  T=-0.811E+02  P= 0.212E+01  U= 0.198E+03  V=-0.176E+03  W=-0.123E-03
+ T( 300)=36000.  C= 0.111E+05  E= 0.212E+04  T= 0.275E+04  P=-0.268E+02  U=-0.587E+03  V=-0.286E+03  W= 0.207E-02
+ T( 400)=48000.  C= 0.909E+04  E= 0.566E+04  T= 0.102E+05  P=-0.322E+03  U=-0.135E+04  V= 0.732E+03  W= 0.136E-01
+ T( 500)=60000.  C= 0.102E+05  E= 0.898E+04  T= 0.125E+05  P=-0.540E+03  U=-0.577E+03  V= 0.224E+04  W= 0.217E-01
+ T( 600)=72000.  C= 0.188E+05  E= 0.103E+05  T= 0.112E+05  P=-0.544E+03  U= 0.192E+04  V= 0.203E+04  W= 0.115E-01
+ T( 700)=84000.  C= 0.272E+05  E= 0.107E+05  T= 0.102E+05  P=-0.544E+03  U= 0.289E+04  V=-0.572E+03  W= 0.632E-02
+ **      CPU FOR CONCENTRATIONS  C =           0.00   **
+ **      CPU FOR TEMPERATURE THETA =           0.00   **
+ **      CPU FOR EXNER PRESSURE PI =           0.00   **
+ **      CPU FOR X MOMENTUM EQ.  U =           0.00   **
+ **      CPU FOR Y MOMENTUM EQ.  V =           0.00   **
+ **      CPU FOR CONTINUITY EQ.  W =           0.00   **
+ **      CPU FOR PRINTING UNKNOWNS =           0.00   **
+ **      CPU FOR  BOUNDARY   LAYER =           0.00   **
+ **      CPU FOR HIGH  PASS FILTER =           0.00   **
+ **      CPU FOR SYNOPTIC VARIABLS =           0.00   **
+ **                                                   **

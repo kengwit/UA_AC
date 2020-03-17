@@ -1,0 +1,2 @@
+"COMP: cl -c -Fooptions.obj  -Dalloca=_alloca            /Ox /GL /Op "
+"LINK: cl -F10000000       /Ox /GL /Op       -Feoptions -link -stack:10000000"
