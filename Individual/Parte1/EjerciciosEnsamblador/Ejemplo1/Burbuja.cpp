@@ -1,8 +1,11 @@
+// Elvi Mihai Sabau Sabau.
+
 #include <stdlib.h>
 #include <stdio.h>
 
-
 void bubbleSort(int arr[], int n);
+
+// Esta funcion no se usa, fue usada en su momento para aprender como utilizar variables de C en el bloque asm.
 void swapNumber(int *a, int *b);
 
 int main(void)
@@ -43,10 +46,12 @@ int main(void)
 
 void bubbleSort(int* arr, int size)
 {
-    int a = size - 2;
+    int a = size - 2;           // tamaño - 2 porque estámos comporbando cada 2 grupos a la vez, por lo tanto, el ultimo par no se comprueba
+                                //    ya que si se hace, se saldria fuera del rango del vector, y comprobaria la ult. pos. con algo
+                                //    que no hace parte del vector.
 
     __asm {
-            mov esi, arr        // Asingamos la dir del inicio del array a esi
+            mov esi, arr        // Asingamos la dir del inicio del array a esi.
             mov edi, a;         // Asignamos el tamaño del array a edi.
             mov eax, edi;       // eax = contador externo.
         
@@ -54,9 +59,9 @@ void bubbleSort(int* arr, int size)
             mov ebx, edi;       // ebx = contador interno.
 
         interno:                // Tag del bucle interno.
-            mov ecx, [esi];     // Valor actual.
-            mov edx, [esi + 4]; // Valor siguiente.
-            cmp ecx, edx;       // Comparamos el valor actual con el siguiente.
+            mov ecx, [esi];     // ecx = valor de la pos. actual del vector.
+            mov edx, [esi + 4]; // edx = Valor posición siguiente.
+            cmp ecx, edx;       // Comparamos el valor actual con el siguiente, el resultado e 
             jl guardar;         // Si el valor actual ECX es menor que la siguiente [ESI + 4], entonces nos saltamos el paso de intercambiarlos.
 
             xchg ecx, edx;      // Intercambiamos.
@@ -65,7 +70,7 @@ void bubbleSort(int* arr, int size)
             mov [esi], ecx;     // Guardamos el valor actual.
             mov [esi + 4], edx; // Guardamos el valor siguiente.
 
-            add esi, 4;         // Siguiente iteracion
+            add esi, 4;         // Incrementamos el registro en 4 para pasar a la siguiente posición del vector.
 
             dec ebx;            // Decretemntamos 1 en el contador interno.
             jnz interno;        // Si no es 0, repetimos el bucle interno.
@@ -77,7 +82,8 @@ void bubbleSort(int* arr, int size)
     }
 }
 
-void swapNumber(int* a, int* b /*, int* size*/ ) {
+// Esta funcion no se usa, fue usada en su momento para aprender como utilizar variables de C en el bloque asm.
+void swapNumber(int* a, int* b) {
     __asm
     {
         // Haciendo que las variables de nustro codigo en C sea usable en nuestro bloque __asm.
