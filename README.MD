@@ -21,3 +21,4 @@ In this repository you can find:
 - Practices to learn about structural, data and control risks.
 - Practices to learn how to solve said risks.
 - Medium and Advanced concepts on RISK.
+- Advanced condepts on segmented architectures.
